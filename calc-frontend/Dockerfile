@@ -14,4 +14,4 @@ ENV PORT=5173
 EXPOSE 5173
 
 # runs when container is started
-ENTRYPOINT ["npm", "run dev"]
+ENTRYPOINT ["npm", "run", "dev"]
