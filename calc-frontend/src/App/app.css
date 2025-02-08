@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root{
+    margin: 0 auto;
+    padding: 2rem;
+    
+}
+
+body {
+    margin: 0;
+    display: flex;
+    min-width: 320px;
+    min-height: 100vh;
+
+    font-size:100%;
+  }
+
+  h1{
+    font-size:2rem; 
+  }
+
+  h2{
+    font-size:1.75rem;
+  }
+
+  h3{
+    font-size:1.5rem;
+  }
