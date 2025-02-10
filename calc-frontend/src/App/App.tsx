@@ -1,34 +1,42 @@
-import { useState } from 'react'
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from "react-router";
 
 import './app.css'
-import ucfLogo from '../assets/ucf-logo.png'
 
+import Home from "../pages/Home";
+import Derivatives from "../pages/Derivatives";
+import Limits from "../pages/Limits";
+import Integrals from "../pages/Integrals";
+
+import ParabolaDerivative from "../components/ParabolaDerivative";
+import ParabolaIntegral from "../components/ParabolaIntegral";
+import ParabolaLimit from "../components/ParabolaLimit";
+import RootLayout from "./RootLayout";
 
 function App() {
-  const [count, setCount] = useState(0)
-  
+
+    // go to the RootLayout component to edit the visual layout
+
+    // handles all the routes
+    const router = createBrowserRouter(
+      createRoutesFromElements(
+        <Route path='/' element={<RootLayout/>}>
+          <Route index element={<Home/>} />
+
+          <Route path='/derivatives' element={ <Derivatives/> }/>
+          <Route path='/derivatives/parabola' element={ <ParabolaDerivative/> } />
+
+          <Route path='/integrals' element= { <Integrals/> }/>
+          <Route path='/integrals/parabola' element={ <ParabolaIntegral/> }/>
+
+          <Route path='/limits' element= {<Limits/>}/>
+          <Route path='/limits/parabola' element={ <ParabolaLimit/> } />
+          
+        </Route>
+      )
+    );
 
   return (
-    <>
-      <div>
-        <a href="https://www.ucf.edu/" target="_blank">
-          <img src={ucfLogo} className="logo" alt="UCF logo" />
-        </a>
-
-      </div>
-      <h1 className='text-green-500'>Calc Visualizer</h1>
-      <div className="card">
-        <button className = "text-red-500 border-2 border-solid cursor-pointer transform hover:scale-110 transition-transform duration-200" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p>
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <RouterProvider router={router} />
   )
 }
 
