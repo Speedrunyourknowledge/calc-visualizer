@@ -2,7 +2,7 @@
 
 :root{
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1.5rem;
     
 }
 
@@ -14,6 +14,20 @@ body {
     background-color: rgba(121, 110, 110, 0.562);
 
     font-size:100%;
+  }
+
+  .header{
+    margin-bottom:1.5rem;
+  }
+
+  .link-title{
+    font-size:1.5rem;
+  }
+
+  .link-box{
+    @apply w-300 h-30 flex items-center justify-center 
+    bg-gray-500 rounded-lg hover:bg-gray-600 transition transform hover:scale-103 
+    duration-200;
   }
 
   h1{
