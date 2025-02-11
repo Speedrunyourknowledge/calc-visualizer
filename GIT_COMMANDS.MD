@@ -13,11 +13,13 @@ git clone [repo url]
 ```
 git fetch
 ```
+<br/>
 
 4. Create a local branch that tracks an existing remote branch
 ```
 git checkout [branch name]
 ```
+<br/>
 
 5. Now you are ready to contribute!
 
