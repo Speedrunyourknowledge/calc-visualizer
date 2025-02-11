@@ -8,6 +8,7 @@ git clone [repo url]
 2. Change directory (cd) to the repo folder
 <br/>
 
+
 3. Get all updates from the remote repository 
 ```
 git fetch
