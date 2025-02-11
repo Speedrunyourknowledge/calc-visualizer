@@ -25,7 +25,7 @@ git checkout [branch name]
 
 ## Utility commands
 
-See what branch you’re currently on 
+See which branch you’re currently on 
 ```
 git branch
 ```
@@ -41,16 +41,16 @@ See if you have anything in the staging area *Also checks if your current bran
 ```
 git status  
 ```
-Always run ‘git fetch’ first because the branch may have been updated recently
+**Always** run ‘git fetch’ first in case the remote branch was updated recently
 <br/><br/>
 
-Fetch updates from remote AND merge updates into the current branch 
+Fetch updates from remote **and** merge updates into the current branch 
 ```
 git pull
 ```
 <br/>
 
-Fetch updates from remote AND rebase updates into the current branch 
+Fetch updates from remote **and** rebase updates into the current branch 
 ```
 git pull --rebase
 ```
@@ -119,31 +119,31 @@ git reset
 ```
 <br/>
 
-Remove files from the staging area AND revert uncommitted changes to those files
+Remove files from the staging area **and** revert uncommitted changes to those files
 ```
 git reset --hard
 ```
 <br/>
 
-Reset the branch to the given commit AND revert changed files
+Reset the branch to the given commit **and** revert changed files
 ```
 git reset --hard [commit id]
 ```
 <br/>
 
-Undo the last commit AND revert changed files
+Undo the last commit **and** revert changed files
 ```
 git reset --hard HEAD^
 ```
 <br/>
 
-Reset the branch to the given commit AND place changed files in the staging area
+Reset the branch to the given commit **and** place changed files in the staging area
 ```
 git reset --soft [commit id]
 ```
 <br/>
 
-Undo the last commit AND place changed files in the staging area
+Undo the last commit **and** place changed files in the staging area
 ```
 git reset --soft HEAD^
 ```
@@ -157,7 +157,7 @@ git reset --hard origin/[branch name]
 
 ## Commit Commands
 
-Add files to your previous commit OR simply change your previous commit message
+Add files to your previous commit or simply change your previous commit message
 ```
 git commit --amend -m "[New commit message]"
 ```
@@ -176,8 +176,6 @@ Save all file changes to a stash that you can access later
 ```
 git stash
 ```
-<br/>
-
 This is useful when you want to switch to another branch, but you have uncommitted changes you don't want to lose
 <br/><br/>
 
