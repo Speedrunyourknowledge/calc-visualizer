@@ -4,7 +4,7 @@
 ```
 git clone [repo url]
 ```
-
+<br/>
 2. Change directory (cd) to the repo folder
 
 3. Get all updates from the remote repository 
@@ -51,6 +51,7 @@ git pull --rebase
 Rebasing takes your local branch and stacks it on top of updates from the remote. 
 This is useful when you only care about keeping your local branch up to date, and you don’t want to clutter your branch history with merge commits that would result from git pull. 
 Each git pull creates a merge commit on your local branch. <br/>
+
 **Don't** rebase on github because it alters the remote branch history. Only rebase local branches.
 
 - Just merge the current branch with the one you declare 
