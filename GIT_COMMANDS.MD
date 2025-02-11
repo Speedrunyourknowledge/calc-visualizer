@@ -6,7 +6,7 @@ git clone [repo url]
 ```
 <br/>
 2. Change directory (cd) to the repo folder
-<br/>
+<br/><br/>
 
 3. Get all updates from the remote repository 
 ```
