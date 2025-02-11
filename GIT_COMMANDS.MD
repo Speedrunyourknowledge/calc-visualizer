@@ -12,12 +12,13 @@ git clone [repo url]
 git fetch
 ```
 
-4. Create a local branch that tracks an existing remote branch 
+4. Create a local branch that tracks an existing remote branch
 ```
-git branch —track [branch name] origin/[branch name]
+git checkout [branch name]
 ```
 
 5. Now you are ready to contribute!
+
 
 ## Utility commands
 
@@ -48,8 +49,9 @@ git pull --rebase
 ```
 
 Rebasing takes your local branch and stacks it on top of updates from the remote. 
-This is useful when you only care about keeping your local branch up to date, so you don’t want to clutter your branch history with merge commits that would result from git pull. 
-Each git pull creates a merge commit on your local branch. DON’T rebase on github because it alters the remote branch history. Only rebase local branches.
+This is useful when you only care about keeping your local branch up to date, and you don’t want to clutter your branch history with merge commits that would result from git pull. 
+Each git pull creates a merge commit on your local branch. <br/>
+**Don't** rebase on github because it alters the remote branch history. Only rebase local branches.
 
 - Just merge the current branch with the one you declare 
 ```
@@ -61,7 +63,13 @@ git merge [branch name]
 git rebase [branch name]
 ```
 
-## Editing commands
+- View the commit history of the current branch
+```
+git log --oneline
+```
+
+
+## Edit Commands
 
 - Create a local branch (when a remote branch doesn’t exist for it yet) 
 ```
@@ -87,6 +95,95 @@ git push
 ```
 git push -u origin [branch name] 
 ```
+
+
+## Undo Commands
+
+- Remove files from the staging area
+```
+git reset
+```
+
+- Remove files from the staging area AND revert uncommitted changes to those files
+```
+git reset --hard
+```
+
+- Reset the branch to the given commit AND revert changed files
+```
+git reset --hard [commit id]
+```
+
+- Undo the last commit AND revert changed files
+```
+git reset --hard HEAD^
+```
+
+- Reset the branch to the given commit AND place changed files in the staging area
+```
+git reset --soft [commit id]
+```
+
+- Undo the last commit AND place changed files in the staging area
+```
+git reset --soft HEAD^
+```
+
+- Completely replace the current branch with the latest version of the remote branch
+```
+git reset --hard origin/[branch name]
+```
+
+
+## Commit Commands
+
+- Add files to your previous commit OR simply change your previous commit message
+```
+git commit --amend -m "[New commit message]"
+```
+
+- Add files to your previous commit without changing your previous commit message
+```
+git commit --amend --no-edit
+```
+
+**Don't** alter commits that have already been pushed to the remote. This alters the remote branch history.
+
+
+## Stash Commands
+
+- Save all file changes to a stash that you can access later
+```
+git stash
+```
+
+This is useful when you want to switch to another branch, but you have uncommitted changes you don't want to lose
+
+- Save the stash with a name
+```
+git stash push -m "[name]"
+```
+
+- View your stashes
+```
+git stash list
+```
+
+- Apply file changes from a specific stash
+```
+git stash pop [stash index]
+```
+
+- Delete a specific stash
+```
+git stash drop [stash index]
+```
+
+- Delete all your stashes
+```
+git stash clear
+```
+
 
 ## Pull Requests
 
