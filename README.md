@@ -1,4 +1,5 @@
-# calc-visualizer
-calculus visualizer for knighthacks
+# Calc Visualizer
+Calculus visualizer for UCF Knight Hacks. A website with interactive graphs for many calculus topics. 
 
-changed this in test-2
+## Learn useful git commands
+Check out the GIT_COMMANDS.MD file. It has all the git commands a beginner (or veteran) should know.
