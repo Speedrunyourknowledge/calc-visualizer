@@ -45,7 +45,7 @@ See if you have anything in the staging area and check if your current branch 
 ```
 git status  
 ```
-**Always** run ‘git fetch’ first in case the remote branch was updated recently
+**Always** run `git fetch` first in case the remote branch was updated recently
 <br/><br/>
 
 Fetch updates from remote **and** merge updates into the current branch 
