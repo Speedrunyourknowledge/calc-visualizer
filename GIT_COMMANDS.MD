@@ -21,7 +21,7 @@ git checkout [branch name]
 <br/>
 
 5. Now you are ready to contribute!
-<br/>
+
 
 ## Utility commands
 
@@ -77,7 +77,6 @@ View the commit history of the current branch
 ```
 git log --oneline
 ```
-<br/>
 
 
 ## Edit Commands
@@ -110,7 +109,6 @@ Push a local branch to the remote repo and create a corresponding remote branchâ
 ```
 git push -u origin [branch name]â€¨
 ```
-<br/>
 
 
 ## Undo Commands
@@ -155,7 +153,6 @@ Completely replace the current branch with the latest version of the remote bran
 ```
 git reset --hard origin/[branch name]
 ```
-<br/>
 
 
 ## Commit Commands
@@ -171,7 +168,6 @@ Add files to your previous commit without changing your previous commit message
 git commit --amend --no-edit
 ```
 **Don't** alter commits that have already been pushed to the remote. This alters the remote branch history.
-<br/><br/>
 
 
 ## Stash Commands
@@ -213,7 +209,6 @@ Delete all your stashes
 ```
 git stash clear
 ```
-<br/>
 
 
 ## Pull Requests
