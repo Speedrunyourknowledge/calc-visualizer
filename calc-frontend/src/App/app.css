@@ -47,6 +47,12 @@ body {
     margin-bottom: .5rem;
   }
 
+  .error-title{
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: bold;
+  }
+
   h1{
     font-size:2rem; 
   }
