@@ -34,6 +34,7 @@ import LineInt from "../components/Line/LineInt";
 
 import EulerDeriv from "../components/Euler/EulerDeriv";
 import EulerInt from "../components/Euler/EulerInt";
+import ErrorPage from "../pages/ErrorPage";
 
 
 function App() {
@@ -43,8 +44,8 @@ function App() {
     // handles all the routes
     const router = createBrowserRouter(
       createRoutesFromElements(
-        <Route path='/' element={<RootLayout/>}>
-          <Route index element={<Home/>} />
+        <Route path='/' element={<RootLayout/>} >
+          <Route index element={<Home/>}/>
 
           <Route path='/derivatives' element={ <Derivatives/> }/>
           <Route path='/derivatives/parabola' element={ <ParabolaDeriv/> } />
@@ -68,6 +69,8 @@ function App() {
 
           <Route path='/limits' element= {<Limits/>}/>
           <Route path='/limits/parabola' element={ <ParabolaLimit/> } />
+
+          <Route path='*' element={<ErrorPage/>} />
           
         </Route>
       )
