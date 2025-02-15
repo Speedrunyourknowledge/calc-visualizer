@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "tsc -b && vite build --base=/calc-visualizer/calc-frontend",
+    "build": "tsc -b && vite build --base=/calc-visualizer",
     "lint": "eslint .",
     "preview": "vite preview"
   },
