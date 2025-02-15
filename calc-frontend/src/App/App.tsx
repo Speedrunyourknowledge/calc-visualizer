@@ -41,11 +41,13 @@ function App() {
 
     // go to the RootLayout component to edit the visual layout
 
-    // handles all the routes
+    // Handles all the routes
+    // The calc-visualizer path is for github pages
     const router = createBrowserRouter(
       createRoutesFromElements(
         <Route path='/' element={<RootLayout/>} >
           <Route index element={<Home/>}/>
+          <Route path='/calc-visualizer' element={<Home/>} />
 
           <Route path='/derivatives' element={ <Derivatives/> }/>
           <Route path='/derivatives/parabola' element={ <ParabolaDeriv/> } />
