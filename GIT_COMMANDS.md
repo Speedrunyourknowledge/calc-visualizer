@@ -48,6 +48,12 @@ git status  
 **Always** run `git fetch` first in case the remote branch was updated recently
 <br/><br/>
 
+Track an existing remote branch
+```
+git branch -u origin/[branch name]
+```
+<br/>
+
 Fetch updates from remote **and** merge updates into the current branch 
 ```
 git pull

@@ -3,15 +3,15 @@ import { Link } from "react-router"
 function Home() {
 
   return (
-      <div className="flex flex-col flex-grow items-center justify-center gap-4">
-          <Link to="/derivatives">
-              <div className="link-title link-box">Derivatives</div>
+      <div className="flex flex-col flex-grow items-center justify-center gap-6">
+          <Link to="/derivatives" className = "link-box">
+              <div className="link-title ">Derivatives</div>
           </Link>
-          <Link to="/integrals">
-              <div className="link-title link-box">Integrals</div>
+          <Link to="/integrals" className = "link-box">
+              <div className="link-title">Integrals</div>
           </Link>
-          <Link to="/limits">
-              <div className="link-title link-box">Limits</div>
+          <Link to="/limits" className = "link-box">
+              <div className="link-title">Limits</div>
           </Link>
       </div>
   )

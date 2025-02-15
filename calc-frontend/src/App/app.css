@@ -16,8 +16,12 @@ body {
     font-size:100%;
   }
 
+  #root{
+    width:100%;
+  }
+
   .header{
-    margin-bottom:1.5rem;
+    margin-bottom:1rem;
   }
 
   .link-title{
@@ -25,9 +29,28 @@ body {
   }
 
   .link-box{
-    @apply w-300 h-30 flex items-center justify-center 
+    @apply h-30 flex w-full items-center justify-center 
     bg-gray-500 rounded-lg hover:bg-gray-600 transition transform hover:scale-103 
     duration-200;
+  }
+
+  .topic-button{
+    @apply bg-amber-300 rounded-lg cursor-pointer w-1/2;
+    padding: 10px;
+    font-size:1.25rem;
+  }
+
+  .back-button{
+    @apply cursor-pointer bg-sky-400 hover:bg-blue-600 hover:text-neutral-50 rounded-md border-2 border-solid;
+    padding: 4px 12px;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+  }
+
+  .error-title{
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: bold;
   }
 
   h1{
