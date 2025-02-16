@@ -25,7 +25,7 @@ function RootLayout(){
           </div>
         </div>
 
-        <div className="h-[75px] w-fit self-start">
+        <div className="h-[75px] w-fit">
             <a href="https://www.ucf.edu/" target="_blank">
             <img className="rounded-sm max-h-[100%]" src={ucfLogo} alt="UCF logo"></img>
             </a>  
