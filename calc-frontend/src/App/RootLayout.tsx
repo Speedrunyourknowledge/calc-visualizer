@@ -2,7 +2,7 @@ import { Outlet, Link} from "react-router";
 import { ScrollRestoration } from "react-router";
 
 import ucfLogo from "../assets/ucf-logo.png"
-import calcLogo from "../assets/calc-logo-eye-half-short.svg"
+import calcLogo from "../assets/calc-logo-eye-align-short.svg"
 
 function RootLayout(){
 
