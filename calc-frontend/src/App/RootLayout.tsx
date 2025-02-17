@@ -18,9 +18,9 @@ function RootLayout(){
               <h1 className="w-fit inline-block font-medium">Calc Visualizer</h1>
           </Link>
 
-          <div className="h-[85px] w-fit inline-block">
+          <div className="w-fit inline-block">
             <Link to ='/'>
-              <img className="max-h-[100%]" src={calcLogo} alt="Calc Visualizer logo"></img>
+              <img className="max-h-[85px]" src={calcLogo} alt="Calc Visualizer logo"></img>
             </Link>
           </div>
         </div>
