@@ -1,34 +1,54 @@
 import { useNavigate } from "react-router"
+import { Link } from "react-router"
+
 
 // will show list of derivative options to choose from
-function Derivatives(){
+function Derivatives() {
 
   const navigate = useNavigate();
 
-    return (
-        <div>
-          <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
-          <h2 style={{marginBottom:'1rem' }}>The Derivative of Common Functions</h2>
+  return (
+    <div>
+      <button className="back-button" onClick={() => navigate(-1)}>&#8249; Back</button>
 
-          <div className="flex flex-col flex-grow justify-center gap-6">
-            <button className="topic-button" onClick={()=> navigate("/derivatives/linear")}>Linear</button>
-            
-            <button className="topic-button" onClick={()=> navigate("/derivatives/parabola")}>Parabola</button>
+      <div className="flex flex-col flex-grow justify-center gap-6 items-center">
+        <h2 style={{ marginBottom: '1rem' }}>The Derivative of Common Functions</h2>
+        
+        <Link to="/derivatives/linear" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Linear</button>
+        </Link>
 
-            <button className="topic-button" onClick={()=> navigate("/derivatives/cubic")}>Cubic</button>
+        <Link to="/derivatives/parabola" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Parabola</button>
+        </Link>
 
-            <button className="topic-button" onClick={()=> navigate("/derivatives/euler")}>Euler</button>
+        <Link to="/derivatives/cubic" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Cubic</button>
+        </Link>
 
-            <button className="topic-button" onClick={()=> navigate("/derivatives/natural-log")}>Natural Log</button>
+        <Link to="/derivatives/euler" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Euler</button>
+        </Link>
 
-            <button className="topic-button" onClick={()=> navigate("/derivatives/sine")}>Sine</button>
+        <Link to="/derivatives/natural-log" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Natural Log</button>
+        </Link>
 
-            <button className="topic-button" onClick={()=> navigate("/derivatives/cosine")}>Cosine</button>
+        <Link to="/derivatives/sine" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Sine</button>
+        </Link>
 
-            <button className="topic-button" onClick={()=> navigate("/derivatives/tangent")}>Tangent</button>
-          </div>
-        </div>
-    )
+        <Link to="/derivatives/cosine" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Cosine</button>
+        </Link>
+
+        <Link to="/derivatives/tangent" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Tangent</button>
+        </Link>
+
+      </div>
+    </div>
+  )
 }
 
 export default Derivatives
