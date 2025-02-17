@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router"
+import { Link } from "react-router"
+
 
 // will show list of integral options to choose from
 function Integrals(){
@@ -8,24 +10,43 @@ function Integrals(){
     return (
         <div>
           <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
-          <h2 style={{marginBottom:'1rem'}}>Integrals</h2>
           
-          <div className="flex flex-col flex-grow justify-center gap-6">
-          <button className="topic-button" onClick={()=> navigate("/integrals/linear")}>Linear</button>
+          <div className="flex flex-col flex-grow justify-center gap-6 items-center">
+          <h2 style={{marginBottom:'1rem'}}>The Integral of Common Functions</h2>
 
-            <button className="topic-button" onClick={()=> navigate("/integrals/parabola")}>Parabola</button>
 
-            <button className="topic-button" onClick={()=> navigate("/integrals/cubic")}>Cubic</button>
+          <Link to="/integrals/linear">
+          <button className="topic-button">Linear</button>
+          </Link>
 
-            <button className="topic-button" onClick={()=> navigate("/integrals/euler")}>Euler</button>
+          <Link to="/integrals/parabola">
+          <button className="topic-button">Parabola</button>
+          </Link>
 
-            <button className="topic-button" onClick={()=> navigate("/integrals/natural-log")}>Natural Log</button>
+          <Link to="/integrals/cubic">
+          <button className="topic-button">Cubic</button>
+          </Link>
 
-            <button className="topic-button" onClick={()=> navigate("/integrals/sine")}>Sine</button>
+          <Link to="/integrals/euler">
+          <button className="topic-button">Euler</button>
+          </Link>
 
-            <button className="topic-button" onClick={()=> navigate("/integrals/cosine")}>Cosine</button>
+            <Link to="/integrals/natural-log">
+            <button className="topic-button">Natural Log</button>
+            </Link>
+            
+            <Link to="/integrals/sine">
+            <button className="topic-button">Sine</button>
+            </Link>
 
-            <button className="topic-button" onClick={()=> navigate("/integrals/tangent")}>Tangent</button>
+            <Link to="/integrals/cosine">
+            <button className="topic-button">Cosine</button>
+            </Link>
+
+            <Link to="/integrals/tangent">
+            <button className="topic-button">Tangent</button>
+            </Link>
+
           </div>
         </div>
     )
