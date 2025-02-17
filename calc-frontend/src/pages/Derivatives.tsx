@@ -10,40 +10,40 @@ function Derivatives() {
   return (
     <div>
       <button className="back-button" onClick={() => navigate(-1)}>&#8249; Back</button>
-      <h2 style={{ marginBottom: '1rem' }}>The Derivative of Common Functions</h2>
 
-      <div className="flex flex-col flex-grow justify-center gap-6">
-
-        <Link to="/derivatives/linear">
-          <button className="topic-button">Linear</button>
+      <div className="flex flex-col flex-grow justify-center gap-6 items-center">
+        <h2 style={{ marginBottom: '1rem' }}>The Derivative of Common Functions</h2>
+        
+        <Link to="/derivatives/linear" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Linear</button>
         </Link>
 
-        <Link to="/derivatives/parabola">
-          <button className="topic-button">Parabola</button>
+        <Link to="/derivatives/parabola" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Parabola</button>
         </Link>
 
-        <Link to="/derivatives/cubic">
-          <button className="topic-button">Cubic</button>
+        <Link to="/derivatives/cubic" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Cubic</button>
         </Link>
 
-        <Link to="/derivatives/euler">
-          <button className="topic-button">Euler</button>
+        <Link to="/derivatives/euler" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Euler</button>
         </Link>
 
-        <Link to="/derivatives/natural-log">
-          <button className="topic-button">Natural Log</button>
+        <Link to="/derivatives/natural-log" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Natural Log</button>
         </Link>
 
-        <Link to="/derivatives/sine">
-          <button className="topic-button">Sine</button>
+        <Link to="/derivatives/sine" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Sine</button>
         </Link>
 
-        <Link to="/derivatives/cosine">
-          <button className="topic-button">Cosine</button>
+        <Link to="/derivatives/cosine" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Cosine</button>
         </Link>
 
-        <Link to="/derivatives/tangent">
-          <button className="topic-button">Tangent</button>
+        <Link to="/derivatives/tangent" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Tangent</button>
         </Link>
 
       </div>
