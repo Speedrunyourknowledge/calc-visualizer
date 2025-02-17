@@ -9,9 +9,9 @@ function Limits() {
     return (
         <div>
             <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
-            <h2 style={{marginBottom:'1rem' }}>Limits</h2>
 
             <div className="flex flex-col flex-grow justify-center gap-6 items-center">
+            <h2 style={{marginBottom:'1rem' }}>The Limit of Common Functions</h2>
 
               <Link to="/limits/parabola" className="topic-box">
               <button className="px-10 text-2xl cursor-pointer">Parabola</button>
