@@ -15,36 +15,36 @@ function Integrals(){
           <h2 style={{marginBottom:'1rem'}}>The Integral of Common Functions</h2>
 
 
-          <Link to="/integrals/linear">
-          <button className="topic-button">Linear</button>
+          <Link to="/integrals/linear" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Linear</button>
           </Link>
 
-          <Link to="/integrals/parabola">
-          <button className="topic-button">Parabola</button>
+          <Link to="/integrals/parabola" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Parabola</button>
           </Link>
 
-          <Link to="/integrals/cubic">
-          <button className="topic-button">Cubic</button>
+          <Link to="/integrals/cubic" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Cubic</button>
           </Link>
 
-          <Link to="/integrals/euler">
-          <button className="topic-button">Euler</button>
+          <Link to="/integrals/euler" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Euler</button>
           </Link>
 
-            <Link to="/integrals/natural-log">
-            <button className="topic-button">Natural Log</button>
+            <Link to="/integrals/natural-log" className="topic-box">
+            <button className="px-10 text-2xl cursor-pointer">Natural Log</button>
             </Link>
             
-            <Link to="/integrals/sine">
-            <button className="topic-button">Sine</button>
+            <Link to="/integrals/sine" className="topic-box">
+            <button className="px-10 text-2xl cursor-pointer">Sine</button>
             </Link>
 
-            <Link to="/integrals/cosine">
-            <button className="topic-button">Cosine</button>
+            <Link to="/integrals/cosine" className="topic-box">
+            <button className="px-10 text-2xl cursor-pointer">Cosine</button>
             </Link>
 
-            <Link to="/integrals/tangent">
-            <button className="topic-button">Tangent</button>
+            <Link to="/integrals/tangent" className="topic-box">
+            <button className="px-10 text-2xl cursor-pointer">Tangent</button>
             </Link>
 
           </div>
