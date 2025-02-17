@@ -34,6 +34,12 @@ body {
     duration-200;
   }
 
+  .topic-box{
+    @apply h-20 flex w-1/2 items-center justify-center 
+    bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
+    duration-200;
+  }
+
   .topic-button{
     @apply bg-amber-300 rounded-lg cursor-pointer w-1/2;
     padding: 10px;
