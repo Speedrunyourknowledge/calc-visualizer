@@ -13,7 +13,7 @@ function CubicDeriv()
           <h2 style={{marginBottom:'1rem'}}>Derivative of &nbsp;{"\\(y = x^{3} \\)"} </h2>
         </MathJax>
 
-        <iframe className = "graph-frame" src="https://www.desmos.com/calculator/s8veesvrob?embed" 
+        <iframe className = "graph-frame" src="https://www.desmos.com/calculator/yeq7msmx7k?embed" 
                 style={{border: "1px solid #ccc"}} >
         </iframe>
 
