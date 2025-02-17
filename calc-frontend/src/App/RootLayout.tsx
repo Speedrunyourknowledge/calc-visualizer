@@ -2,7 +2,7 @@ import { Outlet, Link} from "react-router";
 import { ScrollRestoration } from "react-router";
 
 import ucfLogo from "../assets/ucf-logo.png"
-import calcLogo from "../assets/calc-logo-d-shadow.svg"
+import CalcLogo from "../components/CalcLogo"
 
 function RootLayout(){
 
@@ -13,23 +13,23 @@ function RootLayout(){
       <ScrollRestoration/>
 
       <div className="header flex items-center justify-between gap-6">
+
         <div className="flex items-center gap-2">
           <Link to ='/'>
-              <h1 className="w-fit inline-block font-medium">Calc Visualizer</h1>
+              <h1 className="w-fit font-medium">Calc Visualizer</h1>
           </Link>
 
-          <div className="w-fit inline-block">
+          <div className="w-fit h-[85px]">
             <Link to ='/'>
-              <img className="max-h-[85px]" src={calcLogo} alt="Calc Visualizer logo"></img>
+              <CalcLogo />
             </Link>
           </div>
+          
         </div>
 
-        <div className="h-[75px] w-fit">
-            <a href="https://www.ucf.edu/" target="_blank">
+          <a href="https://www.ucf.edu/" target="_blank" className="w-fit h-[75px]">
             <img className="rounded-sm max-h-[100%]" src={ucfLogo} alt="UCF logo"></img>
-            </a>  
-        </div>
+          </a>  
       
       </div>
 
