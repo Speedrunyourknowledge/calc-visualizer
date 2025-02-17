@@ -11,8 +11,8 @@ function Derivatives() {
     <div>
       <button className="back-button" onClick={() => navigate(-1)}>&#8249; Back</button>
 
-      <div className="flex flex-col flex-grow justify-center gap-6 items-center">
-        <h2 style={{ marginBottom: '1rem' }}>The Derivative of Common Functions</h2>
+      <div className="flex flex-col flex-grow justify-center gap-6 items-center topic-list">
+        <h2 className = "topic-header">The Derivative of Common Functions</h2>
         
         <Link to="/derivatives/linear" className="topic-box">
           <button className="px-10 text-2xl cursor-pointer">Linear</button>

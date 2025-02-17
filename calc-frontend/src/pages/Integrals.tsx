@@ -12,7 +12,7 @@ function Integrals(){
           <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
           
           <div className="flex flex-col flex-grow justify-center gap-6 items-center">
-          <h2 style={{marginBottom:'1rem'}}>The Integral of Common Functions</h2>
+          <h2 className="topic-header">The Integral of Common Functions</h2>
 
 
           <Link to="/integrals/linear" className="topic-box">
