@@ -12,7 +12,7 @@ function RootLayout(){
     <>
       <ScrollRestoration/>
 
-      <div className="header flex items-center justify-between gap-6">
+      <div className="header flex items-center justify-between gap-4">
 
         <div className="flex items-center gap-2">
           <Link to ='/'>
@@ -27,8 +27,8 @@ function RootLayout(){
           
         </div>
 
-          <a href="https://www.ucf.edu/" target="_blank" className="w-fit h-[75px]">
-            <img className="rounded-sm max-h-[100%]" src={ucfLogo} alt="UCF logo"></img>
+          <a href="https://www.ucf.edu/" target="_blank" className="h-[75px] shrink-0">
+            <img className="rounded-sm h-[100%] object-contain" src={ucfLogo} alt="UCF logo"></img>
           </a>  
       
       </div>

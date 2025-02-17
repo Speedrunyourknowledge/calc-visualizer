@@ -2,7 +2,7 @@
 
 :root{
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 1rem;
     
 }
 
@@ -34,6 +34,10 @@ body {
     duration-200;
   }
 
+  .topic-header{
+    margin-bottom:.25rem;
+  }
+
   .topic-box{
     @apply h-20 flex w-1/2 items-center justify-center 
     bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
@@ -59,12 +63,23 @@ body {
     font-weight: bold;
   }
 
+  @media (max-width: 768px) {
+
+    .topic-list{
+      @apply gap-4;
+    }
+  }
+
+
   h1{
     font-size:2rem; 
+    line-height:1.25;
+
   }
 
   h2{
     font-size:1.75rem;
+    line-height:1.25;
   }
 
   h3{
