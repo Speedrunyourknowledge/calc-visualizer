@@ -13,7 +13,7 @@ function CosineDeriv()
         <h2 style={{marginBottom:'1rem'}}>Derivative of &nbsp;{"\\(y = \\cos(x)\\)"} </h2>
       </MathJax>
       
-      <iframe className = "graph-frame" src="https://www.desmos.com/calculator/31z1jfhmcm?embed" 
+      <iframe className = "graph-frame" src="https://www.desmos.com/calculator/eryny7fmhk?embed" 
               style={{border: "1px solid #ccc"}} >
       </iframe>
     
