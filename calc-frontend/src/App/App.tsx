@@ -36,6 +36,11 @@ import EulerDeriv from "../components/Euler/EulerDeriv";
 import EulerInt from "../components/Euler/EulerInt";
 import ErrorPage from "../pages/ErrorPage";
 
+import UnitCircle from "../pages/UnitCircle";
+import UnitSine from "../components/UnitCircle/UnitSine";
+import UnitCosine from "../components/UnitCircle/UnitCosine";
+import UnitTangent from "../components/UnitCircle/UnitTangent";
+
 
 function App() {
 
@@ -71,6 +76,11 @@ function App() {
 
           <Route path='/limits' element= {<Limits/>}/>
           <Route path='/limits/parabola' element={ <ParabolaLimit/> } />
+
+          <Route path='/unit-circle' element= {<UnitCircle/>}/>
+          <Route path='/unit-circle/sine' element={ <UnitSine/> } />
+          <Route path='/unit-circle/cosine' element={ <UnitCosine/> } />
+          <Route path='/unit-circle/tangent' element={ <UnitTangent/> } />
 
           <Route path='*' element={<ErrorPage/>} />
           

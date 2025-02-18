@@ -70,15 +70,18 @@ body {
     aspect-ratio: 1/1;
   }
 
+  .unit-frame{
+    width:550px;
+    aspect-ratio: 3/2;
+  }
+
   @media (max-width: 768px) {
 
     .topic-list{
       @apply gap-4;
     }
 
-    .graph-frame{
-      width:300px;
-    }
+
   }
 
 

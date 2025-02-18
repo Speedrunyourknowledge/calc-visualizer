@@ -13,6 +13,9 @@ function Home() {
           <Link to="/limits" className = "link-box">
               <div className="link-title">Limits</div>
           </Link>
+          <Link to="/unit-circle" className = "link-box">
+              <div className="link-title">Unit Circle</div>
+          </Link>
       </div>
   )
 };

@@ -13,7 +13,7 @@ function CubicIntegral()
         <h2 style={{marginBottom:'1rem'}}>Derivative of &nbsp;{"\\(y = e^{x} \\)"} </h2>
       </MathJax>
 
-      <iframe className = "graph-frame" src="https://www.desmos.com/calculator/s2safw1tkh?embed" 
+      <iframe className = "graph-frame" src="https://www.desmos.com/calculator/5fb4idx020?embed" 
               style={{border: "1px solid #ccc"}} >
       </iframe>
     
