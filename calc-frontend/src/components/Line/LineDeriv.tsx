@@ -13,7 +13,7 @@ function LineDeriv()
           <h2 style={{marginBottom:'1rem'}}>Derivative of &nbsp;{"\\(y = \\frac{1}{2} x\\)"} </h2>
         </MathJax>
         
-        <iframe className = "graph-frame" src="https://www.desmos.com/calculator/7fswj3rgdh?embed" 
+        <iframe className = "graph-frame" src="https://www.desmos.com/calculator/opyeqlknbm?embed" 
                 style={{border: "1px solid #ccc"}} >
         </iframe>
         

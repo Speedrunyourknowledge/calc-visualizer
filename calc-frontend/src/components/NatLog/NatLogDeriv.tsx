@@ -12,7 +12,7 @@ function NatLogDeriv(){
         <h2 style={{marginBottom:'1rem'}}>Derivative of &nbsp;{"\\(y = \\ln(x)\\)"} </h2>
       </MathJax>
       
-      <iframe className = "graph-frame" src="https://www.desmos.com/calculator/2cccyw7pck?embed" 
+      <iframe className = "graph-frame" src="https://www.desmos.com/calculator/fhqfrzsb2a?embed" 
               style={{border: "1px solid #ccc"}} >
       </iframe>
     
