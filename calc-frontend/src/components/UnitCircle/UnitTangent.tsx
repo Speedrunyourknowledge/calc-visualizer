@@ -9,12 +9,20 @@ function UnitTangent()
     <div> 
       <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
       <MathJax>
-        <h2 style={{marginBottom:'1rem'}}>{"\\(\\tan(x)\\)"} on the Unit Circle</h2>
+        <h2 style={{marginBottom:'1rem'}}>{"\\(\\tan(θ)\\)"} on the Unit Circle</h2>
       </MathJax>
       
-      <iframe className = "graph-frame unit-frame" src="https://www.desmos.com/calculator/xjgvgerxbv?embed"  
-              style={{border: "1px solid #ccc"}} >
-      </iframe>
+      <div className="flex gap-4 graph-outer-box">
+        <iframe className = "graph-frame unit-frame" src="https://www.desmos.com/calculator/xjgvgerxbv?embed"  
+                style={{border: "1px solid #ccc"}} >
+        </iframe>
+
+        <p className="big-p flex">
+            <MathJax><span>{"\\(\\tan(θ)\\)"} is the slope at any point on the Unit Circle. This is depicted
+              by the green line in the triangle. The tangent graph also shows the value of {"\\(\\tan(θ)\\)"}</span>
+            </MathJax>
+        </p>
+      </div>
     
     </div>
   )

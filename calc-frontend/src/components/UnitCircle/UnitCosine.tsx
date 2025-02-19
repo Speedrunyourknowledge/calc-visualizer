@@ -9,12 +9,20 @@ function UnitCosine()
     <div> 
       <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
       <MathJax>
-        <h2 style={{marginBottom:'1rem'}}>{"\\(\\cos(x)\\)"} on the Unit Circle</h2>
+        <h2 style={{marginBottom:'1rem'}}>{"\\(\\cos(θ)\\)"} on the Unit Circle</h2>
       </MathJax>
-      
-      <iframe className = "graph-frame unit-frame" src="https://www.desmos.com/calculator/3h1qvy6omf?embed"  
-              style={{border: "1px solid #ccc"}} >
-      </iframe>
+
+      <div className="flex gap-4 graph-outer-box">
+        <iframe className = "graph-frame unit-frame" src="https://www.desmos.com/calculator/3h1qvy6omf?embed"  
+                style={{border: "1px solid #ccc"}} >
+        </iframe>
+
+        <p className="big-p">
+          <MathJax><span>{"\\(\\cos(θ)\\)"} is the x&#8209;coordinate on the Unit Circle. This is depicted
+            by the green line in the triangle. The cosine graph also shows the value of {"\\(\\cos(θ)\\)"}</span>
+          </MathJax>
+        </p>
+      </div>
     
     </div>
   )

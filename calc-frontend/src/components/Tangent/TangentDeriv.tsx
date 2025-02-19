@@ -5,6 +5,7 @@ function CubicIntegral()
 {
 
   const navigate = useNavigate();
+  
   return (
     <div> 
       <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
@@ -12,9 +13,16 @@ function CubicIntegral()
         <h2 style={{marginBottom:'1rem'}}>Derivative of &nbsp;{"\\(y = \\tan(x)\\)"} </h2>
       </MathJax>
       
-      <iframe className = "graph-frame" src="https://www.desmos.com/calculator/4t2g6fpc3s?embed" 
-              style={{border: "1px solid #ccc"}} >
-      </iframe>
+      <div className="flex gap-4 graph-outer-box">
+        <iframe className = "graph-frame" src="https://www.desmos.com/calculator/4t2g6fpc3s?embed" 
+                style={{border: "1px solid #ccc"}} >
+        </iframe>
+
+        <p className="big-p">
+          <MathJax>The tangent function has vertical asymptotes at multiples of {"\\(x = \\frac{π}{2}\\)"}</MathJax>
+        </p>
+
+      </div>
     
     </div>
   )
