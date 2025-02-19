@@ -12,9 +12,15 @@ function SineDeriv()
         <h2 style={{marginBottom:'1rem'}}>Derivative of &nbsp;{"\\(y = \\sin(x)\\)"} </h2>
       </MathJax>
       
-      <iframe className = "graph-frame" src="https://www.desmos.com/calculator/bdxrwxldzr?embed"  
-              style={{border: "1px solid #ccc"}} >
-      </iframe>
+      <div className="flex gap-4 graph-outer-box">
+        <iframe className = "graph-frame" src="https://www.desmos.com/calculator/bdxrwxldzr?embed"  
+                style={{border: "1px solid #ccc"}} >
+        </iframe>
+
+        <p className="big-p">
+            <MathJax>The sine function starts at 0 and ends at 0 in the interval [0, 2{"\\(π\\)"}]</MathJax>
+        </p>
+      </div>
     
     </div>
   )

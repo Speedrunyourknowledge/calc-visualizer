@@ -57,8 +57,8 @@ function App() {
           <Route path='/derivatives' element={ <Derivatives/> }/>
           <Route path='/derivatives/parabola' element={ <ParabolaDeriv/> } />
           <Route path='/derivatives/cubic' element={ <CubicDeriv/> } />
-          <Route path='/derivatives/natural-log' element={ <NatLogDeriv/> } />
-          <Route path='/derivatives/euler' element={ <EulerDeriv/> } />
+          <Route path='/derivatives/logarithmic' element={ <NatLogDeriv/> } />
+          <Route path='/derivatives/exponential' element={ <EulerDeriv/> } />
           <Route path='/derivatives/linear' element={ <LineDeriv/> } />
           <Route path='/derivatives/sine' element={ <SineDeriv/> } />
           <Route path='/derivatives/cosine' element={ <CosineDeriv/> } />
@@ -67,8 +67,8 @@ function App() {
           <Route path='/integrals' element= { <Integrals/> }/>
           <Route path='/integrals/parabola' element={ <ParabolaInt/> }/>
           <Route path='/integrals/cubic' element={ <CubicInt/> }/>
-          <Route path='/integrals/natural-log' element={ <NatLogInt/> } />
-          <Route path='/integrals/euler' element={ <EulerInt/> } />
+          <Route path='/integrals/logarithmic' element={ <NatLogInt/> } />
+          <Route path='/integrals/exponential' element={ <EulerInt/> } />
           <Route path='/integrals/linear' element={ <LineInt/> } />
           <Route path='/integrals/sine' element={ <SineInt/> } />
           <Route path='/integrals/cosine' element={ <CosineInt/> } />
