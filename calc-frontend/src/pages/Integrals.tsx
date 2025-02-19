@@ -11,9 +11,8 @@ function Integrals(){
         <div>
           <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
           
-          <div className="flex flex-col flex-grow justify-center gap-6 items-center">
-          <h2 className="topic-header">The Integral of Common Functions</h2>
-
+          <h2 className="topic-header m-auto w-fit">The Integral of Common Functions</h2>
+          <div className="flex flex-col gap-6 items-center topic-list">
 
           <Link to="/integrals/linear" className="topic-box">
           <button className="px-10 text-2xl cursor-pointer">Linear</button>
@@ -27,12 +26,12 @@ function Integrals(){
           <button className="px-10 text-2xl cursor-pointer">Cubic</button>
           </Link>
 
-          <Link to="/integrals/euler" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Euler</button>
+          <Link to="/integrals/exponential" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Exponential</button>
           </Link>
 
-            <Link to="/integrals/natural-log" className="topic-box">
-            <button className="px-10 text-2xl cursor-pointer">Natural Log</button>
+            <Link to="/integrals/logarithmic" className="topic-box">
+            <button className="px-10 text-2xl cursor-pointer">Logarithmic</button>
             </Link>
             
             <Link to="/integrals/sine" className="topic-box">

@@ -11,8 +11,8 @@ function UnitCircle() {
     <div>
       <button className="back-button" onClick={() => navigate(-1)}>&#8249; Back</button>
 
-      <div className="flex flex-col flex-grow justify-center gap-6 items-center topic-list">
-        <h2 className = "topic-header">Interpreting the Unit Circle</h2>
+      <h2 className = "topic-header m-auto w-fit">Interpreting the Unit Circle</h2>
+      <div className="flex flex-col gap-6 items-center topic-list">
         
         <Link to="/unit-circle/sine" className="topic-box">
           <button className="px-10 text-2xl cursor-pointer">Sine</button>
