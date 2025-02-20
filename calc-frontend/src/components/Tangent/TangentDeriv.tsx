@@ -13,7 +13,7 @@ function CubicIntegral()
         <h2 style={{marginBottom:'1rem'}}>Derivative of &nbsp;{"\\(y = \\tan(x)\\)"} </h2>
       </MathJax>
       
-      <div className="flex gap-4 graph-outer-box">
+      <div className="flex graph-outer-box">
         <iframe className = "graph-frame" src="https://www.desmos.com/calculator/4t2g6fpc3s?embed" 
                 style={{border: "1px solid #ccc"}} >
         </iframe>

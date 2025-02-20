@@ -12,7 +12,7 @@ function UnitTangent()
         <h2 style={{marginBottom:'1rem'}}>{"\\(\\tan(θ)\\)"} on the Unit Circle</h2>
       </MathJax>
       
-      <div className="flex gap-4 graph-outer-box">
+      <div className="flex graph-outer-box">
         <iframe className = "graph-frame unit-frame" src="https://www.desmos.com/calculator/xjgvgerxbv?embed"  
                 style={{border: "1px solid #ccc"}} >
         </iframe>
