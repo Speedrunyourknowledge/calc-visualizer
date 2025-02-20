@@ -21,7 +21,7 @@ body {
   }
 
   .header{
-    margin-bottom:1.5rem;
+    margin-bottom:1.25rem;
   }
 
   .link-title{
@@ -60,7 +60,7 @@ body {
     @apply cursor-pointer bg-sky-400 hover:bg-blue-600 hover:text-neutral-50 rounded-md border-2 border-solid;
     padding: 4px 12px;
     font-size: 1.5rem;
-    margin-bottom: .5rem;
+    margin-bottom: .75rem;
   }
 
   .error-title{
@@ -76,25 +76,49 @@ body {
     aspect-ratio: 1/1;
   }
 
+  .graph-outer-box{
+    @apply gap-2;
+  }
+
   .unit-frame{
     width:550px;
     aspect-ratio: 3/2;
   }
 
-  @media (max-width: 799px) {
+  /* 
+      List the more inclusive media queries first if they 
+      should be overridden by subsequent queries
+  */
+  @media (max-width: 999px) {
 
     .topic-list{
       @apply gap-4;
-      width: 100%;
+      width: 70%;
     }
 
     .home-list{
       @apply gap-4;
-      width: 100%;
+      width: 70%;
     }
+
+  }
+
+  @media (max-width: 799px) {
 
     .graph-outer-box{
       @apply flex-wrap;
+    }
+
+  }
+
+  @media (max-width: 599px) {
+
+    .topic-list{
+      width: 100%;
+    }
+
+    .home-list{
+      width: 100%;
     }
 
   }
@@ -106,6 +130,8 @@ body {
     }
 
   }
+
+
 
   .big-p{
     font-size: 1.125rem;
