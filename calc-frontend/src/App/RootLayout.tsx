@@ -7,7 +7,6 @@ import CalcLogo from "../components/CalcLogo"
 function RootLayout(){
 
 
-
   return(
     <>
       <ScrollRestoration/>
