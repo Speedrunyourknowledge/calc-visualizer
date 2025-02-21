@@ -18,9 +18,10 @@ function UnitTangent()
         </iframe>
 
         <p className="big-p flex">
-            <MathJax><span>{"\\(\\tan(θ)\\)"} is the slope at any point on the Unit Circle. This is depicted
-              by the green line in the triangle. The tangent graph also shows the value of {"\\(\\tan(θ)\\)"}</span>
-            </MathJax>
+          <MathJax><span>{"\\(\\tan(θ)\\)"} is the slope at any point on the Unit Circle. 
+            This is depicted by the green line in the triangle. The tangent graph on the right shows the value 
+            of {"\\(\\tan(θ)\\)"} on the y&#8209;axis for each angle on the x&#8209;axis</span>
+          </MathJax>
         </p>
       </div>
     
