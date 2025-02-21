@@ -1,30 +1,29 @@
 import { MathJax } from "better-react-mathjax"
-import { useNavigate } from "react-router";
+import { Link } from "react-router";
 
-function CubicIntegral()
-{
+function CubicIntegral() {
 
-  const navigate = useNavigate();
-  
   return (
-    <div> 
-      <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
+    <div>
+      <Link to="/derivatives">
+        <button className="back-button"> Back</button>
+      </Link>
       <MathJax>
-        <h2 style={{marginBottom:'1rem'}}>Derivative of &nbsp;{"\\(y = \\tan(x)\\)"} </h2>
+        <h2 style={{ marginBottom: '1rem' }}>Derivative of &nbsp;{"\\(y = \\tan(x)\\)"} </h2>
       </MathJax>
-      
+
       <div className="flex graph-outer-box">
-        <iframe className = "graph-frame" src="https://www.desmos.com/calculator/4t2g6fpc3s?embed" 
-                style={{border: "1px solid #ccc"}} >
+        <iframe className="graph-frame" src="https://www.desmos.com/calculator/4t2g6fpc3s?embed"
+          style={{ border: "1px solid #ccc" }} >
         </iframe>
 
         <p className="big-p">
-          <MathJax>The tangent function has vertical asymptotes at multiples of <span style={{fontSize:'130%'}}>
+          <MathJax>The tangent function has vertical asymptotes at multiples of <span style={{ fontSize: '130%' }}>
             {"\\(x = \\frac{π}{2}\\)"}</span></MathJax>
         </p>
 
       </div>
-    
+
     </div>
   )
 }
