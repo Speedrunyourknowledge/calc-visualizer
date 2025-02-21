@@ -1,13 +1,13 @@
 import { MathJax } from "better-react-mathjax"
-import { useNavigate } from "react-router";
+import { Link } from "react-router";
 
 function NatLogDeriv(){
 
-  const navigate = useNavigate();
-
   return (
     <div> 
-      <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
+      <Link to="/derivatives">
+        <button className="back-button"> Back</button>
+      </Link>
       <MathJax>
         <h2 style={{marginBottom:'1rem'}}>Derivative of &nbsp;{"\\(y = \\ln(x)\\)"} </h2>
       </MathJax>
