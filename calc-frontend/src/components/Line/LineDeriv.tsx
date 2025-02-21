@@ -19,7 +19,8 @@ function LineDeriv()
           </iframe>
 
           <p className="big-p">
-            <MathJax>The linear function has a constant slope equal to {"\\(\\frac{Δy}{Δx}\\)"}</MathJax>
+            <MathJax>The linear function has a constant slope equal to <span style={{fontSize:'130%'}}>
+              {"\\(\\frac{Δy}{Δx}\\)"}</span></MathJax>
           </p>
 
         </div>

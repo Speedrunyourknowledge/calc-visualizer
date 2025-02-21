@@ -19,7 +19,8 @@ function CubicIntegral()
         </iframe>
 
         <p className="big-p">
-          <MathJax>The tangent function has vertical asymptotes at multiples of {"\\(x = \\frac{π}{2}\\)"}</MathJax>
+          <MathJax>The tangent function has vertical asymptotes at multiples of <span style={{fontSize:'130%'}}>
+            {"\\(x = \\frac{π}{2}\\)"}</span></MathJax>
         </p>
 
       </div>

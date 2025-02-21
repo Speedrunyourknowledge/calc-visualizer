@@ -18,8 +18,9 @@ function UnitSine()
         </iframe>
 
         <p className="big-p flex">
-          <MathJax><span>{"\\(\\sin(θ)\\)"} is the y&#8209;coordinate on the Unit Circle. This is depicted
-            by the green line in the triangle. The sine graph also shows the value of {"\\(\\sin(θ)\\)"}</span>
+          <MathJax><span>{"\\(\\sin(θ)\\)"} is the y&#8209;coordinate on the Unit Circle. 
+            This is depicted by the green line in the triangle. The sine graph on the right shows the value 
+            of {"\\(\\sin(θ)\\)"} on the y&#8209;axis for each angle on the x&#8209;axis</span>
           </MathJax>
         </p>
       </div>

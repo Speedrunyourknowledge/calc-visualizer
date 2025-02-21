@@ -19,7 +19,8 @@ function CosineDeriv()
         </iframe>
 
         <p className="big-p">
-          <MathJax>The cosine function starts at 1 and ends at 1 in the interval [0, 2{"\\(π\\)"}]</MathJax>
+          <MathJax>The cosine function starts with a value of 1 and ends with a value of 1 on the 
+            interval [0, 2{"\\(π\\)"}]</MathJax>
         </p>
 
       </div>

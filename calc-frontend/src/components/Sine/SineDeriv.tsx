@@ -18,7 +18,8 @@ function SineDeriv()
         </iframe>
 
         <p className="big-p">
-            <MathJax>The sine function starts at 0 and ends at 0 in the interval [0, 2{"\\(π\\)"}]</MathJax>
+          <MathJax>The sine function starts with a value of 0 and ends with a value of 0 on the 
+            interval [0, 2{"\\(π\\)"}]</MathJax>
         </p>
       </div>
     
