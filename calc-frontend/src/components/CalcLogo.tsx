@@ -43,9 +43,9 @@ function CalcLogo()
     <g style={{ filter: 'url("#drop-shadow-filter-1")' }}>
       <rect
         x="362.805"
-        y="180.643"
+        y="180.066"
         width="35.508"
-        height="67.173"
+        height="67.75"
         style={{ filter: "none", strokeWidth: 3, stroke: "rgb(255, 216, 0)" }}
       />
       <rect
@@ -57,9 +57,9 @@ function CalcLogo()
       />
       <rect
         x="398.403"
-        y="131.663"
+        y="130.147"
         width="35.508"
-        height="122.781"
+        height="124.297"
         style={{ filter: "none", strokeWidth: 3, stroke: "rgb(255, 216, 0)" }}
       />
       <rect
