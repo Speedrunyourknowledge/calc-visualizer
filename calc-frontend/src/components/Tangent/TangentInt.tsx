@@ -1,12 +1,14 @@
-import { useNavigate } from "react-router";
+import { Link } from "react-router";
 
 function TangentInt()
 {
-  const navigate = useNavigate();
 
   return (
     <div> 
-      <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
+      <Link to="/integrals">
+        <button className="back-button"> Back</button>
+      </Link>
+
       <h2 style={{marginBottom:'1rem'}}>Tangent Integral </h2>
 
     </div>

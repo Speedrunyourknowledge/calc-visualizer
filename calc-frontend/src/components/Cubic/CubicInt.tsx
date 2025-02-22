@@ -1,13 +1,15 @@
-import { useNavigate } from "react-router";
+import { Link } from "react-router";
 
-function CubicInt()
-{
-  const navigate = useNavigate();
+function CubicInt() {
+
 
   return (
-    <div> 
-      <button className="back-button" onClick={()=> navigate(-1)}>&#8249; Back</button>
-      <h2 style={{marginBottom:'1rem'}}>Cubic Integral </h2>
+    <div>
+      <Link to="/integrals">
+        <button className="back-button"> Back</button>
+      </Link>
+
+      <h2 style={{ marginBottom: '1rem' }}>Cubic Integral </h2>
 
     </div>
   )
