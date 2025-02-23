@@ -11,6 +11,8 @@ export default defineConfig({
     react()
   ],
   test: {
-    setupFiles: ['./src/__tests__/vitest.setup.ts']
+    environment: 'jsdom',
+    setupFiles: ['./src/__tests__/vitest.setup.ts', './src/__tests__/window.setup.ts'],
+    
   },
 })
