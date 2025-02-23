@@ -1,6 +1,5 @@
 import { MathJax } from "better-react-mathjax";
 import { Link } from "react-router";
-import IntGraph from "./IntGraph"
 
 function ParabolaInt()
 {
@@ -14,7 +13,9 @@ function ParabolaInt()
           <h2 style={{marginBottom:'1rem'}}>Integral of &nbsp;{"\\(y = x^{2} \\)"} </h2>
       </MathJax>
 
-      <IntGraph />
+      <div className="flex graph-outer-box">
+        
+      </div>
     </div>
   )
 }
