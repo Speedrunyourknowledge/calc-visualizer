@@ -38,6 +38,7 @@ import UnitSine from "../components/UnitCircle/UnitSine";
 import UnitCosine from "../components/UnitCircle/UnitCosine";
 import UnitTangent from "../components/UnitCircle/UnitTangent";
 
+import LimitDef from "../components/Limits/LimitDef";
 
 const RoutesList = 
 <Route path='/' element={<RootLayout/>} >
@@ -65,7 +66,7 @@ const RoutesList =
   <Route path='/integrals/tangent' element={ <TangentInt/> } />
 
   <Route path='/limits' element= {<Limits/>}/>
-  <Route path='/limits/parabola' element={ <ParabolaLimit/> } />
+  <Route path='/limits/limitdef' element={ <LimitDef/> } />
 
   <Route path='/unit-circle' element= {<UnitCircle/>}/>
   <Route path='/unit-circle/sine' element={ <UnitSine/> } />
