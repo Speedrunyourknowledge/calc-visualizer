@@ -16,7 +16,7 @@ function CosineDeriv() {
         <iframe className="graph-frame" src="https://www.desmos.com/calculator/eryny7fmhk?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
-
+        
         <p className="big-p">
           <MathJax>The cosine function starts with a value of 1 and ends with a value of 1 on the
             interval [0, 2{"\\(π\\)"}]</MathJax>
