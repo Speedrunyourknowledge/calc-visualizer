@@ -8,6 +8,12 @@ y_line = np.sin(x_line)
 
 initial_bars = 10
 
+def midpoint_integrate(f, a, b, n):
+    h = (b - a) / n
+    midpoints = a + h * (np.arange(n) + 0.5)
+    return h * np.sum(f(midpoints))
+
+
 def generate_bars(n_bars):
     x_bar = np.linspace(1, 5, n_bars + 1)[:-1]
     y_bar = np.sin(x_bar)
@@ -27,13 +33,20 @@ bar_trace = go.Bar(
 )
 fig.add_trace(bar_trace)
 
+fig.update_layout(title=(
+        f'Approx. Area = {round(midpoint_integrate(np.sin, 0, 5, initial_bars), 12)}'
+        f'<br>     True Area = 0.716337814537'
+))
+
 steps = []
 for n_bars in range(10, 101, 5):
     x_bar, y_bar, width = generate_bars(n_bars)
     step = dict(
         method="update",
         args=[
-            {"x": [x_line, x_bar], "y": [y_line, y_bar], "width": [None, [width] * len(x_bar)]}
+            {"x": [x_line, x_bar], "y": [y_line, y_bar], "width": [None, [width] * len(x_bar)]},
+             {"title.text":  f'Approx. Area = {round(midpoint_integrate(np.sin, 0, 5, n_bars), 12)}'
+            f'<br>     True Area = 0.716337814537'}
         ],
         label=f"{n_bars}"
     )
@@ -51,18 +64,23 @@ fig.update_layout(
     barmode='overlay',
     xaxis_title="X-axis",
     yaxis_title="Y-axis",
-    title="Sin(x)",
     xaxis=dict(range=[1, 5], fixedrange=True),
     yaxis=dict(fixedrange=True),
 )
 
-# output figure as a div
-div_content = fig.to_html(full_html=False, include_plotlyjs=False)
+
+div_content = fig.to_html(full_html=False, include_plotlyjs=False, config={
+    'scrollZoom': False,
+    'displayModeBar': False,
+    'doubleClick': False,
+    'editable': False,
+    'staticPlot': False
+})
 
 soup = BeautifulSoup(div_content, 'html.parser')
 
 pretty_content = soup.prettify()
 
-f = open("./html-output/graph.txt", "w")
+f = open("graph.txt", "w")
 f.write(pretty_content)
 f.close()
