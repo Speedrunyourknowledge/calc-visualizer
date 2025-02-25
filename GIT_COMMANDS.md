@@ -62,6 +62,12 @@ If git tells you your branch can be "fast forwarded" when you git pull, then no 
 If your branch cannot be fast forwarded, that means the remote branch was updated since the last time you made a commit on your local branch. Without fast forwarding, a merge commit will be created with all the changes from the remote branch. 
 <br/><br/>
 
+Tell git to only execute the merge step of "git pull" if fast forwarding is possible. If fast forwarding is not possible, then you will have to run "git merge" separately. This prevents any unintentional merge commits.
+```
+git config --global pull.ff only
+```
+<br/>
+
 Fetch updates from remote **and** rebase updates into the current branch 
 ```
 git pull --rebase
