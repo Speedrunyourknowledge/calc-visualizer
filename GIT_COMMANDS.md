@@ -58,17 +58,18 @@ Fetch updates from remote **and** merge updates into the current branch 
 ```
 git pull
 ```
-<br/>
+If git tells you your branch can be "fast forwarded" when you git pull, then no merge commit will be created on your local branch. 
+If your branch cannot be fast forwarded, that means the remote branch was updated since the last time you made a commit on your local branch. Without fast forwarding, a merge commit will be created with all the changes from the remote branch. 
+<br/><br/>
 
 Fetch updates from remote **and** rebase updates into the current branch 
 ```
 git pull --rebase
 ```
-Rebasing takes your local branch and stacks it on top of updates from the remote. 
-This is useful when you only care about keeping your local branch up to date, and you don’t want to clutter your branch history with merge commits that would result from git pull. 
-Each git pull creates a merge commit on your local branch.
+Rebasing takes your local branch and moves it ahead of updates from the remote branch, making it appear as if the commits 
+in the remote branch happened first. This is useful when "git pull" cannot be fast forwarded, and you want to avoid unnecessary merge commits in your branch history. 
 <br/>
-**Don't** rebase on github because it alters the remote branch history. Only rebase local branches.
+**Don't** rebase a remote branch because it alters the remote branch history. Only rebase local branches.
 <br/><br/>
 
 Just merge the current branch with the one you declare 
