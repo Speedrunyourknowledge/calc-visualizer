@@ -9,7 +9,6 @@ window.PLOTLYENV = window.PLOTLYENV || {};
 if (document.getElementById("4ff4a5e3-494f-49ab-9a3c-0ba487997d9d")) {
   Plotly.newPlot("4ff4a5e3-494f-49ab-9a3c-0ba487997d9d", [{
     "hovertemplate": "(%{x:.2f}, %{y:.2f})",
-    "legendgroup": "",
     "line": {
       "color": "#636efa",
       "dash": "solid"
@@ -38,7 +37,7 @@ if (document.getElementById("4ff4a5e3-494f-49ab-9a3c-0ba487997d9d")) {
       "color": ["green", "green", "green", "green", "green", "green", "red", "red", "red", "red"]
     },
     "name": "Rectangles",
-    "opacity": 0.5,
+    "opacity": 0.65,
     "width": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
     "x": {
       "dtype": "f8",
@@ -53,15 +52,9 @@ if (document.getElementById("4ff4a5e3-494f-49ab-9a3c-0ba487997d9d")) {
     "template": {
       "data": {
         "bar": [{
-          "error_x": {
-              "color": "#2a3f5f"
-          },
-          "error_y": {
-              "color": "#2a3f5f"
-          },
           "marker": {
               "line": {
-                  "color": "#E5ECF6",
+                  "color": "#000000",
                   "width": 0.5
               },
               "pattern": {
@@ -85,86 +78,9 @@ if (document.getElementById("4ff4a5e3-494f-49ab-9a3c-0ba487997d9d")) {
         },
         "paper_bgcolor": "white",
         "plot_bgcolor": "#E5ECF6",
-        "polar": {
-          "bgcolor": "#E5ECF6",
-          "angularaxis": {
-            "gridcolor": "white",
-            "linecolor": "white",
-            "ticks": ""
-          },
-          "radialaxis": {
-            "gridcolor": "white",
-            "linecolor": "white",
-            "ticks": ""
-          }
-        },
-        "ternary": {
-          "bgcolor": "#E5ECF6",
-          "aaxis": {
-            "gridcolor": "white",
-            "linecolor": "white",
-            "ticks": ""
-          },
-          "baxis": {
-            "gridcolor": "white",
-            "linecolor": "white",
-            "ticks": ""
-          },
-          "caxis": {
-            "gridcolor": "white",
-            "linecolor": "white",
-            "ticks": ""
-          }
-        },
-        "coloraxis": {
-          "colorbar": {
-            "outlinewidth": 0,
-            "ticks": ""
-          }
-        },
-        "colorscale": {
-          "sequential": [
-            [0.0, "#0d0887"],
-            [0.1111111111111111, "#46039f"],
-            [0.2222222222222222, "#7201a8"],
-            [0.3333333333333333, "#9c179e"],
-            [0.4444444444444444, "#bd3786"],
-            [0.5555555555555556, "#d8576b"],
-            [0.6666666666666666, "#ed7953"],
-            [0.7777777777777778, "#fb9f3a"],
-            [0.8888888888888888, "#fdca26"],
-            [1.0, "#f0f921"]
-          ],
-          "sequentialminus": [
-            [0.0, "#0d0887"],
-            [0.1111111111111111, "#46039f"],
-            [0.2222222222222222, "#7201a8"],
-            [0.3333333333333333, "#9c179e"],
-            [0.4444444444444444, "#bd3786"],
-            [0.5555555555555556, "#d8576b"],
-            [0.6666666666666666, "#ed7953"],
-            [0.7777777777777778, "#fb9f3a"],
-            [0.8888888888888888, "#fdca26"],
-            [1.0, "#f0f921"]
-          ],
-          "diverging": [
-            [0, "#8e0152"],
-            [0.1, "#c51b7d"],
-            [0.2, "#de77ae"],
-            [0.3, "#f1b6da"],
-            [0.4, "#fde0ef"],
-            [0.5, "#f7f7f7"],
-            [0.6, "#e6f5d0"],
-            [0.7, "#b8e186"],
-            [0.8, "#7fbc41"],
-            [0.9, "#4d9221"],
-            [1, "#276419"]
-          ]
-        },
         "xaxis": {
           "gridcolor": "white",
           "linecolor": "white",
-          "ticks": "",
           "title": {
             "standoff": 15
           },
@@ -175,7 +91,6 @@ if (document.getElementById("4ff4a5e3-494f-49ab-9a3c-0ba487997d9d")) {
         "yaxis": {
           "gridcolor": "white",
           "linecolor": "white",
-          "ticks": "",
           "title": {
             "standoff": 15
           },
@@ -189,8 +104,7 @@ if (document.getElementById("4ff4a5e3-494f-49ab-9a3c-0ba487997d9d")) {
             "gridcolor": "white",
             "linecolor": "white",
             "showbackground": true,
-            "ticks": "",
-            "zerolinecolor": "white",
+              "zerolinecolor": "white",
             "gridwidth": 2
           },
           "yaxis": {
@@ -198,29 +112,14 @@ if (document.getElementById("4ff4a5e3-494f-49ab-9a3c-0ba487997d9d")) {
             "gridcolor": "white",
             "linecolor": "white",
             "showbackground": true,
-            "ticks": "",
-            "zerolinecolor": "white",
+              "zerolinecolor": "white",
             "gridwidth": 2
           },
-          "zaxis": {
-            "backgroundcolor": "#E5ECF6",
-            "gridcolor": "white",
-            "linecolor": "white",
-            "showbackground": true,
-            "ticks": "",
-            "zerolinecolor": "white",
-            "gridwidth": 2
-          }
         },
         "shapedefaults": {
           "line": {
             "color": "#2a3f5f"
           }
-        },
-        "annotationdefaults": {
-          "arrowcolor": "#2a3f5f",
-          "arrowhead": 0,
-          "arrowwidth": 1
         },
         "geo": {
           "bgcolor": "white",
@@ -254,9 +153,6 @@ if (document.getElementById("4ff4a5e3-494f-49ab-9a3c-0ba487997d9d")) {
         "text": "Y-axis"
       },
       "fixedrange": true
-    },
-    "legend": {
-      "tracegroupgap": 0
     },
     "margin": {
       "t": 60
