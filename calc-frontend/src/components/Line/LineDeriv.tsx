@@ -14,7 +14,7 @@ function LineDeriv()
         </MathJax>
         
         <div className="flex graph-outer-box">
-          <iframe className = "graph-frame" src="https://www.desmos.com/calculator/opyeqlknbm?embed" 
+          <iframe className = "graph-frame" src="https://www.desmos.com/calculator/dojf9xhzey?embed" 
                   style={{border: "1px solid #ccc"}} >
           </iframe>
 

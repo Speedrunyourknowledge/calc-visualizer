@@ -13,7 +13,7 @@ function ParabolaDeriv(){
         </MathJax>
 
         <div className="flex graph-outer-box">
-          <iframe className = "graph-frame" src="https://www.desmos.com/calculator/phq9sqq94c?embed" 
+          <iframe className = "graph-frame" src="https://www.desmos.com/calculator/wtqxy7h0yi?embed"
                   style={{border: "1px solid #ccc"}} >
           </iframe>
 

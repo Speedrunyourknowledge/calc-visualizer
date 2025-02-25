@@ -14,7 +14,7 @@ function UnitTangent() {
       </MathJax>
 
       <div className="flex graph-outer-box">
-        <iframe className="graph-frame unit-frame" src="https://www.desmos.com/calculator/xjgvgerxbv?embed"
+        <iframe className="graph-frame unit-frame" src="https://www.desmos.com/calculator/9wzsprp36r?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 

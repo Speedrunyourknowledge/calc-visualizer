@@ -14,7 +14,7 @@ function EulerDeriv()
       </MathJax>
 
       <div className="flex graph-outer-box">
-        <iframe className = "graph-frame" src="https://www.desmos.com/calculator/5fb4idx020?embed" 
+        <iframe className = "graph-frame" src="https://www.desmos.com/calculator/apkv8zj85n?embed"
                 style={{border: "1px solid #ccc"}} >
         </iframe>
 

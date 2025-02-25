@@ -14,7 +14,7 @@ function UnitCosine() {
       </MathJax>
 
       <div className="flex graph-outer-box">
-        <iframe className="graph-frame unit-frame" src="https://www.desmos.com/calculator/3h1qvy6omf?embed"
+        <iframe className="graph-frame unit-frame" src="https://www.desmos.com/calculator/a5jvnnetfk?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 

@@ -13,7 +13,7 @@ function CosineDeriv() {
       </MathJax>
 
       <div className="flex graph-outer-box">
-        <iframe className="graph-frame" src="https://www.desmos.com/calculator/eryny7fmhk?embed"
+        <iframe className="graph-frame" src="https://www.desmos.com/calculator/t9zizgbgrv?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 
