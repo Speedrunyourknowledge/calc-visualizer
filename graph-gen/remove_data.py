@@ -1,8 +1,6 @@
 from html_input.graph_tuple import graph_tuple as gt
 
 # The graph_tuple is everything inside the parentheses from Plotly.newPlot() on the frontend
-# In the graph_tuple, you must change null -> None, true -> True, false -> False
-# Change these back in the filtered output
 # Use the online json beautifier on the output, 
 # then insert it back into the Plotly.newPlot() function on the frontend
 
@@ -48,7 +46,13 @@ layout['scene'].pop('zaxis', None)
 
 layout.pop('annotationdefaults', None)
 
-# write filtered tuple to file
+# change text to valid javascript syntax
+str_gt = str(gt).replace('None', 'null') \
+                .replace('True', 'true') \
+                .replace('False', 'false')
+
+# write to file
 f = open("./html_output/filtered.txt", "w")
-f.write(str(gt))
+f.write(str_gt)
 f.close()
+
