@@ -230,5 +230,3 @@ git stash clear
 
 The easiest way to make a PR is on github. “A pull request is a proposal to merge a set of changes from one branch into another” (github docs). Make sure the correct branch is being merged into the other one. You can see the two merging branches in the top left corner.
 
-
-
