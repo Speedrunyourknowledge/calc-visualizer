@@ -14,7 +14,7 @@ function UnitSine() {
       </MathJax>
 
       <div className="flex graph-outer-box">
-        <iframe className="graph-frame unit-frame" src="https://www.desmos.com/calculator/giprp93pt8?embed"
+        <iframe className="graph-frame unit-frame" src="https://www.desmos.com/calculator/h75kwbdxfh?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 

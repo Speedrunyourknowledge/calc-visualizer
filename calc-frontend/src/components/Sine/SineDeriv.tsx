@@ -14,7 +14,7 @@ function SineDeriv()
       </MathJax>
       
       <div className="flex graph-outer-box">
-        <iframe className = "graph-frame" src="https://www.desmos.com/calculator/bdxrwxldzr?embed"  
+        <iframe className = "graph-frame" src="https://www.desmos.com/calculator/e9waw1mka6?embed"  
                 style={{border: "1px solid #ccc"}} >
         </iframe>
 

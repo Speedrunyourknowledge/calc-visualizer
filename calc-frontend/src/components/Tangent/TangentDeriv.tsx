@@ -13,7 +13,7 @@ function CubicIntegral() {
       </MathJax>
 
       <div className="flex graph-outer-box">
-        <iframe className="graph-frame" src="https://www.desmos.com/calculator/4t2g6fpc3s?embed"
+        <iframe className="graph-frame" src="https://www.desmos.com/calculator/4hzxwimehi?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 

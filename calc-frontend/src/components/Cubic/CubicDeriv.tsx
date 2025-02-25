@@ -13,7 +13,7 @@ function CubicDeriv() {
       </MathJax>
 
       <div className="flex graph-outer-box">
-        <iframe className="graph-frame" src="https://www.desmos.com/calculator/0wh7782h7k?embed"
+        <iframe className="graph-frame" src="https://www.desmos.com/calculator/wzc7pioeji?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 
