@@ -37,7 +37,7 @@ bar_trace = go.Bar(
     x=x_bar,
     y=y_bar,
     width=[width] * len(x_bar),
-    opacity=0.5,
+    opacity=0.65,
     name="Rectangles",
     marker = dict(color=['green' if value > 0 else 'red' for value in y_bar]),
     hovertemplate="(%{x:.2f}, %{y:.2f})",
@@ -91,6 +91,11 @@ div_content = fig.to_html(full_html=False, include_plotlyjs=False, config={
 soup = BeautifulSoup(div_content, 'html.parser')
 
 pretty_content = soup.prettify()
+
+# change text to valid python syntax
+pretty_content = pretty_content.replace('null', 'None') \
+                               .replace('true', 'True') \
+                               .replace('false', 'False')
 
 f = open("graph.txt", "w")
 f.write(pretty_content)
