@@ -1,11 +1,11 @@
 import { MathJax } from "better-react-mathjax"
 import { Link } from "react-router";
 
-function CosineDeriv() {
+function LimitDef() {
 
   return (
     <div>
-      <Link to="/derivatives">
+      <Link to="/limits">
         <button className="back-button"> Back</button>
       </Link>
       <MathJax>
@@ -13,7 +13,7 @@ function CosineDeriv() {
       </MathJax>
 
       <div className="flex graph-outer-box">
-        <iframe className="graph-frame" src="https://www.desmos.com/calculator/t9zizgbgrv?embed"
+        <iframe className="graph-frame" src="https://www.desmos.com/calculator/eryny7fmhk?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 
@@ -28,4 +28,4 @@ function CosineDeriv() {
   )
 }
 
-export default CosineDeriv
+export default LimitDef
