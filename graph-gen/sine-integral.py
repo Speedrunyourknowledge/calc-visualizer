@@ -39,7 +39,7 @@ bar_trace = go.Bar(
     width=[width] * len(x_bar),
     opacity=0.6,
     name="Rectangles",
-    marker = dict(color=['#00b500' if value > 0 else '#ff2900' for value in y_bar]),
+    marker = dict(color=['#31b500' if value > 0 else '#ff3c00' for value in y_bar]),
     hovertemplate="(%{x:.2f}, %{y:.2f})",
 )
 fig.add_trace(bar_trace)
@@ -58,7 +58,7 @@ for n_bars in range(initial_bars, 101, 5):
         method="update",
         args=[
             {"x": [x_line, x_bar], "y": [y_line, y_bar], "width": [None, [width] * len(x_bar)], 
-             "marker": dict(color=['#00b500' if value > 0 else '#ff2900' for value in y_bar])},
+             "marker": dict(color=['#31b500' if value > 0 else '#ff3c00' for value in y_bar])},
              {"title.text":  f'Approx. Area = {round(midpoint_integrate(func, a, b, n_bars), 12)}' 
              f'<br>     True Area = {round(area, 12)}'}
         ],
