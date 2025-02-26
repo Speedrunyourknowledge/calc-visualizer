@@ -7,10 +7,13 @@ function Home() {
       <h2 className = "topic-header m-auto w-fit">Topics</h2>
 
       <div className="flex flex-col gap-6 m-auto home-list">
-
+        {
+          /*
           <Link to="/limits" className = "link-box">
               <div className="link-title">Limits</div>
           </Link>
+          */
+        }
         
           <Link to="/derivatives" className = "link-box">
               <div className="link-title">Derivatives</div>
