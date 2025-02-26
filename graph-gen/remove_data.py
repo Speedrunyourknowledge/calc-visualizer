@@ -50,7 +50,7 @@ layout.pop('annotationdefaults', None)
 str_gt = str(gt).replace('None', 'null') \
                 .replace('True', 'true') \
                 .replace('False', 'false') \
-                .replace('true area', 'True area')
+                .replace('true Area', 'True Area')
 
 # write to file
 f = open("./html_output/filtered.txt", "w")
