@@ -49,7 +49,8 @@ layout.pop('annotationdefaults', None)
 # change text to valid javascript syntax
 str_gt = str(gt).replace('None', 'null') \
                 .replace('True', 'true') \
-                .replace('False', 'false')
+                .replace('False', 'false') \
+                .replace('true area', 'True area')
 
 # write to file
 f = open("./html_output/filtered.txt", "w")
