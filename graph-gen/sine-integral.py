@@ -37,7 +37,7 @@ bar_trace = go.Bar(
     x=x_bar,
     y=y_bar,
     width=[width] * len(x_bar),
-    opacity=0.65,
+    opacity=0.6,
     name="Rectangles",
     marker = dict(color=['green' if value > 0 else 'red' for value in y_bar]),
     hovertemplate="(%{x:.2f}, %{y:.2f})",
@@ -48,6 +48,8 @@ fig.update_layout(title=(
         f'Approx. Area = {round(midpoint_integrate(func, a, b, initial_bars), 12)}'
         f'<br>     True Area = {round(area, 12)}'
 ))
+
+fig.update_layout(title_font_size=14, title_pad_b=2)
 
 steps = []
 for n_bars in range(initial_bars, 101, 5):
@@ -67,7 +69,7 @@ for n_bars in range(initial_bars, 101, 5):
 sliders = [dict(
     active=0,
     currentvalue={"prefix": "n = "},
-    pad={"t": 50},
+    pad={"t": 30},
     steps=steps
 )]
 
