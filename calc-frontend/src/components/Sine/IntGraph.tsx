@@ -159,7 +159,7 @@ function IntGraph() {
                 't': 60
             },
             'title': {
-                'text': 'Approx. Area = 0.723854436986<br>     true Area = 0.716337814537',
+                'text': 'Approx. Area = 0.723854436986<br>     True Area = 0.716337814537',
                 'font': {
                     'size': 14
                 },
@@ -190,7 +190,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.723854436986<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.723854436986<br>     True Area = 0.716337814537'
                     }],
                     'label': '10',
                     'method': 'update'
@@ -209,7 +209,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.7196649724<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.7196649724<br>     True Area = 0.716337814537'
                     }],
                     'label': '15',
                     'method': 'update'
@@ -228,7 +228,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.718206683791<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.718206683791<br>     True Area = 0.716337814537'
                     }],
                     'label': '20',
                     'method': 'update'
@@ -247,7 +247,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.717533105244<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.717533105244<br>     True Area = 0.716337814537'
                     }],
                     'label': '25',
                     'method': 'update'
@@ -266,7 +266,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.717167581442<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.717167581442<br>     True Area = 0.716337814537'
                     }],
                     'label': '30',
                     'method': 'update'
@@ -285,7 +285,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.716947308104<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.716947308104<br>     True Area = 0.716337814537'
                     }],
                     'label': '35',
                     'method': 'update'
@@ -304,7 +304,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.716804392926<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.716804392926<br>     True Area = 0.716337814537'
                     }],
                     'label': '40',
                     'method': 'update'
@@ -323,7 +323,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.716706433796<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.716706433796<br>     True Area = 0.716337814537'
                     }],
                     'label': '45',
                     'method': 'update'
@@ -342,7 +342,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.716636375704<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.716636375704<br>     True Area = 0.716337814537'
                     }],
                     'label': '50',
                     'method': 'update'
@@ -361,7 +361,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.716584546811<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.716584546811<br>     True Area = 0.716337814537'
                     }],
                     'label': '55',
                     'method': 'update'
@@ -380,7 +380,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.7165451302<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.7165451302<br>     True Area = 0.716337814537'
                     }],
                     'label': '60',
                     'method': 'update'
@@ -399,7 +399,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.716514456909<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.716514456909<br>     True Area = 0.716337814537'
                     }],
                     'label': '65',
                     'method': 'update'
@@ -418,7 +418,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.7164901199<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.7164901199<br>     True Area = 0.716337814537'
                     }],
                     'label': '70',
                     'method': 'update'
@@ -437,7 +437,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.716470486886<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.716470486886<br>     True Area = 0.716337814537'
                     }],
                     'label': '75',
                     'method': 'update'
@@ -456,7 +456,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.716454419263<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.716454419263<br>     True Area = 0.716337814537'
                     }],
                     'label': '80',
                     'method': 'update'
@@ -475,7 +475,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.716441103192<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.716441103192<br>     True Area = 0.716337814537'
                     }],
                     'label': '85',
                     'method': 'update'
@@ -494,7 +494,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.716429944463<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.716429944463<br>     True Area = 0.716337814537'
                     }],
                     'label': '90',
                     'method': 'update'
@@ -513,7 +513,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.71642050102<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.71642050102<br>     True Area = 0.716337814537'
                     }],
                     'label': '95',
                     'method': 'update'
@@ -532,7 +532,7 @@ function IntGraph() {
                             'color': ['green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red', 'red']
                         }
                     }, {
-                        'title.text': 'Approx. Area = 0.7164124385<br>     true Area = 0.716337814537'
+                        'title.text': 'Approx. Area = 0.7164124385<br>     True Area = 0.716337814537'
                     }],
                     'label': '100',
                     'method': 'update'
