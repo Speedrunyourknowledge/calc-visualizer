@@ -142,7 +142,7 @@ function IntGraph() {
                 'anchor': 'y',
                 'domain': [0.0, 1.0],
                 'title': {
-                    'text': 'X-axis'
+                    'text': 'x-axis'
                 },
                 'range': [0, 5],
                 'fixedrange': true
@@ -151,7 +151,7 @@ function IntGraph() {
                 'anchor': 'x',
                 'domain': [0.0, 1.0],
                 'title': {
-                    'text': 'Y-axis'
+                    'text': 'y-axis'
                 },
                 'fixedrange': true
             },
