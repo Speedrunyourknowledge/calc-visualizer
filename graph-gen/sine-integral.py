@@ -76,8 +76,8 @@ sliders = [dict(
 fig.update_layout(
     sliders=sliders,
     barmode='overlay',
-    xaxis_title="X-axis",
-    yaxis_title="Y-axis",
+    xaxis_title="x-axis",
+    yaxis_title="y-axis",
     xaxis=dict(range=[a, b], fixedrange=True),
     yaxis=dict(fixedrange=True),
 )
