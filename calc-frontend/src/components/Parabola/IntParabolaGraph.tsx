@@ -98,31 +98,7 @@ if (document.getElementById("8b3cec35-60d3-4ca8-94f8-9bdc59863b11")) {
             [0.8888888888888888, "#fdca26"],
             [1.0, "#f0f921"]
           ],
-          "sequentialminus": [
-            [0.0, "#0d0887"],
-            [0.1111111111111111, "#46039f"],
-            [0.2222222222222222, "#7201a8"],
-            [0.3333333333333333, "#9c179e"],
-            [0.4444444444444444, "#bd3786"],
-            [0.5555555555555556, "#d8576b"],
-            [0.6666666666666666, "#ed7953"],
-            [0.7777777777777778, "#fb9f3a"],
-            [0.8888888888888888, "#fdca26"],
-            [1.0, "#f0f921"]
-          ],
-          "diverging": [
-            [0, "#8e0152"],
-            [0.1, "#c51b7d"],
-            [0.2, "#de77ae"],
-            [0.3, "#f1b6da"],
-            [0.4, "#fde0ef"],
-            [0.5, "#f7f7f7"],
-            [0.6, "#e6f5d0"],
-            [0.7, "#b8e186"],
-            [0.8, "#7fbc41"],
-            [0.9, "#4d9221"],
-            [1, "#276419"]
-          ]
+          
         },
         "xaxis": {
           "gridcolor": "white",
@@ -164,15 +140,6 @@ if (document.getElementById("8b3cec35-60d3-4ca8-94f8-9bdc59863b11")) {
             "ticks": "",
             "zerolinecolor": "white",
             "gridwidth": 2
-          },
-          "zaxis": {
-            "backgroundcolor": "#E5ECF6",
-            "gridcolor": "white",
-            "linecolor": "white",
-            "showbackground": true,
-            "ticks": "",
-            "zerolinecolor": "white",
-            "gridwidth": 2
           }
         },
         "shapedefaults": {
@@ -184,14 +151,6 @@ if (document.getElementById("8b3cec35-60d3-4ca8-94f8-9bdc59863b11")) {
           "arrowcolor": "#2a3f5f",
           "arrowhead": 0,
           "arrowwidth": 1
-        },
-        "geo": {
-          "bgcolor": "white",
-          "landcolor": "#E5ECF6",
-          "subunitcolor": "white",
-          "showland": true,
-          "showlakes": true,
-          "lakecolor": "white"
         },
         "title": {
           "x": 0.05
