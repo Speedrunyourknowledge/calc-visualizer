@@ -20,7 +20,7 @@ useLayoutEffect(() => {
       "mode": "lines",
       "name": "Function",
       "orientation": "v",
-      "showlegend": true,
+      "showlegend": false,
       "x": {
         "dtype": "f8",
         "bdata": "AAAAAAAAAAB7FK5H4XqEP3sUrkfhepQ\u002fuB6F61G4nj97FK5H4XqkP5qZmZmZmak\u002fuB6F61G4rj\u002fsUbgeheuxP3sUrkfherQ\u002fCtejcD0Ktz+amZmZmZm5Pylcj8L1KLw\u002fuB6F61G4vj+kcD0K16PAP+xRuB6F68E\u002fMzMzMzMzwz97FK5H4XrEP8P1KFyPwsU\u002fCtejcD0Kxz9SuB6F61HIP5qZmZmZmck\u002f4XoUrkfhyj8pXI\u002fC9SjMP3E9CtejcM0\u002fuB6F61G4zj8AAAAAAADQP6RwPQrXo9A\u002fSOF6FK5H0T\u002fsUbgehevRP4\u002fC9Shcj9I\u002fMzMzMzMz0z\u002fXo3A9CtfTP3sUrkfhetQ\u002fH4XrUbge1T\u002fD9Shcj8LVP2dmZmZmZtY\u002fCtejcD0K1z+uR+F6FK7XP1K4HoXrUdg\u002f9ihcj8L12D+amZmZmZnZPz4K16NwPdo\u002f4XoUrkfh2j+F61G4HoXbPylcj8L1KNw\u002fzczMzMzM3D9xPQrXo3DdPxWuR+F6FN4\u002fuB6F61G43j9cj8L1KFzfPwAAAAAAAOA\u002fUrgehetR4D+kcD0K16PgP\u002fYoXI\u002fC9eA\u002fSOF6FK5H4T+amZmZmZnhP+xRuB6F6+E\u002fPgrXo3A94j+PwvUoXI\u002fiP+F6FK5H4eI\u002fMzMzMzMz4z+F61G4HoXjP9ejcD0K1+M\u002fKVyPwvUo5D97FK5H4XrkP83MzMzMzOQ\u002fH4XrUbge5T9xPQrXo3DlP8P1KFyPwuU\u002fFa5H4XoU5j9nZmZmZmbmP7gehetRuOY\u002fCtejcD0K5z9cj8L1KFznP65H4XoUruc\u002fAAAAAAAA6D9SuB6F61HoP6RwPQrXo+g\u002f9ihcj8L16D9I4XoUrkfpP5qZmZmZmek\u002f7FG4HoXr6T8+CtejcD3qP5DC9Shcj+o\u002f4XoUrkfh6j8zMzMzMzPrP4XrUbgehes\u002f16NwPQrX6z8pXI\u002fC9SjsP3sUrkfheuw\u002fzczMzMzM7D8fhetRuB7tP3E9CtejcO0\u002fw\u002fUoXI\u002fC7T8VrkfhehTuP2dmZmZmZu4\u002fuB6F61G47j8K16NwPQrvP1yPwvUoXO8\u002frkfhehSu7z8AAAAAAADwPylcj8L1KPA\u002fUrgehetR8D97FK5H4XrwP6RwPQrXo\u002fA\u002fzczMzMzM8D\u002f2KFyPwvXwPx+F61G4HvE\u002fSOF6FK5H8T9xPQrXo3DxP5qZmZmZmfE\u002fw\u002fUoXI\u002fC8T\u002fsUbgehevxPxWuR+F6FPI\u002fPgrXo3A98j9nZmZmZmbyP4\u002fC9Shcj\u002fI\u002fuB6F61G48j\u002fhehSuR+HyPwrXo3A9CvM\u002fMzMzMzMz8z9cj8L1KFzzP4XrUbgehfM\u002frkfhehSu8z\u002fXo3A9CtfzPwAAAAAAAPQ\u002fKVyPwvUo9D9SuB6F61H0P3sUrkfhevQ\u002fpHA9Ctej9D\u002fNzMzMzMz0P\u002fYoXI\u002fC9fQ\u002fH4XrUbge9T9I4XoUrkf1P3E9CtejcPU\u002fmpmZmZmZ9T\u002fD9Shcj8L1P+xRuB6F6\u002fU\u002fFa5H4XoU9j8+CtejcD32P2dmZmZmZvY\u002fj8L1KFyP9j+4HoXrUbj2P+F6FK5H4fY\u002fCtejcD0K9z8zMzMzMzP3P1yPwvUoXPc\u002fhetRuB6F9z+uR+F6FK73P9ejcD0K1\u002fc\u002fAAAAAAAA+D8="
@@ -52,6 +52,7 @@ useLayoutEffect(() => {
         "dtype": "f8",
         "bdata": "yBcI0W88sz+\u002fe\u002fPCyUvNP7D4m4UtMdk\u002f69DTjfiI4j+RiAvFFJ3pP03ndsT6UfE\u002fGYidYHKZ9z82imQClr0AQIkXFKCQQApAd+juJqk9G0A="
       },
+      "showlegend":false,
       "type": "bar"
     }], {
       "template": {
@@ -196,7 +197,9 @@ useLayoutEffect(() => {
         "tracegroupgap": 0
       },
       "margin": {
-        "t": 60
+        "t": 60,
+        "r":30,
+        "l":60
       },
       "title": {
         "text": "Approx. Area = 2.522861663\u003cbr\u003e     True Area = 2.648783654",
@@ -669,7 +672,7 @@ useLayoutEffect(() => {
 
 
     return (
-        <div className="plotly-graph-div graph-frame unit-frame" id="304551b2-c823-49ee-aa49-af98a1dc87da">
+        <div className="plotly-graph-div graph-frame" id="304551b2-c823-49ee-aa49-af98a1dc87da">
         </div>
     )
 
