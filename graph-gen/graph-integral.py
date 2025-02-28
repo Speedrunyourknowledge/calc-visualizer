@@ -35,7 +35,7 @@ fig = px.line(x=x_line, y=y_line)
 if a < 0:
   fig.add_vline(x=0, line_width=2, line_color="#a5adad")
 
-fig.update_traces(hovertemplate="(%{x:.2f}, %{y:.2f})", name="Function", showlegend=True)
+fig.update_traces(hovertemplate="(%{x:.2f}, %{y:.2f})", name="Function", showlegend=False)
 
 bar_trace = go.Bar(
     x=x_bar,
@@ -46,6 +46,7 @@ bar_trace = go.Bar(
     marker = dict(color=['#31b500' if value > 0 else '#ff3c00' for value in y_bar],
     line=dict(color='black', width=1)),
     hovertemplate="(%{x:.2f}, %{y:.2f})",
+    showlegend=False
 )
 fig.add_trace(bar_trace)
 
@@ -97,7 +98,7 @@ for n_bars in range(initial_bars, 101, 5):
 sliders = [dict(
     active=0,
     currentvalue={"prefix": "n = "},
-    pad={"t": 30},
+    pad={"t": 30, "r":30, "l":60},
     steps=steps
 )]
 
