@@ -12,9 +12,7 @@ function Integrals() {
 
       <h2 className="topic-header m-auto w-fit">The Integral of Common Functions</h2>
       <div className="flex flex-col gap-6 items-center topic-list">
-
-{
-  /*
+  
         <Link to="/integrals/linear" className="topic-box">
           <button className="px-10 text-2xl cursor-pointer">Linear</button>
         </Link>
@@ -34,13 +32,11 @@ function Integrals() {
         <Link to="/integrals/logarithmic" className="topic-box">
           <button className="px-10 text-2xl cursor-pointer">Logarithmic</button>
         </Link>
-  */
-}
+  
         <Link to="/integrals/sine" className="topic-box">
           <button className="px-10 text-2xl cursor-pointer">Sine</button>
         </Link>
-{
-  /*
+  
         <Link to="/integrals/cosine" className="topic-box">
           <button className="px-10 text-2xl cursor-pointer">Cosine</button>
         </Link>
@@ -48,8 +44,8 @@ function Integrals() {
         <Link to="/integrals/tangent" className="topic-box">
           <button className="px-10 text-2xl cursor-pointer">Tangent</button>
         </Link>
-  */
-}
+  
+
       </div>
     </div>
   )
