@@ -6,8 +6,8 @@ function IntTangentGraph() {
 
 useLayoutEffect(() => {
   window.PLOTLYENV = window.PLOTLYENV || {};
-  if (document.getElementById("fab4ffcf-5bd9-434f-9260-f2ee64c0b385")) {
-    Plotly.newPlot("fab4ffcf-5bd9-434f-9260-f2ee64c0b385", [{
+  if (document.getElementById("d69fe3c8-e512-4238-a713-c58592dfa54d")) {
+    Plotly.newPlot("d69fe3c8-e512-4238-a713-c58592dfa54d", [{
       "hovertemplate": "(%{x:.2f}, %{y:.2f})",
       "legendgroup": "",
       "line": {
@@ -668,7 +668,7 @@ useLayoutEffect(() => {
 
 
     return (
-        <div className="plotly-graph-div graph-frame unit-frame" id="fab4ffcf-5bd9-434f-9260-f2ee64c0b385">
+        <div className="plotly-graph-div graph-frame unit-frame" id="d69fe3c8-e512-4238-a713-c58592dfa54d">
         </div>
     )
 
