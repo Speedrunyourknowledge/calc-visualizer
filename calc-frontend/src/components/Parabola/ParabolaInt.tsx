@@ -14,7 +14,7 @@ function ParabolaInt() {
     
     <MathJax>
       <h2 style={{ marginBottom: '1rem' }}>
-        {"\\(\\int_0^{10} x^2 \\,dx\\)"}
+        {"\\(\\int_{^-5}^{5} x^2 \\,dx\\)"}
       </h2>
     </MathJax>
 

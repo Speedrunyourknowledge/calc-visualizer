@@ -6,10 +6,9 @@ from bs4 import BeautifulSoup
 import jsbeautifier
 
 # just change these 3 values
-a = '?' # insert lower limit
-b = '?' # insert lower limit
-func = lambda x: '?' # insert function in terms of x
-
+a = -5 # insert lower bound
+b = 5 # insert upper bound
+func = lambda x: x**2 # insert function in terms of x
 
 def midpoint_integrate(f, a, b, n):
     h = (b - a) / n
@@ -32,6 +31,10 @@ x_bar, y_bar, width = generate_bars(initial_bars)
 
 fig = px.line(x=x_line, y=y_line)
 
+# adds a line at x = 0 if the lower bound is negative
+if a < 0:
+  fig.add_vline(x=0, line_width=2, line_color="#a5adad")
+
 fig.update_traces(hovertemplate="(%{x:.2f}, %{y:.2f})", name="Function", showlegend=True)
 
 bar_trace = go.Bar(
@@ -45,6 +48,31 @@ bar_trace = go.Bar(
     hovertemplate="(%{x:.2f}, %{y:.2f})",
 )
 fig.add_trace(bar_trace)
+
+# remove unneeded graphs
+fig.layout.template.data = {}
+fig.layout.template.data["bar"] =  [{
+                                      "marker": {
+                                        "line": {
+                                          "color": "#E5ECF6",
+                                          "width": 0.5
+                                        },
+                                        "pattern": {
+                                          "fillmode": "overlay",
+                                          "size": 10,
+                                          "solidity": 0.2
+                                        }
+                                      },
+                                      "type": "bar"
+                                    }]
+
+# remove unneeded attributes
+fig.layout.template.layout.pop('polar', None)
+fig.layout.template.layout.pop('ternary', None)
+fig.layout.template.layout.pop('coloraxis', None)
+fig.layout.template.layout.colorscale.pop('sequentialminus', None)
+fig.layout.template.layout.colorscale.pop('diverging', None)
+
 
 fig.update_layout(title=(
         f'Approx. Area = {round(midpoint_integrate(func, a, b, initial_bars), 9)}'

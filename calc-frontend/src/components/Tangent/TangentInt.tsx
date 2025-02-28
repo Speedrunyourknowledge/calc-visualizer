@@ -14,7 +14,7 @@ function TangentInt() {
 
         <MathJax>
           <h2 style={{ marginBottom: '1rem' }}>
-            {"\\(\\int_0^1 tan(x) \\,dx\\)"}
+            {"\\(\\int_0^{1.5} tan(x) \\,dx\\)"}
           </h2>
         </MathJax>
 
