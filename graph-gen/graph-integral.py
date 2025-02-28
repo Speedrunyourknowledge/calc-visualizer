@@ -6,9 +6,9 @@ from bs4 import BeautifulSoup
 import jsbeautifier
 
 # just change these 3 values
-a = -5 # insert lower bound
+a = 0 # insert lower bound
 b = 5 # insert upper bound
-func = lambda x: x**2 # insert function in terms of x
+func = lambda x: np.cos(x) # insert function in terms of x
 
 def midpoint_integrate(f, a, b, n):
     h = (b - a) / n
@@ -21,8 +21,8 @@ def generate_bars(n_bars):
     y_bar = func(x_bar)
     return x_bar, y_bar, width
 
-
-x_line = np.arange(a, b, 0.01)
+# prevents the final value from being cut off
+x_line = np.arange(a, b+.01, 0.01)
 y_line = func(x_line)
 area, error= quad(func, a, b)
 
@@ -106,7 +106,7 @@ fig.update_layout(
     barmode='overlay',
     xaxis_title="x-axis",
     yaxis_title="y-axis",
-    xaxis=dict(range=[a, b], fixedrange=True),
+    xaxis=dict(range=[a, b], fixedrange=True), 
     yaxis=dict(fixedrange=True),
 )
 

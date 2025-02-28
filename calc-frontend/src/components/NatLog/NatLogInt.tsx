@@ -14,7 +14,7 @@ function NatLogInt() {
     
     <MathJax>
       <h2 style={{ marginBottom: '1rem' }}>
-        {"\\(\\int_0^{10} ln(x) \\,dx\\)"}
+        {"\\(\\int_{.01}^{10} ln(x) \\,dx\\)"}
       </h2>
     </MathJax>
 
