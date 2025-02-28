@@ -14,7 +14,7 @@ function CubicInt() {
     
     <MathJax>
       <h2 style={{ marginBottom: '1rem' }}>
-        {"\\(\\int_0^{10} x^3 \\,dx\\)"}
+        {"\\(\\int_{^-2}^{4} x^3 \\,dx\\)"}
       </h2>
     </MathJax>
 
