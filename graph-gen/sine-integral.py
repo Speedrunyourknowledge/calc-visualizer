@@ -45,8 +45,8 @@ bar_trace = go.Bar(
 fig.add_trace(bar_trace)
 
 fig.update_layout(title=(
-        f'Approx. Area = {round(midpoint_integrate(func, a, b, initial_bars), 12)}'
-        f'<br>     True Area = {round(area, 12)}'
+        f'Approx. Area = {round(midpoint_integrate(func, a, b, initial_bars), 9)}'
+        f'<br>     True Area = {round(area, 9)}'
 ))
 
 fig.update_layout(title_font_size=14, title_pad_b=2)
@@ -59,8 +59,8 @@ for n_bars in range(initial_bars, 101, 5):
         args=[
             {"x": [x_line, x_bar], "y": [y_line, y_bar], "width": [None, [width] * len(x_bar)], 
              "marker": dict(color=['#31b500' if value > 0 else '#ff3c00' for value in y_bar])},
-             {"title.text":  f'Approx. Area = {round(midpoint_integrate(func, a, b, n_bars), 12)}' 
-             f'<br>     True Area = {round(area, 12)}'}
+             {"title.text":  f'Approx. Area = {round(midpoint_integrate(func, a, b, n_bars), 9)}' 
+             f'<br>     True Area = {round(area, 9)}'}
         ],
         label=f"{n_bars}"
     )
