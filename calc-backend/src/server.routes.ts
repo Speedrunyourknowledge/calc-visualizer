@@ -9,7 +9,10 @@ const router = Router();
 
 // prefix each route with what it will do: auth, user
 
-router.use("/auth", authRoutes);
-router.use("/user", userRoutes);
+// Prefixes the endpoint you created with what you specify here
+//router.use("/auth", authRoutes);
+
+// will be localhost:3000/user/{whatever you chose in routes directory}
+router.use("/user", userRoutes); 
 
 export default router;
