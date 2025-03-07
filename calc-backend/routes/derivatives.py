@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 import numpy as np
 import plotly.graph_objects as go
-#from services.derivative_calc import {functionName} # uncomment to use functions from services
+#from services.derivative_calc import create_graph_data # uncomment to use functions from services
 
 derivatives_bp = Blueprint('derivatives', __name__)
 
@@ -32,7 +32,7 @@ def derivative_graph():
         xaxis_title="x",
         yaxis_title="y",
         template="plotly_dark",
-        xaxis = dict(range=[-10, 10]),
-        yaxis = dict(range=[0,100]),
+        xaxis = dict(range=[-10, 10], fixedrange=True),
+        yaxis = dict(range=[0,100], fixedrange=True),
     )
     return jsonify(fig.to_dict())
