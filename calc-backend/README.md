@@ -1,70 +1,39 @@
-# Backend guide
+# Info about the backend
 
-### Scroll down for new important commands
+1. Installing new dependencies will be same as frontend
+```
+npm install [name of dependency]
+```
 
-### How to run this project
-It will be best to run both frontend and backend at the sametime to avoid any errors
-1. In one terminal cd into calc-frontend and run:
+2. If someone installs new dependencies be inside **calc-backend** and run:
+```
+npm install
+```
+
+3. To start the server, be inside **calc-backend** and run:
 ```
 npm run dev
 ```
+
+4. For frontend to make calls to the backend, make sure both serves are running (split your terminals)
+
+## Project Structure
+
+The **src** directory is the main directory, most of the files will be inside here
 <br/>
 
-2. Create another terminal, or split your current one and cd into calc-backend and run:
-```
-python app.py (python3 for mac)
-```
-<br/>
+1. **routes** directory will contain files with routes inside them
+2. **controllers** directory will contain files that handle logic for the requests (handlers)
+3. **middleware** directory will contain files that contain logic that will be executed before the main logic is executed (before the **controllers** logic).
 
-Both servers are now running and can interact with eachother. You do not need to have
-the back end server opened in your browser since theres nothing for it to display
+Middleware can be error checking or checking for authentication
 
-### Setting up the backend for the first time
-It is recommended to create a virtual environment when working with python. You can skip these steps but they are **recommended** because it keeps all of our dependencies consistent.
-<br/>
+4. **services** directory will contain files for database calls
 
-1. Make sure you are in calc-backend directory
-2. Create the virtual environment (one time only)
-```
-python -m venv venv #(python3 if in mac)
-```
-3. Activate the virtual environment (try one of the following, you should be able to click tab for auto complete to ensure you are typing the right one)
-```
-source venv/bin/activate #(for mac)
-```
-```
-venv/Scripts/activate #(for windows)
-```
-```
-venv/Scripts/Activate.ps1 #(for PowerShell)
-```
-```
-source venv/Scripts/activate #(for bash)
-```
-<br/>
-Your virtual environment is now set up and your terminal should say (venv). 
+It will contain common functions like getUsersById that are used frequently so we dont need to keep coding them over and over in different places
 
-### To deactivate the virtual environment
-```
-deactivate
-```
-### To reactivate the virtual environment look at step 3 above
+5. **server.routes.ts** file links all the routes together.
 
-### Dependencies
-Dependencies will have to be managed by us manually. You can see the current dependencies by looking at **required.txt**
-1. After installing a new python dependency (probably pip install {name}) update the dependencies:
-```
-pip freeze > required.txt
-```
-This will update the required.txt and you must remember to git push it
+Whenever a new route is created inside routes directory, you should make sure you also put it in here.
 
-2. **Activate your venv before:** If someone installed new dependencies, after git pulling the changes:
-```
-pip install -r required.txt
-```
-
-### Where to git pull now
-Now with a dedicated front end and back end, run **git pull** in calc-visualizer directory.
-Then cd into frontend or backend directory depending on what you are working on.
-Do your git adds, commits, and pushes in whatever directory your working in.
-Continue to run **npm install** and **npm run dev** within calc-frontend
+6. **index.ts** file is where the server gets run/setup 
