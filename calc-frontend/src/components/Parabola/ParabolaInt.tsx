@@ -1,22 +1,27 @@
 import { MathJax } from "better-react-mathjax";
 import { Link } from "react-router";
+import IntParabolaGraph from "./IntParabolaGraph"
 
-function ParabolaInt()
-{
-  
+function ParabolaInt() {
+
   return (
-    <div> 
-      <Link to="/integrals">
-        <button className="back-button"> Back</button>
-      </Link>
-      <MathJax>
-          <h2 style={{marginBottom:'1rem'}}>Integral of &nbsp;{"\\(y = x^{2} \\)"} </h2>
-      </MathJax>
+   <div> 
+  <Link to="/integrals">
+    <button className="back-button">Back</button>
+  </Link>
+    
+  <MathJax>
+    <h2 className="center-header">
+      {"\\(\\int_{^-5}^{5} x^2 \\,dx\\)"}
+    </h2>
+  </MathJax>
 
-      <div className="flex graph-outer-box">
-        
-      </div>
-    </div>
+  <div className="graph-outer-box" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <IntParabolaGraph />
+  </div>
+
+</div>
+
   )
 }
 
