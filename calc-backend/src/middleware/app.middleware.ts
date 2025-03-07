@@ -1,0 +1,1 @@
+// Here would go middleware for the overall app (probably like if user is authenticated)
