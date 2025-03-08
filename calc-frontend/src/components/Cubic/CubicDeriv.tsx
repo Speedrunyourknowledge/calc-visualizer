@@ -1,23 +1,33 @@
-import { MathJax } from "better-react-mathjax"
+import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router";
 
 function CubicDeriv() {
 
+  const heading = useRef(null);
+
+  useLayoutEffect(() =>{
+    //@ts-ignore
+    let MQ = MathQuill.getInterface(2);
+
+    MQ.StaticMath(heading.current, { })
+
+  }, []);
+
   return (
     <div>
       <Link to="/derivatives">
-        <button className="back-button"> Back</button>
+        <button className="back-button" style={{ marginBottom: '0rem' }}> Back</button>
       </Link>
-      <MathJax>
-        <h2 style={{ marginBottom: '1rem' }}>Derivative of &nbsp;{"\\(y = x^{3} \\)"} </h2>
-      </MathJax>
+      <div>
+        <h2 style={{ marginBottom: '0.5rem' }}>Derivative of <span ref={heading}>y = x^&#123;3&#125;</span> </h2>
+      </div>
 
       <div className="flex graph-outer-box">
         <iframe className="graph-frame" src="https://www.desmos.com/calculator/wzc7pioeji?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 
-        <p className="big-p flex">
+        <p className="big-p">
           The cubic function cubes each input value, raising it to the third power
         </p>
       </div>

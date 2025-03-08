@@ -17,8 +17,8 @@ function Derivatives() {
           <button className="px-10 text-2xl cursor-pointer">Linear</button>
         </Link>
 
-        <Link to="/derivatives/parabola" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Parabola</button>
+        <Link to="/derivatives/quadratic" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Quadratic</button>
         </Link>
 
         <Link to="/derivatives/cubic" className="topic-box">

@@ -1,7 +1,6 @@
 import {expect, test } from 'vitest'
 import {render, screen} from '@testing-library/react'
 import { createMemoryRouter, createRoutesFromElements, RouterProvider } from 'react-router'
-import { MathJaxContext } from 'better-react-mathjax'
 
 import RoutesList from '../App/RoutesList'
 
@@ -11,7 +10,7 @@ test('full app rendering', () => {
     initialEntries:['/'],
   })
 
-  render(<RouterProvider router = {router} />, {wrapper: MathJaxContext})
+  render(<RouterProvider router = {router} />, {})
   
   // check if heading is visible
   const heading = screen.getByRole('link', {name: 'Calc Visualizer'})

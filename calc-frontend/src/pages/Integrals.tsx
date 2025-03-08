@@ -12,13 +12,17 @@ function Integrals() {
 
       <h2 className="topic-header m-auto w-fit">The Integral of Common Functions</h2>
       <div className="flex flex-col gap-6 items-center topic-list">
+
+        <Link to="/integrals/custom" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Custom</button>
+        </Link>
   
         <Link to="/integrals/linear" className="topic-box">
           <button className="px-10 text-2xl cursor-pointer">Linear</button>
         </Link>
 
-        <Link to="/integrals/parabola" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Parabola</button>
+        <Link to="/integrals/quadratic" className="topic-box">
+          <button className="px-10 text-2xl cursor-pointer">Quadratic</button>
         </Link>
 
         <Link to="/integrals/cubic" className="topic-box">

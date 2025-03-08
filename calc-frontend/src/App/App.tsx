@@ -1,7 +1,8 @@
 import { createBrowserRouter, createRoutesFromElements, RouterProvider} from "react-router";
-import { MathJaxContext } from "better-react-mathjax";
 
+import '../../node_modules/mathquill/build/mathquill.css'
 import './app.css'
+import './widgets.css'
 
 import RoutesList from "./RoutesList";
 
@@ -19,9 +20,7 @@ function App() {
     );
 
   return (
-    <MathJaxContext>
       <RouterProvider router={router} />
-    </MathJaxContext>
   )
 }
 

@@ -98,11 +98,12 @@ for n_bars in range(initial_bars, 101, 5):
 sliders = [dict(
     active=0,
     currentvalue={"prefix": "n = "},
-    pad={"t": 30, "r":30, "l":60},
+    pad={"t": 30},
     steps=steps
 )]
 
 fig.update_layout(
+    margin=dict(t=50, r=30, l=60),
     sliders=sliders,
     barmode='overlay',
     xaxis_title="x-axis",
