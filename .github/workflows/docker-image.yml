@@ -1,4 +1,4 @@
-name: Docker CI Develop Branch
+name: Docker for Backend - Develop Branch
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: build the image
-      run: docker build ./calc-frontend --tag emeraldkeys/calc-visualizer-frontend:latest
+      run: docker build ./calc-backend --tag emeraldkeys/calc-visualizer-backend:latest
     - name: push to docker registry
-      run: docker push emeraldkeys/calc-visualizer-frontend:latest
+      run: docker push emeraldkeys/calc-visualizer-backend:latest
       
