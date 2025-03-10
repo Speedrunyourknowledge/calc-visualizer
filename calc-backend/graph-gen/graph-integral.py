@@ -133,5 +133,8 @@ opts.indent_size = 2
 pretty_js = jsbeautifier.beautify(js_code, opts)
 
 # Save only the JavaScript code to a file
-with open("graph.txt", "w", encoding="utf-8") as f:
-    f.write(pretty_js)
+# with open("graph.txt", "w", encoding="utf-8") as f:
+#    f.write(pretty_js)
+
+print(pretty_js)
+
