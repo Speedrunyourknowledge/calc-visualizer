@@ -11,7 +11,8 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
-app.use(routes);
+// Prefixes the endpoint with /api
+app.use('/api',routes);
 
 //app.use(errorMiddleware);
 
