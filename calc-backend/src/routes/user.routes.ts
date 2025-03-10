@@ -1,5 +1,4 @@
-import { Express, Request, Response, NextFunction } from "express";
-import getUsersHandler from "../controllers/user.controller";
+import {getUsers} from "../controllers/user.controller";
 import { Router } from "express";
 // import middleware
 
@@ -11,6 +10,6 @@ import { Router } from "express";
 
 const router = Router();
 
-router.get("/get-users", getUsersHandler);
+router.get("/get-users", getUsers);
 
-export default router;
+export default router

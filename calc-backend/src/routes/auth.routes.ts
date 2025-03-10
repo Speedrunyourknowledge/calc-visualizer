@@ -1,4 +1,6 @@
 import { Router } from "express";
+import { login } from "../controllers/auth.controller";
+
 // import middleware
 // import controllers
 
@@ -8,7 +10,7 @@ import { Router } from "express";
 const router = Router();
 
 // would be a post instead of get probably
-router.get("/login");
+router.get("/login", login);
 // router.get("sign-up", middlewareFunction, loginHandler); // example
 
 export default router;
