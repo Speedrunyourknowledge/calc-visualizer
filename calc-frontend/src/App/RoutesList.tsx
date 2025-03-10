@@ -7,8 +7,8 @@ import Derivatives from "../pages/Derivatives";
 import Limits from "../pages/Limits";
 import Integrals from "../pages/Integrals";
 
-import QuadraticDeriv from "../components/quadratic/quadraticDeriv";
-import QuadraticInt from "../components/quadratic/quadraticInt";
+import QuadraticDeriv from "../components/Quadratic/QuadraticDeriv";
+import QuadraticInt from "../components/Quadratic/QuadraticInt";
 
 import CubicDeriv from "../components/Cubic/CubicDeriv";
 import CubicInt from "../components/Cubic/CubicInt";
