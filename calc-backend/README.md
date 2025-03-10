@@ -36,4 +36,16 @@ It will contain common functions like getUsersById that are used frequently so w
 
 Whenever a new route is created inside routes directory, you should make sure you also put it in here.
 
-6. **index.ts** file is where the server gets run/setup 
+6. **index.ts** file is where the server gets run/setup
+
+## Python Code
+The graph route uses python code, so you must first create a virtual environment in the calc-backend/ folder
+``
+python3 -m venv .venv
+``
+
+Then install the required python libraries with the following command:
+``
+.venv/bin/python -m pip install --no-cache-dir -r requirements.txt
+``
+You do not need to activate the virtual environment for this python code. The command `.venv/bin/python` will use the virtual environment automatically. The Dockerfile has also been updated to deploy the backend server in production mode
