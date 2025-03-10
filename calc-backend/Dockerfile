@@ -26,7 +26,7 @@ ENV PORT=3000
 EXPOSE 3000
 
 RUN npm run build \
-    && npm prune --production
+    && npm prune --omit=dev
 
 # runs when container is started
 ENTRYPOINT ["npm", "start"]
