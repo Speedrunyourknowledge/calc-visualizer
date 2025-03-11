@@ -2,7 +2,6 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router"
 import IntCosineGraph from "../components/Cosine/IntCosineGraph.tsx"
 import Select from "react-select";
-import {parse} from '@khanacademy/kas'
 
 function CustomInt() {
 
@@ -94,13 +93,12 @@ function CustomInt() {
       handlers: {
         edit: function() { 
 
-          let expr = parse(editMF.current.latex()).expr
+          let expr = parse(editMF.current.latex()).expr.print()
 
           if(output.current){
-            output.current.textContent = expr.print(); 
+            output.current.textContent = expr; 
           }
-
-          console.log(parse('sin(5)').expr.print())
+        
         }
       }
     })
