@@ -2,12 +2,16 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router"
 import IntCosineGraph from "../components/Cosine/IntCosineGraph.tsx"
 import Select from "react-select";
+import {parse} from '@khanacademy/kas'
 
 function CustomInt() {
 
-  const container = useRef(null);
-  const MQ = useRef(null);
-  const containerMF = useRef(null);
+  const container = useRef<HTMLDivElement>(null);
+  const MQ = useRef<any>(null);
+  const containerMF = useRef<any>(null);
+  const edit = useRef<HTMLDivElement>(null);
+  const editMF = useRef<any>(null);
+  const output = useRef<HTMLDivElement>(null);
   const [func, setFunc] = useState<string>('linear')
 
   const funcList = [
@@ -83,14 +87,29 @@ function CustomInt() {
   }
 
   useLayoutEffect(() =>{
-    //@ts-ignore
+    //@ts-ignore Cannot find MathQuill
     MQ.current = MathQuill.getInterface(2);
 
+    editMF.current = MQ.current.MathField(edit.current, { 
+      handlers: {
+        edit: function() { 
+
+          let expr = parse(editMF.current.latex()).expr
+
+          if(output.current){
+            output.current.textContent = expr.print(); 
+          }
+
+          console.log(parse('sin(5)').expr.print())
+        }
+      }
+    })
+    
   }, [])
 
   // prepare math container
   useLayoutEffect(() =>{
-    //@ts-ignore
+    
     containerMF.current = MQ.current.StaticMath(container.current, { })
 
   }, [func])
@@ -115,6 +134,9 @@ function CustomInt() {
           onChange={(opt)=>setFunc(opt.value)}
         />
       </div>
+
+      <div style={{display:'block', marginBottom:'0.5rem'}} className='center-header' ref={edit}> </div>
+      <div style={{display:'block', marginBottom:'0.5rem'}} className='center-header' ref={output}> </div>
         
       <div className="flex graph-outer-box" style={{justifyContent: "center"}}>
         <IntCosineGraph />

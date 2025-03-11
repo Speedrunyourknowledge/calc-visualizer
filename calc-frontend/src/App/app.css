@@ -149,6 +149,12 @@ body {
     width:fit-content
   }
 
+  .center-only{
+    margin-left:auto;
+    margin-right:auto; 
+    width:fit-content;
+  }
+
 
   h1{
     font-size:2rem; 
