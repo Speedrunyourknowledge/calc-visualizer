@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router"
 import IntCosineGraph from "../components/Cosine/IntCosineGraph.tsx"
 import Select from "react-select";
+import {parse} from '@khanacademy/kas'
 
 function CustomInt() {
 
