@@ -6,9 +6,9 @@ from bs4 import BeautifulSoup
 import jsbeautifier
 
 # just change these 3 values
-a = 0 # insert lower bound
-b = 15 # insert upper bound
-func = lambda x: np.emath.logn(10, np.tan(x)) # insert function in terms of x
+a = 7.1 # insert lower bound
+b = 8.6 # insert upper bound
+func = lambda x: np.log(np.emath.logn(10,np.sin(x)+np.emath.logn(10,np.log(x)))) # insert function in terms of x
 
 def midpoint_integrate(f, a, b, n):
     h = (b - a) / n
