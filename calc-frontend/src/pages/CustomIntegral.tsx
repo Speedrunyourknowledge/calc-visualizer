@@ -103,8 +103,13 @@ function CustomInt() {
     editMF.current = MQ.current.MathField(edit.current, { 
       handlers: {
         edit: function() { 
-
-          let expr = parse(editMF.current.latex()).expr.print()
+          let expr;
+          try{
+            expr = parse(editMF.current.latex()).expr.print()
+          }
+          catch(e){
+            console.log(e)
+          }
 
           if(output.current){
             output.current.textContent = expr; 
