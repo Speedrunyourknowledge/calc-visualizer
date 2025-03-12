@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router"
-import IntCosineGraph from "../components/Cosine/IntCosineGraph.tsx"
+import IntCustomGraph from "../components/Custom/IntCustomGraph.tsx"
 import Select from "react-select";
 import {parse} from '@khanacademy/kas'
 
@@ -36,6 +36,16 @@ function CustomInt() {
     )
   }
   */
+  const pythonFormat = (expr:string) =>{
+    let regex = /([^sin|cos|tan|log|ln]*)(sin|cos|tan|log|ln)/g
+
+    let edit = expr.replace(regex, '$1np.$2'); // functions
+
+    edit = edit.replaceAll("^","**") // raise to power
+
+    return edit
+  }
+
 
   // updates the math container with the chosen function
   const chooseFunction = () =>{
@@ -98,6 +108,8 @@ function CustomInt() {
 
           if(output.current){
             output.current.textContent = expr; 
+
+            console.log(pythonFormat(expr))
           }
         
         }
@@ -138,7 +150,7 @@ function CustomInt() {
       <div style={{display:'block', marginBottom:'0.5rem'}} className='center-header' ref={output}> </div>
         
       <div className="flex graph-outer-box" style={{justifyContent: "center"}}>
-        <IntCosineGraph />
+        <IntCustomGraph />
       </div>
 
     </div>

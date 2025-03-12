@@ -7,8 +7,8 @@ import jsbeautifier
 
 # just change these 3 values
 a = 0 # insert lower bound
-b = 5 # insert upper bound
-func = lambda x: np.cos(x) # insert function in terms of x
+b = 15 # insert upper bound
+func = lambda x: np.emath.logn(10, np.tan(x)) # insert function in terms of x
 
 def midpoint_integrate(f, a, b, n):
     h = (b - a) / n
@@ -76,8 +76,8 @@ fig.layout.template.layout.colorscale.pop('diverging', None)
 
 
 fig.update_layout(title=(
-        f'Approx. Area = {round(midpoint_integrate(func, a, b, initial_bars), 9)}'
-        f'<br>     True Area = {round(area, 9)}'), title_font_size=14, title_pad_b=2)
+        f'Approx. Area = {np.round(midpoint_integrate(func, a, b, initial_bars), 9)}'
+        f'<br>     True Area = {np.round(area, 9)}'), title_font_size=14, title_pad_b=2)
 
 steps = []
 for n_bars in range(initial_bars, 101, 5):
@@ -88,8 +88,8 @@ for n_bars in range(initial_bars, 101, 5):
             {"x": [x_line, x_bar], "y": [y_line, y_bar], "width": [None, [width] * len(x_bar)], 
              "marker": dict(color=['#31b500' if value > 0 else '#ff3c00' for value in y_bar],
               line=dict(color='black', width=1))},
-             {"title.text":  f'Approx. Area = {round(midpoint_integrate(func, a, b, n_bars), 9)}' 
-             f'<br>     True Area = {round(area, 9)}'}
+             {"title.text":  f'Approx. Area = {np.round(midpoint_integrate(func, a, b, n_bars), 9)}' 
+             f'<br>     True Area = {np.round(area, 9)}'}
         ],
         label=f"{n_bars}"
     )

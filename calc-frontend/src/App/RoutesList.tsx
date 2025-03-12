@@ -38,8 +38,8 @@ import UnitCosine from "../components/UnitCircle/UnitCosine";
 import UnitTangent from "../components/UnitCircle/UnitTangent";
 
 import LimitDef from "../components/Limits/LimitDef";
-import CustomInt from "../pages/CustomIntegral";
 
+import CustomInt from "../pages/CustomIntegral";
 
 const RoutesList = 
 <Route path='/' element={<RootLayout/>} >
