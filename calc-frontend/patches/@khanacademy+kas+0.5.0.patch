@@ -1,36 +1,171 @@
 diff --git a/node_modules/@khanacademy/kas/dist/es/index.js b/node_modules/@khanacademy/kas/dist/es/index.js
-index 3fe5b6d..ddf13c9 100644
+index 3fe5b6d..5532a20 100644
 --- a/node_modules/@khanacademy/kas/dist/es/index.js
 +++ b/node_modules/@khanacademy/kas/dist/es/index.js
-@@ -4347,11 +4347,10 @@ class Log extends Expr {
+@@ -134,6 +134,7 @@ var parser$1 = function () {
+     $V3 = [6, 11],
+     $V4 = [6, 11, 13, 17];
+   var parser = {
++    options: {base_first:true},
+     trace: function trace() {},
+     yy: {},
+     symbols_: {
+@@ -1046,7 +1047,7 @@ var parser = function () {
+           this.$ = yy.Trig.create($$[$0 - 1], $$[$0]);
+           break;
+         case 22:
+-          this.$ = yy.Log.create($$[$0 - 1], $$[$0]);
++          this.$ = yy.Log.create($$[$0 - 1], $$[$0], base_first=options.base_first);
+           break;
+         case 24:
+           this.$ = new yy.Pow($$[$0 - 2], $$[$0]);
+@@ -4326,13 +4327,14 @@ Pow.nthroot = function (radicand, degree) {
+   return new _class5(radicand, exp.addHint("root"));
+ };
+ class Log extends Expr {
+-  constructor(base, power) {
++  constructor(base, power, base_first=true) {
+     super();
+     this.base = void 0;
+     this.power = void 0;
+     this.func = Log;
+     this.base = base;
+     this.power = power;
++    this.base_first = base_first | true;
+     this.hints = _extends({}, this.hints, {
+       open: false
+     });
+@@ -4346,12 +4348,20 @@ class Log extends Expr {
+   codegen() {
      return "(Math.log(" + this.power.codegen() + ") / Math.log(" + this.base.codegen() + "))";
    }
-   print() {
+-  print() {
 -    var power = "(" + this.power.print() + ")";
-     if (this.isNatural()) {
+-    if (this.isNatural()) {
 -      return "ln" + power;
-+      return "ln(" + this.power.print() +")";
-     } else {
+-    } else {
 -      return "log_(" + this.base.print() + ") " + power;
-+      return "log(" + this.power.print() + "," + this.base.print() + ")";
++  print(base_first) {
++    if(base_first) {
++      if (this.isNatural()) {
++        return "ln(" + this.power.print() +")";
++      } else {
++        return "log(" + this.base.print() + "," + this.power.print() + ")";
++      }
++    }
++    else{
++      if (this.isNatural()) {
++        return "ln(" + this.power.print() +")";
++      } else {
++        return "log(" + this.power.print() + "," + this.base.print() + ")";
++      }
      }
    }
    tex() {
+@@ -4420,8 +4430,8 @@ class Log extends Expr {
+   static common() {
+     return NumTen;
+   }
+-  static create(base, power) {
+-    var log = new Log(base, power);
++  static create(base, power, base_first=true) {
++    var log = new Log(base, power, base_first);
+     if (!power.hints.parens) {
+       log = log.addHint("open");
+     }
 diff --git a/node_modules/@khanacademy/kas/dist/index.js b/node_modules/@khanacademy/kas/dist/index.js
-index d952975..776a3b2 100644
+index d952975..cb4a651 100644
 --- a/node_modules/@khanacademy/kas/dist/index.js
 +++ b/node_modules/@khanacademy/kas/dist/index.js
-@@ -4364,11 +4364,10 @@ class Log extends Expr {
+@@ -910,6 +910,7 @@ var parser = function () {
+     $Vn = [10, 16, 19, 21, 22, 28, 29, 30, 31, 32, 34, 37, 39, 42, 43, 44, 46],
+     $Vo = [5, 6, 8, 10, 12, 14, 16, 18, 19, 21, 22, 28, 29, 30, 31, 32, 33, 34, 35, 37, 39, 41, 42, 43, 44, 45, 46];
+   var parser = {
++    options: {base_first:true},
+     trace: function trace() {},
+     yy: {},
+     symbols_: {
+@@ -1052,7 +1053,7 @@ var parser = function () {
+           this.$ = yy.Trig.create($$[$0 - 1], $$[$0]);
+           break;
+         case 22:
+-          this.$ = yy.Log.create($$[$0 - 1], $$[$0]);
++          this.$ = yy.Log.create($$[$0 - 1], $$[$0], base_first=options.base_first);
+           break;
+         case 24:
+           this.$ = new yy.Pow($$[$0 - 2], $$[$0]);
+@@ -4342,10 +4343,12 @@ class Pow extends Expr {
+ class Log extends Expr {
+   base;
+   power;
+-  constructor(base, power) {
++  base_first;
++  constructor(base, power, base_first=true) {
+     super();
+     this.base = base;
+     this.power = power;
++    this.base_first = base_first;
+     this.hints = {
+       ...this.hints,
+       open: false
+@@ -4363,12 +4366,20 @@ class Log extends Expr {
+   codegen() {
      return "(Math.log(" + this.power.codegen() + ") / Math.log(" + this.base.codegen() + "))";
    }
-   print() {
+-  print() {
 -    var power = "(" + this.power.print() + ")";
-     if (this.isNatural()) {
+-    if (this.isNatural()) {
 -      return "ln" + power;
-+      return "ln(" + this.power.print() +")";
-     } else {
+-    } else {
 -      return "log_(" + this.base.print() + ") " + power;
-+      return "log(" + this.power.print() + "," + this.base.print() + ")";
++  print(base_first) {
++    if(base_first) {
++      if (this.isNatural()) {
++        return "ln(" + this.power.print() +")";
++      } else {
++        return "log(" + this.base.print() + "," + this.power.print() + ")";
++      }
++    }
++    else{
++      if (this.isNatural()) {
++        return "ln(" + this.power.print() +")";
++      } else {
++        return "log(" + this.power.print() + "," + this.base.print() + ")";
++      }
      }
    }
    tex() {
+@@ -4437,8 +4448,8 @@ class Log extends Expr {
+   static common() {
+     return NumTen;
+   }
+-  static create(base, power) {
+-    var log = new Log(base, power);
++  static create(base, power, base_first=true) {
++    var log = new Log(base, power, base_first);
+     if (!power.hints.parens) {
+       log = log.addHint("open");
+     }
+diff --git a/node_modules/@khanacademy/kas/dist/nodes.d.ts b/node_modules/@khanacademy/kas/dist/nodes.d.ts
+index 84167a3..1d1cb24 100644
+--- a/node_modules/@khanacademy/kas/dist/nodes.d.ts
++++ b/node_modules/@khanacademy/kas/dist/nodes.d.ts
+@@ -162,7 +162,8 @@ export declare class Pow extends Expr {
+ export declare class Log extends Expr {
+     base: Expr;
+     power: Expr;
+-    constructor(base: Expr, power: Expr);
++    base_first:boolean;
++    constructor(base: Expr, power: Expr, base_first?:boolean);
+     func: typeof Log;
+     args(): Expr[];
+     eval(vars?: Vars, options?: ParseOptions): number;
+@@ -176,7 +177,7 @@ export declare class Log extends Expr {
+     isNatural(): boolean;
+     static natural(): Const;
+     static common(): Int;
+-    static create(base: any, power: any): Log;
++    static create(base: any, power: any, base_first?:boolean): Log;
+ }
+ type TrigFunc = {
+     eval: (arg: number) => number;
