@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router"
 import IntCustomGraph from "../components/Custom/IntCustomGraph.tsx"
-import generateFunction from "../functions/mathOutput";
+import {generateFunction, validateBounds} from "../functions/mathOutput";
 
 function CustomInt() {
 
@@ -15,60 +15,37 @@ function CustomInt() {
   const [func, setFunc] = useState<string>('');
   const [bounds, setBounds] = useState<number[]>([0,5]);
 
-  // sends input to plotly
   /*
-  const sendInput = ()=>{
-
-    let input = "hi";
-
-    return(
-      input
-    )
-  }
+    Updates the function and the bounds with the user input
+    Returns 1 if input is invalid
   */
-
-  // Updates the function and the bounds with the user input
-  // Returns 1 if error occured
   const generateOutput = ():number =>{
-    const funcLatex = editMF.current.latex()
-    let newFunc: string;
+    const funcLatex:string = editMF.current.latex()
+    let newFunc:string;
+
+    // check if function is valid
     try{
-      // check if function is valid
       newFunc = generateFunction(funcLatex)
-
-      // empty string was entered
-      if(newFunc == ''){
-        console.log('Please enter a valid function')
-        return 1
-      }
-
     }
-    catch(e){
+    catch{
       console.log('Please enter a valid function')
       return 1
     }
 
-    const lowerBound = containerMF.current.innerFields[0].latex()
-    const upperBound = containerMF.current.innerFields[1].latex()
+    const lowerBound:string = containerMF.current.innerFields[0].latex()
+    const upperBound:string = containerMF.current.innerFields[1].latex()
 
-    const lowerNum = parseFloat(lowerBound)
-    const upperNum = parseFloat(upperBound)
+    const checkBounds = validateBounds(lowerBound, upperBound)
 
-    if(isNaN(lowerNum) || isNaN(upperNum)){
-      console.log('The upper and lower bounds must be numbers')
+    // check if bounds are valid
+    if(checkBounds !== 'success'){
+      console.log(checkBounds)
       return 1
     }
 
-    if(lowerNum < upperNum){
-      // bounds are valid
-    }
-    else{
-      console.log('The lower bound must be less than the upper bound')
-      return 1
-    }
-    // if input is valid, set all variables
+    // input is valid, so set all variables
     setFunc(newFunc)
-    setBounds([lowerBound, upperBound])
+    setBounds([parseFloat(lowerBound), parseFloat(upperBound)])
 
     return 0
   }
