@@ -22,8 +22,8 @@ const pythonFormat = (expr:string) =>{
   Returns: a graphable math function
   Errors are handled by the caller
 */ 
-const generateFunction = (functionLatex: string, base_first=true) =>{
-  let newFunc;
+const generateFunction = (functionLatex: string, base_first=true): string =>{
+  let newFunc: string;
 
   // Use print(false) if you want log(x, base) as the output
   // The default is base_first = true, which prints log(base, x)

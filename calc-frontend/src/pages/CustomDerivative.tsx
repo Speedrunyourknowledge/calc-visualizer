@@ -29,9 +29,10 @@ function CustomDeriv() {
   // Returns 1 if error occured
   const generateOutput = ():number =>{
     const funcLatex = editMF.current.latex()
+    let newFunc: string;
     try{
-      const newFunc = generateFunction(funcLatex)
-      setFunc(newFunc)
+      // check if function is valid
+      newFunc = generateFunction(funcLatex)
     }
     catch(e){
       console.log('Please enter a valid function')
@@ -50,12 +51,15 @@ function CustomDeriv() {
     }
 
     if(lowerNum < upperNum){
-      setBounds([lowerBound, upperBound])
+      // bounds are valid
     }
     else{
       console.log('The lower bound must be less than the upper bound')
       return 1
     }
+    // if input is valid, set all variables
+    setFunc(newFunc)
+    setBounds([lowerBound, upperBound])
 
     return 0
   }
