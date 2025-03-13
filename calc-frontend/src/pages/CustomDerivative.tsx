@@ -1,6 +1,6 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router"
-import {parse} from '@khanacademy/kas'
+import generateFunction from "../functions/mathOutput";
 
 function CustomDeriv() {
 
@@ -10,7 +10,8 @@ function CustomDeriv() {
 
   const edit = useRef<HTMLDivElement>(null);
   const editMF = useRef<any>(null);
-  const output = useRef<HTMLDivElement>(null);
+  const [func, setFunc] = useState<string>('');
+  const [bounds, setBounds] = useState<number[]>([0,5]);
 
   // sends input to plotly
   /*
@@ -24,59 +25,56 @@ function CustomDeriv() {
   }
   */
 
-  const pythonFormat = (expr:string) =>{
-    let regex = /([^sin|cos|tan|log]*)(sin|cos|tan|log)/g
-    // numpy functions start with np.
-    let editStr = expr.replace(regex, '$1np.$2'); 
+  // Updates the function and the bounds with the user input
+  // Returns 1 if error occured
+  const generateOutput = ():number =>{
+    const funcLatex = editMF.current.latex()
+    try{
+      const newFunc = generateFunction(funcLatex)
+      setFunc(newFunc)
+    }
+    catch(e){
+      console.log('Please enter a valid function')
+      return 1
+    }
 
-    regex = /([^log]*)(log)/g
-    // numpy log becomes np.emath.logn
-    editStr = editStr.replace(regex, '$1emath.$2n'); 
+    const lowerBound = containerMF.current.innerFields[0].latex()
+    const upperBound = containerMF.current.innerFields[1].latex()
 
-    // numpy ln becomes np.log
-    editStr = editStr.replaceAll("ln","np.log"); 
+    const lowerNum = parseFloat(lowerBound)
+    const upperNum = parseFloat(upperBound)
 
-    editStr = editStr.replaceAll("^","**") // raise to power
+    if(isNaN(lowerNum) || isNaN(upperNum)){
+      console.log('The upper and lower bounds must be numbers')
+      return 1
+    }
 
-    return editStr
+    if(lowerNum < upperNum){
+      setBounds([lowerBound, upperBound])
+    }
+    else{
+      console.log('The lower bound must be less than the upper bound')
+      return 1
+    }
+
+    return 0
   }
 
+  // sets up the user input field
   useLayoutEffect(() =>{
     //@ts-ignore Cannot find MathQuill
     MQ.current = MathQuill.getInterface(2);
 
-    editMF.current = MQ.current.StaticMath(edit.current).innerFields[0]
+    containerMF.current = MQ.current.StaticMath(container.current, { }) // for the bounds
 
+    editMF.current = MQ.current.StaticMath(edit.current).innerFields[0] // for the function
+
+    // updates the output whenever 'enter' is pressed
     editMF.current.config({
       handlers: {
-        edit: function() { 
-          let expr;
-          try{
-            // Use print(false) if you want log(x, base) as the output
-            // The default is base_first = true, which prints log(base, x)
-            expr = parse(editMF.current.latex()).expr.print()
-
-            console.log(expr || 'nothing')
-
-            if(output.current){
-              output.current.textContent = expr; 
-  
-              console.log(pythonFormat(expr))
-            }
-          }
-          catch(e){
-            console.log(e)
-          }
-        }
+        enter: generateOutput
       }
     })
-
-  }, [])
-
-  // prepare math container
-  useLayoutEffect(() =>{
-    
-    containerMF.current = MQ.current.StaticMath(container.current, { })
 
   }, [])
 
@@ -98,7 +96,9 @@ function CustomDeriv() {
 
       </div>
 
-      <div style={{display:'block', marginBottom:'0.5rem'}} className='center-header' ref={output}> </div>
+      <div style={{display:'block', marginBottom:'0.5rem'}} className='center-header'> 
+        {func} &nbsp;&nbsp;{bounds.join(', ')}
+      </div>
         
       <div className="flex graph-outer-box" style={{justifyContent: "center"}}>
         The graph will go here
