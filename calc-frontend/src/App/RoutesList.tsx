@@ -40,6 +40,7 @@ import UnitTangent from "../components/UnitCircle/UnitTangent";
 import LimitDef from "../components/Limits/LimitDef";
 
 import CustomInt from "../pages/CustomIntegral";
+import CustomDeriv from "../pages/CustomDerivative";
 
 const RoutesList = 
 <Route path='/' element={<RootLayout/>} >
@@ -47,6 +48,7 @@ const RoutesList =
   <Route path='/calc-visualizer' element={<Home/>} />
 
   <Route path='/derivatives' element={ <Derivatives/> }/>
+  <Route path='/derivatives/custom' element={ <CustomDeriv/> } />
   <Route path='/derivatives/quadratic' element={ <QuadraticDeriv/> } />
   <Route path='/derivatives/cubic' element={ <CubicDeriv/> } />
   <Route path='/derivatives/logarithmic' element={ <NatLogDeriv/> } />
