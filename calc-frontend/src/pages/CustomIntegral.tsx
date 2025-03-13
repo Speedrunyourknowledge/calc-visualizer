@@ -92,7 +92,9 @@ function CustomInt() {
           \int_\MathQuillMathField&#123;0&#125;^\MathQuillMathField&#123;5&#125;
         </div>
 
-        <div ref={edit} style={{height:'fit-content', alignSelf:'center', marginRight:'.25rem'}}> </div>
+        <div ref={edit} style={{height:'fit-content', alignSelf:'center', marginRight:'.25rem'}}> 
+          x
+        </div>
 
         <div ref={ending} style={{height:'fit-content', alignSelf:'center'}}> 
           \mathrm&#123;d&#125;x

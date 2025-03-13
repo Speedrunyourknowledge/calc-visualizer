@@ -91,7 +91,7 @@ function CustomDeriv() {
         </div>
 
         <div ref={edit}> 
-          y = \MathQuillMathField1
+          y = \MathQuillMathField&#123;x&#125;
         </div>
 
       </div>

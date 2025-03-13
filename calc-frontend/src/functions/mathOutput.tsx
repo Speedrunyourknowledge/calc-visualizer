@@ -22,12 +22,12 @@ const pythonFormat = (expr:string) =>{
   Returns: a graphable math function
   Errors are handled by the caller
 */ 
-const generateFunction = (functionLatex: string) =>{
+const generateFunction = (functionLatex: string, base_first=true) =>{
   let newFunc;
 
   // Use print(false) if you want log(x, base) as the output
   // The default is base_first = true, which prints log(base, x)
-  newFunc = parse(functionLatex).expr.print()
+  newFunc = parse(functionLatex).expr.print(base_first)
 
   console.log(pythonFormat(newFunc))
 
