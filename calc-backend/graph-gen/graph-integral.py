@@ -112,7 +112,7 @@ fig.update_layout(
     yaxis=dict(fixedrange=True),
 )
 
-div_content = fig.to_html(full_html=False, include_plotlyjs=False, config={
+div_content = fig.to_html(full_html=False, include_plotlyjs=False, div_id="plotly_graph", config={
     'scrollZoom': False,
     'displayModeBar': False,
     'doubleClick': False,
