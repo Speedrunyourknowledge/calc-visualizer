@@ -33,6 +33,12 @@ function CustomDeriv() {
     try{
       // check if function is valid
       newFunc = generateFunction(funcLatex)
+
+      // empty string was entered
+      if(newFunc == ''){
+        console.log('Please enter a valid function')
+        return 1
+      }
     }
     catch(e){
       console.log('Please enter a valid function')
