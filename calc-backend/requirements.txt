@@ -3,7 +3,6 @@ certifi==2024.7.4
 charset-normalizer==3.3.2
 EditorConfig==0.17.0
 idna==3.7
-jsbeautifier==1.15.4
 lxml==5.2.2
 narwhals==1.28.0
 numpy==2.0.1

@@ -3,7 +3,6 @@ import plotly.graph_objects as go
 from scipy.integrate import quad
 import numpy as np
 from bs4 import BeautifulSoup
-import jsbeautifier
 
 # just change these 3 values
 a = 7.1 # insert lower bound
@@ -128,14 +127,9 @@ js_code = ""
 for script in soup.find_all('script'):
     js_code += script.text.strip() 
 
-opts = jsbeautifier.default_options()
-opts.indent_size = 2  
-
-pretty_js = jsbeautifier.beautify(js_code, opts)
-
 # Save only the JavaScript code to a file
 # with open("graph.txt", "w", encoding="utf-8") as f:
-#    f.write(pretty_js)
+#    f.write(js_code)
 
-print(pretty_js)
+print(js_code)
 

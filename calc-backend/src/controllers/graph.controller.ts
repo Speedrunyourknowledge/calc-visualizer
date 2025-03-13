@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import path from 'node:path';
 import { spawn } from 'child_process';
+//@ts-ignore Cannot find types for js-beautify
+import beautify from 'js-beautify'
 
 // This file would hold logic that gets executed when the users route is called
 
@@ -22,6 +24,7 @@ export function createGraph(req: Request, res: Response, next: NextFunction){
 
     process.stdout.on('close', function(data: any) {
 
-      res.send(Buffer.concat(chunks).toString("utf-8"));
+      const prettyStr: string = beautify.js(Buffer.concat(chunks).toString("utf-8"), {indent_size: 2})
+      res.send(prettyStr);
     })
 }
