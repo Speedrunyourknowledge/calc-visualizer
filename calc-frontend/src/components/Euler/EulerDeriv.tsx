@@ -1,27 +1,44 @@
-import { MathJax } from "better-react-mathjax"
+import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router";
 
 function EulerDeriv()
 {
 
+  const heading = useRef(null);
+  const container = useRef(null);
+  const con2 = useRef(null);
+  const con3 = useRef(null);
+
+  useLayoutEffect(() =>{
+    //@ts-ignore
+    let MQ = MathQuill.getInterface(2);
+
+    MQ.StaticMath(heading.current, { })
+    MQ.StaticMath(container.current, { })
+    MQ.StaticMath(con2.current, { })
+    MQ.StaticMath(con3.current, { })
+
+  }, []);
+
   return (
     <div>
       <Link to="/derivatives">
-        <button className="back-button"> Back</button>
+        <button className="back-button" style={{marginBottom:'0rem'}}> Back</button>
       </Link>
-      <MathJax>
-        <h2 style={{marginBottom:'1rem'}}>Derivative of &nbsp;{"\\(y = e^{x} \\)"} </h2>
-      </MathJax>
+      <div>
+        <h2 style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = e^&#123;x&#125;</span></h2>
+      </div>
 
       <div className="flex graph-outer-box">
         <iframe className = "graph-frame" src="https://www.desmos.com/calculator/apkv8zj85n?embed"
                 style={{border: "1px solid #ccc"}} >
         </iframe>
 
-        <p className="big-p flex">
-          <MathJax>The exponential function grows the fastest. It naturally has a horizontal asymptote 
-            at {"\\(y = 0\\)"}. <br/> The {"\\(e\\)"} in {"\\(e^{x} \\)"} is called Euler's number, and 
-            it is equal to 2.718... (the digits go on forever)</MathJax>
+        <p className="big-p">
+          The exponential function grows the fastest. It has a horizontal asymptote 
+          at <span ref={container}>y = 0</span>. 
+          The <span ref={con2}>e</span> in <span ref={con3}>e^&#123;x&#125;</span> is 
+          called Euler's number, and it is equal to 2.718... (the digits go on forever)
         </p>
       </div>
     

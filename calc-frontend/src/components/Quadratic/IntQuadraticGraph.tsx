@@ -2,7 +2,7 @@
 
 import { useLayoutEffect } from "react";
 
-function IntParabolaGraph() {
+function IntQuadraticGraph() {
 
 useLayoutEffect(() => {
   window.PLOTLYENV = window.PLOTLYENV || {};
@@ -195,7 +195,7 @@ useLayoutEffect(() => {
         "tracegroupgap": 0
       },
       "margin": {
-        "t": 60,
+        "t": 50,
         "r":30,
         "l":60
       },
@@ -689,4 +689,4 @@ useLayoutEffect(() => {
 
 }
 
-export default IntParabolaGraph
+export default IntQuadraticGraph

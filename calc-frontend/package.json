@@ -8,16 +8,20 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "postinstall": "patch-package"
   },
   "dependencies": {
+    "@khanacademy/kas": "^0.5.0",
     "@tailwindcss/vite": "^4.0.4",
-    "better-react-mathjax": "^2.1.0",
+    "axios": "^1.8.1",
     "jsdom": "^26.0.0",
+    "mathquill": "^0.10.1-a",
     "npm": "^11.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^7.1.5",
+    "react-select": "^5.10.1",
     "tailwindcss": "^4.0.4"
   },
   "devDependencies": {
@@ -32,6 +36,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "patch-package": "^8.0.0",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
     "vite": "^6.1.1",

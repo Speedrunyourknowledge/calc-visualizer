@@ -1,0 +1,84 @@
+diff --git a/node_modules/@khanacademy/kas/dist/es/index.js b/node_modules/@khanacademy/kas/dist/es/index.js
+index 3fe5b6d..a576088 100644
+--- a/node_modules/@khanacademy/kas/dist/es/index.js
++++ b/node_modules/@khanacademy/kas/dist/es/index.js
+@@ -4346,12 +4346,20 @@ class Log extends Expr {
+   codegen() {
+     return "(Math.log(" + this.power.codegen() + ") / Math.log(" + this.base.codegen() + "))";
+   }
+-  print() {
+-    var power = "(" + this.power.print() + ")";
+-    if (this.isNatural()) {
+-      return "ln" + power;
+-    } else {
+-      return "log_(" + this.base.print() + ") " + power;
++  print(base_first = true) {
++    if(base_first) {
++      if (this.isNatural()) {
++        return "ln(" + this.power.print() +")";
++      } else {
++        return "log(" + this.base.print() + "," + this.power.print() + ")";
++      }
++    }
++    else{
++      if (this.isNatural()) {
++        return "ln(" + this.power.print() +")";
++      } else {
++        return "log(" + this.power.print() + "," + this.base.print() + ")";
++      }
+     }
+   }
+   tex() {
+diff --git a/node_modules/@khanacademy/kas/dist/index.js b/node_modules/@khanacademy/kas/dist/index.js
+index d952975..434d3b5 100644
+--- a/node_modules/@khanacademy/kas/dist/index.js
++++ b/node_modules/@khanacademy/kas/dist/index.js
+@@ -4363,12 +4363,20 @@ class Log extends Expr {
+   codegen() {
+     return "(Math.log(" + this.power.codegen() + ") / Math.log(" + this.base.codegen() + "))";
+   }
+-  print() {
+-    var power = "(" + this.power.print() + ")";
+-    if (this.isNatural()) {
+-      return "ln" + power;
+-    } else {
+-      return "log_(" + this.base.print() + ") " + power;
++  print(base_first = true) {
++    if(base_first) {
++      if (this.isNatural()) {
++        return "ln(" + this.power.print() +")";
++      } else {
++        return "log(" + this.base.print() + "," + this.power.print() + ")";
++      }
++    }
++    else{
++      if (this.isNatural()) {
++        return "ln(" + this.power.print() +")";
++      } else {
++        return "log(" + this.power.print() + "," + this.base.print() + ")";
++      }
+     }
+   }
+   tex() {
+diff --git a/node_modules/@khanacademy/kas/dist/nodes.d.ts b/node_modules/@khanacademy/kas/dist/nodes.d.ts
+index 84167a3..05fb440 100644
+--- a/node_modules/@khanacademy/kas/dist/nodes.d.ts
++++ b/node_modules/@khanacademy/kas/dist/nodes.d.ts
+@@ -26,7 +26,7 @@ declare abstract class Expr {
+     eval(vars?: Vars, options?: ParseOptions): number;
+     codegen(): string;
+     compile(): (vars: Expr[]) => string;
+-    abstract print(): string;
++    abstract print(base_first?: boolean): string;
+     abstract tex(): string;
+     asTex(options: any): string;
+     name(): string;
+@@ -167,7 +167,7 @@ export declare class Log extends Expr {
+     args(): Expr[];
+     eval(vars?: Vars, options?: ParseOptions): number;
+     codegen(): string;
+-    print(): string;
++    print(base_first?: boolean): string;
+     tex(): string;
+     collect(options?: Options): Expr;
+     expand(): Expr | Add | this;

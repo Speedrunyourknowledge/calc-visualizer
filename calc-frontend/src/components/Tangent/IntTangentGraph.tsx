@@ -197,7 +197,7 @@ useLayoutEffect(() => {
         "tracegroupgap": 0
       },
       "margin": {
-        "t": 60,
+        "t": 50,
         "r":30,
         "l":60
       },

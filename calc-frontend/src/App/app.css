@@ -85,6 +85,12 @@ body {
     aspect-ratio: 3/2;
   }
 
+  .select-container{
+    font-size:1rem;
+    align-self:center;
+    width: 12ch;
+  }
+
   /* 
       List the more inclusive media queries first if they 
       should be overridden by subsequent queries
@@ -131,17 +137,22 @@ body {
 
   }
 
-
-
   .big-p{
     font-size: 1.125rem;
   }
 
   .center-header{
-    margin-bottom: 1rem;
+    font-size:1.5rem;
+    margin-bottom: 0.25rem;
     margin-left:auto;
     margin-right:auto; 
     width:fit-content
+  }
+
+  .center-only{
+    margin-left:auto;
+    margin-right:auto; 
+    width:fit-content;
   }
 
 

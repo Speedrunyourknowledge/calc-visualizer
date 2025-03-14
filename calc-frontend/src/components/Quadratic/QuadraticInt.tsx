@@ -1,8 +1,8 @@
 import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router";
-import IntEulerGraph from "./IntEulerGraph"
+import IntQuadraticGraph from "./IntQuadraticGraph"
 
-function EulerInt() {
+function QuadraticInt() {
 
   const container = useRef(null);
 
@@ -18,15 +18,15 @@ function EulerInt() {
       <Link to="/integrals">
         <button className="back-button">Back</button>
       </Link>
-        
+    
       <div className="flex">
         <div ref={container} className="center-header">
-        \int_&#123;0&#125;^&#123;10&#125; e^&#123;x&#125; \quad \mathrm&#123;d&#125;x 
+        \int_&#123;-5&#125;^&#123;5&#125; x^&#123;2&#125; \quad \mathrm&#123;d&#125;x 
         </div>
       </div>
 
       <div className="graph-outer-box" style={{ display: "flex", justifyContent: "center"}}>
-        <IntEulerGraph />
+        <IntQuadraticGraph />
       </div>
 
     </div>
@@ -34,4 +34,4 @@ function EulerInt() {
   )
 }
 
-export default EulerInt
+export default QuadraticInt

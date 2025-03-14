@@ -3,6 +3,6 @@ import { Router } from "express";
 
 const router = Router();
 
-router.get("/create-graph", createGraph);
+router.post("/create-graph", createGraph);
 
 export default router
