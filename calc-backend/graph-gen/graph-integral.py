@@ -2,11 +2,25 @@ import plotly.express as px
 import plotly.graph_objects as go
 from scipy.integrate import quad
 import numpy as np
+import sys
 
+# safe evaluation of user input function because it only allows predefined variables
+#def safe_eval(str):
+#  allowed_names = {'sin':np.sin, 'cos', np.cos, 'tan', np.tan, 'log', np.emath.logn, 'ln', np.log}
+  # exceptions are thrown so node is aware of errors
+#  return eval(str, {'__builtins__':None}, allowed_names)
+
+inputFunc = sys.argv[1]
+lowerBound = float(sys.argv[2])
+upperBound = float(sys.argv[3])
+
+# try to evaluate input string
+#safe_func = safe_eval(inputFunc) 
+        
 # just change these 3 values
-a = 7.1 # insert lower bound
-b = 8.6 # insert upper bound
-func = lambda x: np.log(np.emath.logn(10,np.sin(x)+np.emath.logn(10,np.log(x)))) # insert function in terms of x
+a = lowerBound # insert lower bound
+b = upperBound # insert upper bound
+func = lambda x: np.log(np.tan(x))
 
 def midpoint_integrate(f, a, b, n):
     h = (b - a) / n

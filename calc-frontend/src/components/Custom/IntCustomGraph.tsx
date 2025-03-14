@@ -21,9 +21,11 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
       }
       // { withCredentials:true}
     )
+    console.log(func)
 
     request.then(response => {
       if(response.status === 200){
+        console.log(response)
         let graphObject = response.data
 
         // add config to object

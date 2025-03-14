@@ -1,20 +1,10 @@
 import {parse} from '@khanacademy/kas'
 
 const pythonFormat = (expr:string) =>{
-  let regex = /([^sin|cos|tan|log]*)(sin|cos|tan|log)/g
-  // numpy functions start with np.
-  let editStr = expr.replace(regex, '$1np.$2'); 
 
-  regex = /([^log]*)(log)/g
-  // numpy log becomes np.emath.logn
-  editStr = editStr.replace(regex, '$1emath.$2n'); 
+  expr = expr.replaceAll("^","**") // raise to power
 
-  // numpy ln becomes np.log
-  editStr = editStr.replaceAll("ln","np.log"); 
-
-  editStr = editStr.replaceAll("^","**") // raise to power
-
-  return editStr
+  return expr
 }
 
 /* 
