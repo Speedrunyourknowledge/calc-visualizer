@@ -45,10 +45,13 @@ The graph route uses python code, so you must first create a virtual environment
 python3 -m venv .venv
 ```
 
-Then install the required python libraries with the following command:
+Then activate the virtual environment with 
+```
+source .venv/bin/activate
+```
+
+Then install the required python libraries with the following command (while the virtual environment is active):
 
 ```
-.venv/bin/python -m pip install --no-cache-dir -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
-
-You do not need to activate the virtual environment for this python code. The command `.venv/bin/python` will use the virtual environment automatically.
