@@ -75,17 +75,19 @@ function CustomInt() {
         <button className="back-button"> Back</button>
       </Link>
 
-      <div className="center-header flex flex-wrap">
+      <div className="center-header flex flex-wrap justify-center gap-[.5rem]">
         <div ref={container} >
           \int_\MathQuillMathField&#123;0&#125;^\MathQuillMathField&#123;5&#125;
         </div>
 
-        <div ref={edit} style={{height:'fit-content', alignSelf:'center', marginRight:'.25rem'}}> 
-          x
-        </div>
+        <div style={{height:'fit-content', alignSelf:'center'}}>
+          <div ref={edit} style={{marginRight:'.25rem'}}> 
+            x
+          </div>
 
-        <div ref={ending} style={{height:'fit-content', alignSelf:'center'}}> 
-          \mathrm&#123;d&#125;x
+          <div ref={ending}> 
+            \mathrm&#123;d&#125;x
+          </div>
         </div>
 
       </div>
