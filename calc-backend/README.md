@@ -50,8 +50,13 @@ Then activate the virtual environment with
 source .venv/bin/activate
 ```
 
-Then install the required python libraries with the following command (while the virtual environment is active):
+Then install the required python libraries with the following command (while the virtual environment is active)
 
 ```
 python3 -m pip install -r requirements.txt
+```
+
+To deactivate the virtual environment just run
+```
+deactivate
 ```
