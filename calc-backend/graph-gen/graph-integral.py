@@ -2,7 +2,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 from scipy.integrate import quad
 import numpy as np
-from bs4 import BeautifulSoup
 
 # just change these 3 values
 a = 7.1 # insert lower bound
@@ -111,25 +110,7 @@ fig.update_layout(
     yaxis=dict(fixedrange=True),
 )
 
-div_content = fig.to_html(full_html=False, include_plotlyjs=False, div_id="plotly_graph", config={
-    'scrollZoom': False,
-    'displayModeBar': False,
-    'doubleClick': False,
-    'editable': False,
-    'staticPlot': False
-})
+fig_json = fig.to_json(pretty=True)
 
-soup = BeautifulSoup(div_content, 'html.parser')
-
-pretty_content = soup.prettify()
-
-js_code = ""
-for script in soup.find_all('script'):
-    js_code += script.text.strip() 
-
-# Save only the JavaScript code to a file
-# with open("graph.txt", "w", encoding="utf-8") as f:
-#    f.write(js_code)
-
-print(js_code)
+print(fig_json)
 

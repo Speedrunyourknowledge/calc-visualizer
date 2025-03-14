@@ -92,13 +92,12 @@ function CustomInt() {
 
       </div>
 
-      <div style={{display:'block', marginBottom:'0.5rem'}} className='center-header'> 
-        {func} &nbsp;&nbsp;{bounds.join(', ')}
-      </div>
-        
-      <div className="flex graph-outer-box" style={{justifyContent: "center"}}>
-        <IntCustomGraph />
-      </div>
+      {
+        func === ''? null :
+        <div className="flex graph-outer-box" style={{justifyContent: "center"}}>
+          <IntCustomGraph func={func} lowerBound = {bounds[0]} upperBound = {bounds[1]}/>
+        </div>
+      }
 
     </div>
   )

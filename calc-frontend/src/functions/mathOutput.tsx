@@ -33,7 +33,7 @@ const generateFunction = (funcLatex: string, python_code=true): string =>{
   newFunc = parse(funcLatex).expr.print(python_code)
 
   // empty string was entered
-  if(newFunc == ''){
+  if(newFunc === ''){
     throw new Error('no empty strings allowed')
   }
 
