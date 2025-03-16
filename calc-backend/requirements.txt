@@ -6,6 +6,8 @@ numpy==2.0.1
 packaging==24.2
 pandas==2.2.2
 plotly==6.0.0
+plusminus==0.8.1
+pyparsing==3.2.1
 python-dateutil==2.9.0.post0
 pytz==2024.1
 requests==2.32.3
