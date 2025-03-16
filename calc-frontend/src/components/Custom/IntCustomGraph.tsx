@@ -6,6 +6,7 @@ import axios from "axios";
 function IntCustomGraph({func, lowerBound, upperBound}) {
 
   const [ready, setReady] = useState(false)
+  const [success, setSuccess] = useState(false)
   const [plotlyObject, setPlotlyObject] = useState(null)
 
   useEffect(() => {
@@ -21,50 +22,56 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
       }
       // { withCredentials:true}
     )
-    console.log(func)
+
+    // add loading circle when ready is false
+    setReady(false)
+    setSuccess(false)
 
     request.then(response => {
-      if(response.status === 200){
-        console.log(response)
-        let graphObject = response.data
+      console.log(response)
+      let graphObject = response.data
 
-        // add config to object
-        graphObject.config = {
-          'scrollZoom': false,
-          'displayModeBar': false,
-          'doubleClick': false,
-          'editable': false,
-          'staticPlot': false
+      // add config to object
+      graphObject.config = {
+        'scrollZoom': false,
+        'displayModeBar': false,
+        'doubleClick': false,
+        'editable': false,
+        'staticPlot': false
       }
-      
-        setReady(true)
-        setPlotlyObject(graphObject)
+    
+      setSuccess(true)
+      setPlotlyObject(graphObject)
+    })
+    .catch(function(e) {
+      if(e.code === 'ERR_NETWORK'){
+        console.log('Unable to connect to server')
+      }
+      if(e.status === 422){
+        console.log(e)
+        console.log('Your function could not be graphed. \
+          Make sure the function is properly formatted and check if the bounds \
+          are within the function\'s domain')
       }
       else{
-        console.log('The function could not be graphed. Make sure the function \
-          is defined for all x-values within your bounds.')
+        console.log(e)
+        console.log('server returned a bad response')
       }
     })
-    .catch(function(error) {
-
-      if(error.response === undefined){
-        console.log('Unable to connect to server')
-        console.log(error)
-      }
-      else{
-        console.log('A server error occured')
-      }
+    .finally(() =>{
+      setReady(true)
     })
 
   },[])
 
   useLayoutEffect(() => {
-    if(ready){
+    if(success){
       try{
         window.PLOTLYENV = window.PLOTLYENV || {};
         if(document.getElementById("plotly_graph")) {
           Plotly.newPlot("plotly_graph", plotlyObject)
         };
+
       }
       catch(e){
         // graph failed
@@ -75,8 +82,14 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
 
 
   return (
-      <div className="plotly-graph-div graph-frame" id="plotly_graph">
-      </div>
+    
+    ready? 
+      success? <div className="plotly-graph-div graph-frame" id="plotly_graph"></div> :
+      <div>graph failed</div> 
+    :
+    <div>
+      loading...
+    </div> 
   )
 
 }

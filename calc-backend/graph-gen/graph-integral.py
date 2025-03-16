@@ -3,24 +3,37 @@ import plotly.graph_objects as go
 from scipy.integrate import quad
 import numpy as np
 import sys
+from plusminus import BaseArithmeticParser
 
-# safe evaluation of user input function because it only allows predefined variables
-#def safe_eval(str):
-#  allowed_names = {'sin':np.sin, 'cos', np.cos, 'tan', np.tan, 'log', np.emath.logn, 'ln', np.log}
-  # exceptions are thrown so node is aware of errors
-#  return eval(str, {'__builtins__':None}, allowed_names)
+class NumpyArithmeticParser(BaseArithmeticParser):
+  def customize(self):
 
-inputFunc = sys.argv[1]
-lowerBound = float(sys.argv[2])
-upperBound = float(sys.argv[3])
+    super().customize()
 
-# try to evaluate input string
-#safe_func = safe_eval(inputFunc) 
-        
+    self.add_function('sin', 1, np.sin)
+    self.add_function('cos', 1, np.cos)
+    self.add_function('tan', 1, np.tan)
+    self.add_function('log', 2, np.emath.logn)
+    self.add_function('ln', 1, np.log)
+
+    self.add_operator("**", 2, BaseArithmeticParser.LEFT, lambda a, b: a ** b)
+
+
+parser = NumpyArithmeticParser()
+
+input_func = sys.argv[1]
+lower_bound = float(sys.argv[2])
+upper_bound = float(sys.argv[3])
+
+# parses a string representing a function
+def insert_x(x):
+  parser['x'] = x
+  return parser.evaluate(input_func)
+
 # just change these 3 values
-a = lowerBound # insert lower bound
-b = upperBound # insert upper bound
-func = lambda x: np.log(np.tan(x))
+a = lower_bound 
+b = upper_bound 
+func = insert_x
 
 def midpoint_integrate(f, a, b, n):
     h = (b - a) / n

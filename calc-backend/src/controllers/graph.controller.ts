@@ -19,7 +19,7 @@ export function createGraph(req: Request, res: Response, next: NextFunction){
     const chunks:any = []; // holds data stream
 
     process.on('error', function(e) {
-      res.status(422).send('error graphing function');
+      res.status(422).send(e);
     })
 
     // spawned process is asynchronous
@@ -31,6 +31,12 @@ export function createGraph(req: Request, res: Response, next: NextFunction){
     process.stdout.on('close', function(data: any) {
 
       const prettyStr: string = Buffer.concat(chunks).toString("utf-8")
-      res.status(200).send(prettyStr);
+
+      if(prettyStr === ''){
+        res.status(422).send('error graphing function')
+      }
+      else{
+        res.status(200).send(prettyStr);
+      }
     })
 }
