@@ -26,15 +26,15 @@ function EulerDeriv()
         <button className="back-button" style={{marginBottom:'0rem'}}> Back</button>
       </Link>
       <div>
-        <h2 style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = e^&#123;x&#125;</span></h2>
+        <h2 className="center-header" style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = e^&#123;x&#125;</span></h2>
       </div>
 
-      <div className="flex graph-outer-box">
+      <div className="graph-outer-box">
         <iframe className = "graph-frame" src="https://www.desmos.com/calculator/apkv8zj85n?embed"
                 style={{border: "1px solid #ccc"}} >
         </iframe>
 
-        <p className="big-p">
+        <p className="big-p side-text">
           The exponential function grows the fastest. It has a horizontal asymptote 
           at <span ref={container}>y = 0</span>. 
           The <span ref={con2}>e</span> in <span ref={con3}>e^&#123;x&#125;</span> is 

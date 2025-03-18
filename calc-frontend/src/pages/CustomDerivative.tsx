@@ -88,7 +88,7 @@ function CustomDeriv() {
         {func} &nbsp;&nbsp;{bounds.join(', ')}
       </div>
         
-      <div className="flex graph-outer-box" style={{justifyContent: "center"}}>
+      <div className="graph-outer-box" style={{justifyContent: "center"}}>
         The graph will go here
       </div>
 

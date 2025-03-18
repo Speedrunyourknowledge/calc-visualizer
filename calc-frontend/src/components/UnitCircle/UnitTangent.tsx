@@ -23,18 +23,18 @@ function UnitTangent() {
       </Link>
 
       <div>
-        <h2 style={{ marginBottom: '1rem' }}><span ref={heading}>tan(\theta)</span> on the Unit Circle</h2>
+        <h2 className="center-header" style={{marginBottom:'0.5rem'}}><span ref={heading}>tan(\theta)</span> on the Unit Circle</h2>
       </div>
 
-      <div className="flex graph-outer-box">
+      <div className="graph-outer-box">
         <iframe className="graph-frame unit-frame" src="https://www.desmos.com/calculator/9wzsprp36r?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 
-        <p className="big-p">
+        <p className="big-p side-text">
           <span ref={container}>tan(\theta)</span> is the slope at any point on the Unit Circle.
             This is depicted by the green line in the triangle. The tangent graph on the right shows the value
-            of <span ref={container}>tan(\theta)</span> on the y&#8209;axis for each angle on the x&#8209;axis
+            of <span ref={con2}>tan(\theta)</span> on the y&#8209;axis for each angle on the x&#8209;axis
         </p>
       </div>
 
