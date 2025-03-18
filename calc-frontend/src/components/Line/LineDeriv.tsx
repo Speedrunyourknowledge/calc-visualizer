@@ -27,11 +27,11 @@ function LineDeriv()
           <button className="back-button"> Back</button>
         </Link> 
         <p className="big-p">
-            The derivative of a linear function <span ref={heading}>y = mx</span> is equivalent to the slope of the line - <span ref={container}>\frac&#123;\Delta \text&#123;&#8202;&#125; y&#125; 
+            The derivative of a linear function <span ref={heading}>y = mx</span> is equivalent to it's slope - <span ref={container}>\frac&#123;\Delta \text&#123;&#8202;&#125; y&#125; 
             &#123;\Delta \text&#123;&#8202;&#125; x&#125;</span>
         </p>        
         <div className="flex graph-outer-box">
-          <iframe className = "graph-frame" src="https://www.desmos.com/calculator/6tdy3yors3?embed" 
+          <iframe className = "graph-frame" src="https://www.desmos.com/calculator/xvx816hrbm?embed" 
                   style={{border: "1px solid #ccc"}} >
           </iframe>
 
