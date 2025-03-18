@@ -21,24 +21,27 @@ function LineDeriv()
   }, []);
 
   return (
+    
       <div>
         <Link to="/derivatives">
         <button className="back-button"> Back</button>
       </Link> 
+      <p className="big-p">
+            The derivative of a linear function <span ref={heading}>y = mx</span> is equivalent to the slope of the linear, which is 
+            m = <span ref={container}>\frac&#123;\Delta \text&#123;&#8202;&#125; y&#125; 
+            &#123;\Delta \text&#123;&#8202;&#125; x&#125;</span>
+      </p>
+        /*
         <div>
           <h2 style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = x</span> </h2>
         </div>
-        
+        */
         <div className="flex graph-outer-box">
-          <iframe className = "graph-frame" src="https://www.desmos.com/calculator/dojf9xhzey?embed" 
+          <iframe className = "graph-frame" src="https://www.desmos.com/calculator/6tdy3yors3?embed" 
                   style={{border: "1px solid #ccc"}} >
           </iframe>
 
-          <p className="big-p">
-            The linear function has a constant slope equal 
-            to <span ref={container}>\frac&#123;\Delta \text&#123;&#8202;&#125; y&#125; 
-            &#123;\Delta \text&#123;&#8202;&#125; x&#125;</span>
-          </p>
+          
 
         </div>
         
