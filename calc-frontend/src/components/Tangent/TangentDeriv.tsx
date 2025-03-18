@@ -20,15 +20,15 @@ function TangentDeriv() {
         <button className="back-button"> Back</button>
       </Link>
       <div>
-        <h2 style={{ marginBottom: '0.5rem' }}>Derivative of <span ref={heading}>y = tan(x)</span> </h2>
+        <h2 className="center-header" style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = tan(x)</span> </h2>
       </div>
 
-      <div className="flex graph-outer-box">
+      <div className="graph-outer-box">
         <iframe className="graph-frame" src="https://www.desmos.com/calculator/4hzxwimehi?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 
-        <p className="big-p">
+        <p className="big-p side-text">
           The tangent function has vertical asymptotes at multiples 
           of <span ref={container}>x = \frac&#123;\pi&#125; &#123;2&#125;</span>
         </p>

@@ -20,15 +20,15 @@ function SineDeriv(){
         <button className="back-button"> Back</button>
       </Link>
       <div>
-        <h2 style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = sin(x)</span> </h2>
+        <h2 className="center-header" style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = sin(x)</span> </h2>
       </div>
       
-      <div className="flex graph-outer-box">
+      <div className="graph-outer-box">
         <iframe className = "graph-frame" src="https://www.desmos.com/calculator/e9waw1mka6?embed"  
                 style={{border: "1px solid #ccc"}} >
         </iframe>
 
-        <p className="big-p">
+        <p className="big-p side-text">
           The sine function starts with a value of 0 and ends with a value of 0 on the 
           interval <span ref={container}>[0, \quad 2\pi]</span>
         </p>

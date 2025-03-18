@@ -93,7 +93,7 @@ function CustomInt() {
 
       {
         func === ''? null :
-        <div className="flex graph-outer-box" style={{justifyContent: "center"}}>
+        <div className="graph-outer-box" style={{justifyContent: "center"}}>
           <IntCustomGraph key={func + bounds[0].toString() + bounds[1].toString()} func={func} 
             lowerBound = {bounds[0]} upperBound = {bounds[1]}/>
         </div>

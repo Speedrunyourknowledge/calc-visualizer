@@ -25,7 +25,7 @@ function SineInt() {
         </div>
       </div>
 
-      <div className="graph-outer-box" style={{ display: "flex", justifyContent: "center"}}>
+      <div className="graph-outer-box" >
         <IntSineGraph />
       </div>
 

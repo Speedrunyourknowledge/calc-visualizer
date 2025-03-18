@@ -19,15 +19,15 @@ function CubicDeriv() {
         <button className="back-button" style={{ marginBottom: '0rem' }}> Back</button>
       </Link>
       <div>
-        <h2 style={{ marginBottom: '0.5rem' }}>Derivative of <span ref={heading}>y = x^&#123;3&#125;</span> </h2>
+        <h2 className="center-header" style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = x^&#123;3&#125;</span> </h2>
       </div>
 
-      <div className="flex graph-outer-box">
+      <div className="graph-outer-box">
         <iframe className="graph-frame" src="https://www.desmos.com/calculator/wzc7pioeji?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 
-        <p className="big-p">
+        <p className="big-p side-text">
           The cubic function cubes each input value, raising it to the third power
         </p>
       </div>

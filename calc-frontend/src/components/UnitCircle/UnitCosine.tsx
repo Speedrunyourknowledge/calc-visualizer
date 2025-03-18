@@ -23,15 +23,15 @@ function UnitCosine() {
       </Link>
 
       <div>
-        <h2 style={{ marginBottom: '1rem' }}><span ref={heading}>cos(\theta)</span> on the Unit Circle</h2>
+        <h2 className="center-header" style={{marginBottom:'0.5rem'}}><span ref={heading}>cos(\theta)</span> on the Unit Circle</h2>
       </div>
 
-      <div className="flex graph-outer-box">
+      <div className="graph-outer-box">
         <iframe className="graph-frame unit-frame" src="https://www.desmos.com/calculator/a5jvnnetfk?embed"
           style={{ border: "1px solid #ccc" }} >
         </iframe>
 
-        <p className="big-p">
+        <p className="big-p side-text">
           <span ref={container}>cos(\theta)</span> is the x&#8209;coordinate on the Unit Circle.
             This is depicted by the green line in the triangle. The cosine graph on the right shows the value
             of <span ref={con2}>cos(\theta)</span> on the y&#8209;axis for each angle on the x&#8209;axis

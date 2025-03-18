@@ -25,15 +25,15 @@ function NatLogDeriv(){
         <button className="back-button"> Back</button>
       </Link>
       <div>
-        <h2 style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = ln(x)</span> </h2>
+        <h2 className="center-header" style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = ln(x)</span> </h2>
       </div>
       
-      <div className="flex graph-outer-box">
+      <div className="graph-outer-box">
         <iframe className = "graph-frame" src="https://www.desmos.com/calculator/2oftga01j8?embed"
                 style={{border: "1px solid #ccc"}} >
         </iframe>
 
-        <p className="big-p">
+        <p className="big-p side-text">
           The logarithmic function grows the slowest. It has a vertical asymptote 
             at <span ref={container}>x = 0</span>. Logarithms are the inverse of exponents, 
             so <span ref={con2}>y = ln(x)</span> is the same 
