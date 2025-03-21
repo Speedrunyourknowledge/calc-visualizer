@@ -10,9 +10,15 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
+app.use(cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+}));
+
 app.all("/api/auth/*", toNodeHandler(auth));
 
-app.use(cors());
 app.use(express.json())
 
 // Prefixes the endpoint with /api
