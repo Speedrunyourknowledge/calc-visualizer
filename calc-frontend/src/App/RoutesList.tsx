@@ -42,10 +42,14 @@ import LimitDef from "../components/Limits/LimitDef";
 import CustomInt from "../pages/CustomIntegral";
 import CustomDeriv from "../pages/CustomDerivative";
 
+import SignIn from "../pages/SignIn";
+
 const RoutesList = 
 <Route path='/' element={<RootLayout/>} >
   <Route index element={<Home/>}/>
   <Route path='/calc-visualizer' element={<Home/>} />
+
+  <Route path='/sign-in' element={ <SignIn/> }/>
 
   <Route path='/derivatives' element={ <Derivatives/> }/>
   <Route path='/derivatives/custom' element={ <CustomDeriv/> } />
