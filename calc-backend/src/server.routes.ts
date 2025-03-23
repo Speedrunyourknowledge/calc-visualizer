@@ -5,6 +5,7 @@ import { Router } from "express";
 import authRoutes from "./routes/auth.routes";
 import userRoutes from "./routes/user.routes";
 import graphRoutes from "./routes/graph.routes";
+import funcRoutes from "./routes/func.routes";
 
 const router = Router();
 
@@ -14,5 +15,6 @@ const router = Router();
 router.use("/user", userRoutes);
 router.use("/auth", authRoutes);
 router.use("/graph", graphRoutes); 
+router.use("/func", funcRoutes);
 
 export default router;
