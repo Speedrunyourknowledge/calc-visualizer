@@ -17,3 +17,16 @@ index a6f7939..5d05e69 100644
  
 -}());
 +};
+diff --git a/node_modules/mathquill/package.json b/node_modules/mathquill/package.json
+index 52c23d8..1def280 100644
+--- a/node_modules/mathquill/package.json
++++ b/node_modules/mathquill/package.json
+@@ -1,7 +1,7 @@
+ {
+   "name": "mathquill",
+   "description": "Easily type math in your webapp",
+-  "version": "0.10.1a",
++  "version": "0.10.1-a",
+   "license": "MPL-2.0",
+   "repository": {
+     "type": "git",
