@@ -44,48 +44,54 @@ import CustomDeriv from "../pages/CustomDerivative";
 
 import SignIn from "../pages/SignIn";
 import Dashboard from "../pages/Dashboard";
+import ProtectedRoute from "../components/ProtectedRoute";
+import RedirectIfAuth from "../components/RedirectIfAuth";
 
-const RoutesList = 
-<Route path='/' element={<RootLayout/>} >
-  <Route index element={<Home/>}/>
-  <Route path='/calc-visualizer' element={<Home/>} />
+const RoutesList =
+  <Route path='/' element={<RootLayout />} >
+    <Route index element={<Home />} />
+    <Route path='/calc-visualizer' element={<Home />} />
 
-  <Route path='/sign-in' element={ <SignIn/> }/>
+    <Route element={<RedirectIfAuth />} >
+      <Route path='/sign-in' element={<SignIn />} />
+    </Route>
 
-  <Route path='/dashboard' element = { <Dashboard /> } />
+    <Route element={<ProtectedRoute />} >
+      <Route path='/dashboard' element={<Dashboard />} />
+    </Route>
 
-  <Route path='/derivatives' element={ <Derivatives/> }/>
-  <Route path='/derivatives/custom' element={ <CustomDeriv/> } />
-  <Route path='/derivatives/quadratic' element={ <QuadraticDeriv/> } />
-  <Route path='/derivatives/cubic' element={ <CubicDeriv/> } />
-  <Route path='/derivatives/logarithmic' element={ <NatLogDeriv/> } />
-  <Route path='/derivatives/exponential' element={ <EulerDeriv/> } />
-  <Route path='/derivatives/linear' element={ <LineDeriv/> } />
-  <Route path='/derivatives/sine' element={ <SineDeriv/> } />
-  <Route path='/derivatives/cosine' element={ <CosineDeriv/> } />
-  <Route path='/derivatives/tangent' element={ <TangentDeriv/> } />
+    <Route path='/derivatives' element={<Derivatives />} />
+    <Route path='/derivatives/custom' element={<CustomDeriv />} />
+    <Route path='/derivatives/quadratic' element={<QuadraticDeriv />} />
+    <Route path='/derivatives/cubic' element={<CubicDeriv />} />
+    <Route path='/derivatives/logarithmic' element={<NatLogDeriv />} />
+    <Route path='/derivatives/exponential' element={<EulerDeriv />} />
+    <Route path='/derivatives/linear' element={<LineDeriv />} />
+    <Route path='/derivatives/sine' element={<SineDeriv />} />
+    <Route path='/derivatives/cosine' element={<CosineDeriv />} />
+    <Route path='/derivatives/tangent' element={<TangentDeriv />} />
 
-  <Route path='/integrals' element= { <Integrals/> }/>
-  <Route path='/integrals/custom' element={ <CustomInt/> } />
-  <Route path='/integrals/quadratic' element={ <QuadraticInt/> }/>
-  <Route path='/integrals/cubic' element={ <CubicInt/> }/>
-  <Route path='/integrals/logarithmic' element={ <NatLogInt/> } />
-  <Route path='/integrals/exponential' element={ <EulerInt/> } />
-  <Route path='/integrals/linear' element={ <LineInt/> } />
-  <Route path='/integrals/sine' element={ <SineInt/> } />
-  <Route path='/integrals/cosine' element={ <CosineInt/> } />
-  <Route path='/integrals/tangent' element={ <TangentInt/> } />
+    <Route path='/integrals' element={<Integrals />} />
+    <Route path='/integrals/custom' element={<CustomInt />} />
+    <Route path='/integrals/quadratic' element={<QuadraticInt />} />
+    <Route path='/integrals/cubic' element={<CubicInt />} />
+    <Route path='/integrals/logarithmic' element={<NatLogInt />} />
+    <Route path='/integrals/exponential' element={<EulerInt />} />
+    <Route path='/integrals/linear' element={<LineInt />} />
+    <Route path='/integrals/sine' element={<SineInt />} />
+    <Route path='/integrals/cosine' element={<CosineInt />} />
+    <Route path='/integrals/tangent' element={<TangentInt />} />
 
-  <Route path='/limits' element= {<Limits/>}/>
-  <Route path='/limits/limitdef' element={ <LimitDef/> } />
+    <Route path='/limits' element={<Limits />} />
+    <Route path='/limits/limitdef' element={<LimitDef />} />
 
-  <Route path='/unit-circle' element= {<UnitCircle/>}/>
-  <Route path='/unit-circle/sine' element={ <UnitSine/> } />
-  <Route path='/unit-circle/cosine' element={ <UnitCosine/> } />
-  <Route path='/unit-circle/tangent' element={ <UnitTangent/> } />
+    <Route path='/unit-circle' element={<UnitCircle />} />
+    <Route path='/unit-circle/sine' element={<UnitSine />} />
+    <Route path='/unit-circle/cosine' element={<UnitCosine />} />
+    <Route path='/unit-circle/tangent' element={<UnitTangent />} />
 
-  <Route path='*' element={<ErrorPage/>} />
-  
-</Route>
+    <Route path='*' element={<ErrorPage />} />
+
+  </Route>
 
 export default RoutesList
