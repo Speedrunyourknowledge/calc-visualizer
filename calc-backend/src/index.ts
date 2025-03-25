@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import routes from "./server.routes";
+import errorMiddleware from "./middlewares/errorHandler.middleware";
 
 const PORT = process.env.PORT || 3000;
 
