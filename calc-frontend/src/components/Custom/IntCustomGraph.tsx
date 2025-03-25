@@ -11,9 +11,9 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
 
   useEffect(() => {
 
-    const serverUrl = 'http://localhost:3000/api/'
+    const serverUrl = import.meta.env.VITE_SERVER_URL
 
-    let request = axios.post(serverUrl + 'graph/create-graph',
+    let request = axios.post(serverUrl + '/graph/create-graph',
       {
         'func': func,
         'lowerBound': lowerBound,
