@@ -1,14 +1,13 @@
-diff --git a/node_modules/patch-package/dist/coerceSemVer.js b/node_modules/patch-package/dist/coerceSemVer.js
-index a51baea..730a0d0 100644
---- a/node_modules/patch-package/dist/coerceSemVer.js
-+++ b/node_modules/patch-package/dist/coerceSemVer.js
-@@ -7,7 +7,7 @@ exports.coerceSemVer = void 0;
- const semver_1 = __importDefault(require("semver"));
- function coerceSemVer(version) {
-     var _a;
--    return ((_a = semver_1.default.coerce(version)) === null || _a === void 0 ? void 0 : _a.version) || null;
-+    return ((_a = semver_1.default.coerce(version, { loose: true })) === null || _a === void 0 ? void 0 : _a.version) || null;
- }
- exports.coerceSemVer = coerceSemVer;
- //# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29lcmNlU2VtVmVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc3JjL2NvZXJjZVNlbVZlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQSxvREFBMkI7QUFFM0IsU0FBZ0IsWUFBWSxDQUFDLE9BQWU7O0lBQzFDLE9BQU8sQ0FBQSxNQUFBLGdCQUFNLENBQUMsTUFBTSxDQUFDLE9BQU8sQ0FBQywwQ0FBRSxPQUFPLEtBQUksSUFBSSxDQUFBO0FBQ2hELENBQUM7QUFGRCxvQ0FFQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBzZW12ZXIgZnJvbSBcInNlbXZlclwiXG5cbmV4cG9ydCBmdW5jdGlvbiBjb2VyY2VTZW1WZXIodmVyc2lvbjogc3RyaW5nKTogc3RyaW5nIHwgbnVsbCB7XG4gIHJldHVybiBzZW12ZXIuY29lcmNlKHZlcnNpb24pPy52ZXJzaW9uIHx8IG51bGxcbn1cbiJdfQ==
-\ No newline at end of file
+diff --git a/node_modules/patch-package/dist/applyPatches.js b/node_modules/patch-package/dist/applyPatches.js
+index 2d6344b..5dc09b5 100644
+--- a/node_modules/patch-package/dist/applyPatches.js
++++ b/node_modules/patch-package/dist/applyPatches.js
+@@ -42,7 +42,7 @@ function getInstalledPackageVersion({ appPath, path, pathSpecifier, isDevOnly, p
+     }
+     const { version } = require(path_2.join(packageDir, "package.json"));
+     // normalize version for `npm ci`
+-    const result = semver_1.default.valid(version);
++    const result = semver_1.default.valid(version, { loose: true });
+     if (result === null) {
+         throw new PatchApplicationError(`${chalk_1.default.red("Error:")} Version string '${version}' cannot be parsed from ${path_2.join(packageDir, "package.json")}`);
+     }
