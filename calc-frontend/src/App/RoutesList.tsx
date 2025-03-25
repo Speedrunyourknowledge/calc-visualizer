@@ -43,6 +43,7 @@ import CustomInt from "../pages/CustomIntegral";
 import CustomDeriv from "../pages/CustomDerivative";
 
 import SignIn from "../pages/SignIn";
+import Dashboard from "../pages/Dashboard";
 
 const RoutesList = 
 <Route path='/' element={<RootLayout/>} >
@@ -50,6 +51,8 @@ const RoutesList =
   <Route path='/calc-visualizer' element={<Home/>} />
 
   <Route path='/sign-in' element={ <SignIn/> }/>
+
+  <Route path='/dashboard' element = { <Dashboard /> } />
 
   <Route path='/derivatives' element={ <Derivatives/> }/>
   <Route path='/derivatives/custom' element={ <CustomDeriv/> } />
