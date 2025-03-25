@@ -2,13 +2,38 @@ import plotly.express as px
 import plotly.graph_objects as go
 from scipy.integrate import quad
 import numpy as np
-from bs4 import BeautifulSoup
-import jsbeautifier
+import sys
+from plusminus import BaseArithmeticParser
+
+class NumpyArithmeticParser(BaseArithmeticParser):
+  def customize(self):
+
+    super().customize()
+
+    self.add_function('sin', 1, np.sin)
+    self.add_function('cos', 1, np.cos)
+    self.add_function('tan', 1, np.tan)
+    self.add_function('log', 2, np.emath.logn)
+    self.add_function('ln', 1, np.log)
+
+    self.add_operator("**", 2, BaseArithmeticParser.LEFT, lambda a, b: a ** b)
+
+
+parser = NumpyArithmeticParser()
+
+input_func = sys.argv[1]
+lower_bound = float(sys.argv[2])
+upper_bound = float(sys.argv[3])
+
+# parses a string representing a function
+def insert_x(x):
+  parser['x'] = x
+  return parser.evaluate(input_func)
 
 # just change these 3 values
-a = 0 # insert lower bound
-b = 5 # insert upper bound
-func = lambda x: np.cos(x) # insert function in terms of x
+a = lower_bound 
+b = upper_bound 
+func = insert_x
 
 def midpoint_integrate(f, a, b, n):
     h = (b - a) / n
@@ -76,8 +101,8 @@ fig.layout.template.layout.colorscale.pop('diverging', None)
 
 
 fig.update_layout(title=(
-        f'Approx. Area = {round(midpoint_integrate(func, a, b, initial_bars), 9)}'
-        f'<br>     True Area = {round(area, 9)}'), title_font_size=14, title_pad_b=2)
+        f'Approx. Area = {np.round(midpoint_integrate(func, a, b, initial_bars), 9)}'
+        f'<br>     True Area = {np.round(area, 9)}'), title_font_size=14, title_pad_b=2)
 
 steps = []
 for n_bars in range(initial_bars, 101, 5):
@@ -88,8 +113,8 @@ for n_bars in range(initial_bars, 101, 5):
             {"x": [x_line, x_bar], "y": [y_line, y_bar], "width": [None, [width] * len(x_bar)], 
              "marker": dict(color=['#31b500' if value > 0 else '#ff3c00' for value in y_bar],
               line=dict(color='black', width=1))},
-             {"title.text":  f'Approx. Area = {round(midpoint_integrate(func, a, b, n_bars), 9)}' 
-             f'<br>     True Area = {round(area, 9)}'}
+             {"title.text":  f'Approx. Area = {np.round(midpoint_integrate(func, a, b, n_bars), 9)}' 
+             f'<br>     True Area = {np.round(area, 9)}'}
         ],
         label=f"{n_bars}"
     )
@@ -98,11 +123,12 @@ for n_bars in range(initial_bars, 101, 5):
 sliders = [dict(
     active=0,
     currentvalue={"prefix": "n = "},
-    pad={"t": 30, "r":30, "l":60},
+    pad={"t": 30},
     steps=steps
 )]
 
 fig.update_layout(
+    margin=dict(t=50, r=30, l=60),
     sliders=sliders,
     barmode='overlay',
     xaxis_title="x-axis",
@@ -111,27 +137,7 @@ fig.update_layout(
     yaxis=dict(fixedrange=True),
 )
 
-div_content = fig.to_html(full_html=False, include_plotlyjs=False, config={
-    'scrollZoom': False,
-    'displayModeBar': False,
-    'doubleClick': False,
-    'editable': False,
-    'staticPlot': False
-})
+fig_json = fig.to_json(pretty=True)
 
-soup = BeautifulSoup(div_content, 'html.parser')
+print(fig_json)
 
-pretty_content = soup.prettify()
-
-js_code = ""
-for script in soup.find_all('script'):
-    js_code += script.text.strip() 
-
-opts = jsbeautifier.default_options()
-opts.indent_size = 2  
-
-pretty_js = jsbeautifier.beautify(js_code, opts)
-
-# Save only the JavaScript code to a file
-with open("graph.txt", "w", encoding="utf-8") as f:
-    f.write(pretty_js)

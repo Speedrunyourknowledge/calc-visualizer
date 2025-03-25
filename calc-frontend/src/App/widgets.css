@@ -1,0 +1,27 @@
+
+.mq-math-mode var.mq-operator-name.mq-last{
+  padding-right:0;
+}
+
+.mq-math-mode .mq-supsub.mq-after-operator-name{
+  padding-right:0;
+}
+
+.mq-root-block, .mq-math-mode .mq-root-block{
+  vertical-align: bottom;
+  overflow:visible;
+  padding: 0px 2px 0px 2px;
+}
+
+.mq-root-block, .mq-math-mode .mq-root-block:has(.mq-fraction){
+  vertical-align: middle;
+}
+
+.mq-math-mode .mq-fraction{
+  padding: 0px;
+}
+
+h2 .mq-math-mode .mq-fraction{
+  font-size:80%;
+}
+
