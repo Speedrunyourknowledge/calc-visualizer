@@ -2,7 +2,7 @@ name: Docker for Backend - Production Branch
 
 on:
   push:
-    branches: [ "production" ]
+    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
