@@ -2,6 +2,9 @@ import { Route } from "react-router";
 
 import RootLayout from "./RootLayout";
 
+//@ts-ignore implicit any type
+import mathquillFunc from "../../node_modules/mathquill/build/mathquill";
+
 import Home from "../pages/Home";
 import Derivatives from "../pages/Derivatives";
 import Limits from "../pages/Limits";
@@ -41,6 +44,9 @@ import LimitDef from "../components/Limits/LimitDef";
 
 import CustomInt from "../pages/CustomIntegral";
 import CustomDeriv from "../pages/CustomDerivative";
+
+// launch mathquill instance
+mathquillFunc();
 
 const RoutesList = 
 <Route path='/' element={<RootLayout/>} >
