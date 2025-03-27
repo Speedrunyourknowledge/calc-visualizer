@@ -1,11 +1,21 @@
 import { Link } from "react-router"
+import { useAuth } from "../App/AuthContext";
+import SignInButton from "../components/ui/SignInButton";
+import SignOutButton from "../components/ui/SignOutButton";
 
 function Home() {
+  const { session } = useAuth();
+
 
   return (
     <div>
       <h2 className = "topic-header m-auto w-fit">Topics</h2>
 
+        <Link to="/dashboard">
+          <button className="back-button">Dashboard</button>
+        </Link>
+        {session===null ? <SignInButton/> : <SignOutButton/> }
+        {session===null ? <p>Not Signed in</p> : <p>Signed in as {session.user.name}</p>}
       <div className="flex flex-col gap-6 m-auto home-list">
         {
           /*
