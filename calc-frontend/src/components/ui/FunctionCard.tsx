@@ -1,15 +1,24 @@
+import axios from "axios";
 
 interface FunctionCardProps {
     topic: string;
     expression: string;
     id: string;
+    onDelete: (id: string) => void;
 }
-
-const handleDelete = async () => {console.log("Delete")}
 
 const handleView = async () => {console.log("View")}
 
-function FunctionCard({topic, expression, id}: FunctionCardProps) {
+function FunctionCard({topic, expression, id, onDelete}: FunctionCardProps) {
+    const handleDelete = async () => {
+        
+        try {
+            const response = await axios.delete(`http://localhost:3000/api/func/delete/${id}`);
+            onDelete(id);
+        } catch (error) {
+            alert(`Something went wrong: ${error}`)
+        }
+    }
 
     return (
     <div className="bg-white p-4 rounded-2xl shadow-md text-center w-80">
