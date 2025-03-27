@@ -58,17 +58,24 @@ Fetch updates from remote **and** merge updates into the current branch 
 ```
 git pull
 ```
+If git tells you your branch can be "fast forwarded" when you git pull, then no merge commit will be created on your local branch. 
+If your branch cannot be fast forwarded, that means the remote branch was updated since the last time you made a commit on your local branch. Without fast forwarding, a merge commit will be created with all the changes from the remote branch. 
+<br/><br/>
+
+Tell git to only execute the merge step of "git pull" if fast forwarding is possible. If fast forwarding is not possible, then you will have to run "git merge" separately. This prevents any unintentional merge commits.
+```
+git config --global pull.ff only
+```
 <br/>
 
 Fetch updates from remote **and** rebase updates into the current branch 
 ```
 git pull --rebase
 ```
-Rebasing takes your local branch and stacks it on top of updates from the remote. 
-This is useful when you only care about keeping your local branch up to date, and you don’t want to clutter your branch history with merge commits that would result from git pull. 
-Each git pull creates a merge commit on your local branch.
+Rebasing takes your local branch and moves it ahead of updates from the remote branch, making it appear as if the commits 
+in the remote branch happened first. This is useful when "git pull" cannot be fast forwarded, and you want to avoid unnecessary merge commits in your branch history. 
 <br/>
-**Don't** rebase on github because it alters the remote branch history. Only rebase local branches.
+**Don't** rebase a remote branch because it alters the remote branch history. Only rebase local branches.
 <br/><br/>
 
 Just merge the current branch with the one you declare 
@@ -222,6 +229,4 @@ git stash clear
 ## Pull Requests
 
 The easiest way to make a PR is on github. “A pull request is a proposal to merge a set of changes from one branch into another” (github docs). Make sure the correct branch is being merged into the other one. You can see the two merging branches in the top left corner.
-
-
 

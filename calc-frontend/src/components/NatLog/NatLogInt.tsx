@@ -1,17 +1,36 @@
+import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router";
+import IntNatLogGraph from "./IntNatLogGraph"
 
-function NatLogInt()
-{
+function NatLogInt() {
+
+  const container = useRef(null);
+
+  useLayoutEffect(() =>{
+    //@ts-ignore
+    let MQ = MathQuill.getInterface(2);
+    MQ.StaticMath(container.current, { })
+
+  }, []);
 
   return (
     <div> 
       <Link to="/integrals">
-        <button className="back-button"> Back</button>
+        <button className="back-button">Back</button>
       </Link>
-      
-      <h2 style={{marginBottom:'1rem'}}>Natural Log Integral </h2>
+    
+      <div className="flex">
+        <div ref={container} className="center-header">
+        \int_&#123;.01&#125;^&#123;10&#125; \ln(x) \quad \mathrm&#123;d&#125;x 
+        </div>
+      </div>
+
+      <div className="graph-outer-box" >
+        <IntNatLogGraph />
+      </div>
 
     </div>
+
   )
 }
 

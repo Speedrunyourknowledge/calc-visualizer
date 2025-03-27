@@ -1,12 +1,19 @@
 import { createBrowserRouter, createRoutesFromElements, RouterProvider} from "react-router";
-import { MathJaxContext } from "better-react-mathjax";
 
+import '../../node_modules/mathquill/build/mathquill.css'
 import './app.css'
+import './widgets.css'
 
 import RoutesList from "./RoutesList";
 
+//@ts-ignore implicit any type
+import mathquillFunc from "../../node_modules/mathquill/build/mathquill";
+
 
 function App() {
+
+    // launch mathquill instance
+    mathquillFunc();
 
     // go to the RootLayout component to edit the visual layout
 
@@ -19,9 +26,7 @@ function App() {
     );
 
   return (
-    <MathJaxContext>
       <RouterProvider router={router} />
-    </MathJaxContext>
   )
 }
 

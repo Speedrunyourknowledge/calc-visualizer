@@ -77,12 +77,22 @@ body {
   }
 
   .graph-outer-box{
-    @apply gap-2;
+    @apply flex gap-2 justify-center;
   }
 
   .unit-frame{
     width:550px;
     aspect-ratio: 3/2;
+  }
+
+  .select-container{
+    font-size:1rem;
+    align-self:center;
+    width: 12ch;
+  }
+
+  .side-text{
+    max-width: 550px;
   }
 
   /* 
@@ -131,10 +141,22 @@ body {
 
   }
 
-
-
   .big-p{
     font-size: 1.125rem;
+  }
+
+  .center-header{
+    font-size:1.75rem;
+    margin-bottom: 0.25rem;
+    margin-left:auto;
+    margin-right:auto; 
+    width:fit-content
+  }
+
+  .center-only{
+    margin-left:auto;
+    margin-right:auto; 
+    width:fit-content;
   }
 
 

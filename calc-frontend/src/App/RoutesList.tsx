@@ -7,9 +7,8 @@ import Derivatives from "../pages/Derivatives";
 import Limits from "../pages/Limits";
 import Integrals from "../pages/Integrals";
 
-import ParabolaDeriv from "../components/Parabola/ParabolaDeriv";
-import ParabolaInt from "../components/Parabola/ParabolaInt";
-import ParabolaLimit from "../components/Parabola/ParabolaLimit";
+import QuadraticDeriv from "../components/Quadratic/QuadraticDeriv";
+import QuadraticInt from "../components/Quadratic/QuadraticInt";
 
 import CubicDeriv from "../components/Cubic/CubicDeriv";
 import CubicInt from "../components/Cubic/CubicInt";
@@ -40,13 +39,18 @@ import UnitTangent from "../components/UnitCircle/UnitTangent";
 
 import LimitDef from "../components/Limits/LimitDef";
 
+import CustomInt from "../pages/CustomIntegral";
+import CustomDeriv from "../pages/CustomDerivative";
+
+
 const RoutesList = 
 <Route path='/' element={<RootLayout/>} >
   <Route index element={<Home/>}/>
   <Route path='/calc-visualizer' element={<Home/>} />
 
   <Route path='/derivatives' element={ <Derivatives/> }/>
-  <Route path='/derivatives/parabola' element={ <ParabolaDeriv/> } />
+  <Route path='/derivatives/custom' element={ <CustomDeriv/> } />
+  <Route path='/derivatives/quadratic' element={ <QuadraticDeriv/> } />
   <Route path='/derivatives/cubic' element={ <CubicDeriv/> } />
   <Route path='/derivatives/logarithmic' element={ <NatLogDeriv/> } />
   <Route path='/derivatives/exponential' element={ <EulerDeriv/> } />
@@ -56,7 +60,8 @@ const RoutesList =
   <Route path='/derivatives/tangent' element={ <TangentDeriv/> } />
 
   <Route path='/integrals' element= { <Integrals/> }/>
-  <Route path='/integrals/parabola' element={ <ParabolaInt/> }/>
+  <Route path='/integrals/custom' element={ <CustomInt/> } />
+  <Route path='/integrals/quadratic' element={ <QuadraticInt/> }/>
   <Route path='/integrals/cubic' element={ <CubicInt/> }/>
   <Route path='/integrals/logarithmic' element={ <NatLogInt/> } />
   <Route path='/integrals/exponential' element={ <EulerInt/> } />

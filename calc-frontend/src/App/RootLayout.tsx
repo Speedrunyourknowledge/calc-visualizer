@@ -4,6 +4,8 @@ import { ScrollRestoration } from "react-router";
 import ucfLogo from "../assets/ucf-logo.png"
 import CalcLogo from "../components/CalcLogo"
 
+
+
 function RootLayout(){
 
 
@@ -26,7 +28,7 @@ function RootLayout(){
           
         </div>
 
-          <a href="https://www.ucf.edu/" target="_blank" className="h-[75px] shrink-0">
+          <a href="https://www.ucf.edu/" target="_blank" className="h-[75px] shrink-0 self-start">
             <img className="rounded-sm h-[100%] object-contain" src={ucfLogo} alt="UCF logo"></img>
           </a>  
       
