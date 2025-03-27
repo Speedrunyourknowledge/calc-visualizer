@@ -41,14 +41,9 @@ function Dashboard()
 
     return (
         <div>
-            <h1>{session.user.name}'s Dashboard</h1>
+            <h1 className="mb-5">{session.user.name}'s Dashboard</h1>
 
             <div className="flex flex-wrap justify-center items-center content-center gap-10">
-            {/* <FunctionCard topic="Derivative" expression="x^2" id="1" onDelete={handleUIDelete} />
-            <FunctionCard topic="Derivative" expression="x^2" id="2" onDelete={handleUIDelete} />
-            <FunctionCard topic="Derivative" expression="x^2" id="3" onDelete={handleUIDelete} />
-            <FunctionCard topic="Derivative" expression="x^2" id="4" onDelete={handleUIDelete} />
-            <FunctionCard topic="Derivative" expression="x^2" id="5" onDelete={handleUIDelete} /> */}
 
             {userFunctions ? 
             userFunctions.map(funct => (
