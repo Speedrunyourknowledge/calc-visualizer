@@ -16,15 +16,15 @@ function Home() {
         }
         
           <Link to="/derivatives" className = "topic-box">
-              <div className="link-title">Derivatives</div>
+              <button className="link-title cursor-pointer">Derivatives</button>
           </Link>
           
           <Link to="/integrals" className = "topic-box">
-              <div className="link-title">Integrals</div>
+              <button className="link-title cursor-pointer">Integrals</button>
           </Link>
 
           <Link to="/unit-circle" className = "topic-box">
-              <div className="link-title">Unit Circle</div>
+              <button className="link-title cursor-pointer">Unit Circle</button>
           </Link>
           
       </div>

@@ -35,15 +35,16 @@ body {
   .topic-list{
     @apply items-center justify-center;
 
-    max-width: 100%;
+    width:100%;
+
     margin:auto;
-    padding-right:20px;
-    padding-left:20px;
+    padding-right:10px;
+    padding-left:10px;
 
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    column-gap: 20px;
+    column-gap:20px;
     row-gap:20px;
   }
 
@@ -126,6 +127,8 @@ body {
 
     .topic-list{
       grid-template-columns: 1fr 1fr;
+      padding-right:0px;
+      padding-left:0px;
     }
 
     .topic-list-3{
