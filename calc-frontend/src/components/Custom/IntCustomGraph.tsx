@@ -8,10 +8,11 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
   const [ready, setReady] = useState(false)
   const [success, setSuccess] = useState(false)
   const [plotlyObject, setPlotlyObject] = useState(null)
+  const [errorMsg, setErrorMsg] = useState(null)
 
   useEffect(() => {
 
-    const serverUrl = import.meta.env.VITE_SERVER_URL
+    const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3000'
 
     let request = axios.post(serverUrl + '/graph/create-graph',
       {
@@ -45,17 +46,18 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
     })
     .catch(function(e) {
       if(e.code === 'ERR_NETWORK'){
-        console.log('Unable to connect to server')
+        setErrorMsg('Unable to connect to server')
       }
-      if(e.status === 422){
-        console.log(e)
-        console.log('Your function could not be graphed. \
-          Make sure the function is properly formatted and check if the bounds \
-          are within the function\'s domain')
+      else if(e.status === 422){
+        setErrorMsg('Your function could not be graphed. \
+          Make sure the function is properly formatted or try a \
+          different function')
       }
       else{
         console.log(e)
-        console.log('server returned a bad response')
+        setErrorMsg('Your function could not be graphed. \
+          Make sure the function is properly formatted or try a \
+          different function')
       }
     })
     .finally(() =>{
@@ -85,10 +87,11 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
     
     ready? 
       success? <div className="plotly-graph-div graph-frame" id="plotly_graph"></div> :
-      <div>graph failed</div> 
+      <div style={{color:'red'}}>{errorMsg}</div> 
     :
-    <div>
-      loading...
+    <div style={{fontSize:'1.25rem'}}>
+      Loading...<br/>
+      Complex functions may take longer
     </div> 
   )
 

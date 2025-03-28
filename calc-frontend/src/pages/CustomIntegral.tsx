@@ -14,6 +14,7 @@ function CustomInt() {
   const editMF = useRef<any>(null);
   const [func, setFunc] = useState<string>('');
   const [bounds, setBounds] = useState<number[]>([0,5]);
+  const [formatCheck, setFormatCheck] = useState<string>('');
 
   /*
     Updates the function and the bounds with the user input
@@ -28,7 +29,7 @@ function CustomInt() {
       newFunc = generateFunction(funcLatex)
     }
     catch{
-      console.log('Please enter a valid function')
+      setFormatCheck('Please enter a valid function')
       return 1
     }
 
@@ -39,13 +40,14 @@ function CustomInt() {
 
     // check if bounds are valid
     if(checkBounds !== 'success'){
-      console.log(checkBounds)
+      setFormatCheck(checkBounds)
       return 1
     }
 
     // input is valid, so set all variables
     setFunc(newFunc)
     setBounds([parseFloat(lowerBound), parseFloat(upperBound)])
+    setFormatCheck('')
 
     return 0
   }
@@ -92,8 +94,15 @@ function CustomInt() {
       </div>
 
       {
+        formatCheck === ''? null :
+        <div className="center-header" style={{fontSize:'1rem', color:'red'}}>
+          {formatCheck}
+        </div>
+      } 
+
+      {
         func === ''? null :
-        <div className="graph-outer-box" style={{justifyContent: "center"}}>
+        <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
           <IntCustomGraph key={func + bounds[0].toString() + bounds[1].toString()} func={func} 
             lowerBound = {bounds[0]} upperBound = {bounds[1]}/>
         </div>
