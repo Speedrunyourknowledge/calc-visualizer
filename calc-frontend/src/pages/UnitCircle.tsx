@@ -11,7 +11,7 @@ function UnitCircle() {
       </Link>
 
       <h2 className="topic-header m-auto w-fit">Interpreting the Unit Circle</h2>
-      <div className="flex flex-col gap-6 items-center topic-list">
+      <div className="topic-list topic-list-3">
 
         <Link to="/unit-circle/sine" className="topic-box">
           <button className="px-10 text-2xl cursor-pointer">Sine</button>
