@@ -24,19 +24,32 @@ fig = go.Figure()
 fig.add_trace(go.Scatter(x=x_vals, y=y_vals, mode="lines", name="f(x) = 2x"))
 
 # Arrow markers – will be updated with the slider
+# Left arrow pointing UP the line toward (5, 10)
 left_arrow_trace = go.Scatter(
     x=[0], y=[0],
     mode="markers",
-    marker=dict(symbol='triangle-right', size=14, color="black"),
+    marker=dict(
+        symbol='arrow',
+        size=30,
+        angle=63.4,  # approx angle for slope = 2 (atan(2) in degrees)
+        color="black"
+    ),
     name="Left Arrow"
 )
 
+# Right arrow pointing DOWN the line toward (5, 10)
 right_arrow_trace = go.Scatter(
     x=[10], y=[20],
     mode="markers",
-    marker=dict(symbol='triangle-left', size=14, color="gold"),
+    marker=dict(
+        symbol='arrow',
+        size=30,
+        angle=-116.6,  # opposite direction (180 - 63.4)
+        color="gold"
+    ),
     name="Right Arrow"
 )
+
 
 fig.add_trace(left_arrow_trace)
 fig.add_trace(right_arrow_trace)
@@ -44,8 +57,9 @@ fig.add_trace(right_arrow_trace)
 # Create slider steps
 steps = []
 for i in range(num_steps):
-    left_x = np.interp(i, [0, num_steps - 1], [x_left_start, limit_x - 0.1])
-    right_x = np.interp(i, [0, num_steps - 1], [x_right_start, limit_x + 0.1])
+    left_x = np.interp(i, [0, num_steps - 1], [x_left_start, limit_x])
+    right_x = np.interp(i, [0, num_steps - 1], [x_right_start, limit_x])
+
     
     left_y = func(left_x)
     right_y = func(right_x)
@@ -71,7 +85,13 @@ fig.update_layout(
     title="Limit of f(x) = 2x as x → 5",
     xaxis_title="x",
     yaxis_title="f(x)",
-    xaxis=dict(range=[0, 10], fixedrange=True),
+    xaxis=dict(
+        range=[0, 10],
+        tickmode='linear',
+        tick0=0,
+        dtick=1,
+        fixedrange=True
+    ),
     yaxis=dict(range=[0, 20], fixedrange=True),
     showlegend=True
 )
