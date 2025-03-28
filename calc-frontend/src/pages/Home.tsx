@@ -6,7 +6,7 @@ function Home() {
     <div>
       <h2 className = "topic-header m-auto w-fit">Topics</h2>
 
-      <div className="flex flex-col gap-6 m-auto home-list">
+      <div className="topic-list topic-list-3" style={{marginBottom:'1rem'}}>
         {
           /*
           <Link to="/limits" className = "link-box">
@@ -15,20 +15,21 @@ function Home() {
           */
         }
         
-          <Link to="/derivatives" className = "link-box">
+          <Link to="/derivatives" className = "topic-box">
               <div className="link-title">Derivatives</div>
           </Link>
           
-          <Link to="/integrals" className = "link-box">
+          <Link to="/integrals" className = "topic-box">
               <div className="link-title">Integrals</div>
           </Link>
 
-          <Link to="/unit-circle" className = "link-box">
+          <Link to="/unit-circle" className = "topic-box">
               <div className="link-title">Unit Circle</div>
           </Link>
           
-          <h3 className = "topic-header m-auto w-fit">More topics coming soon...</h3>
       </div>
+
+      <h3 className = "topic-header m-auto w-fit">More topics coming soon...</h3>
       
     </div>
   )
