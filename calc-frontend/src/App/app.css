@@ -129,6 +129,9 @@ body {
       grid-template-columns: 1fr 1fr;
       padding-right:0px;
       padding-left:0px;
+        
+      column-gap:10px;
+      row-gap:10px;
     }
 
     .topic-list-3{
