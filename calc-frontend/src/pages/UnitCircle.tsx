@@ -14,15 +14,15 @@ function UnitCircle() {
       <div className="topic-list topic-list-3">
 
         <Link to="/unit-circle/sine" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Sine</button>
+          <button className="link-title cursor-pointer">Sine</button>
         </Link>
 
         <Link to="/unit-circle/cosine" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Cosine</button>
+          <button className="link-title cursor-pointer">Cosine</button>
         </Link>
 
         <Link to="/unit-circle/tangent" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Tangent</button>
+          <button className="link-title cursor-pointer">Tangent</button>
         </Link>
 
       </div>
