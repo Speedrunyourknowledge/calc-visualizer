@@ -34,7 +34,7 @@ function UnitTangent() {
         <p className="big-p side-text">
           <span ref={container}>tan(\theta)</span> is the slope at any point on the Unit Circle.
             This is depicted by the green line in the triangle. The tangent graph on the right shows the value
-            of <span ref={con2}>tan(\theta)</span> on the y&#8209;axis for each angle on the x&#8209;axis
+            of <span ref={con2}>tan(\theta)</span> on the y&#8209;axis
         </p>
       </div>
 
