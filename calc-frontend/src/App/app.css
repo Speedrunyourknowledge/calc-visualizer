@@ -55,8 +55,7 @@ body {
   }
 
   .topic-box{
-    @apply flex items-center justify-center 
-    bg-amber-300 hover:bg-amber-400 transition transform hover:scale-103 
+    @apply flex items-center justify-center bg-amber-300 transition transform hover:scale-103 
     duration-200 border-2 border-solid;
 
     border-radius:8px;
@@ -65,9 +64,12 @@ body {
     max-width: calc(var(--spacing) * 20 * 3.5);
   }
 
+  .topic-box:hover{
+    background: var(--color-amber-400);
+  }
+
   .custom-border{
     overflow: hidden;
-    
   }
 
   .custom-border:before{
@@ -84,6 +86,7 @@ body {
   }
 
   .custom-border:after{
+    @apply transition duration-200;
     content: "";
     position:absolute;
     z-index:-1;
@@ -122,10 +125,15 @@ body {
   }
 
   .back-button{
-    @apply cursor-pointer bg-sky-400 hover:bg-blue-600 hover:text-neutral-50 rounded-md border-2 border-solid;
+    @apply cursor-pointer bg-sky-400 rounded-md border-2 border-solid;
     padding: 4px 16px;
     font-size: 1.375rem;
     margin-bottom: .75rem;
+  }
+
+  .back-button:hover{
+    background: var(--color-blue-600);
+    color: var(--color-neutral-50);
   }
 
   .go-button{
@@ -135,8 +143,8 @@ body {
     height: fit-content;
   }
 
-  .brighten:hover {
-    box-shadow: inset 1rem 5rem rgba(255, 255, 255, 0.3);
+  .brighten{
+    @apply hover:shadow-[inset_1rem_5rem_rgba(255,255,255,0.3)];
   }
 
   .error-title{
