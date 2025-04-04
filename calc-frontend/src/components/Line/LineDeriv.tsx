@@ -23,7 +23,7 @@ function LineDeriv()
   return (
     
       <div>
-        <Link to="/derivatives">
+        <Link to="/derivatives" tabIndex={-1}>
           <button className="back-button"> Back</button>
         </Link>
         <div>

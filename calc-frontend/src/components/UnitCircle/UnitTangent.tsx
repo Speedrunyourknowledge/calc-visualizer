@@ -18,7 +18,7 @@ function UnitTangent() {
 
   return (
     <div>
-      <Link to="/unit-circle">
+      <Link to="/unit-circle" tabIndex={-1}>
         <button className="back-button">Back</button>
       </Link>
 

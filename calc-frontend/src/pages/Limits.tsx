@@ -5,15 +5,19 @@ function Limits() {
 
   return (
     <div>
-      <Link to="/">
+      <Link to="/" tabIndex={-1}>
         <button className="back-button"> Back</button>
       </Link>
 
       <h2 className="topic-header m-auto w-fit">The Limit of Common Functions</h2>
-      <div className="flex flex-col gap-6 items-center topic-list">
+      <div className="topic-list">
 
-        <Link to="/limits/limitdef" className="topic-box">
+        <Link to="/limits/limitdef" tabIndex={-1} className="topic-box">
           <button className="px-10 text-2xl cursor-pointer">Definition of a Limit</button>
+        </Link>
+
+        <Link to="/limits/quadratic" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Quadratic</button>
         </Link>
 
 
