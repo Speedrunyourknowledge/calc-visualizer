@@ -7,11 +7,16 @@ function CustomDeriv() {
   const container = useRef<HTMLDivElement>(null);
   const MQ = useRef<any>(null);
   const containerMF = useRef<any>(null);
+  const start = useRef<HTMLDivElement>(null);
 
   const edit = useRef<HTMLDivElement>(null);
   const editMF = useRef<any>(null);
+  //@ts-ignore not used
   const [func, setFunc] = useState<string>('');
+  //@ts-ignore not used
   const [bounds, setBounds] = useState<number[]>([0,5]);
+  //@ts-ignore not used
+  const [formatCheck, setFormatCheck] = useState<string>('');
 
   /*
     Updates the function and the bounds with the user input
@@ -26,7 +31,7 @@ function CustomDeriv() {
       newFunc = generateFunction(funcLatex)
     }
     catch{
-      console.log('Please enter a valid function')
+      setFormatCheck('Please enter a valid function')
       return 1
     }
 
@@ -37,13 +42,15 @@ function CustomDeriv() {
 
     // check if bounds are valid
     if(checkBounds !== 'success'){
-      console.log(checkBounds)
+      setFormatCheck(checkBounds)
       return 1
     }
 
     // input is valid, so set all variables
     setFunc(newFunc)
     setBounds([parseFloat(lowerBound), parseFloat(upperBound)])
+    setFormatCheck('')
+
 
     return 0
   }
@@ -55,10 +62,10 @@ function CustomDeriv() {
 
     containerMF.current = MQ.current.StaticMath(container.current, { }) // for the bounds
 
-    editMF.current = MQ.current.StaticMath(edit.current).innerFields[0] // for the function
+    MQ.current.StaticMath(start.current, { }) // for the y =
 
     // updates the output whenever 'enter' is pressed
-    editMF.current.config({
+    editMF.current = MQ.current.MathField(edit.current, { 
       handlers: {
         enter: generateOutput
       }
@@ -69,27 +76,29 @@ function CustomDeriv() {
 
   return(
     <div>
-      <Link to="/derivatives">
+      <Link to="/derivatives" tabIndex={-1}>
         <button className="back-button"> Back</button>
       </Link>
 
-      <div className="center-header flex flex-wrap justify-center gap-[1rem]">
+      <div className="center-header flex flex-wrap justify-center gap-[1rem]" style={{alignItems:"center"}}>
         <div ref={container}>
           \MathQuillMathField&#123;0&#125; \leq x \leq \MathQuillMathField&#123;5&#125;
         </div>
 
-        <div ref={edit}> 
-          y = \MathQuillMathField&#123;x&#125;
+        <div>
+          <div ref={start}> 
+            y =
+          </div>
+
+          <div ref={edit} className = "edit-box"> 
+            x
+          </div>
         </div>
 
       </div>
 
-      <div style={{display:'block', marginBottom:'0.5rem'}} className='center-header'> 
-        {func} &nbsp;&nbsp;{bounds.join(', ')}
-      </div>
-        
-      <div className="graph-outer-box" style={{justifyContent: "center"}}>
-        The graph will go here
+      <div className="center-header" style={{fontSize:'1.5rem'}}>
+        Coming Soon
       </div>
 
     </div>

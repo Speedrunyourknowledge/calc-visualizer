@@ -18,6 +18,7 @@ function CustomInt() {
   const editMF = useRef<any>(null);
   const [func, setFunc] = useState<string>('');
   const [bounds, setBounds] = useState<number[]>([0,5]);
+  const [formatCheck, setFormatCheck] = useState<string>('');
 
   // need to check if func is valid and unique first somehow
   const saveFunction = async (session: Session) => {
@@ -57,7 +58,7 @@ function CustomInt() {
       newFunc = generateFunction(funcLatex)
     }
     catch{
-      console.log('Please enter a valid function')
+      setFormatCheck('Please enter a valid function')
       return 1
     }
 
@@ -68,13 +69,14 @@ function CustomInt() {
 
     // check if bounds are valid
     if(checkBounds !== 'success'){
-      console.log(checkBounds)
+      setFormatCheck(checkBounds)
       return 1
     }
 
     // input is valid, so set all variables
     setFunc(newFunc)
     setBounds([parseFloat(lowerBound), parseFloat(upperBound)])
+    setFormatCheck('')
 
     return 0
   }
@@ -99,18 +101,18 @@ function CustomInt() {
 
   return(
     <div>
-      <Link to="/integrals">
+      <Link to="/integrals" tabIndex={-1}>
         <button className="back-button"> Back</button>
       </Link>
       <SaveFunctionButton onSave={saveFunction} />
 
-      <div className="center-header flex flex-wrap justify-center gap-[.5rem]">
+      <div className="center-header flex flex-wrap justify-center gap-[.5rem]" style={{alignItems:"center"}}>
         <div ref={container} >
           \int_\MathQuillMathField&#123;0&#125;^\MathQuillMathField&#123;5&#125;
         </div>
 
-        <div style={{height:'fit-content', alignSelf:'center'}}>
-          <div ref={edit} style={{marginRight:'.25rem'}}> 
+        <div style={{height:'fit-content', alignSelf:'center', marginRight:'.5rem'}}>
+          <div ref={edit} className = "edit-box" style={{marginRight:'.25rem'}}> 
             x
           </div>
 
@@ -119,15 +121,21 @@ function CustomInt() {
           </div>
         </div>
 
+        <button className="go-button brighten" onClick={generateOutput}> Graph</button>
+
       </div>
 
       {
-        func === ''? null :
-        <div className="graph-outer-box" style={{justifyContent: "center"}}>
-          <IntCustomGraph key={func + bounds[0].toString() + bounds[1].toString()} func={func} 
-            lowerBound = {bounds[0]} upperBound = {bounds[1]}/>
-        </div>
-      }
+        formatCheck === ''? func === ''? null :
+            <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
+              <IntCustomGraph key={func + bounds[0].toString() + bounds[1].toString()} func={func} 
+              lowerBound = {bounds[0]} upperBound = {bounds[1]}/>
+            </div> 
+          :
+          <div className="center-header pad-sm" style={{fontSize:'1.25rem', color:'red', marginTop:'.5rem'}}>
+            {formatCheck}
+          </div>
+      } 
 
     </div>
   )

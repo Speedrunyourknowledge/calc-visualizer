@@ -28,39 +28,118 @@ body {
     font-size:1.5rem;
   }
 
-  .link-box{
-    @apply h-20 flex w-full items-center justify-center 
-    bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
-    duration-200 border-2 border-solid;
-  }
-
   .topic-header{
     margin-bottom:1.125rem;
   }
 
   .topic-list{
-    width:50%;
-    max-width: 100%;
+    @apply items-center justify-center;
+
+    width:100%;
+
     margin:auto;
+    padding-right:60px;
+    padding-left:60px;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap:20px;
+    row-gap:20px;
+
   }
 
-  .home-list{
-    width:50%;
-    max-width: 100%;
-    margin:auto;
+  .topic-list-3{
+    grid-template-columns: 1fr 1fr 1fr;
+    width:75%;
   }
 
   .topic-box{
-    @apply h-20 flex w-full items-center justify-center 
-    bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
+    @apply flex items-center justify-center bg-amber-300 transition transform hover:scale-103 
     duration-200 border-2 border-solid;
+
+    border-radius:8px;
+  
+    height:calc(var(--spacing) * 20);
+    max-width: calc(var(--spacing) * 20 * 3.5);
+  }
+
+  .topic-box:hover{
+    background: var(--color-amber-400);
+  }
+
+  .custom-border{
+    overflow: hidden;
+  }
+
+  .custom-border:before{
+    position:absolute;
+    z-index:-2;
+    height:450%;
+    width:150%;
+
+    content:"";
+    background-image: linear-gradient(to top right, #f46e29, #f46e29, #e93002, 
+                      #DC1FFF, #1f57ff, #1fc7ff, #1fff7c, #1fff7c);
+
+    animation: spin 4s linear infinite;
+  }
+
+  .custom-border:after{
+    @apply transition duration-200;
+    content: "";
+    position:absolute;
+    z-index:-1;
+
+    background: var(--color-amber-300);
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border-radius: 6px;
+
+  }
+
+  .custom-border:hover:after{
+    background: var(--color-amber-400);
+  }
+
+  @keyframes spin{
+    100%{
+      transform: rotate(-360deg);
+    }
+  }
+
+  .loading{
+    animation: delay-appearance 300ms ease-out 1;
+  }
+
+  @keyframes delay-appearance{
+    0% {
+      opacity: 0;
+    }
+    99% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .back-button{
     @apply cursor-pointer bg-sky-400 hover:bg-blue-600 hover:text-neutral-50 rounded-md border-2 border-solid;
-    padding: 4px 12px;
-    font-size: 1.5rem;
+    padding: 4px 16px;
+    font-size: 1.375rem;
     margin-bottom: .75rem;
+  }
+
+  .go-button{
+    @apply cursor-pointer bg-[#1ee342] rounded-md border-2 border-solid;
+    padding: 4px 12px;
+    font-size: 1.375rem;
+    height: fit-content;
+  }
+
+  .brighten{
+    @apply hover:shadow-[inset_1rem_5rem_rgba(255,255,255,0.3)];
   }
 
   .error-title{
@@ -70,7 +149,7 @@ body {
   }
 
   .graph-frame{
-    width:450px;
+    width:400px;
     max-width:100%;
     height:100%;
     aspect-ratio: 1/1;
@@ -95,20 +174,39 @@ body {
     max-width: 550px;
   }
 
+  .pad-sm{
+    padding-right:.5rem;
+    padding-left:.5rem;
+  }
+
   /* 
       List the more inclusive media queries first if they 
       should be overridden by subsequent queries
   */
+  @media (max-width: 1199px){
+
+    .topic-list{
+      padding-right:40px;
+      padding-left:40px;
+    }
+  }
+
+  @media (max-width: 1099px){
+
+    .topic-list{
+      padding-right:20px;
+      padding-left:20px;
+    }
+  }
+
   @media (max-width: 999px) {
 
     .topic-list{
-      @apply gap-4;
-      width: 70%;
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .home-list{
-      @apply gap-4;
-      width: 70%;
+    .topic-list-3{
+      width:100%;
     }
 
   }
@@ -119,19 +217,42 @@ body {
       @apply flex-wrap;
     }
 
+    .topic-list{
+      padding-right:10px;
+      padding-left:10px;
+    }
   }
+
+  @media (max-width: 699px) {
+    .topic-list{
+      grid-template-columns: 1fr 1fr;
+      padding-right:40px;
+      padding-left:40px;
+    }
+
+    .topic-list-3{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
 
   @media (max-width: 599px) {
-
     .topic-list{
-      width: 100%;
+      padding-right:20px;
+      padding-left:20px;
+        
+      column-gap:15px;
+      row-gap:15px;
     }
-
-    .home-list{
-      width: 100%;
-    }
-
   }
+
+  @media (max-width: 499px) {
+    .topic-list{
+      padding-right:0px;
+      padding-left:0px;
+    }
+  }
+
 
   @media (min-width: 800px) {
 

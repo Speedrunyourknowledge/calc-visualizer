@@ -6,47 +6,47 @@ function Integrals() {
 
   return (
     <div>
-      <Link to="/">
+      <Link to="/" tabIndex={-1}>
         <button className="back-button"> Back</button>
       </Link>
 
       <h2 className="topic-header m-auto w-fit">The Integral of Common Functions</h2>
-      <div className="flex flex-col gap-6 items-center topic-list">
+      <div className="topic-list">
 
-        <Link to="/integrals/custom" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Custom</button>
+        <Link to="/integrals/custom" tabIndex={-1} className="topic-box custom-border">
+          <button className="link-title cursor-pointer">Custom</button>
         </Link>
   
-        <Link to="/integrals/linear" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Linear</button>
+        <Link to="/integrals/linear" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Linear</button>
         </Link>
 
-        <Link to="/integrals/quadratic" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Quadratic</button>
+        <Link to="/integrals/quadratic" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Quadratic</button>
         </Link>
 
-        <Link to="/integrals/cubic" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Cubic</button>
+        <Link to="/integrals/cubic" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Cubic</button>
         </Link>
 
-        <Link to="/integrals/exponential" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Exponential</button>
+        <Link to="/integrals/exponential" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Exponential</button>
         </Link>
 
-        <Link to="/integrals/logarithmic" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Logarithmic</button>
+        <Link to="/integrals/logarithmic" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Logarithmic</button>
         </Link>
   
-        <Link to="/integrals/sine" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Sine</button>
+        <Link to="/integrals/sine" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Sine</button>
         </Link>
   
-        <Link to="/integrals/cosine" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Cosine</button>
+        <Link to="/integrals/cosine" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Cosine</button>
         </Link>
 
-        <Link to="/integrals/tangent" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Tangent</button>
+        <Link to="/integrals/tangent" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Tangent</button>
         </Link>
   
 

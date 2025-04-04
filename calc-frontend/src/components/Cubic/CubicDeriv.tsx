@@ -15,7 +15,7 @@ function CubicDeriv() {
 
   return (
     <div>
-      <Link to="/derivatives">
+      <Link to="/derivatives" tabIndex={-1}>
         <button className="back-button" style={{ marginBottom: '0rem' }}> Back</button>
       </Link>
       <div>

@@ -6,23 +6,23 @@ function UnitCircle() {
 
   return (
     <div>
-      <Link to="/">
+      <Link to="/" tabIndex={-1}>
         <button className="back-button"> Back</button>
       </Link>
 
       <h2 className="topic-header m-auto w-fit">Interpreting the Unit Circle</h2>
-      <div className="flex flex-col gap-6 items-center topic-list">
+      <div className="topic-list topic-list-3">
 
-        <Link to="/unit-circle/sine" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Sine</button>
+        <Link to="/unit-circle/sine" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Sine</button>
         </Link>
 
-        <Link to="/unit-circle/cosine" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Cosine</button>
+        <Link to="/unit-circle/cosine" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Cosine</button>
         </Link>
 
-        <Link to="/unit-circle/tangent" className="topic-box">
-          <button className="px-10 text-2xl cursor-pointer">Tangent</button>
+        <Link to="/unit-circle/tangent" tabIndex={-1} className="topic-box">
+          <button className="link-title cursor-pointer">Tangent</button>
         </Link>
 
       </div>

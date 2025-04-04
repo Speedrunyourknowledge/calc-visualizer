@@ -18,7 +18,7 @@ function UnitCosine() {
 
   return (
     <div>
-      <Link to="/unit-circle">
+      <Link to="/unit-circle" tabIndex={-1}>
         <button className="back-button">Back</button>
       </Link>
 
@@ -34,7 +34,7 @@ function UnitCosine() {
         <p className="big-p side-text">
           <span ref={container}>cos(\theta)</span> is the x&#8209;coordinate on the Unit Circle.
             This is depicted by the green line in the triangle. The cosine graph on the right shows the value
-            of <span ref={con2}>cos(\theta)</span> on the y&#8209;axis for each angle on the x&#8209;axis
+            of <span ref={con2}>cos(\theta)</span> on the y&#8209;axis
           
         </p>
       </div>

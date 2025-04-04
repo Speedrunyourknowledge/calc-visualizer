@@ -4,7 +4,11 @@ import { createMemoryRouter, createRoutesFromElements, RouterProvider } from 're
 
 import RoutesList from '../App/RoutesList'
 
+//@ts-ignore implicit any type
+import mathquillFunc from "../../node_modules/mathquill/build/mathquill";
+
 test('full app rendering', () => {
+
 
   const router = createMemoryRouter(createRoutesFromElements(RoutesList), {
     initialEntries:['/'],

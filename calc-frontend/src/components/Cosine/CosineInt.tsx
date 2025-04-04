@@ -15,7 +15,7 @@ function CosineInt() {
 
   return (
    <div> 
-    <Link to="/integrals">
+    <Link to="/integrals" tabIndex={-1}>
       <button className="back-button">Back</button>
     </Link>
         

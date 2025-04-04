@@ -8,12 +8,13 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
   const [ready, setReady] = useState(false)
   const [success, setSuccess] = useState(false)
   const [plotlyObject, setPlotlyObject] = useState(null)
+  const [errorMsg, setErrorMsg] = useState(null)
 
   useEffect(() => {
 
-    const serverUrl = 'http://localhost:3000/api/'
+    const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3000'
 
-    let request = axios.post(serverUrl + 'graph/create-graph',
+    let request = axios.post(serverUrl + '/graph/create-graph',
       {
         'func': func,
         'lowerBound': lowerBound,
@@ -45,17 +46,18 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
     })
     .catch(function(e) {
       if(e.code === 'ERR_NETWORK'){
-        console.log('Unable to connect to server')
+        setErrorMsg('Unable to connect to server')
       }
-      if(e.status === 422){
-        console.log(e)
-        console.log('Your function could not be graphed. \
-          Make sure the function is properly formatted and check if the bounds \
-          are within the function\'s domain')
+      else if(e.status === 422){
+        setErrorMsg('Your function could not be graphed. \
+          Make sure the function is properly formatted or try a \
+          different function')
       }
       else{
         console.log(e)
-        console.log('server returned a bad response')
+        setErrorMsg('Your function could not be graphed. \
+          Make sure the function is properly formatted or try a \
+          different function')
       }
     })
     .finally(() =>{
@@ -80,16 +82,21 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
     }
   }, [ready]);
 
+  if(!ready){
+    return(       
+      <div className="pad-sm loading" style={{fontSize:'1.25rem'}}>
+        Loading...<br/>
+        Complex functions may take longer
+      </div> 
+    )
+  }
+
+  if(ready && !success){
+    return <div className="pad-sm" style={{color:'red', fontSize: '1.25rem'}}>{errorMsg}</div> 
+  }
 
   return (
-    
-    ready? 
-      success? <div className="plotly-graph-div graph-frame" id="plotly_graph"></div> :
-      <div>graph failed</div> 
-    :
-    <div>
-      loading...
-    </div> 
+    <div className="plotly-graph-div graph-frame" id="plotly_graph"></div> 
   )
 
 }
