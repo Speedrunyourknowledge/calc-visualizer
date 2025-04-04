@@ -11,8 +11,11 @@ function CustomDeriv() {
 
   const edit = useRef<HTMLDivElement>(null);
   const editMF = useRef<any>(null);
+  //@ts-ignore not used
   const [func, setFunc] = useState<string>('');
+  //@ts-ignore not used
   const [bounds, setBounds] = useState<number[]>([0,5]);
+  //@ts-ignore not used
   const [formatCheck, setFormatCheck] = useState<string>('');
 
   /*
