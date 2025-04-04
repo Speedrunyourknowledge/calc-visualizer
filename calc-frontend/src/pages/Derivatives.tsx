@@ -13,7 +13,7 @@ function Derivatives() {
       <h2 className="topic-header m-auto w-fit">The Derivative of Common Functions</h2>
       <div className="topic-list">
 
-        <Link to="/derivatives/custom" className="topic-box">
+        <Link to="/derivatives/custom" className="topic-box custom-border">
           <button className="link-title cursor-pointer">Custom</button>
         </Link>
 
