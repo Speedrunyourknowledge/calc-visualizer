@@ -55,18 +55,13 @@ function Home() {
     src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Integral_example.svg/600px-Integral_example.svg.png" 
    />
 </div>
-  <div className="p-4">
-   <h2 className="text-lg font-semibold">
-   <Link to="/integrals" className = "link-box">
-              <div className="link-title">Integrals</div>
-          </Link>
+  <div className="p-4<div mt-2 flex flex-wrap ">
+   <h2 className=".big-p .side-text bg-gray-100 text-black-700 text-xs font-semibold px-2 py-1 rounded border-2 border-balck-solid rounded-lg shadow-md">
+  Integrals
    </h2>
 
    <div className="flex items-center mt-2">
-    <span className="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
-     Calc 1 Topic
-     
-    </span>
+   
     <i className="fas fa-fire text-yellow-500 ml-2">
     </i>
    </div>
@@ -74,6 +69,9 @@ function Home() {
     <span className=".big-p .side-text bg-gray-200 text-black-700 text-xs font-semibold px-2 py-1 rounded">
     WP: Integrals are the continuous analog of a sum, which is used to calculate areas, volumes, and their generalizations.
     </span>
+    <span className="bg-gray-300 px-5 py-1 rounded border-2 border-balck-solid rounded-lg shadow-md">
+       Linear
+      </span>
    </div>
   </div>
  </div>
@@ -180,7 +178,7 @@ function Home() {
      </div>
     </div>
    </div>
-        
+        {/*
           <Link to="/derivatives" className = "link-box">
               <div className="link-title">Derivatives</div>
           </Link>
@@ -194,6 +192,7 @@ function Home() {
           </Link>
           
           <h3 className = "topic-header m-auto w-fit">More topics coming soon...</h3>
+        */}
       </div>
       
     </div>
