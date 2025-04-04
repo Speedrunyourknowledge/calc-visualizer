@@ -23,7 +23,7 @@ function Dashboard()
     const getFuncs = async () => {
         const userId = session.user.id;
         try {
-          const response = await axios.get(`http://localhost:3000/api/func/all/${userId}`);
+          const response = await axios.get(`http://localhost:3000/func/all/${userId}`);
           setUserFunctions(response.data);
         } catch (error) {
           console.log("SOMETing wrong:", error);

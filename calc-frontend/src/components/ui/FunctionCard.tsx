@@ -13,7 +13,7 @@ function FunctionCard({topic, expression, id, onDelete}: FunctionCardProps) {
     const handleDelete = async () => {
         
         try {
-            const response = await axios.delete(`http://localhost:3000/api/func/delete/${id}`);
+            const response = await axios.delete(`http://localhost:3000/func/delete/${id}`);
             onDelete(id);
         } catch (error) {
             alert(`Something went wrong: ${error}`)
