@@ -5,6 +5,9 @@
     padding: 1rem;
     
 }
+.big-p .side-text{
+    font-family: 'Inter', sans-serif;
+}
 
 body {
     margin: 0;
@@ -144,6 +147,8 @@ body {
   .big-p{
     font-size: 1.125rem;
   }
+
+  
 
   .center-header{
     font-size:1.75rem;
