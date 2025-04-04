@@ -3,6 +3,10 @@ import { Link } from "react-router"
 import IntCustomGraph from "../components/Custom/IntCustomGraph.tsx"
 import {generateFunction, validateBounds} from "../functions/mathOutput";
 
+import { Session } from "../lib/auth-client.ts";
+import axios from "axios";
+import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
+
 function CustomInt() {
 
   const container = useRef<HTMLDivElement>(null);
@@ -15,6 +19,31 @@ function CustomInt() {
   const [func, setFunc] = useState<string>('');
   const [bounds, setBounds] = useState<number[]>([0,5]);
   const [formatCheck, setFormatCheck] = useState<string>('');
+
+  // need to check if func is valid and unique first somehow
+  const saveFunction = async (session: Session) => {
+      const equation = func;
+      const lowerBound = bounds[0];
+      const upperBound = bounds[1];
+      const topic = "Integral";
+      const userId = session.user.id;
+  
+      try {
+        const response = await axios.post(`http://localhost:3000/api/func/create-integral/${userId}`, {
+          equation,
+          lowerBound,
+          upperBound,
+          topic,
+        },{
+          headers: {
+            Authorization: `Bearer ${session.session.token}`
+          }
+        })
+        console.log("Function created:", response.data);
+      } catch (error) {
+        console.log("SOMething wrong",error);
+      }
+    }
 
   /*
     Updates the function and the bounds with the user input
@@ -75,6 +104,7 @@ function CustomInt() {
       <Link to="/integrals" tabIndex={-1}>
         <button className="back-button"> Back</button>
       </Link>
+      <SaveFunctionButton onSave={saveFunction} />
 
       <div className="center-header flex flex-wrap justify-center gap-[.5rem]" style={{alignItems:"center"}}>
         <div ref={container} >
