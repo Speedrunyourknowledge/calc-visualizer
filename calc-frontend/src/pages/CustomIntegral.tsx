@@ -22,7 +22,13 @@ function CustomInt() {
 
   // need to check if func is valid and unique first somehow
   const saveFunction = async (session: Session) => {
-      const equation = func;
+
+      // invalid format
+      if(generateOutput(false) === 1){
+        return
+      }
+
+      const equation = generateFunction(editMF.current.latex(), false);
       const lowerBound = bounds[0];
       const upperBound = bounds[1];
       const topic = "Integral";
@@ -49,13 +55,13 @@ function CustomInt() {
     Updates the function and the bounds with the user input
     Returns 1 if input is invalid
   */
-  const generateOutput = ():number =>{
+  const generateOutput = (python_code?: boolean):number =>{
     const funcLatex:string = editMF.current.latex()
     let newFunc:string;
 
     // check if function is valid
     try{
-      newFunc = generateFunction(funcLatex)
+      newFunc = generateFunction(funcLatex, python_code || true)
     }
     catch{
       setFormatCheck('Please enter a valid function')
@@ -121,7 +127,7 @@ function CustomInt() {
           </div>
         </div>
 
-        <button className="go-button brighten" onClick={generateOutput}> Graph</button>
+        <button className="go-button brighten" onClick={()=>generateOutput()}> Graph</button>
 
       </div>
 
