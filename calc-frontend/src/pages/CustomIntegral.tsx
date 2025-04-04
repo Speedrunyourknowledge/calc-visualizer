@@ -35,7 +35,7 @@ function CustomInt() {
       const userId = session.user.id;
   
       try {
-        const response = await axios.post(`http://localhost:3000/api/func/create-integral/${userId}`, {
+        const response = await axios.post(`http://localhost:3000/func/create-integral/${userId}`, {
           equation,
           lowerBound,
           upperBound,
