@@ -15,15 +15,15 @@ function Home() {
           */
         }
         
-          <Link to="/derivatives" className = "topic-box">
+          <Link to="/derivatives" tabIndex={-1} className = "topic-box">
               <button className="link-title cursor-pointer">Derivatives</button>
           </Link>
           
-          <Link to="/integrals" className = "topic-box">
+          <Link to="/integrals" tabIndex={-1} className = "topic-box">
               <button className="link-title cursor-pointer">Integrals</button>
           </Link>
 
-          <Link to="/unit-circle" className = "topic-box">
+          <Link to="/unit-circle" tabIndex={-1} className = "topic-box">
               <button className="link-title cursor-pointer">Unit Circle</button>
           </Link>
           

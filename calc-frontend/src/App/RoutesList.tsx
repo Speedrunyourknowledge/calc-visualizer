@@ -38,9 +38,11 @@ import UnitCosine from "../components/UnitCircle/UnitCosine";
 import UnitTangent from "../components/UnitCircle/UnitTangent";
 
 import LimitDef from "../components/Limits/LimitDef";
+import QuadraticLimit from "../components/Quadratic/QuadraticLimit";
 
 import CustomInt from "../pages/CustomIntegral";
 import CustomDeriv from "../pages/CustomDerivative";
+
 
 
 const RoutesList = 
@@ -72,6 +74,7 @@ const RoutesList =
 
   <Route path='/limits' element= {<Limits/>}/>
   <Route path='/limits/limitdef' element={ <LimitDef/> } />
+  <Route path='/limits/quadratic' element={ <QuadraticLimit/> } />
 
   <Route path='/unit-circle' element= {<UnitCircle/>}/>
   <Route path='/unit-circle/sine' element={ <UnitSine/> } />
