@@ -1,6 +1,7 @@
 import {expect, test } from 'vitest'
 import {render, screen} from '@testing-library/react'
 import { createMemoryRouter, createRoutesFromElements, RouterProvider } from 'react-router'
+import { AuthProvider } from '../App/AuthContext'
 
 import RoutesList from '../App/RoutesList'
 
@@ -14,7 +15,7 @@ test('full app rendering', () => {
     initialEntries:['/'],
   })
 
-  render(<RouterProvider router = {router} />, {})
+  render(<AuthProvider><RouterProvider router = {router} /></AuthProvider>, {})
   
   // check if heading is visible
   const heading = screen.getByRole('link', {name: 'Calc Visualizer'})
