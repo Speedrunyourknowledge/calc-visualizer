@@ -13,7 +13,7 @@ function Integrals() {
       <h2 className="topic-header m-auto w-fit">The Integral of Common Functions</h2>
       <div className="topic-list">
 
-        <Link to="/integrals/custom" className="topic-box">
+        <Link to="/integrals/custom" className="topic-box custom-border">
           <button className="link-title cursor-pointer">Custom</button>
         </Link>
   

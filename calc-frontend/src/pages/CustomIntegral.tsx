@@ -76,13 +76,13 @@ function CustomInt() {
         <button className="back-button"> Back</button>
       </Link>
 
-      <div className="center-header flex flex-wrap justify-center gap-[.5rem]">
+      <div className="center-header flex flex-wrap justify-center gap-[.5rem]" style={{alignItems:"center"}}>
         <div ref={container} >
           \int_\MathQuillMathField&#123;0&#125;^\MathQuillMathField&#123;5&#125;
         </div>
 
-        <div style={{height:'fit-content', alignSelf:'center'}}>
-          <div ref={edit} style={{marginRight:'.25rem'}}> 
+        <div style={{height:'fit-content', alignSelf:'center', marginRight:'.5rem'}}>
+          <div ref={edit} className = "edit-box" style={{marginRight:'.25rem'}}> 
             x
           </div>
 
@@ -91,22 +91,21 @@ function CustomInt() {
           </div>
         </div>
 
+        <button className="go-button brighten" onClick={generateOutput}> Graph</button>
+
       </div>
 
       {
-        formatCheck === ''? null :
-        <div className="center-header" style={{fontSize:'1rem', color:'red'}}>
-          {formatCheck}
-        </div>
+        formatCheck === ''? func === ''? null :
+            <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
+              <IntCustomGraph key={func + bounds[0].toString() + bounds[1].toString()} func={func} 
+              lowerBound = {bounds[0]} upperBound = {bounds[1]}/>
+            </div> 
+          :
+          <div className="center-header pad-sm" style={{fontSize:'1.25rem', color:'red', marginTop:'.5rem'}}>
+            {formatCheck}
+          </div>
       } 
-
-      {
-        func === ''? null :
-        <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
-          <IntCustomGraph key={func + bounds[0].toString() + bounds[1].toString()} func={func} 
-            lowerBound = {bounds[0]} upperBound = {bounds[1]}/>
-        </div>
-      }
 
     </div>
   )

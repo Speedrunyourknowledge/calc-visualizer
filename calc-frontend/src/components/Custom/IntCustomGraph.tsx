@@ -82,17 +82,21 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
     }
   }, [ready]);
 
+  if(!ready){
+    return(       
+      <div className="pad-sm loading" style={{fontSize:'1.25rem'}}>
+        Loading...<br/>
+        Complex functions may take longer
+      </div> 
+    )
+  }
+
+  if(ready && !success){
+    return <div className="pad-sm" style={{color:'red', fontSize: '1.25rem'}}>{errorMsg}</div> 
+  }
 
   return (
-    
-    ready? 
-      success? <div className="plotly-graph-div graph-frame" id="plotly_graph"></div> :
-      <div style={{color:'red'}}>{errorMsg}</div> 
-    :
-    <div style={{fontSize:'1.25rem'}}>
-      Loading...<br/>
-      Complex functions may take longer
-    </div> 
+    <div className="plotly-graph-div graph-frame" id="plotly_graph"></div> 
   )
 
 }
