@@ -35,6 +35,11 @@ function CustomInt() {
   const [func, setFunc] = useState<string>('');
   const [bounds, setBounds] = useState<number[]>([0,0]);
   const [formatCheck, setFormatCheck] = useState<string>('');
+  const [canAskAI, setCanAskAI] = useState(true);
+
+  const handleAIResponseComplete = () => {
+    setCanAskAI(false);
+  }
 
   const [saving, setSaving] = useState<boolean>(false);
   const [enableSave, setEnableSave] = useState<boolean>(false);
@@ -127,6 +132,7 @@ function CustomInt() {
     }
 
     setFormatCheck('')
+    setCanAskAI(true);
 
     return 0
   }
@@ -208,7 +214,7 @@ function CustomInt() {
           </div>
       } 
       <div className="fixed bottom-2 right-2 z-1000">
-        <AskAIButton />
+        <AskAIButton func={func} canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
       </div>
 
     </div>
