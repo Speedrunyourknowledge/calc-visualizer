@@ -30,13 +30,22 @@ body {
   .link-title{
     font-size:1.5rem;
   }
+  .link-title2{
+    font-size:1.25rem;
+  }
+
 
   .link-box{
     @apply h-20 flex w-full items-center justify-center 
     bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
     duration-200 border-2 border-solid;
   }
-
+  .link-box2{
+    @apply px-5 py-1 flex  items-center justify-center
+    bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded shadow-md
+    bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
+    duration-200 border-2 border-solid;
+  }
   .topic-header{
     margin-bottom:1.125rem;
   }

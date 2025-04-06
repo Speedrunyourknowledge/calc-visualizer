@@ -1,6 +1,8 @@
 import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router"
 
+
+
 function Home() {
 
     const d1 = useRef(null);
@@ -64,33 +66,45 @@ function Home() {
       </i>
      </div>
      <div className="mt-2 flex flex-wrap gap-2">
-      <span className="bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded border-2 border-balck-solid rounded-lg shadow-md">
-      <span ref={d1}> x </span> {/*Linear*/}
-      </span>
-      <span className="bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded border-2 border-balck-solid rounded-lg shadow-md">
-      <span ref={d2}>x^{2}</span>{/*Quad*/}
-      </span>
-      <span className="bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded border-2 border-balck-solid rounded-lg shadow-md">
-      <span ref={d3}>x^{3}</span>{/*Cubic*/}
-      </span>
-      <span className="bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded border-2 border-balck-solid rounded-lg shadow-md">
-      <span ref={d4}>{"e^{x}"}</span>{/*Expnential*/}
-      </span>
-      <span className="bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded border-2 border-balck-solid rounded-lg shadow-md">
-      <span ref={d5}>ln(x)</span>{/*Log*/}
-      </span>
-      <span className="bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded border-2 border-balck-solid rounded-lg shadow-md">
-      <span ref={d6}>cos(x)</span>{/*Sine*/}
-      </span>
-      <span className="bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded border-2 border-balck-solid rounded-lg shadow-md">
-      <span ref={d7}>sin(x)</span>{/*Cos*/}
-      </span>
-      <span className="bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded border-2 border-balck-solid rounded-lg shadow-md">
-      <span ref={d8}>tan(x)</span>{/*Tan*/}
-      </span>
-      <span className="bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded border-2 border-balck-solid rounded-lg shadow-md">
-      <span ref={d9}>custom</span>{/*Tan*/}
-      </span>
+        <Link to="/derivatives/linear" className = "link-box2">
+              <div className="link-title2"><span ref={d1}> x </span>
+              </div>
+          </Link>
+
+        <Link to="/derivatives/quadratic" className = "link-box2">
+              <div className="link-title2"><span ref={d2}>x^{2}</span>
+              </div>
+          </Link>
+
+        <Link to="/derivatives/exponential" className = "link-box2">
+              <div className="link-title2"> <span ref={d4}>{"e^{x}"}</span>{/*Expnential*/}
+              </div>
+          </Link>
+
+        <Link to="/derivatives/logarithmic" className = "link-box2">
+              <div className="link-title2"><span ref={d5}>ln(x)</span>{/*Log*/}
+              </div>
+          </Link>
+
+        <Link to="/derivatives/sine" className = "link-box2">
+              <div className="link-title2"><span ref={d6}>cos(x)</span>{/*Sine*/}
+              </div>
+          </Link>
+
+          <Link to="/derivatives/cosine" className = "link-box2">
+              <div className="link-title2"><span ref={d7}>sin(x)</span>{/*Cos*/}
+              </div>
+          </Link>
+
+          <Link to="/derivatives/tangent" className = "link-box2">
+              <div className="link-title2"><span ref={d8}>tan(x)</span>{/*Tan*/}
+              </div>
+          </Link>
+
+          <Link to="/derivatives/custom" className = "link-box2">
+              <div className="link-title2"><span ref={d9}>custom</span>{/*Custom*/}
+              </div>
+          </Link>
       <i className="fas fa-fire text-yellow-500 ml-2">
       </i>
      </div>
