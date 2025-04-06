@@ -1,8 +1,18 @@
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 
-function AskAIButton() {
+function AskAIButton({ func, canAskAI, onAIResponseComplete }: 
+  { func: string; canAskAI: boolean, onAIResponseComplete: () => void }) {
   const [open, setOpen] = useState(false);
+
+  const handleAskAI = () => {
+    try {
+      
+      onAIResponseComplete();
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   const markdownText = `
 # 🤖 Ask AI
@@ -34,8 +44,22 @@ You can ask **anything** here — whether it's about _calculus_, **code**, or �
 
           {/* Modal Content */}
           <div className="relative bg-gray-800 text-white max-w-2xl w-full rounded-xl p-6 shadow-lg overflow-auto">
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-xl font-semibold">Ask AI</h2>
+            <div className="flex justify-between items-center mb-4 border-b-2 border-solid">
+              {canAskAI ? (
+                <button onClick={handleAskAI} className="cursor-pointer">
+                  <h2 className="text-xl font-semibold">{`Ask AI About: ${func}`}</h2>
+                </button>
+              ) : (
+                <button
+                  className="cursor-pointer"
+                  onClick={() => setOpen(false)}
+                >
+                  <h2 className="text-xl font-semibold">
+                    Generate a New Function to Ask Again!
+                  </h2>
+                </button>
+              )}
+
               <button
                 onClick={() => setOpen(false)}
                 className="text-white text-xl hover:text-red-400 cursor-pointer"
