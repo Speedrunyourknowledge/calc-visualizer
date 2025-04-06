@@ -6,6 +6,7 @@ import {generateFunction, validateBounds} from "../functions/mathOutput";
 import { Session } from "../lib/auth-client.ts";
 import axios from "axios";
 import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
+import AskAIButton from "../components/ui/AskAIButton.tsx";
 
 function CustomInt() {
 
@@ -206,6 +207,9 @@ function CustomInt() {
             {formatCheck}
           </div>
       } 
+      <div className="fixed bottom-2 right-2 z-1000">
+        <AskAIButton />
+      </div>
 
     </div>
   )
