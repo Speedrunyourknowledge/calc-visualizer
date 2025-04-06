@@ -3,7 +3,6 @@ import { Route } from "react-router";
 import RootLayout from "./RootLayout";
 
 import Home from "../pages/Home";
-import Derivatives from "../pages/Derivatives";
 import Limits from "../pages/Limits";
 import Integrals from "../pages/Integrals";
 
@@ -48,7 +47,7 @@ const RoutesList =
   <Route index element={<Home/>}/>
   <Route path='/calc-visualizer' element={<Home/>} />
 
-  <Route path='/derivatives' element={ <Derivatives/> }/>
+
   <Route path='/derivatives/custom' element={ <CustomDeriv/> } />
   <Route path='/derivatives/quadratic' element={ <QuadraticDeriv/> } />
   <Route path='/derivatives/cubic' element={ <CubicDeriv/> } />

@@ -208,11 +208,6 @@ function Home() {
      </div>
     </div>
    </div>
-        
-          <Link to="/derivatives" className = "link-box">
-              <div className="link-title">Derivatives</div>
-          </Link>
-          
           <Link to="/integrals" className = "link-box">
               <div className="link-title">Integrals</div>
           </Link>
