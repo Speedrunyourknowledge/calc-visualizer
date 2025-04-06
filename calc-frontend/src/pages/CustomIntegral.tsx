@@ -6,7 +6,7 @@ import {generateFunction, validateBounds} from "../functions/mathOutput";
 import { Session } from "../lib/auth-client.ts";
 import axios from "axios";
 import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
-import AskAIButton from "../components/ui/AskAIButton.tsx";
+import AskAIButton from "../components/ui/AskAIButtonIntegral.tsx";
 
 function CustomInt() {
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 
-function AskAIButton({ func, canAskAI, onAIResponseComplete }: 
+function AskAIButtonIntegral({ func, canAskAI, onAIResponseComplete }: 
   { func: string; canAskAI: boolean, onAIResponseComplete: () => void }) {
   const [open, setOpen] = useState(false);
 
@@ -75,4 +75,4 @@ You can ask **anything** here â€” whether it's about _calculus_, **code**, or ðŸ
   );
 }
 
-export default AskAIButton;
+export default AskAIButtonIntegral;
