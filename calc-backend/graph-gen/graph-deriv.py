@@ -5,17 +5,16 @@ import plotly.graph_objects as go
 
 x = sp.symbols('x')
 
-#Just change these three
-f = sp.sin(x)
-y_range = [-2, 2]
-x_range = [-10, 10]
+#Change these two
+f = sp.cos(x)
+x_range = [0, 5]
 
 
 f_prime = sp.diff(f, x)
 f_y = sp.lambdify(x, f, 'numpy')
 f_prime_y = sp.lambdify(x, f_prime, 'numpy')
 
-x_vals = np.arange(x_range[0], x_range[1] + 0.1, 0.1)
+x_vals = np.arange(x_range[0], x_range[1] + 0.05, 0.05)
 f_vals = f_y(x_vals)
 
 fig = go.Figure()
@@ -65,15 +64,15 @@ sliders = [dict(
         for frame in frames
     ],
     transition=dict(duration=0),
-    y= -0.05,
+    y=-0.05,
     len=1.0
 )]
 
 fig.update_layout(
     xaxis_title='x-axis',
     yaxis_title='y-axis',
-    xaxis=dict(range=[x_range[0], x_range[1]]),
-    yaxis=dict(range=[y_range[0], y_range[1]]),
+    xaxis=dict(range=[x_range[0], x_range[1]],fixedrange=True),
+    yaxis=dict(range=[np.min(f_vals) - 0.1 , np.max(f_vals) + 0.1], fixedrange=True),
     sliders=sliders,
     uirevision='static'
 )
