@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 x = sp.symbols('x')
 
 #Change these two
-f = sp.cos(x)
+f = x**3
 x_range = [0, 5]
 
 
@@ -68,11 +68,23 @@ sliders = [dict(
     len=1.0
 )]
 
+pad_min = 0
+if(np.min(f_vals) == 0):
+    pad_min = abs(np.max(f_vals)/10)
+else:
+    pad_min = abs(np.min(f_vals)/10)
+
+pad_max = 0
+if(np.max(f_vals) == 0):
+    pad_max = abs(np.min(f_vals)/10)
+else:
+    pad_max = abs(np.max(f_vals)/10)
+
 fig.update_layout(
     xaxis_title='x-axis',
     yaxis_title='y-axis',
     xaxis=dict(range=[x_range[0], x_range[1]],fixedrange=True),
-    yaxis=dict(range=[np.min(f_vals) - 0.1 , np.max(f_vals) + 0.1], fixedrange=True),
+    yaxis=dict(range=[np.min(f_vals) - pad_min, np.max(f_vals) + pad_max], fixedrange=True),
     sliders=sliders,
     uirevision='static'
 )
