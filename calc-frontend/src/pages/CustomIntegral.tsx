@@ -210,7 +210,7 @@ function CustomInt() {
         formatCheck === ''? func === ''? null :
             <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
               <IntCustomGraph key={funcKey} func={func} 
-              lowerBound = {bounds[0]} upperBound = {bounds[1]}/>
+              lowerBound = {bounds[0]} upperBound = {bounds[1]} onAIResponseComplete={handleAIResponseComplete}/>
             </div> 
           :
           <div className="center-header pad-sm" style={{fontSize:'1.25rem', color:'red', marginTop:'.5rem', 
