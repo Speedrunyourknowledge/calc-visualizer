@@ -1,27 +1,56 @@
+import axios from "axios";
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
-function AskAIButtonIntegral({ func, canAskAI, onAIResponseComplete }: 
-  { func: string; canAskAI: boolean, onAIResponseComplete: () => void }) {
+function AskAIButtonIntegral({
+  func,
+  lowerBound,
+  upperBound,
+  canAskAI,
+  onAIResponseComplete,
+}: {
+  func: string;
+  lowerBound: number;
+  upperBound: number;
+  canAskAI: boolean;
+  onAIResponseComplete: () => void;
+}) 
+{
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [markdownText, setMarkdownText] = useState(`# 🤖 Ask AI
 
-  const handleAskAI = () => {
+# Graph your function, then click above for an explanation!
+`);
+
+  const handleAskAI = async () => {
     try {
-      
-      onAIResponseComplete();
-    } catch (error) {
-      console.error(error);
-    }
-  }
+      setLoading(true);
+      const response = await axios.post(
+        "http://localhost:3000/gemini/ask-integral",
+        {
+          func,
+          lowerBound,
+          upperBound,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-  const markdownText = `
-# 🤖 Ask AI
-You can ask **anything** here — whether it's about _calculus_, **code**, or 🧠 brain teasers!
-  
-- Type your question
-- Get smart answers
-- Stay curious!
-`;
+      setMarkdownText(response.data.message);
+      onAIResponseComplete();
+
+    } catch (error) {
+      setMarkdownText(`❌ An Error occured, try again.`);
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -43,7 +72,7 @@ You can ask **anything** here — whether it's about _calculus_, **code**, or �
           <div className="absolute inset-0 bg-black/50"></div>
 
           {/* Modal Content */}
-          <div className="relative bg-gray-800 text-white max-w-2xl w-full rounded-xl p-6 shadow-lg overflow-auto">
+          <div className="relative bg-gray-800 text-white max-w-2xl max-h-[80vh] w-full rounded-xl p-6 shadow-lg overflow-y-auto">
             <div className="flex justify-between items-center mb-4 border-b-2 border-solid">
               {canAskAI ? (
                 <button onClick={handleAskAI} className="cursor-pointer">
@@ -67,7 +96,17 @@ You can ask **anything** here — whether it's about _calculus_, **code**, or �
                 &times;
               </button>
             </div>
-            <ReactMarkdown>{markdownText}</ReactMarkdown>
+
+            <div className="relative">
+              {loading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-10">
+                  <div className="loader animate-spin w-10 h-10 border-4 border-t-transparent border-white rounded-full"></div>
+                </div>
+              )}
+              <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+                {markdownText}
+              </ReactMarkdown>
+            </div>
           </div>
         </div>
       )}

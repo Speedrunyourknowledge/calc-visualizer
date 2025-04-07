@@ -35,7 +35,9 @@ function CustomInt() {
   const [func, setFunc] = useState<string>('');
   const [bounds, setBounds] = useState<number[]>([0,0]);
   const [formatCheck, setFormatCheck] = useState<string>('');
-  const [canAskAI, setCanAskAI] = useState(true);
+
+  const [canAskAI, setCanAskAI] = useState<boolean>(true);
+  const [jsFunc, setJsFunc] = useState<string>('x');
 
   const handleAIResponseComplete = () => {
     setCanAskAI(false);
@@ -103,6 +105,7 @@ function CustomInt() {
       newFunc = generateFunction(funcLatex, python_code ?? true)
     }
     catch{
+      setCanAskAI(false);
       setFormatCheck('Please enter a valid function')
       return 1
     }
@@ -115,6 +118,7 @@ function CustomInt() {
     // check if bounds are valid
     if(checkBounds !== 'success'){
       setFormatCheck(checkBounds)
+      setCanAskAI(false);
       return 1
     }
 
@@ -133,6 +137,7 @@ function CustomInt() {
 
     setFormatCheck('')
     setCanAskAI(true);
+    setJsFunc(generateFunction(editMF.current.latex(), false));
 
     return 0
   }
@@ -214,7 +219,7 @@ function CustomInt() {
           </div>
       } 
       <div className="fixed bottom-2 right-2 z-1000">
-        <AskAIButton func={func} canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
+        <AskAIButton func={jsFunc} lowerBound={bounds[0]} upperBound={bounds[1]} canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
       </div>
 
     </div>
