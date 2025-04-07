@@ -10,18 +10,16 @@ const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 export async function askIntegral(req: Request, res: Response) {
   const { func, lowerBound, upperBound }: { func: string; lowerBound: number; upperBound: number } = req.body;
-  console.log("backend equation:", func);
-  console.log("Body:", req.body);
 
-  const prompt = `Explain to me how the integral of the following function works and the math behind it (Riemann Sum). My function is: ${func}, the lowerbound is: ${lowerBound}, the upperbound is: ${upperBound}. Limit yourself to 500 for me to better understand.`;
+  const prompt = `Explain to me how the integral of the following function works and the math behind it (Riemann Sum). My function is: ${func}, the lowerbound is: ${lowerBound}, the upperbound is: ${upperBound}. Limit yourself to 150 for me to better understand.`;
 
   const response = await ai.models.generateContent({
     model: "gemini-1.5-flash",
     contents: prompt,
     config: {
-      maxOutputTokens: 750,
+      maxOutputTokens: 225,
       temperature: 0.3,
-      systemInstruction: "You are a calculus 1 tutor. You will explain the integral asked in the context of a Riemann Sum to a student. The student has a program to let them visualize their function that has their function graphed and they can move a slider to change the amount of rectangles in the Riemann Sum. Try toimit yourself to 500 words."
+      systemInstruction: "You are a calculus 1 tutor. You will brielfy summarize the integral asked in the context of a Riemann Sum to a student. The student has a program to let them visualize their function that has their function graphed and they can move a slider to change the amount of rectangles in the Riemann Sum. Try to limit yourself to 150 words."
     },
   });
 
