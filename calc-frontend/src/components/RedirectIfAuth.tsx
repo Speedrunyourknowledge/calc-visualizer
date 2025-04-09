@@ -3,12 +3,14 @@ import { useAuth } from "../App/AuthContext";
 
 function RedirectIfAuth()
 {
-    const { session } = useAuth();
+    const { session, isPending } = useAuth();
 
-    // user is not logged in - let them go to the page
-    if(session === null) {
+    // user is not logged in - let them go to sign in page
+    if(isPending || !session) {
         return <Outlet/>
     }
+
+    // user is logged in - take them to home
     return <Navigate to="/" replace/>
 }
 

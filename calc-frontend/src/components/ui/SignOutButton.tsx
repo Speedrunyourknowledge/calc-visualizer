@@ -7,8 +7,7 @@ function SignOutButton()
             await authClient.signOut();
 
         } catch (error) {
-            alert("Something went wrong signout out.");
-            console.error("Error signing out:", error);
+            console.error("Error signing out: ", error);
         }   
     }
 

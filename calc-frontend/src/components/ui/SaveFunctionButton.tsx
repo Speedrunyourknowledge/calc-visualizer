@@ -8,7 +8,7 @@ function SaveFunctionButton({onSave}: {onSave: (session: Session) => void})
     const { session } = useAuth();
 
     const handleClick = () => {
-        if(session === null) {
+        if(!session) {
             navigate("/sign-in");
             return;
         }
@@ -16,7 +16,7 @@ function SaveFunctionButton({onSave}: {onSave: (session: Session) => void})
     }
 
     return (
-        <button className="back-button" onClick={handleClick}>Save Function!</button>
+        <button className="back-button" onClick={handleClick}>Save Function</button>
     )
 }
 
