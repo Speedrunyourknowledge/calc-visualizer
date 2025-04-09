@@ -16,7 +16,7 @@ function SaveFunctionButton({onSave}: {onSave: (session: Session) => void})
     }
 
     return (
-        <button className="back-button" onClick={handleClick}>Save Function</button>
+        <button className="back-button ml-[14px]" onClick={handleClick}>Save Function</button>
     )
 }
 
