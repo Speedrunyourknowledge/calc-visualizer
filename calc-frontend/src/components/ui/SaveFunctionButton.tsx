@@ -19,7 +19,7 @@ function SaveFunctionButton({onSave, saving, enableSave}: {onSave: (session: Ses
     if(saving){
       return (
         <button className="back-button ml-[1rem]">
-          <div className="animate-spin w-4 h-4 border-2 border-t-transparent border-white rounded-full"></div>
+          <div className="animate-spin w-[1.125rem] h-[1.125rem] border-3 border-t-transparent border-white rounded-full"></div>
         </button>
       )
     }
