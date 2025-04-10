@@ -6,6 +6,7 @@ import {generateFunction, validateBounds} from "../functions/mathOutput";
 import { Session } from "../lib/auth-client.ts";
 import axios from "axios";
 import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
+import AskAIButton from "../components/ui/AskAIButtonIntegral.tsx";
 
 function CustomInt() {
 
@@ -34,6 +35,13 @@ function CustomInt() {
   const [func, setFunc] = useState<string>('');
   const [bounds, setBounds] = useState<number[]>([0,0]);
   const [formatCheck, setFormatCheck] = useState<string>('');
+
+  const [canAskAI, setCanAskAI] = useState<boolean>(false);
+  const [jsFunc, setJsFunc] = useState<string>('');
+
+  const handleAIResponseComplete = () => {
+    setCanAskAI(false);
+  }
 
   const [saving, setSaving] = useState<boolean>(false);
   const [enableSave, setEnableSave] = useState<boolean>(false);
@@ -97,6 +105,7 @@ function CustomInt() {
       newFunc = generateFunction(funcLatex, python_code ?? true)
     }
     catch{
+      setCanAskAI(false);
       setFormatCheck('Please enter a valid function')
       return 1
     }
@@ -109,6 +118,7 @@ function CustomInt() {
     // check if bounds are valid
     if(checkBounds !== 'success'){
       setFormatCheck(checkBounds)
+      setCanAskAI(false);
       return 1
     }
 
@@ -126,6 +136,8 @@ function CustomInt() {
     }
 
     setFormatCheck('')
+    setCanAskAI(true);
+    setJsFunc(generateFunction(editMF.current.latex(), false));
 
     return 0
   }
@@ -191,15 +203,22 @@ function CustomInt() {
           </div>
         </div>
 
-        <button className="go-button brighten mb-[.5rem]" onClick={()=>generateOutput()}> Graph</button>
+        <button className="go-button brighten mb-[.5rem]" onClick={()=>generateOutput()}>Graph</button>
+      </div>
+
+      <div style={{display:'grid'}}>
+        <div className="" style={{position:'fixed', zIndex:'1', justifySelf:'end'}}>
+          <AskAIButton func={jsFunc} lowerBound={bounds[0]} upperBound={bounds[1]} key={funcKey} 
+            canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
+        </div>
       </div>
 
       {
         formatCheck === ''? func === ''? null :
-            <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
-              <IntCustomGraph key={funcKey} func={func} 
-              lowerBound = {bounds[0]} upperBound = {bounds[1]}/>
-            </div> 
+          <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
+            <IntCustomGraph key={funcKey} func={func} 
+            lowerBound = {bounds[0]} upperBound = {bounds[1]} onAIResponseComplete={handleAIResponseComplete}/>
+          </div> 
           :
           <div className="center-header pad-sm" style={{fontSize:'1.25rem', color:'red', marginTop:'.5rem', 
             maxWidth:'550px'}}>
