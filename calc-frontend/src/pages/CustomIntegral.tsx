@@ -36,8 +36,8 @@ function CustomInt() {
   const [bounds, setBounds] = useState<number[]>([0,0]);
   const [formatCheck, setFormatCheck] = useState<string>('');
 
-  const [canAskAI, setCanAskAI] = useState<boolean>(true);
-  const [jsFunc, setJsFunc] = useState<string>('x');
+  const [canAskAI, setCanAskAI] = useState<boolean>(false);
+  const [jsFunc, setJsFunc] = useState<string>('');
 
   const handleAIResponseComplete = () => {
     setCanAskAI(false);
@@ -203,24 +203,28 @@ function CustomInt() {
           </div>
         </div>
 
-        <button className="go-button brighten mb-[.5rem]" onClick={()=>generateOutput()}> Graph</button>
+        <button className="go-button brighten mb-[.5rem]" onClick={()=>generateOutput()}>Graph</button>
+      </div>
+
+      <div style={{display:'grid'}}>
+        <div className="" style={{position:'fixed', zIndex:'1', justifySelf:'end'}}>
+          <AskAIButton func={jsFunc} lowerBound={bounds[0]} upperBound={bounds[1]} key={funcKey} 
+            canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
+        </div>
       </div>
 
       {
         formatCheck === ''? func === ''? null :
-            <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
-              <IntCustomGraph key={funcKey} func={func} 
-              lowerBound = {bounds[0]} upperBound = {bounds[1]} onAIResponseComplete={handleAIResponseComplete}/>
-            </div> 
+          <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
+            <IntCustomGraph key={funcKey} func={func} 
+            lowerBound = {bounds[0]} upperBound = {bounds[1]} onAIResponseComplete={handleAIResponseComplete}/>
+          </div> 
           :
           <div className="center-header pad-sm" style={{fontSize:'1.25rem', color:'red', marginTop:'.5rem', 
             maxWidth:'550px'}}>
             {formatCheck}
           </div>
       } 
-      <div className="fixed bottom-2 right-2 z-1000">
-        <AskAIButton func={jsFunc} lowerBound={bounds[0]} upperBound={bounds[1]} canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
-      </div>
 
     </div>
   )

@@ -10,10 +10,8 @@ import { AuthProvider } from "./AuthContext";
 //@ts-ignore implicit any type
 import mathquillFunc from "../../node_modules/mathquill/build/mathquill";
 
-
 function App() {
 
-  // launch mathquill instance
   mathquillFunc();
 
   // go to the RootLayout component to edit the visual layout

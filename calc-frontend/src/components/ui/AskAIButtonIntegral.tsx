@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 
@@ -7,22 +7,23 @@ function AskAIButtonIntegral({
   func,
   lowerBound,
   upperBound,
+  key,
   canAskAI,
   onAIResponseComplete,
 }: {
   func: string;
   lowerBound: number;
   upperBound: number;
+  key: string;
   canAskAI: boolean;
   onAIResponseComplete: () => void;
 }) 
 {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [markdownText, setMarkdownText] = useState(`# 🤖 Ask AI
-
-# Graph your function, then click above for an explanation!
-`);
+  const [markdownText, setMarkdownText] = useState(
+    `## 🤖 Ask AI\n\n### Graph your function, then click above for an explanation!`
+  );
 
   const handleAskAI = async () => {
     try {
@@ -45,12 +46,19 @@ function AskAIButtonIntegral({
       onAIResponseComplete();
 
     } catch (error) {
-      setMarkdownText(`❌ An Error occured, try again.`);
+      setMarkdownText(`## ❌ An error occured, please try again`);
       console.error(error);
     } finally {
       setLoading(false);
     }
   };
+
+  // the user has created a new graph
+  useEffect(() => {
+    if(key !== ''){
+      setMarkdownText(`## 🤖 Ask AI\n\n### Click above for an explanation!`);
+    }
+  },[key])
 
   return (
     <>
@@ -72,26 +80,27 @@ function AskAIButtonIntegral({
           <div className="absolute inset-0 bg-black/50"></div>
 
           {/* Modal Content */}
-          <div className="relative bg-gray-800 text-white max-w-2xl max-h-[80vh] w-full rounded-xl p-6 shadow-lg overflow-y-auto">
-            <div className="flex justify-between items-center mb-4 border-b-2 border-solid">
+          <div className="relative bg-gray-800 text-white max-w-2xl max-h-[80vh] w-full rounded-xl p-4 pt-2
+            shadow-lg overflow-y-auto mr-[20px] ml-[20px]">
+            <div className="flex justify-between items-center mb-2 border-b-2 border-solid gap-2">
               {canAskAI ? (
-                <button onClick={handleAskAI} className="cursor-pointer">
+                <button onClick={handleAskAI} className="cursor-pointer pb-1">
                   <h2 className="text-xl font-semibold">{`Ask AI About: ${func}`}</h2>
                 </button>
               ) : (
                 <button
-                  className="cursor-pointer"
+                  className="cursor-pointer pb-1"
                   onClick={() => setOpen(false)}
                 >
-                  <h2 className="text-xl font-semibold">
-                    Generate a New Function to Ask Again!
+                  <h2 className="text-l font-medium">
+                    Generate a New Function to Ask a Question
                   </h2>
                 </button>
               )}
 
               <button
                 onClick={() => setOpen(false)}
-                className="text-white text-xl hover:text-red-400 cursor-pointer"
+                className="text-white text-4xl hover:text-red-400 cursor-pointer pb-1"
               >
                 &times;
               </button>
