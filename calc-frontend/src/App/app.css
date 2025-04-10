@@ -109,7 +109,7 @@ body {
   }
 
   .loading{
-    animation: delay-appearance 300ms ease-out 1;
+    animation: delay-appearance 150ms ease-out 1;
   }
 
   @keyframes delay-appearance{
