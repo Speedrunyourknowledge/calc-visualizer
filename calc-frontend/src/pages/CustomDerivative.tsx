@@ -1,8 +1,7 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router"
 import {generateFunction, validateBounds} from "../functions/mathOutput";
 import DerivCustomGraph from "../components/Custom/DerivCustomGraph";
-import { Blocks } from "react-loader-spinner";
 
 import { Session } from "../lib/auth-client.ts";
 import axios from "axios";
@@ -37,6 +36,8 @@ function CustomDeriv() {
   const [formatCheck, setFormatCheck] = useState<string>('');
 
   const [saving, setSaving] = useState<boolean>(false);
+  const [enableSave, setEnableSave] = useState<boolean>(false);
+  const [funcKey, setFuncKey] = useState<string>('');
 
   // need to check if func is unique first
   const saveFunction = async (session: Session) => {
@@ -47,8 +48,6 @@ function CustomDeriv() {
       return
     }
 
-    setSaving(true) // show loading while saving
-
     // latex version of function is saved
     const equation = editMF.current.latex();
     const lowerBound = bounds[0];
@@ -57,8 +56,10 @@ function CustomDeriv() {
     const userId = session.user.id;
     
     try {
+      setSaving(true) // show loading while saving
+
       // create-integral handles any topic
-      const response = await axios.post(`http://localhost:3000/func/create-integral/${userId}`, {
+      await axios.post(`http://localhost:3000/func/create-integral/${userId}`, {
         equation,
         lowerBound,
         upperBound,
@@ -68,13 +69,14 @@ function CustomDeriv() {
           Authorization: `Bearer ${session.session.token}`
         }
       })
-      console.log("Function created: ", response.data);
     } 
     catch (error) {
       console.error("save function error: ",error);
     }
     finally{
       setSaving(false)
+      // disable save until new graph is created
+      setEnableSave(false)
     }
 
   }
@@ -86,6 +88,9 @@ function CustomDeriv() {
   const generateOutput = (python_code?: boolean):number =>{
     const funcLatex:string = editMF.current.latex()
     let newFunc:string;
+    let newLowerBound:number;
+    let newUpperBound:number;
+    let newFuncKey:string;
 
     // check if function is valid
     try{
@@ -108,8 +113,18 @@ function CustomDeriv() {
     }
 
     // input is valid, so set all variables
+    newLowerBound = parseFloat(lowerBound)
+    newUpperBound = parseFloat(upperBound)
+
     setFunc(newFunc)
-    setBounds([parseFloat(lowerBound), parseFloat(upperBound)])
+    setBounds([newLowerBound, newUpperBound])
+
+    newFuncKey = newFunc + newLowerBound + newUpperBound
+    // check that new graph is different from old one
+    if(newFuncKey !== funcKey){
+      setFuncKey(newFuncKey)
+    }
+
     setFormatCheck('')
 
     return 0
@@ -138,6 +153,14 @@ function CustomDeriv() {
 
   }, [])
 
+  useEffect(() => {
+
+    // new graph was created, enable saving
+    if(funcKey !== ''){
+      setEnableSave(true)
+    }
+
+  }, [funcKey])
 
   return(
     <div>
@@ -146,19 +169,10 @@ function CustomDeriv() {
           <button className="back-button"> Back</button>
         </Link>
       
-        <SaveFunctionButton onSave={saveFunction}></SaveFunctionButton>
+        <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
 
         <div></div>
       </div>
-      
-      {saving? 
-        <Blocks height="80" width="80" color="#4fa94d" ariaLabel="loading" 
-          wrapperStyle={{marginLeft:'auto', marginRight:'auto'}}
-          wrapperClass="blocks-wrapper" visible={true}
-          />
-        :
-        null
-      }
 
       <div className="center-header flex flex-wrap justify-center gap-[1rem] mt-[.5rem]" style={{alignItems:"center"}}>
         <div ref={container}>
@@ -181,7 +195,7 @@ function CustomDeriv() {
       {
         formatCheck === ''? func === ''? null :
             <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
-              <DerivCustomGraph key={func + bounds[0].toString() + bounds[1].toString()} func={func} 
+              <DerivCustomGraph key={funcKey} func={func} 
               lowerBound = {bounds[0]} upperBound = {bounds[1]}/>
             </div> 
           :

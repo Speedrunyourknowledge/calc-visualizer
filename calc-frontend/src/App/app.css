@@ -131,6 +131,13 @@ body {
     margin-bottom: .75rem;
   }
 
+  .disabled{
+    @apply hover:bg-sky-400 hover:text-black;
+
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
   .go-button{
     @apply cursor-pointer bg-[#1ee342] rounded-md border-2 border-solid;
     padding: 4px 12px;
