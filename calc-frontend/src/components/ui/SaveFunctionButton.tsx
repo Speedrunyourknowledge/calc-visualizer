@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router";
 import { useAuth } from "../../App/AuthContext";
 import { Session } from "../../lib/auth-client";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, TooltipArrow } from "@radix-ui/react-tooltip";
+
 
 function SaveFunctionButton({onSave, saving, enableSave}: {onSave: (session: Session) => void, 
   saving: boolean, enableSave: boolean})
@@ -27,7 +29,18 @@ function SaveFunctionButton({onSave, saving, enableSave}: {onSave: (session: Ses
     // disabled
     if(!enableSave){
       return (
-        <button className="back-button ml-[1rem] disabled">Save Function</button>
+        <TooltipProvider delayDuration={0}>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button className="back-button ml-[1rem] disabled">Save Function</button>
+            </TooltipTrigger>
+
+            <TooltipContent className="tooltip-content">
+              Graph a new function first
+              <TooltipArrow className="tooltip-arrow"/>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       )
     }
 
