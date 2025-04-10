@@ -1,35 +1,47 @@
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 interface FunctionCardProps {
     topic: string;
-    expression: string;
+    equation: string;
+    lowerBound: number;
+    upperBound: number;
     id: string;
     onDelete: (id: string) => void;
 }
 
-const handleView = async () => {console.log("View")}
+function FunctionCard({topic, equation, lowerBound, upperBound, id, onDelete}: FunctionCardProps) {
 
-function FunctionCard({topic, expression, id, onDelete}: FunctionCardProps) {
+    const navigate = useNavigate()
+
+    const handleView = async () => {
+  
+      navigate(`/${topic}s/custom`, {state: {func: equation, bounds: [lowerBound, upperBound]}} )
+    }
+
     const handleDelete = async () => {
+
+      const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3000'
         
         try {
-            const response = await axios.delete(`http://localhost:3000/api/func/delete/${id}`);
+            await axios.delete(`${serverUrl}/func/delete/${id}`);
             onDelete(id);
         } catch (error) {
-            alert(`Something went wrong: ${error}`)
+            console.error(`Delete function error: ${error}`)
         }
     }
 
     return (
-    <div className="bg-white p-4 rounded-2xl shadow-md text-center w-80">
-        <h2 className="text-xl font-semibold mb-2">{topic}</h2>
-        <p className="text-lg text-gray-700 mb-4">{expression}</p>
-        <img src={""} alt="Graph" className="w-full h-40 object-cover rounded-md mb-4" />
+    <div className="bg-[#f6f6f7] p-4 pt-2 rounded-2xl shadow-md text-center w-[240px]">
+        <p className="text-xl mb-2">{equation}</p>
+        <img src={""} alt={topic + " graph"}className="w-full aspect-2/1 bg-green-300 rounded-md mb-4" />
         <div className="flex justify-between">
-            <button onClick={handleView} className="bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-blue-700">
+            <button onClick={handleView} className="bg-blue-500 text-[#f6f6f7] px-4 py-2 
+              rounded-md cursor-pointer hover:bg-blue-700 tracking-wide font-semibold">
                 View
                 </button>
-            <button onClick={handleDelete} className="bg-red-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-red-700">
+            <button onClick={handleDelete} className="bg-red-500 text-[#f6f6f7] px-4 py-2 
+              rounded-md cursor-pointer hover:bg-red-700 tracking-wide font-semibold">
                 Delete
             </button>
         </div>

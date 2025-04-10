@@ -45,7 +45,6 @@ import CustomDeriv from "../pages/CustomDerivative";
 
 import SignIn from "../pages/SignIn";
 import Dashboard from "../pages/Dashboard";
-import ProtectedRoute from "../components/ProtectedRoute";
 import RedirectIfAuth from "../components/RedirectIfAuth";
 
 const RoutesList =
@@ -57,9 +56,7 @@ const RoutesList =
       <Route path='/sign-in' element={<SignIn />} />
     </Route>
 
-    <Route element={<ProtectedRoute />} >
-      <Route path='/dashboard' element={<Dashboard />} />
-    </Route>
+    <Route path='/dashboard' element={<Dashboard />} />
 
     <Route path='/derivatives' element={<Derivatives />} />
     <Route path='/derivatives/custom' element={<CustomDeriv />} />

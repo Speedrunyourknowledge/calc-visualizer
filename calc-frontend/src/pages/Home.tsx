@@ -4,20 +4,28 @@ import SignInButton from "../components/ui/SignInButton";
 import SignOutButton from "../components/ui/SignOutButton";
 
 function Home() {
-  const { session } = useAuth();
+  const { session, isPending } = useAuth();
 
 
   return (
     <div>
-      <h2 className = "topic-header m-auto w-fit">Topics</h2>
-
-      <Link to="/dashboard">
+      <Link to="/dashboard" tabIndex={-1} style={{marginRight:'20px'}}>
         <button className="back-button">Dashboard</button>
       </Link>
-      {session===null ? <SignInButton/> : <SignOutButton/> }
-      {session===null ? <p>Not Signed in</p> : <p>Signed in as {session.user.name}</p>}
+      {isPending === true? 
+        null
+        : 
+        !session ? <SignInButton/> : <SignOutButton/> }
 
-      <div className="flex flex-col gap-6 m-auto home-list">
+      {isPending === true? 
+        <div className="big-p">&nbsp;</div> 
+        : 
+        !session? <p className="big-p">Not Signed in</p> : 
+          <p className="big-p">Signed in as {session.user.name}</p>}
+
+      <h2 className = "topic-header m-auto w-fit">Topics</h2>
+
+      <div className="flex flex-col m-auto home-list">
         <div className="topic-list topic-list-3" style={{marginBottom:'1rem'}}>
           {
             /*

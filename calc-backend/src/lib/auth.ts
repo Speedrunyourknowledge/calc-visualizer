@@ -6,11 +6,18 @@ export const auth = betterAuth({
     database: prismaAdapter(prisma, {
         provider: "mongodb",
     }),
-    trustedOrigins: ["http://localhost:5173"],
+    trustedOrigins: ["http://localhost:5173", 'https://calcvisualizer.netlify.app'],
     socialProviders: {
-        github: {
-            clientId: process.env.GITHUB_CLIENT_ID as string,
-            clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
-        },
+        google: {
+            clientId: process.env.GOOGLE_CLIENT_ID as string,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+        }
     },
+    onAPIError: {
+      throw: true,
+      onError: (e) =>{
+        console.error('Auth error: ' + e)
+      },
+      errorURL: process.env.FRONTEND_URL || 'http://localhost:5173' + '/auth-error'
+    }
 } satisfies BetterAuthOptions);

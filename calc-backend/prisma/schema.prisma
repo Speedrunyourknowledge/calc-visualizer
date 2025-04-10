@@ -24,6 +24,8 @@ model User {
   sessions      Session[]
   accounts      Account[]
   funcs         Func[]
+
+  @@map("user")
 }
 
 model Session {
@@ -37,6 +39,8 @@ model Session {
   updatedAt DateTime @updatedAt
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("session")
 }
 
 model Account {
@@ -53,7 +57,10 @@ model Account {
   createdAt             DateTime  @default(now())
   updatedAt             DateTime  @updatedAt
 
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  idToken String?
+
+  @@map("account")
 }
 
 model Verification {
@@ -63,9 +70,12 @@ model Verification {
   expiresAt  DateTime
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
+
+  @@map("verification")
 }
 
 // Need to add type
+
 model Func {
   id         String @id @default(cuid()) @map("_id")
   equation   String

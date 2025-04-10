@@ -12,29 +12,30 @@ function RootLayout(){
   return(
     <>
       <ScrollRestoration/>
+      <div className="flex flex-col">
+        <div className="header flex items-center justify-between gap-4">
 
-      <div className="header flex items-center justify-between gap-4">
-
-        <div className="flex items-center gap-2">
-          <Link to ='/'>
-              <h1 className="w-fit font-medium">Calc Visualizer</h1>
-          </Link>
-
-          <div className="w-fit h-[85px]">
+          <div className="flex items-center gap-2">
             <Link to ='/'>
-              <CalcLogo />
+                <h1 className="w-fit font-medium">Calc Visualizer</h1>
             </Link>
+
+            <div className="w-fit h-[85px]">
+              <Link to ='/'>
+                <CalcLogo />
+              </Link>
+            </div>
+            
           </div>
-          
-        </div>
 
           <a href="https://www.ucf.edu/" target="_blank" className="h-[75px] shrink-0 self-start">
             <img className="rounded-sm h-[100%] object-contain" src={ucfLogo} alt="UCF logo"></img>
           </a>  
-      
-      </div>
+        
+        </div>
 
-      <Outlet />
+        <Outlet />
+      </div>
     </>
   )
 }

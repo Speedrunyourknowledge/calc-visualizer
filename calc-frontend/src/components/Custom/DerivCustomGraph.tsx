@@ -3,7 +3,7 @@
 import { useLayoutEffect , useEffect, useState} from "react";
 import axios from "axios";
 
-function IntCustomGraph({func, lowerBound, upperBound}) {
+function DerivCustomGraph({func, lowerBound, upperBound}) {
 
   const [ready, setReady] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -14,7 +14,7 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
 
     const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3000'
 
-    let request = axios.post(serverUrl + '/graph/create-graph',
+    let request = axios.post(serverUrl + '/graph/create-deriv-graph',
       {
         'func': func,
         'lowerBound': lowerBound,
@@ -99,4 +99,4 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
 
 }
 
-export default IntCustomGraph
+export default DerivCustomGraph
