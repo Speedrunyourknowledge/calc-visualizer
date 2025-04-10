@@ -24,22 +24,22 @@ function Dashboard()
     const navigate = useNavigate()
 
     useEffect(() => {
+      // user is not logged in
+      if(!isPending && !session){
+        navigate("/sign-in")
+        return
+      }
+
       if(session){
         getFuncs();
       }
     }, [isPending]);
-    
-    // user is not logged in
-    if(!isPending && !session){
-      navigate("/sign-in")
-      return
-    }
 
     // show loading while checking if user is logged in
     if(!session){
       return  <Blocks height="80" width="80" color="#4fa94d" ariaLabel="loading" 
         wrapperStyle={{marginLeft:'auto', marginRight:'auto'}}
-        wrapperClass="blocks-wrapper" visible={true}
+        wrapperClass="blocks-wrapper loading" visible={true}
         />
     }
 
@@ -64,7 +64,7 @@ function Dashboard()
     if(!loaded){
       return  <Blocks height="80" width="80" color="#4fa94d" ariaLabel="loading" 
         wrapperStyle={{marginLeft:'auto', marginRight:'auto'}}
-        wrapperClass="blocks-wrapper" visible={true}
+        wrapperClass="blocks-wrapper loading" visible={true}
         />
     }
 

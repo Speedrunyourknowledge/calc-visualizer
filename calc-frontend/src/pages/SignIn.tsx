@@ -46,7 +46,7 @@ function SignIn() {
             loaded? null :
             <Blocks height="80" width="80" color="#4fa94d" ariaLabel="loading" 
               wrapperStyle={{marginLeft:'auto', marginRight:'auto'}}
-              wrapperClass="blocks-wrapper" visible={true}
+              wrapperClass="blocks-wrapper loading" visible={true}
             />
           }
           
