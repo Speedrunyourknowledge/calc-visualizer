@@ -203,7 +203,7 @@ function CustomDeriv() {
 
       {
         formatCheck === ''? func === ''? null :
-            <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
+            <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem', marginBottom:'1rem'}}>
               <DerivCustomGraph key={funcKey} func={func} lowerBound = {bounds[0]} upperBound = {bounds[1]}
               handleSave={handleSave} onAIResponseComplete={handleAIResponseComplete}/>
             </div> 
@@ -214,7 +214,7 @@ function CustomDeriv() {
           </div>
       } 
 
-      <div style={{display:'flex', justifyContent:'space-between'}}>
+      <div className="ai-container">
         <div></div>
 
         <AskAIButtonDerivative func={JSFunc} lowerBound={bounds[0]} upperBound={bounds[0]} key={funcKey} 
@@ -223,7 +223,7 @@ function CustomDeriv() {
       </div>
 
           
-        </div>
+    </div>
     
   )
 }
