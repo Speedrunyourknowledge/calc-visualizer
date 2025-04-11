@@ -33,7 +33,7 @@ function RootLayout() {
         {session ? (
           session.user.image ? (
             <Link to="/dashboard">
-              <Avatar className="mr-5 cursor-pointer w-10 h-10">
+              <Avatar className="mr-5 cursor-pointer w-12 h-12">
                 <AvatarImage src={session.user.image} />
                 <AvatarFallback>{session.user.name.charAt(0)}</AvatarFallback>
               </Avatar>
