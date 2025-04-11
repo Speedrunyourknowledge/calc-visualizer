@@ -3,9 +3,7 @@ import { Route } from "react-router";
 import RootLayout from "./RootLayout";
 
 import Home from "../pages/Home";
-import Derivatives from "../pages/Derivatives";
 import Limits from "../pages/Limits";
-import Integrals from "../pages/Integrals";
 
 import QuadraticDeriv from "../components/Quadratic/QuadraticDeriv";
 import QuadraticInt from "../components/Quadratic/QuadraticInt";
@@ -32,11 +30,6 @@ import EulerDeriv from "../components/Euler/EulerDeriv";
 import EulerInt from "../components/Euler/EulerInt";
 import ErrorPage from "../pages/ErrorPage";
 
-import UnitCircle from "../pages/UnitCircle";
-import UnitSine from "../components/UnitCircle/UnitSine";
-import UnitCosine from "../components/UnitCircle/UnitCosine";
-import UnitTangent from "../components/UnitCircle/UnitTangent";
-
 import LimitDef from "../components/Limits/LimitDef";
 import QuadraticLimit from "../components/Quadratic/QuadraticLimit";
 
@@ -58,7 +51,6 @@ const RoutesList =
 
     <Route path='/dashboard' element={<Dashboard />} />
 
-    <Route path='/derivatives' element={<Derivatives />} />
     <Route path='/derivatives/custom' element={<CustomDeriv />} />
     <Route path='/derivatives/quadratic' element={<QuadraticDeriv />} />
     <Route path='/derivatives/cubic' element={<CubicDeriv />} />
@@ -69,7 +61,6 @@ const RoutesList =
     <Route path='/derivatives/cosine' element={<CosineDeriv />} />
     <Route path='/derivatives/tangent' element={<TangentDeriv />} />
 
-    <Route path='/integrals' element={<Integrals />} />
     <Route path='/integrals/custom' element={<CustomInt />} />
     <Route path='/integrals/quadratic' element={<QuadraticInt />} />
     <Route path='/integrals/cubic' element={<CubicInt />} />

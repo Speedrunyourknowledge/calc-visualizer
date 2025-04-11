@@ -5,10 +5,6 @@ function Limits() {
 
   return (
     <div>
-      <Link to="/" tabIndex={-1}>
-        <button className="back-button"> Back</button>
-      </Link>
-
       <h2 className="topic-header m-auto w-fit">The Limit of Common Functions</h2>
       <div className="topic-list">
 

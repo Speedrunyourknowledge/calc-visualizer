@@ -23,9 +23,6 @@ function LineDeriv()
   return (
     
       <div>
-        <Link to="/derivatives" tabIndex={-1}>
-          <button className="back-button"> Back</button>
-        </Link>
         <div>
           <h2 className="center-header">Derivative of <span ref={heading}>y = \frac&#123;1&#125;&#123;2&#125; \quad x</span> </h2>
         </div>

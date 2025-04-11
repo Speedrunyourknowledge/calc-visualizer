@@ -14,11 +14,7 @@ function LimitDef() {
   }, []);
 
   return (
-    <div> 
-      <Link to="/limits" tabIndex={-1}>
-        <button className="back-button">Back</button>
-      </Link>
-
+    <div>
       <div>
         <h2 className="center-header" style={{marginBottom:'0.5rem'}}>Limit of <span ref={heading}>y = x^&#123;2&#125;</span> </h2>
       </div>

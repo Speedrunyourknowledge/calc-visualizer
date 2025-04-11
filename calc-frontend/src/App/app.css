@@ -42,6 +42,10 @@
     --sidebar-ring: oklch(0.708 0 0);
 
 }
+.big-p .side-text{
+    font-family: 'Inter', sans-serif;
+}
+
 
 body {
     margin: 0;
@@ -64,7 +68,22 @@ body {
   .link-title{
     font-size:1.5rem;
   }
+  .link-title2{
+    font-size:1.25rem;
+  }
 
+
+  .link-box{
+    @apply h-20 flex w-full items-center justify-center 
+    bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
+    duration-200 border-2 border-solid;
+  }
+  .link-box2{
+    @apply px-5 py-1 flex  items-center justify-center
+    bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded shadow-md
+    bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
+    duration-200 border-2 border-solid;
+  }
   .topic-header{
     margin-bottom:1.125rem;
   }
@@ -159,13 +178,6 @@ body {
     100% {
       opacity: 1;
     }
-  }
-
-  .back-button{
-    @apply cursor-pointer bg-sky-400 hover:bg-blue-600 hover:text-neutral-50 rounded-md border-2 border-solid;
-    padding: 4px 12px;
-    font-size: 1.25rem;
-    margin-bottom: .75rem;
   }
 
   .go-button{
@@ -355,6 +367,8 @@ body {
   .big-p{
     font-size: 1.125rem;
   }
+
+  
 
   .center-header{
     font-size:1.75rem;
