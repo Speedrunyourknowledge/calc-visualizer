@@ -6,6 +6,7 @@ import DerivCustomGraph from "../components/Custom/DerivCustomGraph";
 import { Session } from "../lib/auth-client.ts";
 import axios from "axios";
 import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
+import AskAIButtonDerivative from "@/components/ui/AskAIButtonDerivative.tsx";
 
 function CustomDeriv() {
 
@@ -39,8 +40,15 @@ function CustomDeriv() {
   const [enableSave, setEnableSave] = useState<boolean>(false);
   const [funcKey, setFuncKey] = useState<string>('');
 
+  const [canAskAI, setCanAskAI] = useState<boolean>(false);
+  const [JSFunc, setJSFunc] = useState<string>('');
+
   const handleSave = () => {
     setEnableSave(false)
+  }
+
+  const handleAIResponseComplete = () => {
+    setCanAskAI(false);
   }
 
   // need to check if func is unique first
@@ -92,6 +100,7 @@ function CustomDeriv() {
   const generateOutput = (python_code?: boolean):number =>{
     const funcLatex:string = editMF.current.latex()
     let newFunc:string;
+    let newJSFunc:string;
     let newLowerBound:number;
     let newUpperBound:number;
     let newFuncKey:string;
@@ -99,6 +108,8 @@ function CustomDeriv() {
     // check if function is valid
     try{
       newFunc = generateFunction(funcLatex, python_code ?? true)
+
+      newJSFunc = generateFunction(funcLatex, false); // func for AI
     }
     catch{
       setFormatCheck('Please enter a valid function')
@@ -121,12 +132,14 @@ function CustomDeriv() {
     newUpperBound = parseFloat(upperBound)
 
     setFunc(newFunc)
+    setJSFunc(newJSFunc);
     setBounds([newLowerBound, newUpperBound])
 
     newFuncKey = newFunc + newLowerBound + newUpperBound
     // check that new graph is different from old one
     if(newFuncKey !== funcKey){
       setFuncKey(newFuncKey)
+      setCanAskAI(true);
     }
 
     setFormatCheck('')
@@ -193,7 +206,7 @@ function CustomDeriv() {
         formatCheck === ''? func === ''? null :
             <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
               <DerivCustomGraph key={funcKey} func={func} lowerBound = {bounds[0]} upperBound = {bounds[1]}
-              handleSave={handleSave}/>
+              handleSave={handleSave} onAIResponseComplete={handleAIResponseComplete}/>
             </div> 
           :
           <div className="center-header pad-sm" style={{fontSize:'1.25rem', color:'red', marginTop:'.5rem',
@@ -205,7 +218,9 @@ function CustomDeriv() {
       <div style={{display:'flex', justifyContent:'space-between'}}>
         <div></div>
 
-        
+        <AskAIButtonDerivative func={JSFunc} lowerBound={bounds[0]} upperBound={bounds[0]} key={funcKey} 
+        canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}
+        />
       </div>
 
     </div>
