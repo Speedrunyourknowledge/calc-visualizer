@@ -3,7 +3,7 @@
 import { useLayoutEffect , useEffect, useState} from "react";
 import axios from "axios";
 
-function DerivCustomGraph({func, lowerBound, upperBound, handleSave}) {
+function DerivCustomGraph({func, lowerBound, upperBound, handleSave, onAIResponseComplete}) {
 
   const [ready, setReady] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -59,6 +59,8 @@ function DerivCustomGraph({func, lowerBound, upperBound, handleSave}) {
       }
       // disable save button
       handleSave();
+
+      onAIResponseComplete();// disable AI
     })
     .finally(() =>{
       setReady(true)
@@ -80,6 +82,8 @@ function DerivCustomGraph({func, lowerBound, upperBound, handleSave}) {
         console.error(e)
 
         handleSave();
+
+        onAIResponseComplete();
       }
     }
   }, [ready]);
