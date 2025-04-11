@@ -21,7 +21,7 @@ body {
   }
 
   .header{
-    margin-bottom:1.25rem;
+    margin-bottom:.5rem;
   }
 
   .link-title{
@@ -126,9 +126,21 @@ body {
 
   .back-button{
     @apply cursor-pointer bg-sky-400 hover:bg-blue-600 hover:text-neutral-50 rounded-md border-2 border-solid;
-    padding: 4px 16px;
+    padding: 4px 12px;
     font-size: 1.25rem;
     margin-bottom: .75rem;
+  }
+
+  .go-button{
+    @apply cursor-pointer bg-[#1ee342] rounded-md border-2 border-solid;
+    padding: 4px 12px;
+    font-size: 1.25rem;
+  }
+
+  .save-button{
+    @apply cursor-pointer bg-sky-400 hover:bg-blue-600 hover:text-neutral-50 rounded-md border-2 border-solid;
+    padding: 4px 12px;
+    font-size: 1.25rem;
   }
 
   .disabled{
@@ -136,13 +148,6 @@ body {
 
     opacity: 0.6;
     cursor: not-allowed;
-  }
-
-  .go-button{
-    @apply cursor-pointer bg-[#1ee342] rounded-md border-2 border-solid;
-    padding: 4px 12px;
-    font-size: 1.375rem;
-    height: fit-content;
   }
 
   .brighten{
@@ -156,7 +161,7 @@ body {
   }
 
   .graph-frame{
-    width:400px;
+    width:500px;
     max-width:100%;
     height:100%;
     aspect-ratio: 1/1;

@@ -20,7 +20,7 @@ function SaveFunctionButton({onSave, saving, enableSave}: {onSave: (session: Ses
 
     if(saving){
       return (
-        <button className="back-button">
+        <button className="save-button">
           <div className="animate-spin w-[1.125rem] h-[1.125rem] border-3 border-t-transparent border-white rounded-full"></div>
         </button>
       )
@@ -32,7 +32,7 @@ function SaveFunctionButton({onSave, saving, enableSave}: {onSave: (session: Ses
         <TooltipProvider delayDuration={0}>
           <Tooltip>
             <TooltipTrigger asChild>
-              <button className="back-button disabled">Save Function</button>
+              <button className="save-button disabled">Save Function</button>
             </TooltipTrigger>
 
             <TooltipContent className="tooltip-content">
@@ -45,7 +45,7 @@ function SaveFunctionButton({onSave, saving, enableSave}: {onSave: (session: Ses
     }
 
     return (
-      <button className="back-button" onClick={handleClick}>
+      <button className="save-button" onClick={handleClick}>
         Save Function
       </button>
     )

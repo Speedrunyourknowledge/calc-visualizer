@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState, useEffect } from "react";
-import { Link, useLocation } from "react-router"
+import { useLocation } from "react-router"
 import IntCustomGraph from "../components/Custom/IntCustomGraph.tsx"
 import {generateFunction, validateBounds} from "../functions/mathOutput";
 
@@ -181,20 +181,7 @@ function CustomInt() {
 
   return(
     <div>
-      <div className="gap-[15px]" style={{display:'flex', justifyContent:'space-between'}}>
-        <Link to="/integrals" tabIndex={-1}>
-          <button className="back-button"> Back</button>
-        </Link>
-
-        <div>
-          <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
-        </div>
-        
-        <AskAIButton func={JSFunc} lowerBound={bounds[0]} upperBound={bounds[1]} key={funcKey} 
-            canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
-      </div>
-
-      <div className="center-header flex flex-wrap justify-center gap-[.5rem]" style={{alignItems:"center"}}>
+      <div className="center-header flex flex-wrap justify-center gap-[1rem]" style={{alignItems:"center"}}>
         <div className="flex gap-[.5rem]">
           <div ref={container} >
             \int_\MathQuillMathField&#123;0&#125;^\MathQuillMathField&#123;5&#125;
@@ -205,13 +192,15 @@ function CustomInt() {
               x
             </div>
 
-            <div ref={ending} style={{marginRight:'.5rem'}}> 
+            <div ref={ending}> 
               \mathrm&#123;d&#125;x
             </div>
           </div>
         </div>
 
-        <button className="go-button brighten mb-[.5rem]" onClick={()=>generateOutput()}>Graph</button>
+        <button className="go-button brighten" onClick={()=>generateOutput()}>Graph</button>
+
+        <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
       </div>
 
       {
@@ -227,6 +216,12 @@ function CustomInt() {
           </div>
       } 
 
+      <div style={{display:'flex', justifyContent:'space-between'}}>
+        <div></div>
+        
+        <AskAIButton func={JSFunc} lowerBound={bounds[0]} upperBound={bounds[1]} key={funcKey} 
+            canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
+      </div>
     </div>
   )
 }

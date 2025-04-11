@@ -7,14 +7,12 @@ function AskAIButtonIntegral({
   func,
   lowerBound,
   upperBound,
-  key,
   canAskAI,
   onAIResponseComplete,
 }: {
   func: string;
   lowerBound: number;
   upperBound: number;
-  key: string;
   canAskAI: boolean;
   onAIResponseComplete: () => void;
 }) 
@@ -55,10 +53,8 @@ function AskAIButtonIntegral({
 
   // the user has created a new graph
   useEffect(() => {
-    if(key !== ''){
-      setMarkdownText(`### 🤖 Ask AI\n### Click above for an explanation!`);
-    }
-  },[key])
+    setMarkdownText(`### 🤖 Ask AI\n### Click above for an explanation!`);
+  },[])
 
   return (
     <>

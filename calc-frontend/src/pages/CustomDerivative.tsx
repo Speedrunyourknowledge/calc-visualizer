@@ -1,5 +1,5 @@
 import { useLayoutEffect, useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router"
+import { useLocation } from "react-router"
 import {generateFunction, validateBounds} from "../functions/mathOutput";
 import DerivCustomGraph from "../components/Custom/DerivCustomGraph";
 
@@ -168,17 +168,6 @@ function CustomDeriv() {
 
   return(
     <div>
-      <div className="gap-[15px]" style={{display:'flex', justifyContent:'space-between'}}>
-        <Link to="/derivatives" tabIndex={-1}>
-          <button className="back-button"> Back</button>
-        </Link>
-
-        <div>
-          <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
-        </div>
-
-        <div></div>
-      </div>
 
       <div className="center-header flex flex-wrap justify-center gap-[1rem] mt-[.5rem]" style={{alignItems:"center"}}>
         <div ref={container}>
@@ -190,12 +179,14 @@ function CustomDeriv() {
             y =
           </div>
 
-          <div ref={edit} className = "edit-box" style={{marginRight:'.5rem'}}> 
+          <div ref={edit} className = "edit-box"> 
             x
           </div>
         </div>
 
-        <button className="go-button brighten mb-[.5rem]" onClick={()=>generateOutput()}> Graph</button>
+        <button className="go-button brighten" onClick={()=>generateOutput()}> Graph</button>
+
+        <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
       </div>
 
       {
@@ -210,6 +201,12 @@ function CustomDeriv() {
             {formatCheck}
           </div>
       } 
+
+      <div style={{display:'flex', justifyContent:'space-between'}}>
+        <div></div>
+
+        
+      </div>
 
     </div>
   )
