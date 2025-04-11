@@ -181,13 +181,13 @@ function CustomInt() {
 
   return(
     <div>
-      <div className="center-header flex flex-wrap justify-center gap-[1rem]" style={{alignItems:"center"}}>
+      <div className="center-header flex flex-wrap justify-center gap-[.5rem]" style={{alignItems:"center"}}>
         <div className="flex gap-[.5rem]">
           <div ref={container} >
             \int_\MathQuillMathField&#123;0&#125;^\MathQuillMathField&#123;5&#125;
           </div>
 
-          <div style={{height:'fit-content', alignSelf:'center'}}>
+          <div style={{height:'fit-content', alignSelf:'center'}} className="mr-[.75rem]">
             <div ref={edit} className = "edit-box" style={{marginRight:'.25rem'}}> 
               x
             </div>
@@ -198,30 +198,31 @@ function CustomInt() {
           </div>
         </div>
 
-        <button className="go-button brighten" onClick={()=>generateOutput()}>Graph</button>
+        <button className="go-button brighten mr-[.5rem]" onClick={()=>generateOutput()}>Graph</button>
 
         <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
       </div>
 
-      {
-        formatCheck === ''? func === ''? null :
-          <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
-            <IntCustomGraph key={funcKey} func={func} lowerBound = {bounds[0]} upperBound = {bounds[1]} 
-            handleSave={handleSave} onAIResponseComplete={handleAIResponseComplete}/>
-          </div> 
-          :
-          <div className="center-header pad-sm" style={{fontSize:'1.25rem', color:'red', marginTop:'.5rem', 
-            maxWidth:'550px'}}>
-            {formatCheck}
-          </div>
-      } 
+        {
+          formatCheck === ''? func === ''? null :
+            <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem', marginBottom:'1rem'}}>
+              <IntCustomGraph key={funcKey} func={func} lowerBound = {bounds[0]} upperBound = {bounds[1]} 
+              handleSave={handleSave} onAIResponseComplete={handleAIResponseComplete}/>
+            </div> 
+            :
+            <div className="center-header pad-sm" style={{fontSize:'1.25rem', color:'red', marginTop:'1.25rem', 
+              marginBottom:'1rem', maxWidth:'550px'}}>
+              {formatCheck}
+            </div>
+        } 
 
-      <div style={{display:'flex', justifyContent:'space-between'}}>
-        <div></div>
-        
-        <AskAIButton func={JSFunc} lowerBound={bounds[0]} upperBound={bounds[1]} key={funcKey} 
-            canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
-      </div>
+        <div className="ai-container">
+          <div></div>
+          
+          <AskAIButton func={JSFunc} lowerBound={bounds[0]} upperBound={bounds[1]} key={funcKey} 
+              canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
+        </div>
+      
     </div>
   )
 }
