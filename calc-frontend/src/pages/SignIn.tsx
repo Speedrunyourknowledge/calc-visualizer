@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { authClient } from "../lib/auth-client";
 import { FcGoogle } from "react-icons/fc";
-import { Blocks } from "react-loader-spinner";
 
 function SignIn() {
-
-  const [loaded, setLoaded] = useState<boolean>(true)
+  const [pendingGoogle, setPendingGoogle] = useState<boolean>(false);
 
   const baseUrl = import.meta.env.VITE_FRONTEND_URL || "http://localhost:5173"
 
@@ -19,7 +17,7 @@ function SignIn() {
       {
         onRequest: () => {
           // show loading
-          setLoaded(false)
+          setPendingGoogle(true);
         },
         onResponse:() => {
           // keep loading until redirected to google
@@ -27,30 +25,33 @@ function SignIn() {
         }
       }
     )  
+    setPendingGoogle(false);
   }
 
   return (
-      <div className="ml-auto mr-auto" style={{marginTop:'100px'}}>
-          <div className="flex flex-col gap-1 bg-white p-6 rounded-2xl shadow-md text-center">
-              <h1 className="text-xl font-semibold mb-4">Sign in</h1>
-              <button
-                onClick={handleSignInGoogle}
-                className="flex items-center gap-2 px-4 py-2 
-                  bg-zinc-100 hover:bg-zinc-200 text-gray-800 border border-gray-300 rounded-md cursor-pointer">
-                <FcGoogle size={20} /> Sign in with Google
-              </button>
+    <div className="flex items-center justify-center h-screen -mt-25">
+    <div className="flex flex-col gap-2 bg-white p-6 rounded-2xl shadow-md text-center ">
+        <h1 className="text-2xl font-semibold mb-4">Sign in</h1>
+        <button
+            disabled={pendingGoogle}
+            onClick={handleSignInGoogle}
+            className="flex items-center gap-2 px-4 py-2 bg-white text-gray-800 border border-gray-300 rounded-md cursor-pointer">
+            {pendingGoogle ? (
+                <span className="flex items-center gap-2">
+                    <span className="loader animate-spin w-4 h-4 border-2 border-t-transparent border-gray-800 rounded-full"></span>
+                    Signing in...
+                </span>
+            ) : (
+                <>
+                    <FcGoogle size={20} /> Sign in with Google
+                </>
+            )}
+        </button>
+    </div>
+</div>
 
-          </div>
-
-          {
-            loaded? null :
-            <Blocks height="80" width="80" color="#4fa94d" ariaLabel="loading" 
-              wrapperStyle={{marginLeft:'auto', marginRight:'auto'}}
-              wrapperClass="blocks-wrapper loading" visible={true}
-            />
-          }
           
-      </div>
+          
   )
 
 }

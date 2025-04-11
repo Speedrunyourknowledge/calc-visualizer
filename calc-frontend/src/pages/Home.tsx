@@ -17,12 +17,6 @@ function Home() {
         : 
         !session ? <SignInButton/> : <SignOutButton/> }
 
-      {isPending === true? 
-        <div className="big-p">&nbsp;</div> 
-        : 
-        !session? <p className="big-p">Not Signed in</p> : 
-          <p className="big-p">Signed in as {session.user.name}</p>}
-
       <h2 className = "topic-header m-auto w-fit">Topics</h2>
 
       <div className="flex flex-col m-auto home-list">
