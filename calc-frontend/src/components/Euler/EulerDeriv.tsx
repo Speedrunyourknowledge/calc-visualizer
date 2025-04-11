@@ -22,9 +22,6 @@ function EulerDeriv()
 
   return (
     <div>
-      <Link to="/calc-visualizer">
-        <button className="back-button" style={{marginBottom:'0rem'}}> Back</button>
-      </Link>
       <div>
         <h2 className="center-header" style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = e^&#123;x&#125;</span></h2>
       </div>

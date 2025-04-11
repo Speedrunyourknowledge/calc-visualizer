@@ -15,10 +15,6 @@ function NatLogInt() {
 
   return (
     <div> 
-      <Link to="/integrals">
-        <button className="back-button">Back</button>
-      </Link>
-    
       <div className="flex">
         <div ref={container} className="center-header">
         \int_&#123;.01&#125;^&#123;10&#125; \ln(x) \quad \mathrm&#123;d&#125;x 

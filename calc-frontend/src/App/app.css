@@ -69,13 +69,6 @@ body {
     duration-200 border-2 border-solid;
   }
 
-  .back-button{
-    @apply cursor-pointer bg-sky-400 hover:bg-blue-600 hover:text-neutral-50 rounded-md border-2 border-solid;
-    padding: 4px 12px;
-    font-size: 1.5rem;
-    margin-bottom: .75rem;
-  }
-
   .error-title{
     font-size: 3rem;
     line-height: 1;

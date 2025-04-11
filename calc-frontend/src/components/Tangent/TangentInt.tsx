@@ -15,10 +15,6 @@ function TangentInt() {
 
   return (
     <div> 
-      <Link to="/integrals">
-        <button className="back-button">Back</button>
-      </Link>
-          
       <div className="flex">
         <div ref={container} className="center-header">
         \int_&#123;0&#125;^&#123;1.5&#125; \tan(x) \quad \mathrm&#123;d&#125;x 

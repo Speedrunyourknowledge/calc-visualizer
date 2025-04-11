@@ -25,7 +25,11 @@ function Home() {
     const d18 = useRef(null);
     const d19 = useRef(null);
     const d20 = useRef(null);
-    
+    const d21 = useRef(null);
+    const d22 = useRef(null);
+    const d23 = useRef(null);
+    const d24 = useRef(null);
+    const d25 = useRef(null);
   
     useLayoutEffect(() =>{
       //@ts-ignore
@@ -50,6 +54,11 @@ function Home() {
       MQ.StaticMath(d18.current, { })
       MQ.StaticMath(d19.current, { })
       MQ.StaticMath(d20.current, { })
+      MQ.StaticMath(d21.current, { })
+      MQ.StaticMath(d22.current, { })
+      MQ.StaticMath(d23.current, { })
+      MQ.StaticMath(d24.current, { })
+      MQ.StaticMath(d25.current, { })
 
   
     }, []);
@@ -60,7 +69,77 @@ function Home() {
 
       <div className="flex flex-col gap-6 m-auto home-list">
         
-        
+      {/*Unit Circle*/}
+    <div className="bg-white border-2 border-balck-solid rounded-lg shadow-md">
+  
+  <img alt="Limit illustration"
+    className="w-full h-50 object-cover" 
+    height="400" 
+    src=""//Image for Integrals goes here
+    width="400"/>
+
+  <div className="p-4">
+   <h2 className="text-lg font-semibold">
+    
+   </h2>
+   <div className="flex items-center mt-2">
+    <span className=".big-p .side-text bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+     Calc 1 Topic
+    </span>
+    <i className="fas fa-fire text-yellow-500 ml-2">
+    </i>
+   </div>
+   <div className="mt-2 flex flex-wrap gap-2">
+      <Link to="/derivatives/linear" className = "link-box2">
+              <div className="link-title2"><span ref={d18}> x </span>
+              </div>
+          </Link>
+
+        <Link to="/derivatives/quadratic" className = "link-box2">
+              <div className="link-title2"><span ref={d19}>x^{2}</span>
+              </div>
+          </Link>
+
+        <Link to="/derivatives/exponential" className = "link-box2">
+              <div className="link-title2"> <span ref={d20}>{"e^{x}"}</span>{/*Expnential*/}
+              </div>
+          </Link>
+
+        <Link to="/derivatives/logarithmic" className = "link-box2">
+              <div className="link-title2"><span ref={d21}>ln(x)</span>{/*Log*/}
+              </div>
+          </Link>
+
+        <Link to="/derivatives/sine" className = "link-box2">
+              <div className="link-title2"><span ref={d22}>sin(x)</span>{/*Sine*/}
+              </div>
+          </Link>
+
+          <Link to="/derivatives/cosine" className = "link-box2">
+              <div className="link-title2"><span ref={d23}>cos(x)</span>{/*Cos*/}
+              </div>
+          </Link>
+
+          <Link to="/derivatives/tangent" className = "link-box2">
+              <div className="link-title2"><span ref={d24}>tan(x)</span>{/*Tan*/}
+              </div>
+          </Link>
+
+          <Link to="/derivatives/custom" className = "link-box2">
+              <div className="link-title2"><span ref={d25}>custom</span>{/*Custom*/}
+              </div>
+          </Link>
+
+    <i className="fas fa-fire text-yellow-500 ml-2">
+    </i>
+   </div>
+   <div className="mt-2 flex flex-wrap gap-2">
+    <span className=".big-p .side-text bg-gray-200 text-black-700 text-xs font-semibold px-2 py-1 rounded">
+    WP: The unit circle is a circle of radius 1 centered at the origin of the coordinate plane, and it is used to define trigonometric functions such as sine, cosine, and tangent.
+    </span>
+   </div>
+  </div>
+ </div> 
 {/*Derivatives*/}
    <div className="bg-white border-2 border-balck-solid rounded-lg shadow-md">
   
@@ -104,12 +183,12 @@ function Home() {
           </Link>
 
         <Link to="/derivatives/sine" className = "link-box2">
-              <div className="link-title2"><span ref={d6}>cos(x)</span>{/*Sine*/}
+              <div className="link-title2"><span ref={d6}>sin(x)</span>{/*Sine*/}
               </div>
           </Link>
 
           <Link to="/derivatives/cosine" className = "link-box2">
-              <div className="link-title2"><span ref={d7}>sin(x)</span>{/*Cos*/}
+              <div className="link-title2"><span ref={d7}>cos(x)</span>{/*Cos*/}
               </div>
           </Link>
 
@@ -175,12 +254,12 @@ function Home() {
           </Link>
 
         <Link to="/integrals/sine" className = "link-box2">
-              <div className="link-title2"><span ref={d14}>cos(x)</span>{/*Sine*/}
+              <div className="link-title2"><span ref={d14}>sin(x)</span>{/*Sine*/}
               </div>
           </Link>
 
           <Link to="/integrals/cosine" className = "link-box2">
-              <div className="link-title2"><span ref={d15}>sin(x)</span>{/*Cos*/}
+              <div className="link-title2"><span ref={d15}>cos(x)</span>{/*Cos*/}
               </div>
           </Link>
 
@@ -202,54 +281,7 @@ function Home() {
       </span>
      </div>
     </div>
-   </div>
-
-    {/*Unit Circle*/}
-    <div className="bg-white border-2 border-balck-solid rounded-lg shadow-md">
-  
-  <img alt="UnitCircle illustration"
-    className="w-full h-50 object-cover" 
-    height="400" 
-    src=""//Image for Integrals goes here
-    width="400"/>
-
-  <div className="p-4">
-   <h2 className="text-lg font-semibold">
-    
-   </h2>
-   <div className="flex items-center mt-2">
-    <span className=".big-p .side-text bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
-     Calc 1 Topic
-    </span>
-    <i className="fas fa-fire text-yellow-500 ml-2">
-    </i>
-   </div>
-   <div className="mt-2 flex flex-wrap gap-2">
-      <Link to="/unit-circle/sine" className = "link-box2">
-            <div className="link-title2"><span ref={d18}> x </span>
-            </div>
-        </Link>
-
-      <Link to="/unit-circle/cosine" className = "link-box2">
-            <div className="link-title2"><span ref={d19}>x^{2}</span>
-            </div>
-        </Link>
-
-      <Link to="/unit-circle/tangent" className = "link-box2">
-            <div className="link-title2"> <span ref={d20}>{"e^{x}"}</span>
-            </div>
-        </Link>
-
-    <i className="fas fa-fire text-yellow-500 ml-2">
-    </i>
-   </div>
-   <div className="mt-2 flex flex-wrap gap-2">
-    <span className=".big-p .side-text bg-gray-200 text-black-700 text-xs font-semibold px-2 py-1 rounded">
-    WP: The unit circle is a circle of radius 1 centered at the origin of the coordinate plane, and it is used to define trigonometric functions such as sine, cosine, and tangent.
-    </span>
-   </div>
-  </div>
- </div>  
+   </div> 
  </div>
 </div>
           

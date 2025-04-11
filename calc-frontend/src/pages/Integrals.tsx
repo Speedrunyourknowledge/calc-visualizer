@@ -6,10 +6,6 @@ function Integrals() {
 
   return (
     <div>
-      <Link to="/">
-        <button className="back-button"> Back</button>
-      </Link>
-
       <h2 className="topic-header m-auto w-fit">The Integral of Common Functions</h2>
       <div className="flex flex-col gap-6 items-center topic-list">
 

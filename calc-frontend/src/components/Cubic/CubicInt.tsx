@@ -14,11 +14,7 @@ function CubicInt() {
   }, []);
 
   return (
-  <div> 
-    <Link to="/integrals">
-      <button className="back-button">Back</button>
-    </Link>
-        
+  <div>       
     <div className="flex">
       <div ref={container} className="center-header">
       \int_&#123;-2&#125;^&#123;4&#125; x^&#123;3&#125; \quad \mathrm&#123;d&#125;x 

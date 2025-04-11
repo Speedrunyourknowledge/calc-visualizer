@@ -70,10 +70,6 @@ function CustomInt() {
 
   return(
     <div>
-      <Link to="/integrals">
-        <button className="back-button"> Back</button>
-      </Link>
-
       <div className="center-header flex flex-wrap justify-center gap-[.5rem]">
         <div ref={container} >
           \int_\MathQuillMathField&#123;0&#125;^\MathQuillMathField&#123;5&#125;

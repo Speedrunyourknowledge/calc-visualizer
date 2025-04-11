@@ -4,7 +4,6 @@ import RootLayout from "./RootLayout";
 
 import Home from "../pages/Home";
 import Limits from "../pages/Limits";
-import Integrals from "../pages/Integrals";
 
 import QuadraticDeriv from "../components/Quadratic/QuadraticDeriv";
 import QuadraticInt from "../components/Quadratic/QuadraticInt";
@@ -31,11 +30,6 @@ import EulerDeriv from "../components/Euler/EulerDeriv";
 import EulerInt from "../components/Euler/EulerInt";
 import ErrorPage from "../pages/ErrorPage";
 
-import UnitCircle from "../pages/UnitCircle";
-import UnitSine from "../components/UnitCircle/UnitSine";
-import UnitCosine from "../components/UnitCircle/UnitCosine";
-import UnitTangent from "../components/UnitCircle/UnitTangent";
-
 import LimitDef from "../components/Limits/LimitDef";
 
 import CustomInt from "../pages/CustomIntegral";
@@ -58,7 +52,6 @@ const RoutesList =
   <Route path='/derivatives/cosine' element={ <CosineDeriv/> } />
   <Route path='/derivatives/tangent' element={ <TangentDeriv/> } />
 
-  <Route path='/integrals' element= { <Integrals/> }/>
   <Route path='/integrals/custom' element={ <CustomInt/> } />
   <Route path='/integrals/quadratic' element={ <QuadraticInt/> }/>
   <Route path='/integrals/cubic' element={ <CubicInt/> }/>
@@ -71,11 +64,6 @@ const RoutesList =
 
   <Route path='/limits' element= {<Limits/>}/>
   <Route path='/limits/limitdef' element={ <LimitDef/> } />
-
-  <Route path='/unit-circle' element= {<UnitCircle/>}/>
-  <Route path='/unit-circle/sine' element={ <UnitSine/> } />
-  <Route path='/unit-circle/cosine' element={ <UnitCosine/> } />
-  <Route path='/unit-circle/tangent' element={ <UnitTangent/> } />
 
   <Route path='*' element={<ErrorPage/>} />
   

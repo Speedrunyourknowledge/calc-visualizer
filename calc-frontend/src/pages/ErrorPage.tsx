@@ -8,7 +8,6 @@ function ErrorPage(){
             <h1 className="error-title">Oops!</h1>
             <p className="font-medium text-2xl">Looks like the limit of this page doesn't exist.</p>
             <p className="font-medium text-2xl">You may have mistyped the address or the page may have moved.</p>
-            <button className="back-button" onClick={()=> navigate("/")}>Back to Home</button>
         </div>
     )
 

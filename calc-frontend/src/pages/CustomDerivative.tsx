@@ -69,17 +69,12 @@ function CustomDeriv() {
 
   return(
     <div>
-      <Link to="/calc-visualizer">
-        <button className="back-button"> Back</button>
-      </Link>
-
       <div className="center-header flex flex-wrap justify-center gap-[1rem]">
+        <div ref={edit}> 
+          \frac&#123;d(\MathQuillMathField&#123;x&#125;)&#125;&#123;dx&#125;
+        </div>
         <div ref={container}>
           \MathQuillMathField&#123;0&#125; \leq x \leq \MathQuillMathField&#123;5&#125;
-        </div>
-
-        <div ref={edit}> 
-          y = \MathQuillMathField&#123;x&#125;
         </div>
 
       </div>

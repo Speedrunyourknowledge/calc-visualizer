@@ -14,11 +14,7 @@ function CosineInt() {
   }, []);
 
   return (
-   <div> 
-    <Link to="/integrals">
-      <button className="back-button">Back</button>
-    </Link>
-        
+   <div>       
     <div className="flex">
       <div ref={container} className="center-header">
       \int_&#123;0&#125;^&#123;5&#125; \cos(x) \quad \mathrm&#123;d&#125;x 
