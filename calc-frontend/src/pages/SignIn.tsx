@@ -1,12 +1,9 @@
 import { useState } from "react";
 import { authClient } from "../lib/auth-client";
 import { FcGoogle } from "react-icons/fc";
-import { Blocks } from "react-loader-spinner";
 
 function SignIn() {
-
-  const [loaded, setLoaded] = useState<boolean>(true)
-  const [pendingGoogle, setPendingGoogle] = useState(false);
+  const [pendingGoogle, setPendingGoogle] = useState<boolean>(false);
 
   const baseUrl = import.meta.env.VITE_FRONTEND_URL || "http://localhost:5173"
 
@@ -21,7 +18,6 @@ function SignIn() {
         onRequest: () => {
           // show loading
           setPendingGoogle(true);
-          setLoaded(false)
         },
         onResponse:() => {
           // keep loading until redirected to google
