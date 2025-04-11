@@ -39,6 +39,10 @@ function CustomDeriv() {
   const [enableSave, setEnableSave] = useState<boolean>(false);
   const [funcKey, setFuncKey] = useState<string>('');
 
+  const handleSave = () => {
+    setEnableSave(false)
+  }
+
   // need to check if func is unique first
   const saveFunction = async (session: Session) => {
 
@@ -164,12 +168,14 @@ function CustomDeriv() {
 
   return(
     <div>
-      <div style={{display:'flex', justifyContent:'space-between'}}>
+      <div className="gap-[15px]" style={{display:'flex', justifyContent:'space-between'}}>
         <Link to="/derivatives" tabIndex={-1}>
           <button className="back-button"> Back</button>
         </Link>
-      
-        <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
+
+        <div>
+          <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
+        </div>
 
         <div></div>
       </div>
@@ -195,8 +201,8 @@ function CustomDeriv() {
       {
         formatCheck === ''? func === ''? null :
             <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
-              <DerivCustomGraph key={funcKey} func={func} 
-              lowerBound = {bounds[0]} upperBound = {bounds[1]}/>
+              <DerivCustomGraph key={funcKey} func={func} lowerBound = {bounds[0]} upperBound = {bounds[1]}
+              handleSave={handleSave}/>
             </div> 
           :
           <div className="center-header pad-sm" style={{fontSize:'1.25rem', color:'red', marginTop:'.5rem',

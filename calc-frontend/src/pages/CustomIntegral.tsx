@@ -37,15 +37,19 @@ function CustomInt() {
   const [formatCheck, setFormatCheck] = useState<string>('');
 
   const [canAskAI, setCanAskAI] = useState<boolean>(false);
-  const [jsFunc, setJsFunc] = useState<string>('');
+  const [JSFunc, setJSFunc] = useState<string>('');
+
+  const [saving, setSaving] = useState<boolean>(false);
+  const [enableSave, setEnableSave] = useState<boolean>(false);
+  const [funcKey, setFuncKey] = useState<string>('');
 
   const handleAIResponseComplete = () => {
     setCanAskAI(false);
   }
 
-  const [saving, setSaving] = useState<boolean>(false);
-  const [enableSave, setEnableSave] = useState<boolean>(false);
-  const [funcKey, setFuncKey] = useState<string>('');
+  const handleSave = () => {
+    setEnableSave(false)
+  }
 
   // need to check if func is unique first
   const saveFunction = async (session: Session) => {
@@ -96,6 +100,7 @@ function CustomInt() {
   const generateOutput = (python_code?: boolean):number =>{
     const funcLatex:string = editMF.current.latex()
     let newFunc:string;
+    let newJSFunc:string;
     let newLowerBound:number;
     let newUpperBound:number;
     let newFuncKey:string;
@@ -103,6 +108,8 @@ function CustomInt() {
     // check if function is valid
     try{
       newFunc = generateFunction(funcLatex, python_code ?? true)
+
+      newJSFunc = generateFunction(funcLatex, false); // func for AI
     }
     catch{
       setFormatCheck('Please enter a valid function')
@@ -125,6 +132,7 @@ function CustomInt() {
     newUpperBound = parseFloat(upperBound)
 
     setFunc(newFunc)
+    setJSFunc(newJSFunc)
     setBounds([newLowerBound, newUpperBound])
 
     newFuncKey = newFunc + newLowerBound + newUpperBound
@@ -135,7 +143,6 @@ function CustomInt() {
     }
 
     setFormatCheck('')
-    setJsFunc(generateFunction(editMF.current.latex(), false));
 
     return 0
   }
@@ -183,7 +190,7 @@ function CustomInt() {
           <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
         </div>
         
-        <AskAIButton func={jsFunc} lowerBound={bounds[0]} upperBound={bounds[1]} key={funcKey} 
+        <AskAIButton func={JSFunc} lowerBound={bounds[0]} upperBound={bounds[1]} key={funcKey} 
             canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
       </div>
 
@@ -210,8 +217,8 @@ function CustomInt() {
       {
         formatCheck === ''? func === ''? null :
           <div className="graph-outer-box" style={{justifyContent: "center", marginTop:'.5rem'}}>
-            <IntCustomGraph key={funcKey} func={func} 
-            lowerBound = {bounds[0]} upperBound = {bounds[1]} onAIResponseComplete={handleAIResponseComplete}/>
+            <IntCustomGraph key={funcKey} func={func} lowerBound = {bounds[0]} upperBound = {bounds[1]} 
+            handleSave={handleSave} onAIResponseComplete={handleAIResponseComplete}/>
           </div> 
           :
           <div className="center-header pad-sm" style={{fontSize:'1.25rem', color:'red', marginTop:'.5rem', 

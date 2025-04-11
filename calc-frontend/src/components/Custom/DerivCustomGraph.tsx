@@ -3,7 +3,7 @@
 import { useLayoutEffect , useEffect, useState} from "react";
 import axios from "axios";
 
-function DerivCustomGraph({func, lowerBound, upperBound}) {
+function DerivCustomGraph({func, lowerBound, upperBound, handleSave}) {
 
   const [ready, setReady] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -57,6 +57,8 @@ function DerivCustomGraph({func, lowerBound, upperBound}) {
           Make sure the function is properly formatted or try a \
           different function')
       }
+      // disable save button
+      handleSave();
     })
     .finally(() =>{
       setReady(true)
@@ -76,6 +78,8 @@ function DerivCustomGraph({func, lowerBound, upperBound}) {
       catch(e){
         // graph failed
         console.error(e)
+
+        handleSave();
       }
     }
   }, [ready]);

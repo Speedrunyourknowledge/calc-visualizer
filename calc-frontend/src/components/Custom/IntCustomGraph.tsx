@@ -3,7 +3,7 @@
 import { useLayoutEffect , useEffect, useState} from "react";
 import axios from "axios";
 
-function IntCustomGraph({func, lowerBound, upperBound, onAIResponseComplete}) {
+function IntCustomGraph({func, lowerBound, upperBound, handleSave, onAIResponseComplete}) {
 
   const [ready, setReady] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -46,20 +46,21 @@ function IntCustomGraph({func, lowerBound, upperBound, onAIResponseComplete}) {
     .catch(function(e) {
       if(e.code === 'ERR_NETWORK'){
         setErrorMsg('Unable to connect to server')
-        onAIResponseComplete();
       }
       else if(e.status === 422){
         setErrorMsg('Your function could not be graphed. \
           Make sure the function is properly formatted or try a \
           different function');
-        onAIResponseComplete();
       }
       else{
         setErrorMsg('Your function could not be graphed. \
           Make sure the function is properly formatted or try a \
           different function')
-          onAIResponseComplete();
       }
+      // disable save button
+      handleSave();
+      // disable ask AI
+      onAIResponseComplete();
     })
     .finally(() =>{
       setReady(true)
@@ -79,6 +80,8 @@ function IntCustomGraph({func, lowerBound, upperBound, onAIResponseComplete}) {
       catch(e){
         // graph failed
         console.error(e)
+        
+        handleSave();
         onAIResponseComplete();
       }
     }
