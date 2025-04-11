@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/derivativeAnimation/480p15/partial_movie_files/DerivativeAnimation/1185818338_1552005253_511297391.mp4'
+file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/derivativeAnimation/480p15/partial_movie_files/DerivativeAnimation/624642324_1428517652_306457215.mp4'
+file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/derivativeAnimation/480p15/partial_movie_files/DerivativeAnimation/624642324_4247107814_2138057827.mp4'
+file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/derivativeAnimation/480p15/partial_movie_files/DerivativeAnimation/624642324_2627134858_427118853.mp4'
+file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/derivativeAnimation/480p15/partial_movie_files/DerivativeAnimation/624642324_3255016341_3053928769.mp4'
+file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/derivativeAnimation/480p15/partial_movie_files/DerivativeAnimation/624642324_667144672_1683506337.mp4'
+file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/derivativeAnimation/480p15/partial_movie_files/DerivativeAnimation/624642324_57979658_624445027.mp4'
+file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/derivativeAnimation/480p15/partial_movie_files/DerivativeAnimation/624642324_667144672_2528836472.mp4'
