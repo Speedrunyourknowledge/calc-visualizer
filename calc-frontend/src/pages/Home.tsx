@@ -322,11 +322,22 @@ function Home() {
  </div>
 
     
-        
-          <Link to="/derivatives" className = "link-box">
-              <div className="link-title">Derivatives</div>
-          </Link>
-          
+    
+    <div className="mt-2 flex flex-wrap gap-2"></div>
+     <h2 className="text-lg font-semibold">
+      Unit Circle
+     </h2>
+    <span className="big-p .side-text bg-gray-200 text-black-700 text-xs font-semibold px-2 py-1 rounded">
+    WIP: Unit Circle is a circle
+      </span>
+      
+    <div className="mt-2">
+     
+     <div className="mt-2">
+
+     </div>
+    </div>
+   </div>
           <Link to="/integrals" className = "link-box">
               <div className="link-title">Integrals</div>
           </Link>
@@ -344,7 +355,7 @@ function Home() {
         
       </div>
       
-    </div>
+    
   )
 };
 

@@ -16,7 +16,7 @@ function CosineDeriv() {
 
   return (
     <div>
-      <Link to="/derivatives">
+      <Link to="/calc-visualizer">
         <button className="back-button"> Back</button>
       </Link>
       <div>
