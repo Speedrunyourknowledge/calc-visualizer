@@ -181,13 +181,12 @@ function CustomDeriv() {
 
   return(
     <div>
-
-      <div className="center-header flex flex-wrap justify-center gap-[1rem] mt-[.5rem]" style={{alignItems:"center"}}>
+      <div className="center-header flex flex-wrap justify-center gap-[.5rem] mt-[.5rem]" style={{alignItems:"center"}}>
         <div ref={container}>
           \MathQuillMathField&#123;0&#125; \leq x \leq \MathQuillMathField&#123;5&#125;
         </div>
 
-        <div>
+        <div className="mr-[1rem]">
           <div ref={start}> 
             y =
           </div>
@@ -197,7 +196,7 @@ function CustomDeriv() {
           </div>
         </div>
 
-        <button className="go-button brighten" onClick={()=>generateOutput()}> Graph</button>
+        <button className="go-button brighten mr-[.5rem]" onClick={()=>generateOutput()}> Graph</button>
 
         <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
       </div>
@@ -223,7 +222,9 @@ function CustomDeriv() {
         />
       </div>
 
-    </div>
+          
+        </div>
+    
   )
 }
 

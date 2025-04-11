@@ -23,7 +23,7 @@ function RootLayout() {
             <h1 className="w-fit font-medium">Calc Visualizer</h1>
           </Link>
 
-          <div className="w-fit h-[85px]">
+          <div className="w-fit h-[75px]">
             <Link to='/'>
               <CalcLogo />
             </Link>
