@@ -81,17 +81,6 @@ function Dashboard()
                   )) 
                 }
 
-                <Link to="/integrals/custom" tabIndex={-1} state={{func: 'x^2', bounds: [0, 5]}} 
-                  className="topic-box custom-border">
-
-                  <button className="link-title cursor-pointer">Custom Integral</button>
-                </Link>
-
-                <Link to="/derivatives/custom" tabIndex={-1} state={{func: 'x^2', bounds: [0, 5]}} 
-                  className="topic-box custom-border">
-
-                  <button className="link-title cursor-pointer">Custom Derivative</button>
-                </Link>
               </div>
               : 
               <>
