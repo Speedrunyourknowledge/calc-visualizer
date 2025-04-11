@@ -105,7 +105,6 @@ function CustomInt() {
       newFunc = generateFunction(funcLatex, python_code ?? true)
     }
     catch{
-      setCanAskAI(false);
       setFormatCheck('Please enter a valid function')
       return 1
     }
@@ -118,7 +117,6 @@ function CustomInt() {
     // check if bounds are valid
     if(checkBounds !== 'success'){
       setFormatCheck(checkBounds)
-      setCanAskAI(false);
       return 1
     }
 
@@ -133,10 +131,10 @@ function CustomInt() {
     // check that new graph is different from old one
     if(newFuncKey !== funcKey){
       setFuncKey(newFuncKey)
+      setCanAskAI(true);
     }
 
     setFormatCheck('')
-    setCanAskAI(true);
     setJsFunc(generateFunction(editMF.current.latex(), false));
 
     return 0
@@ -176,14 +174,17 @@ function CustomInt() {
 
   return(
     <div>
-      <div style={{display:'flex', justifyContent:'space-between'}}>
+      <div className="gap-[15px]" style={{display:'flex', justifyContent:'space-between'}}>
         <Link to="/integrals" tabIndex={-1}>
           <button className="back-button"> Back</button>
         </Link>
-      
-        <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
 
-        <div></div>
+        <div>
+          <SaveFunctionButton onSave={saveFunction} saving={saving} enableSave={enableSave}></SaveFunctionButton>
+        </div>
+        
+        <AskAIButton func={jsFunc} lowerBound={bounds[0]} upperBound={bounds[1]} key={funcKey} 
+            canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
       </div>
 
       <div className="center-header flex flex-wrap justify-center gap-[.5rem]" style={{alignItems:"center"}}>
@@ -204,13 +205,6 @@ function CustomInt() {
         </div>
 
         <button className="go-button brighten mb-[.5rem]" onClick={()=>generateOutput()}>Graph</button>
-      </div>
-
-      <div style={{display:'grid'}}>
-        <div className="" style={{position:'fixed', zIndex:'1', justifySelf:'end'}}>
-          <AskAIButton func={jsFunc} lowerBound={bounds[0]} upperBound={bounds[1]} key={funcKey} 
-            canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
-        </div>
       </div>
 
       {

@@ -22,7 +22,7 @@ function AskAIButtonIntegral({
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [markdownText, setMarkdownText] = useState(
-    `## 🤖 Ask AI\n\n### Graph your function, then click above for an explanation!`
+    `### 🤖 Ask AI\n### Graph your function, then click above for an explanation!`
   );
 
   const handleAskAI = async () => {
@@ -46,7 +46,7 @@ function AskAIButtonIntegral({
       onAIResponseComplete();
 
     } catch (error) {
-      setMarkdownText(`## ❌ An error occured, please try again`);
+      setMarkdownText(`### ❌ An error occured, please try again`);
       console.error(error);
     } finally {
       setLoading(false);
@@ -56,7 +56,7 @@ function AskAIButtonIntegral({
   // the user has created a new graph
   useEffect(() => {
     if(key !== ''){
-      setMarkdownText(`## 🤖 Ask AI\n\n### Click above for an explanation!`);
+      setMarkdownText(`### 🤖 Ask AI\n### Click above for an explanation!`);
     }
   },[key])
 
@@ -66,10 +66,10 @@ function AskAIButtonIntegral({
         onClick={() => {
           setOpen(true);
         }}
-        className="cursor-pointer relative w-16 h-16 rounded-xl p-0.5 bg-gradient-to-tr from-pink-500 via-yellow-400 to-blue-500 hover:scale-105 transition-transform"
+        className="cursor-pointer relative w-15 h-15 rounded-xl p-0.5 bg-gradient-to-tr from-pink-500 via-yellow-400 to-blue-500 hover:scale-105 transition-transform"
       >
         <div className="flex flex-col items-center justify-center w-full h-full bg-gray-800 text-white rounded-xl text-xs font-medium">
-          <div className="text-lg font-bold mb-1">?</div>
+          <div className="text-lg font-bold">?</div>
           Ask AI
         </div>
       </button>
@@ -85,16 +85,16 @@ function AskAIButtonIntegral({
             <div className="flex justify-between items-center mb-2 border-b-2 border-solid gap-2">
               {canAskAI ? (
                 <button onClick={handleAskAI} className="cursor-pointer pb-1">
-                  <h2 className="text-xl font-semibold">{`Ask AI About: ${func}`}</h2>
+                  <h3 className="font-semibold">{`Ask AI About: ${func}`}</h3>
                 </button>
               ) : (
                 <button
                   className="cursor-pointer pb-1"
                   onClick={() => setOpen(false)}
                 >
-                  <h2 className="text-l font-medium">
+                  <h3 className="font-medium">
                     Generate a New Function to Ask a Question
-                  </h2>
+                  </h3>
                 </button>
               )}
 
