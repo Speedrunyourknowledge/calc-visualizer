@@ -167,7 +167,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/anthony/Documents/coding/calc visualizer stuff/calc-visualizer/calc-backend/prisma/client",
+      "value": "C:\\Users\\cresp\\OneDrive\\Desktop\\Projects\\CalcProject\\calc-visualizer\\calc-backend\\prisma\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -176,16 +176,16 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "darwin-arm64",
+        "value": "windows",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/Users/anthony/Documents/coding/calc visualizer stuff/calc-visualizer/calc-backend/prisma/schema.prisma",
+    "sourceFilePath": "C:\\Users\\cresp\\OneDrive\\Desktop\\Projects\\CalcProject\\calc-visualizer\\calc-backend\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../.env",
+    "rootEnvPath": null,
     "schemaEnvPath": "../../.env"
   },
   "relativePath": "..",
@@ -195,12 +195,11 @@ const config = {
     "db"
   ],
   "activeProvider": "mongodb",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": null
+        "value": "mongodb+srv://ucfCalcVisualizer:9iqZbllTCdjUjNk4@cluster0.nzcpu.mongodb.net/CalculusVisualizer?retryWrites=true&w=majority&appName=Cluster0"
       }
     }
   },
@@ -244,8 +243,8 @@ exports.PrismaClient = PrismaClient
 Object.assign(exports, Prisma)
 
 // file annotations for bundling tools to include these files
-path.join(__dirname, "libquery_engine-darwin-arm64.dylib.node");
-path.join(process.cwd(), "prisma/client/libquery_engine-darwin-arm64.dylib.node")
+path.join(__dirname, "query_engine-windows.dll.node");
+path.join(process.cwd(), "prisma/client/query_engine-windows.dll.node")
 // file annotations for bundling tools to include these files
 path.join(__dirname, "schema.prisma");
 path.join(process.cwd(), "prisma/client/schema.prisma")
