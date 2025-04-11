@@ -91,42 +91,42 @@ function Home() {
    </div>
    <div className="mt-2 flex flex-wrap gap-2">
       <Link to="/derivatives/linear" className = "link-box2">
-              <div className="link-title2"><span ref={d18}> x </span>
+              <div className="link-title2"><span ref={d18} style={{ cursor: 'pointer' }}> x </span>
               </div>
           </Link>
 
         <Link to="/derivatives/quadratic" className = "link-box2">
-              <div className="link-title2"><span ref={d19}>x^{2}</span>
+              <div className="link-title2"><span ref={d19} style={{ cursor: 'pointer' }}>x^{2}</span>
               </div>
           </Link>
 
         <Link to="/derivatives/exponential" className = "link-box2">
-              <div className="link-title2"> <span ref={d20}>{"e^{x}"}</span>{/*Expnential*/}
+              <div className="link-title2"> <span ref={d20} style={{ cursor: 'pointer' }}>{"e^{x}"}</span>{/*Expnential*/}
               </div>
           </Link>
 
         <Link to="/derivatives/logarithmic" className = "link-box2">
-              <div className="link-title2"><span ref={d21}>ln(x)</span>{/*Log*/}
+              <div className="link-title2"><span ref={d21} style={{ cursor: 'pointer' }}>ln(x)</span>{/*Log*/}
               </div>
           </Link>
 
         <Link to="/derivatives/sine" className = "link-box2">
-              <div className="link-title2"><span ref={d22}>sin(x)</span>{/*Sine*/}
+              <div className="link-title2"><span ref={d22} style={{ cursor: 'pointer' }}>sin(x)</span>{/*Sine*/}
               </div>
           </Link>
 
           <Link to="/derivatives/cosine" className = "link-box2">
-              <div className="link-title2"><span ref={d23}>cos(x)</span>{/*Cos*/}
+              <div className="link-title2"><span ref={d23} style={{ cursor: 'pointer' }}>cos(x)</span>{/*Cos*/}
               </div>
           </Link>
 
           <Link to="/derivatives/tangent" className = "link-box2">
-              <div className="link-title2"><span ref={d24}>tan(x)</span>{/*Tan*/}
+              <div className="link-title2"><span ref={d24} style={{ cursor: 'pointer' }}>tan(x)</span>{/*Tan*/}
               </div>
           </Link>
 
           <Link to="/derivatives/custom" className = "link-box2">
-              <div className="link-title2"><span ref={d25}>custom</span>{/*Custom*/}
+              <div className="link-title2"><span ref={d25} style={{ cursor: 'pointer' }}>custom</span>{/*Custom*/}
               </div>
           </Link>
 
@@ -163,42 +163,42 @@ function Home() {
      </div>
      <div className="mt-2 flex flex-wrap gap-2">
         <Link to="/derivatives/linear" className = "link-box2">
-              <div className="link-title2"><span ref={d1}> x </span>
+              <div className="link-title2"><span ref={d1} style={{ cursor: 'pointer' }}> x </span>
               </div>
           </Link>
 
         <Link to="/derivatives/quadratic" className = "link-box2">
-              <div className="link-title2"><span ref={d2}>x^{2}</span>
+              <div className="link-title2"><span ref={d2} style={{ cursor: 'pointer' }}>x^{2}</span>
               </div>
           </Link>
 
         <Link to="/derivatives/exponential" className = "link-box2">
-              <div className="link-title2"> <span ref={d4}>{"e^{x}"}</span>{/*Expnential*/}
+              <div className="link-title2"> <span ref={d4} style={{ cursor: 'pointer' }}>{"e^{x}"}</span>{/*Expnential*/}
               </div>
           </Link>
 
         <Link to="/derivatives/logarithmic" className = "link-box2">
-              <div className="link-title2"><span ref={d5}>ln(x)</span>{/*Log*/}
+              <div className="link-title2"><span ref={d5} style={{ cursor: 'pointer' }}>ln(x)</span>{/*Log*/}
               </div>
           </Link>
 
         <Link to="/derivatives/sine" className = "link-box2">
-              <div className="link-title2"><span ref={d6}>sin(x)</span>{/*Sine*/}
+              <div className="link-title2"><span ref={d6} style={{ cursor: 'pointer' }}>sin(x)</span>{/*Sine*/}
               </div>
           </Link>
 
           <Link to="/derivatives/cosine" className = "link-box2">
-              <div className="link-title2"><span ref={d7}>cos(x)</span>{/*Cos*/}
+              <div className="link-title2"><span ref={d7} style={{ cursor: 'pointer' }}>cos(x)</span>{/*Cos*/}
               </div>
           </Link>
 
           <Link to="/derivatives/tangent" className = "link-box2">
-              <div className="link-title2"><span ref={d8}>tan(x)</span>{/*Tan*/}
+              <div className="link-title2"><span ref={d8} style={{ cursor: 'pointer' }}>tan(x)</span>{/*Tan*/}
               </div>
           </Link>
 
           <Link to="/derivatives/custom" className = "link-box2">
-              <div className="link-title2"><span ref={d9}>custom</span>{/*Custom*/}
+              <div className="link-title2"><span ref={d9} style={{ cursor: 'pointer' }}>custom</span>{/*Custom*/}
               </div>
           </Link>
       <i className="fas fa-fire text-yellow-500 ml-2">
@@ -234,42 +234,42 @@ function Home() {
      </div>
      <div className="mt-2 flex flex-wrap gap-2">
         <Link to="/integrals/linear" className = "link-box2">
-              <div className="link-title2"><span ref={d10}> x </span>
+              <div className="link-title2"><span ref={d10} style={{ cursor: 'pointer' }}> x </span>
               </div>
           </Link>
 
         <Link to="/integrals/quadratic" className = "link-box2">
-              <div className="link-title2"><span ref={d11}>x^{2}</span>
+              <div className="link-title2"><span ref={d11} style={{ cursor: 'pointer' }}>x^{2}</span>
               </div>
           </Link>
 
         <Link to="/integrals/exponential" className = "link-box2">
-              <div className="link-title2"> <span ref={d12}>{"e^{x}"}</span>{/*Expnential*/}
+              <div className="link-title2"> <span ref={d12} style={{ cursor: 'pointer' }}>{"e^{x}"}</span>{/*Expnential*/}
               </div>
           </Link>
 
         <Link to="/integrals/logarithmic" className = "link-box2">
-              <div className="link-title2"><span ref={d13}>ln(x)</span>{/*Log*/}
+              <div className="link-title2"><span ref={d13} style={{ cursor: 'pointer' }}>ln(x)</span>{/*Log*/}
               </div>
           </Link>
 
         <Link to="/integrals/sine" className = "link-box2">
-              <div className="link-title2"><span ref={d14}>sin(x)</span>{/*Sine*/}
+              <div className="link-title2"><span ref={d14} style={{ cursor: 'pointer' }}>sin(x)</span>{/*Sine*/}
               </div>
           </Link>
 
           <Link to="/integrals/cosine" className = "link-box2">
-              <div className="link-title2"><span ref={d15}>cos(x)</span>{/*Cos*/}
+              <div className="link-title2"><span ref={d15} style={{ cursor: 'pointer' }}>cos(x)</span>{/*Cos*/}
               </div>
           </Link>
 
           <Link to="/integrals/tangent" className = "link-box2">
-              <div className="link-title2"><span ref={d16}>tan(x)</span>{/*Tan*/}
+              <div className="link-title2"><span ref={d16} style={{ cursor: 'pointer' }}>tan(x)</span>{/*Tan*/}
               </div>
           </Link>
 
           <Link to="/integrals/custom" className = "link-box2">
-              <div className="link-title2"><span ref={d17}>custom</span>{/*Custom*/}
+              <div className="link-title2"><span ref={d17} style={{ cursor: 'pointer' }}>custom</span>{/*Custom*/}
               </div>
           </Link>
       <i className="fas fa-fire text-yellow-500 ml-2">
