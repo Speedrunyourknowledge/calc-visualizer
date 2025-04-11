@@ -28,6 +28,7 @@ upper_bound = float(sys.argv[3])
 # parses a string representing a function
 def insert_x(x):
   parser['x'] = x
+  parser['e'] = np.e
   return parser.evaluate(input_func)
 
 # just change these 3 values

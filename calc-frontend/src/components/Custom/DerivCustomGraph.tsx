@@ -49,13 +49,13 @@ function DerivCustomGraph({func, lowerBound, upperBound, handleSave}) {
       }
       else if(e.status === 422){
         setErrorMsg('Your function could not be graphed. \
-          Make sure the function is properly formatted or try a \
-          different function')
+          Try a different function or try changing \
+          the bounds')
       }
       else{
         setErrorMsg('Your function could not be graphed. \
-          Make sure the function is properly formatted or try a \
-          different function')
+          Try a different function or try changing \
+          the bounds')
       }
       // disable save button
       handleSave();

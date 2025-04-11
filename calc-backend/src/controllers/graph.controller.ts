@@ -39,6 +39,8 @@ export function createGraph(req: Request, res: Response, next: NextFunction){
         res.status(200).send(prettyStr);
       }
     })
+
+    setTimeout(function(){ process.kill()}, 7500);
 }
 
 export function createDerivGraph(req: Request, res: Response, next: NextFunction){
@@ -76,4 +78,6 @@ export function createDerivGraph(req: Request, res: Response, next: NextFunction
       res.status(200).send(prettyStr);
     }
   })
+
+  setTimeout(function(){ process.kill()}, 7500);
 }
