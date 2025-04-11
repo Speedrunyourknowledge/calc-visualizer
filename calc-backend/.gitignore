@@ -3,4 +3,4 @@ node_modules
 dist
 
 .venv
-./prisma/client
+prisma/client
