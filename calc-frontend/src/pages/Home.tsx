@@ -78,18 +78,15 @@ function Home() {
         : 
         !session ? <SignInButton/> : <SignOutButton/> }
 
-      <h2 className = "topic-header m-auto w-fit">Topics</h2>
 
-      <div className="flex flex-col gap-6 m-auto home-list">
+      <div className="py-10 flex flex-col gap-6 m-auto home-list">
         
-      {/*Unit Circle*/}
-    <div className="w-[700px] mx-auto bg-white border-2 border-black-solid rounded-lg shadow-md">
+    <div className="w-47/100 m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
   
   <img alt="Limit illustration"
-    className="w-full h-50 object-cover" 
-    height="400" 
-    src=""//Image for Integrals goes here
-    width="400"/>
+    className="w-full h-100 object-cover" 
+    src="https://images.immediate.co.uk/production/volatile/sites/3/2021/03/Fortnite-Zero-crisis-finale-e16729a.jpg?quality=90&resize=620,414" 
+    />
 
   <div className="p-4">
    <h2 className="text-lg font-semibold">
@@ -154,13 +151,12 @@ function Home() {
   </div>
  </div> 
 {/*Derivatives*/}
-   <div className="w-[700px] mx-auto bg-white border-2 border-black-solid rounded-lg shadow-md">
+  <div className="w-47/100 m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
   
     <img alt="Fortnite illustration"
       className="w-full h-100 object-cover" 
-      height="400" 
       src="https://images.immediate.co.uk/production/volatile/sites/3/2021/03/Fortnite-Zero-crisis-finale-e16729a.jpg?quality=90&resize=620,414" 
-      width="400"/>
+      />
 
     <div className="p-4">
      <h2 className="text-lg font-semibold">
@@ -226,13 +222,12 @@ function Home() {
    </div>
 
    {/*Integrals*/}
-   <div className="w-[700px] mx-auto bg-white border-2 border-black-solid rounded-lg shadow-md">
+   <div className="w-47/100 m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
   
     <img alt="Integrals illustration"
-      className="w-full h-50 object-cover" 
-      height="400" 
-      src=""//Image for Integrals goes here
-      width="400"/>
+      className="w-full h-100 object-cover" 
+      src="https://images.immediate.co.uk/production/volatile/sites/3/2021/03/Fortnite-Zero-crisis-finale-e16729a.jpg?quality=90&resize=620,414" 
+      />
 
     <div className="p-4">
      <h2 className="text-lg font-semibold">
