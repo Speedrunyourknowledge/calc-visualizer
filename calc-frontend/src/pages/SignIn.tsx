@@ -25,7 +25,6 @@ function SignIn() {
         }
       }
     )  
-    setPendingGoogle(false);
   }
 
   return (

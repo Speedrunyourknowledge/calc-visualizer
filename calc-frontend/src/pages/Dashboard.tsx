@@ -26,7 +26,7 @@ function Dashboard()
     useEffect(() => {
       // user is not logged in
       if(!isPending && !session){
-        navigate("/sign-in")
+        navigate("/sign-in", { replace: true })
         return
       }
 
