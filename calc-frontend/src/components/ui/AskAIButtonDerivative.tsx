@@ -53,7 +53,9 @@ function AskAIButtonDerivative({
 
   // the user has created a new graph
   useEffect(() => {
-    setMarkdownText(`### 🤖 Ask AI\n### Click above for an explanation!`);
+    if(func !== ''){
+      setMarkdownText(`### 🤖 Ask AI\n### Click above for an explanation!`);
+    }
   },[])
 
   return (

@@ -12,7 +12,7 @@ function SignOutButton()
     }
 
     return (
-        <button className="back-button" onClick={handleSignOut}>Sign Out</button>
+        <button className="link-box cursor-pointer" onClick={handleSignOut}>Sign Out</button>
     )
 
 }

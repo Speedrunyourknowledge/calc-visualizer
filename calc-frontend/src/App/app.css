@@ -68,30 +68,22 @@ body {
   .link-title{
     font-size:1.5rem;
   }
+
   .link-title2{
     font-size:1.25rem;
   }
 
-
   .link-box{
-    @apply h-20 flex w-full items-center justify-center 
-    bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
-    duration-150 border-2 border-solid;
-  }
-
-  .link-box2{
-    @apply flex  items-center justify-center
+    @apply flex items-center justify-center
     bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded shadow-md
     hover:bg-amber-400 transition transform hover:scale-103 
     duration-150 border-2 border-solid;
   }
 
-   .link-box3{
-    @apply px-5 items-center justify-center
-    bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded shadow-md
-    bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
-    duration-200 border-2 border-solid;
+  .auth-button{
+    @apply hover:bg-zinc-100 duration-150 transition;
   }
+
   .topic-header{
     margin-bottom:1.125rem;
   }
@@ -240,7 +232,11 @@ body {
   }
 
   .side-text{
-    max-width: 800px;
+    max-width: 700px;
+  }
+
+  .home-list{
+    max-width:700px;
   }
 
   .pad-sm{
@@ -352,6 +348,7 @@ body {
 
     .ai-container{
       position:relative;
+      margin-top:15px;
       bottom:0px;
       right:0px;
     }
