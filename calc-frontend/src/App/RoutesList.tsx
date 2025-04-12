@@ -3,7 +3,6 @@ import { Route } from "react-router";
 import RootLayout from "./RootLayout";
 
 import Home from "../pages/Home";
-import Limits from "../pages/Limits";
 
 import QuadraticDeriv from "../components/Quadratic/QuadraticDeriv";
 import QuadraticInt from "../components/Quadratic/QuadraticInt";
@@ -31,7 +30,6 @@ import EulerInt from "../components/Euler/EulerInt";
 import ErrorPage from "../pages/ErrorPage";
 
 import LimitDef from "../components/Limits/LimitDef";
-
 
 import CustomInt from "../pages/CustomIntegral";
 import CustomDeriv from "../pages/CustomDerivative";
@@ -71,7 +69,6 @@ const RoutesList =
     <Route path='/integrals/cosine' element={<CosineInt />} />
     <Route path='/integrals/tangent' element={<TangentInt />} />
 
-    <Route path='/limits' element={<Limits />} />
     <Route path='/limits/limitdef' element={<LimitDef />} />
     
 

@@ -4,11 +4,8 @@ import { useAuth } from "../App/AuthContext";
 import SignInButton from "../components/ui/SignInButton";
 import SignOutButton from "../components/ui/SignOutButton";
 
-
-
 function Home() {
   const { session, isPending } = useAuth();
-
 
     const d1 = useRef(null);
     const d2 = useRef(null);
@@ -65,7 +62,6 @@ function Home() {
       MQ.StaticMath(d24.current, { })
       MQ.StaticMath(d25.current, { })
 
-  
     }, []);
 
   return (

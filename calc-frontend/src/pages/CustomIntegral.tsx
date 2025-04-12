@@ -187,7 +187,7 @@ function CustomInt() {
             \int_\MathQuillMathField&#123;0&#125;^\MathQuillMathField&#123;5&#125;
           </div>
 
-          <div style={{height:'fit-content', alignSelf:'center'}} className="mr-[.75rem]">
+          <div style={{height:'fit-content', alignSelf:'center'}} className="mr-[.5rem]">
             <div ref={edit} className = "edit-box" style={{marginRight:'.25rem'}}> 
               x
             </div>

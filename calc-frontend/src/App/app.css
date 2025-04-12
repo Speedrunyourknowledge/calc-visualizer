@@ -62,7 +62,7 @@ body {
   }
 
   .header{
-    margin-bottom:.5rem;
+    margin-bottom:1rem;
   }
 
   .link-title{
@@ -76,13 +76,14 @@ body {
   .link-box{
     @apply h-20 flex w-full items-center justify-center 
     bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
-    duration-200 border-2 border-solid;
+    duration-150 border-2 border-solid;
   }
+
   .link-box2{
-    @apply px-5 py-1 flex  items-center justify-center
+    @apply flex  items-center justify-center
     bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded shadow-md
-    bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
-    duration-200 border-2 border-solid;
+    hover:bg-amber-400 transition transform hover:scale-103 
+    duration-150 border-2 border-solid;
   }
 
    .link-box3{
@@ -239,7 +240,7 @@ body {
   }
 
   .side-text{
-    max-width: 550px;
+    max-width: 800px;
   }
 
   .pad-sm{

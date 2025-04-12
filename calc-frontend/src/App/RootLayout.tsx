@@ -5,12 +5,11 @@ import ucfLogo from "../assets/ucf-logo.png"
 import CalcLogo from "../components/CalcLogo"
 
 import { useAuth } from "./AuthContext";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
 
 
 function RootLayout() {
   const { session } = useAuth();
-
 
   return (
     <>
@@ -33,7 +32,7 @@ function RootLayout() {
         {session ? (
           session.user.image ? (
             <Link to="/dashboard">
-              <Avatar className="mr-5 cursor-pointer w-10 h-10">
+              <Avatar className="mr-5 cursor-pointer w-12 h-12">
                 <AvatarImage src={session.user.image} />
                 <AvatarFallback>{session.user.name.charAt(0)}</AvatarFallback>
               </Avatar>
