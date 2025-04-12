@@ -80,17 +80,10 @@ function Home() {
 
       <h2 className = "topic-header m-auto w-fit">Topics</h2>
 
-      <div className="flex flex-col m-auto home-list">
-
-        <h3 className = "topic-header m-auto w-fit">More topics coming soon...</h3>
-        
-      </div>
-      <h2 className = "ig-p .side-text topic-header m-auto w-fit">Topics</h2>
-
       <div className="flex flex-col gap-6 m-auto home-list">
         
       {/*Unit Circle*/}
-    <div className="bg-white border-2 border-balck-solid rounded-lg shadow-md">
+    <div className="w-[700px] mx-auto bg-white border-2 border-black-solid rounded-lg shadow-md">
   
   <img alt="Limit illustration"
     className="w-full h-50 object-cover" 
@@ -161,7 +154,7 @@ function Home() {
   </div>
  </div> 
 {/*Derivatives*/}
-   <div className="bg-white border-2 border-balck-solid rounded-lg shadow-md">
+   <div className="w-[700px] mx-auto bg-white border-2 border-black-solid rounded-lg shadow-md">
   
     <img alt="Fortnite illustration"
       className="w-full h-100 object-cover" 
@@ -233,7 +226,7 @@ function Home() {
    </div>
 
    {/*Integrals*/}
-   <div className="bg-white border-2 border-balck-solid rounded-lg shadow-md">
+   <div className="w-[700px] mx-auto bg-white border-2 border-black-solid rounded-lg shadow-md">
   
     <img alt="Integrals illustration"
       className="w-full h-50 object-cover" 
