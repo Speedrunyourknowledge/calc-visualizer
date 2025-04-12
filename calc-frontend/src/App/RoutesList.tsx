@@ -70,6 +70,7 @@ const RoutesList =
     <Route path='/integrals/tangent' element={<TangentInt />} />
 
     <Route path='/limits/limitdef' element={<LimitDef />} />
+    
 
     <Route path='*' element={<ErrorPage />} />
 

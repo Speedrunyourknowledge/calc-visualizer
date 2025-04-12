@@ -66,166 +66,233 @@ function Home() {
 
   return (
     <div>
-      <Link to="/dashboard" tabIndex={-1} style={{marginRight:'20px'}}>
-        <button className="back-button">Dashboard</button>
+      <Link to="/dashboard" tabIndex={-1} style={{marginRight:'10px'}}>
+        <button className="link-box3">Dashboard</button>
       </Link>
       {isPending === true? 
         null
         : 
-        !session ? <SignInButton/> : <SignOutButton/> 
-      }
-
-      <div className="flex flex-col gap-[20px] m-auto home-list mb-4 mt-2">
-              
-        <img alt="Derivative Illustration"
-              className="object-cover" 
-              height="200" 
-              src="" 
-              width="200"
-          />
-
-        <div className="bg-white border-2 border-black-solid rounded-lg shadow-md w-fit">
-
-          <div className="p-4">
-            <h2 className="text-lg font-semibold mb-1">
-              Derivatives
-            </h2>
-
-            <div className="flex items-center mb-3">
-              <span className="big-p bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
-              Calculus 1
-              </span>
-              <i className="fas fa-fire text-yellow-500 ml-2"></i>
-            </div>
-            <div className="mt-2 flex flex-wrap gap-2">
-                <Link to="/derivatives/linear" className = "link-box2">
-                      <div className="link-title2"><span ref={d1} style={{ cursor: 'pointer' }}> x </span>
-                      </div>
-                  </Link>
-
-                <Link to="/derivatives/quadratic" className = "link-box2">
-                      <div className="link-title2"><span ref={d2} style={{ cursor: 'pointer' }}>x^{2}</span>
-                      </div>
-                  </Link>
-
-                <Link to="/derivatives/exponential" className = "link-box2">
-                      <div className="link-title2"> <span ref={d4} style={{ cursor: 'pointer' }}>{"e^{x}"}</span>{/*Expnential*/}
-                      </div>
-                  </Link>
-
-                <Link to="/derivatives/logarithmic" className = "link-box2">
-                      <div className="link-title2"><span ref={d5} style={{ cursor: 'pointer' }}>ln(x)</span>{/*Log*/}
-                      </div>
-                  </Link>
-
-                <Link to="/derivatives/sine" className = "link-box2">
-                      <div className="link-title2"><span ref={d6} style={{ cursor: 'pointer' }}>sin(x)</span>{/*Sine*/}
-                      </div>
-                  </Link>
-
-                  <Link to="/derivatives/cosine" className = "link-box2">
-                      <div className="link-title2"><span ref={d7} style={{ cursor: 'pointer' }}>cos(x)</span>{/*Cos*/}
-                      </div>
-                  </Link>
-
-                  <Link to="/derivatives/tangent" className = "link-box2">
-                      <div className="link-title2"><span ref={d8} style={{ cursor: 'pointer' }}>tan(x)</span>{/*Tan*/}
-                      </div>
-                  </Link>
-
-                  <Link to="/derivatives/custom" className = "link-box2">
-                      <div className="link-title2"><span ref={d9} style={{ cursor: 'pointer' }}>custom</span>{/*Custom*/}
-                      </div>
-                  </Link>
-              <i className="fas fa-fire text-yellow-500 ml-2"></i>
-            </div>
-
-            <div className="mt-2 flex flex-wrap gap-2">
-              <span className="big-p side-text bg-gray-200 text-black-700 font-medium px-2 py-1 rounded">
-              WP: A derivative measures the instantaneous rate of change of a function, 
-              essentially telling you how much a function's output changes for an infinitely small change in its input
-              </span>
-            </div>
-          
-          </div>
-        </div>
+        !session ? <SignInButton/> : <SignOutButton/> }
 
 
-
-        <img alt="Integral illustration"
-              className="object-cover" 
-              height="200" 
-              src=""//Image for Integrals goes here
-              width="200"
-          />
-
-        <div className="bg-white border-2 border-black-solid rounded-lg shadow-md w-fit">
+      <div className="py-10 flex flex-col gap-6 m-auto home-list">
         
-          <div className="p-4">
-            <h2 className="text-lg font-semibold mb-1">
-              Integrals
-            </h2>
-            <div className="flex items-center mb-3">
-              <span className="big-p bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
-              Calculus 1
-              </span>
-              <i className="fas fa-fire text-yellow-500 ml-2"></i>
-            </div>
-            <div className="mt-2 flex flex-wrap gap-2">
-                <Link to="/integrals/linear" className = "link-box2">
-                      <div className="link-title2"><span ref={d10} style={{ cursor: 'pointer' }}> x </span>
-                      </div>
-                  </Link>
+    <div className="w-47/100 m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
+  
+  <img alt="Limit illustration"
+    className="w-full h-100 object-cover" 
+    src="https://images.immediate.co.uk/production/volatile/sites/3/2021/03/Fortnite-Zero-crisis-finale-e16729a.jpg?quality=90&resize=620,414" 
+    />
 
-                <Link to="/integrals/quadratic" className = "link-box2">
-                      <div className="link-title2"><span ref={d11} style={{ cursor: 'pointer' }}>x^{2}</span>
-                      </div>
-                  </Link>
+  <div className="p-4">
+   <h2 className="text-lg font-semibold">
+    
+   </h2>
+   <div className="flex items-center mt-2">
+    <span className=".big-p .side-text bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+     Calc 1 Topic
+    </span>
+    <i className="fas fa-fire text-yellow-500 ml-2">
+    </i>
+   </div>
+   <div className="mt-2 flex flex-wrap gap-2">
+      <Link to="/derivatives/linear" className = "link-box2">
+              <div className="link-title2"><span ref={d18} style={{ cursor: 'pointer' }}> x </span>
+              </div>
+          </Link>
 
-                <Link to="/integrals/exponential" className = "link-box2">
-                      <div className="link-title2"> <span ref={d12} style={{ cursor: 'pointer' }}>{"e^{x}"}</span>{/*Expnential*/}
-                      </div>
-                  </Link>
+        <Link to="/derivatives/quadratic" className = "link-box2">
+              <div className="link-title2"><span ref={d19} style={{ cursor: 'pointer' }}>x^{2}</span>
+              </div>
+          </Link>
 
-                <Link to="/integrals/logarithmic" className = "link-box2">
-                      <div className="link-title2"><span ref={d13} style={{ cursor: 'pointer' }}>ln(x)</span>{/*Log*/}
-                      </div>
-                  </Link>
+        <Link to="/derivatives/exponential" className = "link-box2">
+              <div className="link-title2"> <span ref={d20} style={{ cursor: 'pointer' }}>{"e^{x}"}</span>{/*Expnential*/}
+              </div>
+          </Link>
 
-                <Link to="/integrals/sine" className = "link-box2">
-                      <div className="link-title2"><span ref={d14} style={{ cursor: 'pointer' }}>sin(x)</span>{/*Sine*/}
-                      </div>
-                  </Link>
+        <Link to="/derivatives/logarithmic" className = "link-box2">
+              <div className="link-title2"><span ref={d21} style={{ cursor: 'pointer' }}>ln(x)</span>{/*Log*/}
+              </div>
+          </Link>
 
-                  <Link to="/integrals/cosine" className = "link-box2">
-                      <div className="link-title2"><span ref={d15} style={{ cursor: 'pointer' }}>cos(x)</span>{/*Cos*/}
-                      </div>
-                  </Link>
+        <Link to="/derivatives/sine" className = "link-box2">
+              <div className="link-title2"><span ref={d22} style={{ cursor: 'pointer' }}>sin(x)</span>{/*Sine*/}
+              </div>
+          </Link>
 
-                  <Link to="/integrals/tangent" className = "link-box2">
-                      <div className="link-title2"><span ref={d16} style={{ cursor: 'pointer' }}>tan(x)</span>{/*Tan*/}
-                      </div>
-                  </Link>
+          <Link to="/derivatives/cosine" className = "link-box2">
+              <div className="link-title2"><span ref={d23} style={{ cursor: 'pointer' }}>cos(x)</span>{/*Cos*/}
+              </div>
+          </Link>
 
-                  <Link to="/integrals/custom" className = "link-box2">
-                      <div className="link-title2"><span ref={d17} style={{ cursor: 'pointer' }}>custom</span>{/*Custom*/}
-                      </div>
-                  </Link>
-              <i className="fas fa-fire text-yellow-500 ml-2"></i>
-            </div>
+          <Link to="/derivatives/tangent" className = "link-box2">
+              <div className="link-title2"><span ref={d24} style={{ cursor: 'pointer' }}>tan(x)</span>{/*Tan*/}
+              </div>
+          </Link>
 
-            <div className="mt-2 flex flex-wrap gap-2">
-              <span className="big-p side-text bg-gray-200 text-black-700 font-medium px-2 py-1 rounded">
-              WP: An integral is a mathematical object that represents the signed area under a curve, 
-              and it is used to calculate quantities such as area, volume, and displacement
-              </span>
-            </div>
+          <Link to="/derivatives/custom" className = "link-box2">
+              <div className="link-title2"><span ref={d25} style={{ cursor: 'pointer' }}>custom</span>{/*Custom*/}
+              </div>
+          </Link>
 
-          </div>
-        </div> 
+    <i className="fas fa-fire text-yellow-500 ml-2">
+    </i>
+   </div>
+   <div className="mt-2 flex flex-wrap gap-2">
+    <span className=".big-p .side-text bg-gray-200 text-black-700 text-xs font-semibold px-2 py-1 rounded">
+    WP: The unit circle is a circle of radius 1 centered at the origin of the coordinate plane, and it is used to define trigonometric functions such as sine, cosine, and tangent.
+    </span>
+   </div>
+  </div>
+ </div> 
+{/*Derivatives*/}
+  <div className="w-47/100 m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
+  
+    <img alt="Fortnite illustration"
+      className="w-full h-100 object-cover" 
+      src="https://images.immediate.co.uk/production/volatile/sites/3/2021/03/Fortnite-Zero-crisis-finale-e16729a.jpg?quality=90&resize=620,414" 
+      />
 
-      </div>
+    <div className="p-4">
+     <h2 className="text-lg font-semibold">
+      Derivatives
+     </h2>
+
+     <div className="flex items-center mt-2">
+      <span className=".big-p .side-text bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+       Calc 1 Topic
+      </span>
+      <i className="fas fa-fire text-yellow-500 ml-2">
+      </i>
+     </div>
+     <div className="mt-2 flex flex-wrap gap-2">
+        <Link to="/derivatives/linear" className = "link-box2">
+              <div className="link-title2"><span ref={d1} style={{ cursor: 'pointer' }}> x </span>
+              </div>
+          </Link>
+
+        <Link to="/derivatives/quadratic" className = "link-box2">
+              <div className="link-title2"><span ref={d2} style={{ cursor: 'pointer' }}>x^{2}</span>
+              </div>
+          </Link>
+
+        <Link to="/derivatives/exponential" className = "link-box2">
+              <div className="link-title2"> <span ref={d4} style={{ cursor: 'pointer' }}>{"e^{x}"}</span>{/*Expnential*/}
+              </div>
+          </Link>
+
+        <Link to="/derivatives/logarithmic" className = "link-box2">
+              <div className="link-title2"><span ref={d5} style={{ cursor: 'pointer' }}>ln(x)</span>{/*Log*/}
+              </div>
+          </Link>
+
+        <Link to="/derivatives/sine" className = "link-box2">
+              <div className="link-title2"><span ref={d6} style={{ cursor: 'pointer' }}>sin(x)</span>{/*Sine*/}
+              </div>
+          </Link>
+
+          <Link to="/derivatives/cosine" className = "link-box2">
+              <div className="link-title2"><span ref={d7} style={{ cursor: 'pointer' }}>cos(x)</span>{/*Cos*/}
+              </div>
+          </Link>
+
+          <Link to="/derivatives/tangent" className = "link-box2">
+              <div className="link-title2"><span ref={d8} style={{ cursor: 'pointer' }}>tan(x)</span>{/*Tan*/}
+              </div>
+          </Link>
+
+          <Link to="/derivatives/custom" className = "link-box2">
+              <div className="link-title2"><span ref={d9} style={{ cursor: 'pointer' }}>custom</span>{/*Custom*/}
+              </div>
+          </Link>
+      <i className="fas fa-fire text-yellow-500 ml-2">
+      </i>
+     </div>
+     <div className="mt-2 flex flex-wrap gap-2">
+      <span className=".big-p .side-text bg-gray-200 text-black-700 text-xs font-semibold px-2 py-1 rounded">
+      WP: A derivative measures the instantaneous rate of change of a function, essentially telling you how much a function's output changes for an infinitesimally small change in its input
+      </span>
+     </div>
     </div>
+   </div>
+
+   {/*Integrals*/}
+   <div className="w-47/100 m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
+  
+    <img alt="Integrals illustration"
+      className="w-full h-100 object-cover" 
+      src="https://images.immediate.co.uk/production/volatile/sites/3/2021/03/Fortnite-Zero-crisis-finale-e16729a.jpg?quality=90&resize=620,414" 
+      />
+
+    <div className="p-4">
+     <h2 className="text-lg font-semibold">
+      
+     </h2>
+     <div className="flex items-center mt-2">
+      <span className=".big-p .side-text bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+       Calc 1 Topic
+      </span>
+      <i className="fas fa-fire text-yellow-500 ml-2">
+      </i>
+     </div>
+     <div className="mt-2 flex flex-wrap gap-2">
+        <Link to="/integrals/linear" className = "link-box2">
+              <div className="link-title2"><span ref={d10} style={{ cursor: 'pointer' }}> x </span>
+              </div>
+          </Link>
+
+        <Link to="/integrals/quadratic" className = "link-box2">
+              <div className="link-title2"><span ref={d11} style={{ cursor: 'pointer' }}>x^{2}</span>
+              </div>
+          </Link>
+
+        <Link to="/integrals/exponential" className = "link-box2">
+              <div className="link-title2"> <span ref={d12} style={{ cursor: 'pointer' }}>{"e^{x}"}</span>{/*Expnential*/}
+              </div>
+          </Link>
+
+        <Link to="/integrals/logarithmic" className = "link-box2">
+              <div className="link-title2"><span ref={d13} style={{ cursor: 'pointer' }}>ln(x)</span>{/*Log*/}
+              </div>
+          </Link>
+
+        <Link to="/integrals/sine" className = "link-box2">
+              <div className="link-title2"><span ref={d14} style={{ cursor: 'pointer' }}>sin(x)</span>{/*Sine*/}
+              </div>
+          </Link>
+
+          <Link to="/integrals/cosine" className = "link-box2">
+              <div className="link-title2"><span ref={d15} style={{ cursor: 'pointer' }}>cos(x)</span>{/*Cos*/}
+              </div>
+          </Link>
+
+          <Link to="/integrals/tangent" className = "link-box2">
+              <div className="link-title2"><span ref={d16} style={{ cursor: 'pointer' }}>tan(x)</span>{/*Tan*/}
+              </div>
+          </Link>
+
+          <Link to="/integrals/custom" className = "link-box2">
+              <div className="link-title2"><span ref={d17} style={{ cursor: 'pointer' }}>custom</span>{/*Custom*/}
+              </div>
+          </Link>
+      <i className="fas fa-fire text-yellow-500 ml-2">
+      </i>
+     </div>
+     <div className="mt-2 flex flex-wrap gap-2">
+      <span className=".big-p .side-text bg-gray-200 text-black-700 text-xs font-semibold px-2 py-1 rounded">
+      WP: An integral is a mathematical object that represents the signed area under a curve, and it is used to calculate quantities such as area, volume, and displacement.
+      </span>
+     </div>
+    </div>
+   </div> 
+ </div>
+</div>
+          
+        
+      
+      
+    
   )
 };
 
