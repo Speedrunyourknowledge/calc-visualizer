@@ -84,7 +84,7 @@ function Home() {
         <div className="m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
       
       <video
-        className="w-full object-cover rounded-t-lg"
+        className="w-full object-cover rounded-t-md"
         src={derivativeVideo}
         autoPlay
         loop
@@ -158,7 +158,7 @@ function Home() {
       <div className="m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
       
       <video
-        className="w-full object-cover rounded-t-lg"
+        className="w-full object-cover rounded-t-md"
         src={derivativeVideo}
         autoPlay
         loop
@@ -234,7 +234,7 @@ function Home() {
       <div className="m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
       
       <video
-        className="w-full object-cover rounded-t-lg"
+        className="w-full object-cover rounded-t-md"
         src={derivativeVideo}
         autoPlay
         loop
