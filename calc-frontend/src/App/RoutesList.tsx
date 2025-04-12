@@ -3,7 +3,6 @@ import { Route } from "react-router";
 import RootLayout from "./RootLayout";
 
 import Home from "../pages/Home";
-import Limits from "../pages/Limits";
 
 import QuadraticDeriv from "../components/Quadratic/QuadraticDeriv";
 import QuadraticInt from "../components/Quadratic/QuadraticInt";
@@ -35,38 +34,45 @@ import LimitDef from "../components/Limits/LimitDef";
 import CustomInt from "../pages/CustomIntegral";
 import CustomDeriv from "../pages/CustomDerivative";
 
+import SignIn from "../pages/SignIn";
+import Dashboard from "../pages/Dashboard";
+import RedirectIfAuth from "../components/RedirectIfAuth";
 
-const RoutesList = 
-<Route path='/' element={<RootLayout/>} >
-  <Route index element={<Home/>}/>
-  <Route path='/calc-visualizer' element={<Home/>} />
+const RoutesList =
+  <Route path='/' element={<RootLayout />} >
+    <Route index element={<Home />} />
+    <Route path='/calc-visualizer' element={<Home />} />
 
+    <Route element={<RedirectIfAuth />} >
+      <Route path='/sign-in' element={<SignIn />} />
+    </Route>
 
-  <Route path='/derivatives/custom' element={ <CustomDeriv/> } />
-  <Route path='/derivatives/quadratic' element={ <QuadraticDeriv/> } />
-  <Route path='/derivatives/cubic' element={ <CubicDeriv/> } />
-  <Route path='/derivatives/logarithmic' element={ <NatLogDeriv/> } />
-  <Route path='/derivatives/exponential' element={ <EulerDeriv/> } />
-  <Route path='/derivatives/linear' element={ <LineDeriv/> } />
-  <Route path='/derivatives/sine' element={ <SineDeriv/> } />
-  <Route path='/derivatives/cosine' element={ <CosineDeriv/> } />
-  <Route path='/derivatives/tangent' element={ <TangentDeriv/> } />
+    <Route path='/dashboard' element={<Dashboard />} />
 
-  <Route path='/integrals/custom' element={ <CustomInt/> } />
-  <Route path='/integrals/quadratic' element={ <QuadraticInt/> }/>
-  <Route path='/integrals/cubic' element={ <CubicInt/> }/>
-  <Route path='/integrals/logarithmic' element={ <NatLogInt/> } />
-  <Route path='/integrals/exponential' element={ <EulerInt/> } />
-  <Route path='/integrals/linear' element={ <LineInt/> } />
-  <Route path='/integrals/sine' element={ <SineInt/> } />
-  <Route path='/integrals/cosine' element={ <CosineInt/> } />
-  <Route path='/integrals/tangent' element={ <TangentInt/> } />
+    <Route path='/derivatives/custom' element={<CustomDeriv />} />
+    <Route path='/derivatives/quadratic' element={<QuadraticDeriv />} />
+    <Route path='/derivatives/cubic' element={<CubicDeriv />} />
+    <Route path='/derivatives/logarithmic' element={<NatLogDeriv />} />
+    <Route path='/derivatives/exponential' element={<EulerDeriv />} />
+    <Route path='/derivatives/linear' element={<LineDeriv />} />
+    <Route path='/derivatives/sine' element={<SineDeriv />} />
+    <Route path='/derivatives/cosine' element={<CosineDeriv />} />
+    <Route path='/derivatives/tangent' element={<TangentDeriv />} />
 
-  <Route path='/limits' element= {<Limits/>}/>
-  <Route path='/limits/limitdef' element={ <LimitDef/> } />
+    <Route path='/integrals/custom' element={<CustomInt />} />
+    <Route path='/integrals/quadratic' element={<QuadraticInt />} />
+    <Route path='/integrals/cubic' element={<CubicInt />} />
+    <Route path='/integrals/logarithmic' element={<NatLogInt />} />
+    <Route path='/integrals/exponential' element={<EulerInt />} />
+    <Route path='/integrals/linear' element={<LineInt />} />
+    <Route path='/integrals/sine' element={<SineInt />} />
+    <Route path='/integrals/cosine' element={<CosineInt />} />
+    <Route path='/integrals/tangent' element={<TangentInt />} />
 
-  <Route path='*' element={<ErrorPage/>} />
-  
-</Route>
+    <Route path='/limits/limitdef' element={<LimitDef />} />
+
+    <Route path='*' element={<ErrorPage />} />
+
+  </Route>
 
 export default RoutesList

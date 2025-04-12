@@ -3,15 +3,16 @@
 import { useLayoutEffect , useEffect, useState} from "react";
 import axios from "axios";
 
-function IntCustomGraph({func, lowerBound, upperBound}) {
+function IntCustomGraph({func, lowerBound, upperBound, handleSave, onAIResponseComplete}) {
 
   const [ready, setReady] = useState(false)
   const [success, setSuccess] = useState(false)
   const [plotlyObject, setPlotlyObject] = useState(null)
+  const [errorMsg, setErrorMsg] = useState(null)
 
   useEffect(() => {
 
-    const serverUrl = import.meta.env.VITE_SERVER_URL
+    const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3000'
 
     let request = axios.post(serverUrl + '/graph/create-graph',
       {
@@ -28,7 +29,6 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
     setSuccess(false)
 
     request.then(response => {
-      console.log(response)
       let graphObject = response.data
 
       // add config to object
@@ -45,18 +45,22 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
     })
     .catch(function(e) {
       if(e.code === 'ERR_NETWORK'){
-        console.log('Unable to connect to server')
+        setErrorMsg('Unable to connect to server')
       }
-      if(e.status === 422){
-        console.log(e)
-        console.log('Your function could not be graphed. \
-          Make sure the function is properly formatted and check if the bounds \
-          are within the function\'s domain')
+      else if(e.status === 422){
+        setErrorMsg('Your function could not be graphed. \
+          Try a different function or try changing \
+          the bounds')
       }
       else{
-        console.log(e)
-        console.log('server returned a bad response')
+        setErrorMsg('Your function could not be graphed. \
+          Try a different function or try changing \
+          the bounds')
       }
+      // disable save button
+      handleSave();
+      // disable ask AI
+      onAIResponseComplete();
     })
     .finally(() =>{
       setReady(true)
@@ -75,21 +79,29 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
       }
       catch(e){
         // graph failed
-        console.log(e)
+        console.error(e)
+        
+        handleSave();
+        onAIResponseComplete();
       }
     }
   }, [ready]);
 
+  if(!ready){
+    return(       
+      <div className="pad-sm loading" style={{fontSize:'1.25rem'}}>
+        Loading...<br/>
+        Complex functions may take longer
+      </div> 
+    )
+  }
+
+  if(ready && !success){
+    return <div className="pad-sm" style={{color:'red', fontSize: '1.25rem', maxWidth:'550px'}}>{errorMsg}</div> 
+  }
 
   return (
-    
-    ready? 
-      success? <div className="plotly-graph-div graph-frame" id="plotly_graph"></div> :
-      <div>graph failed</div> 
-    :
-    <div>
-      loading...
-    </div> 
+    <div className="plotly-graph-div graph-frame" id="plotly_graph"></div> 
   )
 
 }

@@ -1,5 +1,4 @@
 import { useLayoutEffect, useRef } from "react";
-import { Link } from "react-router";
 import IntLineGraph from "./IntLineGraph"
 
 function LineInt() {
