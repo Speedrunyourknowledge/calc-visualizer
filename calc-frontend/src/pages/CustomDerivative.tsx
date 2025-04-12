@@ -28,7 +28,6 @@ function CustomDeriv() {
   const container = useRef<HTMLDivElement>(null);
   const MQ = useRef<any>(null);
   const containerMF = useRef<any>(null);
-  const start = useRef<HTMLDivElement>(null);
 
   const edit = useRef<HTMLDivElement>(null);
   const editMF = useRef<any>(null);
@@ -61,7 +60,7 @@ function CustomDeriv() {
     }
 
     // latex version of function is saved
-    const equation = editMF.current.latex();
+    const equation = editMF.current.innerFields[0].latex();
     const lowerBound = bounds[0];
     const upperBound = bounds[1];
     const topic = "Derivative";
@@ -98,7 +97,7 @@ function CustomDeriv() {
     Returns 1 if input is invalid
   */
   const generateOutput = (python_code?: boolean):number =>{
-    const funcLatex:string = editMF.current.latex()
+    const funcLatex:string = editMF.current.innerFields[0].latex()
     let newFunc:string;
     let newJSFunc:string;
     let newLowerBound:number;
@@ -154,16 +153,15 @@ function CustomDeriv() {
 
     containerMF.current = MQ.current.StaticMath(container.current, { }) // for the bounds
 
-    MQ.current.StaticMath(start.current, { }) // for the y =
+    editMF.current = MQ.current.StaticMath(edit.current, { })    // for the function
 
-    // updates the output whenever 'enter' is pressed
-    editMF.current = MQ.current.MathField(edit.current, { 
-      handlers: {
-        enter: generateOutput
-      }
-    })
+    editMF.current.innerFields[0].config({
+        handlers: {
+          enter: generateOutput
+        }
+      })
 
-    editMF.current.latex(state.func) // initialize with a function
+    editMF.current.innerFields[0].latex(state.func) // initialize with a function
 
     containerMF.current.innerFields[0].latex(state.bounds[0]) // initialize bounds
     containerMF.current.innerFields[1].latex(state.bounds[1]) 
@@ -181,13 +179,12 @@ function CustomDeriv() {
 
   return(
     <div>
-      <div className="center-header flex flex-wrap justify-center gap-[1rem]">
-        <div ref={edit}> 
-          \frac&#123;d(\MathQuillMathField&#123;x&#125;)&#125;&#123;dx&#125;
+      <div className="center-header flex flex-wrap justify-center gap-[.5rem] mt-[.5rem] edit-box" style={{alignItems:'center'}}>
+        <div ref={edit} className="edit-down"> 
+        \frac&#123;d(\MathQuillMathField&#123;x&#125;)&#125;&#123;dx&#125;
         </div>
-        <div ref={container}>
+        <div ref={container} className="mr-[.75rem]">
           \MathQuillMathField&#123;0&#125; \leq x \leq \MathQuillMathField&#123;5&#125;
-        </div>
         </div>
 
         <button className="go-button brighten mr-[.5rem]" onClick={()=>generateOutput()}> Graph</button>
