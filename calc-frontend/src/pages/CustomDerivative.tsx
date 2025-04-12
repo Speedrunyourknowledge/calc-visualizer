@@ -188,15 +188,6 @@ function CustomDeriv() {
         <div ref={container}>
           \MathQuillMathField&#123;0&#125; \leq x \leq \MathQuillMathField&#123;5&#125;
         </div>
-
-        <div className="mr-[1rem]">
-          <div ref={start}> 
-            y =
-          </div>
-
-          <div ref={edit} className = "edit-box"> 
-            x
-          </div>
         </div>
 
         <button className="go-button brighten mr-[.5rem]" onClick={()=>generateOutput()}> Graph</button>
