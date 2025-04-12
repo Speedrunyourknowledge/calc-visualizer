@@ -3,6 +3,7 @@ import { Link } from "react-router"
 import { useAuth } from "../App/AuthContext";
 import SignInButton from "../components/ui/SignInButton";
 import SignOutButton from "../components/ui/SignOutButton";
+import derivativeVideo from '../Animations/media/videos/derivativeAnimation/480p15/DerivativeAnimation.mp4';
 
 function Home() {
   const { session, isPending } = useAuth();
@@ -79,12 +80,19 @@ function Home() {
         
     <div className="w-47/100 m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
   
-  <img alt="Limit illustration"
-    className="w-full h-100 object-cover" 
-    src="https://images.immediate.co.uk/production/volatile/sites/3/2021/03/Fortnite-Zero-crisis-finale-e16729a.jpg?quality=90&resize=620,414" 
-    />
+  <video
+    className="w-full h-100 object-cover rounded-t-lg"
+    src={derivativeVideo}
+    autoPlay
+    loop
+    muted
+    playsInline
+  />
 
   <div className="p-4">
+   <h2 className="text-lg font-semibold">
+      Limits
+     </h2>
    <h2 className="text-lg font-semibold">
     
    </h2>
@@ -149,10 +157,14 @@ function Home() {
 {/*Derivatives*/}
   <div className="w-47/100 m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
   
-    <img alt="Fortnite illustration"
-      className="w-full h-100 object-cover" 
-      src="https://images.immediate.co.uk/production/volatile/sites/3/2021/03/Fortnite-Zero-crisis-finale-e16729a.jpg?quality=90&resize=620,414" 
-      />
+    <video
+    className="w-full h-100 object-cover rounded-t-lg"
+    src={derivativeVideo}
+    autoPlay
+    loop
+    muted
+    playsInline
+  />
 
     <div className="p-4">
      <h2 className="text-lg font-semibold">
@@ -220,12 +232,19 @@ function Home() {
    {/*Integrals*/}
    <div className="w-47/100 m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
   
-    <img alt="Integrals illustration"
-      className="w-full h-100 object-cover" 
-      src="https://images.immediate.co.uk/production/volatile/sites/3/2021/03/Fortnite-Zero-crisis-finale-e16729a.jpg?quality=90&resize=620,414" 
-      />
+    <video
+    className="w-full h-100 object-cover rounded-t-lg"
+    src={derivativeVideo}
+    autoPlay
+    loop
+    muted
+    playsInline
+  />
 
     <div className="p-4">
+     <h2 className="text-lg font-semibold">
+      Integrals
+     </h2>
      <h2 className="text-lg font-semibold">
       
      </h2>
