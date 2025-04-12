@@ -1,5 +1,4 @@
 import { useLayoutEffect, useRef } from "react";
-import { Link } from "react-router";
 import IntEulerGraph from "./IntEulerGraph"
 
 function EulerInt() {
@@ -15,10 +14,6 @@ function EulerInt() {
 
   return (
     <div> 
-      <Link to="/integrals" tabIndex={-1}>
-        <button className="back-button">Back</button>
-      </Link>
-        
       <div className="flex">
         <div ref={container} className="center-header">
         \int_&#123;0&#125;^&#123;10&#125; e^&#123;x&#125; \quad \mathrm&#123;d&#125;x 

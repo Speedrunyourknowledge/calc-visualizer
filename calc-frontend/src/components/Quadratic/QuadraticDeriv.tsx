@@ -1,5 +1,4 @@
 import { useLayoutEffect, useRef } from "react";
-import { Link } from "react-router";
 
 function QuadraticDeriv(){
 
@@ -15,9 +14,6 @@ function QuadraticDeriv(){
 
   return (
       <div>
-        <Link to="/derivatives" tabIndex={-1}>
-        <button className="back-button" style={{ marginBottom: '0rem' }}> Back</button>
-      </Link>
         <div>
           <h2 className="center-header" style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = x^&#123;2&#125;</span> </h2>
         </div>

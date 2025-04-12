@@ -1,5 +1,4 @@
 import { useLayoutEffect, useRef } from "react";
-import { Link } from "react-router";
 
 function TangentDeriv() {
 
@@ -16,9 +15,6 @@ function TangentDeriv() {
 
   return (
     <div>
-      <Link to="/derivatives" tabIndex={-1}>
-        <button className="back-button"> Back</button>
-      </Link>
       <div>
         <h2 className="center-header" style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = tan(x)</span> </h2>
       </div>

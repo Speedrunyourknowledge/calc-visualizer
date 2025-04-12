@@ -1,18 +1,13 @@
 import { createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router";
 
-import '../../node_modules/mathquill/build/mathquill.css'
+import '../../mathquill/build/mathquill.css'
 import './app.css'
 import './widgets.css'
 
 import RoutesList from "./RoutesList";
 import { AuthProvider } from "./AuthContext";
 
-//@ts-ignore implicit any type
-import mathquillFunc from "../../node_modules/mathquill/build/mathquill";
-
 function App() {
-
-  mathquillFunc();
 
   // go to the RootLayout component to edit the visual layout
 
