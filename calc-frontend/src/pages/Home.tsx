@@ -86,6 +86,9 @@ function Home() {
 
   <div className="p-4">
    <h2 className="text-lg font-semibold">
+      Limits
+     </h2>
+   <h2 className="text-lg font-semibold">
     
    </h2>
    <div className="flex items-center mt-2">
@@ -226,6 +229,9 @@ function Home() {
       />
 
     <div className="p-4">
+     <h2 className="text-lg font-semibold">
+      Integrals
+     </h2>
      <h2 className="text-lg font-semibold">
       
      </h2>
