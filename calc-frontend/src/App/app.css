@@ -84,6 +84,13 @@ body {
     bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
     duration-200 border-2 border-solid;
   }
+
+   .link-box3{
+    @apply px-5 items-center justify-center
+    bg-gray-200 text-gray-700 font-semibold px-5 py-1 rounded shadow-md
+    bg-amber-300 rounded-lg hover:bg-amber-400 transition transform hover:scale-103 
+    duration-200 border-2 border-solid;
+  }
   .topic-header{
     margin-bottom:1.125rem;
   }

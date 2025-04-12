@@ -70,8 +70,8 @@ function Home() {
 
   return (
     <div>
-      <Link to="/dashboard" tabIndex={-1} style={{marginRight:'20px'}}>
-        <button className="back-button">Dashboard</button>
+      <Link to="/dashboard" tabIndex={-1} style={{marginRight:'10px'}}>
+        <button className="link-box3">Dashboard</button>
       </Link>
       {isPending === true? 
         null
