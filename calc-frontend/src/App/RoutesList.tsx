@@ -3,9 +3,6 @@ import { Route } from "react-router";
 import RootLayout from "./RootLayout";
 
 import Home from "../pages/Home";
-import Derivatives from "../pages/Derivatives";
-import Limits from "../pages/Limits";
-import Integrals from "../pages/Integrals";
 
 import QuadraticDeriv from "../components/Quadratic/QuadraticDeriv";
 import QuadraticInt from "../components/Quadratic/QuadraticInt";
@@ -32,13 +29,7 @@ import EulerDeriv from "../components/Euler/EulerDeriv";
 import EulerInt from "../components/Euler/EulerInt";
 import ErrorPage from "../pages/ErrorPage";
 
-import UnitCircle from "../pages/UnitCircle";
-import UnitSine from "../components/UnitCircle/UnitSine";
-import UnitCosine from "../components/UnitCircle/UnitCosine";
-import UnitTangent from "../components/UnitCircle/UnitTangent";
-
 import LimitDef from "../components/Limits/LimitDef";
-import QuadraticLimit from "../components/Quadratic/QuadraticLimit";
 
 import CustomInt from "../pages/CustomIntegral";
 import CustomDeriv from "../pages/CustomDerivative";
@@ -58,7 +49,6 @@ const RoutesList =
 
     <Route path='/dashboard' element={<Dashboard />} />
 
-    <Route path='/derivatives' element={<Derivatives />} />
     <Route path='/derivatives/custom' element={<CustomDeriv />} />
     <Route path='/derivatives/quadratic' element={<QuadraticDeriv />} />
     <Route path='/derivatives/cubic' element={<CubicDeriv />} />
@@ -69,7 +59,6 @@ const RoutesList =
     <Route path='/derivatives/cosine' element={<CosineDeriv />} />
     <Route path='/derivatives/tangent' element={<TangentDeriv />} />
 
-    <Route path='/integrals' element={<Integrals />} />
     <Route path='/integrals/custom' element={<CustomInt />} />
     <Route path='/integrals/quadratic' element={<QuadraticInt />} />
     <Route path='/integrals/cubic' element={<CubicInt />} />
@@ -80,14 +69,8 @@ const RoutesList =
     <Route path='/integrals/cosine' element={<CosineInt />} />
     <Route path='/integrals/tangent' element={<TangentInt />} />
 
-    <Route path='/limits' element={<Limits />} />
     <Route path='/limits/limitdef' element={<LimitDef />} />
-    <Route path='/limits/quadratic' element={ <QuadraticLimit/> } />
-
-    <Route path='/unit-circle' element={<UnitCircle />} />
-    <Route path='/unit-circle/sine' element={<UnitSine />} />
-    <Route path='/unit-circle/cosine' element={<UnitCosine />} />
-    <Route path='/unit-circle/tangent' element={<UnitTangent />} />
+    
 
     <Route path='*' element={<ErrorPage />} />
 

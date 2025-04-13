@@ -30,6 +30,10 @@ h2 .mq-math-mode .mq-fraction{
   padding-right:.25rem;
 }
 
+.edit-down .mq-root-block{
+  margin-right:.25rem;
+}
+
 .tooltip-content {
   @apply bg-gray-800 text-white;
 

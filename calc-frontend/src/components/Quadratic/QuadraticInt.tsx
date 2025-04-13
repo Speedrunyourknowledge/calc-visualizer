@@ -1,5 +1,4 @@
 import { useLayoutEffect, useRef } from "react";
-import { Link } from "react-router";
 import IntQuadraticGraph from "./IntQuadraticGraph"
 
 function QuadraticInt() {
@@ -15,10 +14,6 @@ function QuadraticInt() {
 
   return (
     <div> 
-      <Link to="/integrals" tabIndex={-1}>
-        <button className="back-button">Back</button>
-      </Link>
-    
       <div className="flex">
         <div ref={container} className="center-header">
         \int_&#123;-5&#125;^&#123;5&#125; x^&#123;2&#125; \quad \mathrm&#123;d&#125;x 

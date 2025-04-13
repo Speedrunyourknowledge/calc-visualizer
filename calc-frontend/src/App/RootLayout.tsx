@@ -5,12 +5,11 @@ import ucfLogo from "../assets/ucf-logo.png"
 import CalcLogo from "../components/CalcLogo"
 
 import { useAuth } from "./AuthContext";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
 
 
 function RootLayout() {
   const { session } = useAuth();
-
 
   return (
     <>

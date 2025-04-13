@@ -181,13 +181,15 @@ function CustomInt() {
 
   return(
     <div>
-      <div className="center-header flex flex-wrap justify-center gap-[.5rem]" style={{alignItems:"center"}}>
+      <div className="center-header flex flex-wrap justify-center gap-[.5rem]" 
+        style={{alignItems:"center", marginBottom:'.75rem'}}>
+
         <div className="flex gap-[.5rem]">
           <div ref={container} >
             \int_\MathQuillMathField&#123;0&#125;^\MathQuillMathField&#123;5&#125;
           </div>
 
-          <div style={{height:'fit-content', alignSelf:'center'}} className="mr-[.75rem]">
+          <div style={{height:'fit-content', alignSelf:'center'}} className="mr-[.5rem]">
             <div ref={edit} className = "edit-box" style={{marginRight:'.25rem'}}> 
               x
             </div>
