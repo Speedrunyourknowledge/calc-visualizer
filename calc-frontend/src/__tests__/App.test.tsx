@@ -4,6 +4,7 @@ import { createMemoryRouter, createRoutesFromElements, RouterProvider } from 're
 
 import { AuthProvider } from '../App/AuthContext'
 import RoutesList from '../App/RoutesList'
+import { Toaster } from '@/components/ui/sonner'
 
 test('full app rendering', () => {
 
@@ -11,7 +12,13 @@ test('full app rendering', () => {
     initialEntries:['/error'],
   })
 
-  render(<AuthProvider><RouterProvider router = {router} /></AuthProvider>, {})
+  render(
+    <AuthProvider>
+      <Toaster />
+      <RouterProvider router={router} />
+    </AuthProvider>,
+    {}
+  );
   
   // check if heading is visible
   const heading = screen.getByRole('link', {name: 'Calc Visualizer'})
