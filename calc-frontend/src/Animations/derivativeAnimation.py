@@ -18,7 +18,7 @@ class DerivativeAnimation(Scene):
 
         func = axes.plot(
             lambda x: .5 * x * (x-3) * (x-4) + .6, 
-            x_range = (0,10)
+            x_range = (0,5)
         )
 
         x = ValueTracker(7)
@@ -38,7 +38,7 @@ class DerivativeAnimation(Scene):
             )
         )
 
-        dot1 =always_redraw(
+        dot1 = always_redraw(
             lambda: Dot()
             .scale(0.7)
             .move_to(axes.c2p(x.get_value(), func.underlying_function(x.get_value())))
@@ -55,12 +55,16 @@ class DerivativeAnimation(Scene):
             )
         )
 
+        tangent_label = always_redraw(
+            lambda: MathTex("y = f'(x)")
+            .scale(0.6)
+            .next_to(secant, UP, buff=0.1)
+            .set_color(GREEN)
+        )
+
         self.add(axes, axes_labels,func)
-        self.play(Create(VGroup(dot1,dot2,secant)))
+        self.add(dot1,dot2,secant,tangent_label)
         self.play(dx.animate.set_value(.001), run_time=1)
-        self.wait(2)
         self.play(x.animate.set_value(1), run_time = 4)
         self.play(x.animate.set_value(7), run_time = 4)
-        self.wait()
-        self.play(dx.animate.set_value(2), run_time = 4)
-        self.wait()
+        self.play(dx.animate.set_value(2), run_time = 1)
