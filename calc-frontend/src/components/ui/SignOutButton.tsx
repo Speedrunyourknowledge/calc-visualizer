@@ -1,3 +1,4 @@
+import { toast } from "sonner";
 import { authClient } from "../../lib/auth-client"
 
 function SignOutButton()
@@ -7,7 +8,8 @@ function SignOutButton()
             await authClient.signOut();
 
         } catch (error) {
-            console.error("Error signing out: ", error);
+            toast.error("Something went wrong signing out");
+            console.error("Error signing out:", error);
         }   
     }
 
