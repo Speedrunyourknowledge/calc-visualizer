@@ -2,7 +2,6 @@ from manim import *
 
 class RightRiemannSum(Scene):
     def construct(self):
-        # Create axes
         axes = Axes(
             x_range=[0, 2.5, 1],
             y_range=[0, 5, 1],
@@ -11,24 +10,20 @@ class RightRiemannSum(Scene):
             axis_config={"include_numbers": True}
         ).to_edge(LEFT)
 
-        # Axis labels
         x_label = axes.get_x_axis_label("x")
         y_label = axes.get_y_axis_label("y")
 
         self.play(Create(axes), Write(x_label), Write(y_label))
 
-        # Plot y = 0.6 * x^2 from 0 to 2.6
         graph = axes.plot(lambda x: 0.6 * x**2, x_range=[0, 2.3], color=WHITE)
         self.play(Create(graph), run_time=2)
 
-        # Riemann sum parameters
         a, b = 0, 2
         n = 10
         dx = (b - a) / n
         rectangles = VGroup()
         area_sum = 0
 
-        # Create rectangles using f(x) = 0.6 * x^2
         for i in range(1, n + 1):
             x_right = a + i * dx
             height = 0.6 * x_right**2
@@ -48,18 +43,15 @@ class RightRiemannSum(Scene):
             rect.align_to(rect_corner, DOWN + LEFT)
             rectangles.add(rect)
 
-        # Animate rectangles fading in one-by-one (0.2s each)
         for rect in rectangles:
             self.play(FadeIn(rect, run_time=0.2))
 
-        # Show area label in top-right corner
         area_text = Text(f"Area ≈ {area_sum:.2f}", font_size=36)
         area_text.to_edge(UP).shift(DOWN*2.4 + LEFT * 3.5)
         self.play(Write(area_text))
 
         self.wait(1.5)
-
-        # Fade everything out
+        
         self.play(
             FadeOut(rectangles),
             FadeOut(area_text),
