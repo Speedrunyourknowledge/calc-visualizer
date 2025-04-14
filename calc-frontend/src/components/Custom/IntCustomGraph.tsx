@@ -2,6 +2,7 @@
 
 import { useLayoutEffect , useEffect, useState} from "react";
 import axios from "axios";
+import { Blocks } from "react-loader-spinner";
 
 function IntCustomGraph({func, lowerBound, upperBound, handleSave, onAIResponseComplete}) {
 
@@ -90,8 +91,10 @@ function IntCustomGraph({func, lowerBound, upperBound, handleSave, onAIResponseC
   if(!ready){
     return(       
       <div className="pad-sm loading" style={{fontSize:'1.25rem'}}>
-        Loading...<br/>
-        Complex functions may take longer
+        <Blocks height="80" width="80" color="#4fa94d" ariaLabel="loading" 
+               wrapperStyle={{marginLeft:'auto', marginRight:'auto'}}
+               wrapperClass="blocks-wrapper loading" visible={true}
+             />
       </div> 
     )
   }
