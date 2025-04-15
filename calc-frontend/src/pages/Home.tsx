@@ -3,7 +3,8 @@ import { Link } from "react-router"
 import { useAuth } from "../App/AuthContext";
 import SignInButton from "../components/ui/SignInButton";
 import SignOutButton from "../components/ui/SignOutButton";
-import derivativeVideo from '../Animations/media/videos/derivativeAnimation/480p15/DerivativeAnimation.mp4';
+import derivativeVideo from '../animations/manim-videos/derivativeAnimation/1080p60/DerivativeAnimation.mp4';
+import integralVideo from '../animations/manim-videos/integralAnimation/1080p60/RightRiemannSum.mp4';
 
 function Home() {
   const { session, isPending } = useAuth();
@@ -235,7 +236,7 @@ function Home() {
       
       <video
         className="w-full object-cover rounded-t-md"
-        src={derivativeVideo}
+        src={integralVideo}
         autoPlay
         loop
         muted
