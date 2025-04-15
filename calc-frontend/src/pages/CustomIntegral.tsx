@@ -8,6 +8,8 @@ import axios from "axios";
 import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
 import AskAIButton from "../components/ui/AskAIButtonIntegral.tsx";
 
+import { toast } from "sonner";
+
 function CustomInt() {
 
   const location = useLocation()
@@ -80,9 +82,11 @@ function CustomInt() {
             Authorization: `Bearer ${session.session.token}`
           }
         })
-        
+
+        toast.success("Function Saved Successfully!");
       } 
       catch (error) {
+        toast.error("Function Failed to Save");
         console.error("save function error: ",error);
       }
       finally{

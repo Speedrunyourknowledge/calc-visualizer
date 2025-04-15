@@ -7,6 +7,8 @@ import './widgets.css'
 import RoutesList from "./RoutesList";
 import { AuthProvider } from "./AuthContext";
 
+import { Toaster } from "@/components/ui/sonner";
+
 function App() {
 
   // go to the RootLayout component to edit the visual layout
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <AuthProvider>
+      <Toaster position="bottom-left" richColors />
       <RouterProvider router={router} />
     </AuthProvider>
   )
