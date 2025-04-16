@@ -105,42 +105,42 @@ function Home() {
         </i>
       </div>
       <div className="mt-2 flex flex-wrap gap-2">
-          <Link to="/derivatives/linear" className = "link-box">
+          <Link to="/limits/linear" className = "link-box">
                   <div className="link-title2"><span ref={d18} style={{ cursor: 'pointer' }}> x </span>
                   </div>
               </Link>
 
-            <Link to="/derivatives/quadratic" className = "link-box">
+            <Link to="/limits/quadratic" className = "link-box">
                   <div className="link-title2"><span ref={d19} style={{ cursor: 'pointer' }}>x^{2}</span>
                   </div>
               </Link>
 
-            <Link to="/derivatives/exponential" className = "link-box">
+            <Link to="/limits/exponential" className = "link-box">
                   <div className="link-title2"> <span ref={d20} style={{ cursor: 'pointer' }}>{"e^{x}"}</span>{/*Expnential*/}
                   </div>
               </Link>
 
-            <Link to="/derivatives/logarithmic" className = "link-box">
+            <Link to="/limits/logarithmic" className = "link-box">
                   <div className="link-title2"><span ref={d21} style={{ cursor: 'pointer' }}>ln(x)</span>{/*Log*/}
                   </div>
               </Link>
 
-            <Link to="/derivatives/sine" className = "link-box">
+            <Link to="/limits/sine" className = "link-box">
                   <div className="link-title2"><span ref={d22} style={{ cursor: 'pointer' }}>sin(x)</span>{/*Sine*/}
                   </div>
               </Link>
 
-              <Link to="/derivatives/cosine" className = "link-box">
+              <Link to="/limits/cosine" className = "link-box">
                   <div className="link-title2"><span ref={d23} style={{ cursor: 'pointer' }}>cos(x)</span>{/*Cos*/}
                   </div>
               </Link>
 
-              <Link to="/derivatives/tangent" className = "link-box">
+              <Link to="/limits/tangent" className = "link-box">
                   <div className="link-title2"><span ref={d24} style={{ cursor: 'pointer' }}>tan(x)</span>{/*Tan*/}
                   </div>
               </Link>
 
-              <Link to="/derivatives/custom" className = "link-box">
+              <Link to="/limits/custom" className = "link-box">
                   <div className="link-title2"><span ref={d25} style={{ cursor: 'pointer' }}>Custom</span>{/*Custom*/}
                   </div>
               </Link>
