@@ -186,10 +186,10 @@ function CustomDeriv() {
         edit-box" style={{alignItems:'center', marginBottom:'.75rem'}}>
 
         <div ref={edit} className="edit-down mr-[.25rem"> 
-        \frac&#123;d(\MathQuillMathField&#123;x&#125;)&#125;&#123;dx&#125;
+        \frac&#123;d&#125;&#123;dx&#125;(\MathQuillMathField&#123;x&#125;)
         </div>
         <div ref={container} className="mr-[1rem]" style={{fontSize:'1.75rem'}}>
-          \MathQuillMathField&#123;0&#125; \leq x \leq \MathQuillMathField&#123;5&#125;
+        \MathQuillMathField&#123;0&#125; \leq x \leq \MathQuillMathField&#123;5&#125;
         </div>
 
         <button className="go-button brighten mr-[.75rem]" onClick={()=>generateOutput()}> Graph</button>

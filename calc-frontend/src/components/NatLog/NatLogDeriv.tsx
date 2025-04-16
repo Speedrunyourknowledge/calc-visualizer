@@ -13,11 +13,20 @@ function NatLogDeriv() {
   }, []);
 
   return (
+
+      
  
+<div>
+     <div className="flex">
+      <div ref={container} className="center-header">
+      \frac&#123;d&#125;&#123;dx&#125;(\ln(x))
+      </div>
+      </div>
 
       <div className="graph-outer-box" >
         <NatLogDerivGraph />
       </div>
+    </div>
 
   )
 }
