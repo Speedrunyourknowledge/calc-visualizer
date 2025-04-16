@@ -38,7 +38,7 @@ import EulerInt from "../components/Euler/EulerInt";
 
 import ErrorPage from "../pages/ErrorPage";
 
-import CustomLim from "../pages/CustomLimit";
+//import CustomLim from "../pages/CustomLimit";
 import CustomInt from "../pages/CustomIntegral";
 import CustomDeriv from "../pages/CustomDerivative";
 
@@ -57,7 +57,7 @@ const RoutesList =
 
     <Route path='/dashboard' element={<Dashboard />} />
 
-    <Route path='/limits/custom' element={<CustomLim />} />
+    {/*<Route path='/limits/custom' element={<CustomLim />} /> */}
     <Route path='/limits/quadratic' element={<QuadraticLim />} />
     <Route path='/limits/cubic' element={<CubicLim />} />
     <Route path='/limits/logarithmic' element={<NatLogLim />} />
