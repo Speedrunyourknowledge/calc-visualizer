@@ -77,29 +77,29 @@ fig.frames = frames
 
 # Create a slider to control the animation.
 sliders = [dict(
+    active=0,
     currentvalue={"visible": False},
+    ticklen=0,               # Hides the line ticks (not enough alone)
+    len=1.0,
+    y=-0.05,
     steps=[
         dict(
             method='animate',
             args=[
                 [frame.name],
                 dict(mode='immediate',
-                     frame=dict(duration=50, redraw=True),
+                     frame=dict(duration=40, redraw=True),
                      transition=dict(duration=0))
             ],
-            label=str(int(round(float(frame.name)))) 
-                  if abs(float(frame.name) - round(float(frame.name))) < 1e-6 
-                  else ""
+            label="",         # Hides numbers
         )
         for frame in frames
     ],
-    transition=dict(duration=0),
-    y=-0.05,
-    len=1.0
+    tickcolor='rgba(0,0,0,0)',
 )]
 
 # Adjust padding and final layout settings.
-pad = max(np.abs(np.min(f_vals)), np.abs(np.max(f_vals))) // 10
+pad =  min(np.abs(np.min(f_vals)), np.abs(np.max(f_vals))) + (max(np.abs(np.min(f_vals)), np.abs(np.max(f_vals))) // 20)
 fig.update_layout(
     xaxis_title='x-axis',
     yaxis_title='y-axis',
