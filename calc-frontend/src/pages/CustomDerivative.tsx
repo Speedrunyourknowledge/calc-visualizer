@@ -7,6 +7,7 @@ import { Session } from "../lib/auth-client.ts";
 import axios from "axios";
 import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
 import AskAIButtonDerivative from "@/components/ui/AskAIButtonDerivative.tsx";
+import { toast } from "sonner";
 
 function CustomDeriv() {
 
@@ -80,8 +81,10 @@ function CustomDeriv() {
           Authorization: `Bearer ${session.session.token}`
         }
       })
+      toast.success("Function Saved Successfully!");
     } 
     catch (error) {
+      toast.error("Function Failed to Save");
       console.error("save function error: ",error);
     }
     finally{
