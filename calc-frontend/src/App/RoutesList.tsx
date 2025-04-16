@@ -29,8 +29,6 @@ import EulerDeriv from "../components/Euler/EulerDeriv";
 import EulerInt from "../components/Euler/EulerInt";
 import ErrorPage from "../pages/ErrorPage";
 
-import LimitDef from "../components/Limits/LimitDef";
-
 import CustomInt from "../pages/CustomIntegral";
 import CustomDeriv from "../pages/CustomDerivative";
 
@@ -68,8 +66,6 @@ const RoutesList =
     <Route path='/integrals/sine' element={<SineInt />} />
     <Route path='/integrals/cosine' element={<CosineInt />} />
     <Route path='/integrals/tangent' element={<TangentInt />} />
-
-    <Route path='/limits/limitdef' element={<LimitDef />} />
     
 
     <Route path='*' element={<ErrorPage />} />
