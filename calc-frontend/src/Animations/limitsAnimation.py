@@ -78,4 +78,4 @@ class Limit(Scene):
             FadeOut(right_arrow)
         )
 
-        self.wait()
+        self.wait(3)

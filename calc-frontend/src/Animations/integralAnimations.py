@@ -61,3 +61,5 @@ class RightRiemannSum(Scene):
             FadeOut(y_label),
             run_time=1
         )
+
+        self.wait(3)

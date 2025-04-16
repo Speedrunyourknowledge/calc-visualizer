@@ -3,7 +3,9 @@ import { Link } from "react-router"
 import { useAuth } from "../App/AuthContext";
 import SignInButton from "../components/ui/SignInButton";
 import SignOutButton from "../components/ui/SignOutButton";
-import derivativeVideo from '../Animations/media/videos/derivativeAnimation/480p15/DerivativeAnimation.mp4';
+import derivativeVideo from '../Animations/media/videos/derivativeAnimation/1080p60/DerivativeAnimation.mp4';
+import integralVideo from '../Animations/media/videos/integralAnimations/1080p60/RightRiemannSum.mp4';
+import limitVideo from '../Animations/media/videos/limitsAnimation/1080p60/Limit.mp4';
 
 function Home() {
   const { session, isPending } = useAuth();
@@ -85,7 +87,7 @@ function Home() {
       
       <video
         className="w-full object-cover rounded-t-md"
-        src={derivativeVideo}
+        src={limitVideo}
         autoPlay
         loop
         muted
@@ -235,7 +237,7 @@ function Home() {
       
       <video
         className="w-full object-cover rounded-t-md"
-        src={derivativeVideo}
+        src={integralVideo}
         autoPlay
         loop
         muted

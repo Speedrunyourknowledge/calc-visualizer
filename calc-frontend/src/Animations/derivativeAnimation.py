@@ -68,3 +68,5 @@ class DerivativeAnimation(Scene):
         self.play(x.animate.set_value(1), run_time = 4)
         self.play(x.animate.set_value(7), run_time = 4)
         self.play(dx.animate.set_value(2), run_time = 1)
+
+        self.wait(3)
