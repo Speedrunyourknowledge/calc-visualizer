@@ -5,7 +5,7 @@ import SignInButton from "../components/ui/SignInButton";
 import SignOutButton from "../components/ui/SignOutButton";
 import derivativeVideo from '../animations/manim-videos/derivativeAnimation/1080p60/DerivativeAnimation.mp4';
 import integralVideo from '../animations/manim-videos/integralAnimation/1080p60/RightRiemannSum.mp4';
-import limitVideo from '../animations/manim-videos/limitAnimation/1080p60/Limit.mp4';
+import limitVideo from '../animations/manim-videos/limitsAnimation/1080p60/Limit.mp4';
 
 function Home() {
   const { session, isPending } = useAuth();
