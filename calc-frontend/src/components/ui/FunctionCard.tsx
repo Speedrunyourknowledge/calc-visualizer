@@ -45,7 +45,7 @@ function FunctionCard({
   return (
     <div className="bg-[#f6f6f7] p-4 pt-2 rounded-2xl shadow-md text-center w-[240px]">
       <p className="text-xl mb-2">
-        <InlineMath>{equation}</InlineMath>
+        <InlineMath math={equation} renderError={() => <span>{equation}</span>}/>
       </p>
       <img
         src={""}
