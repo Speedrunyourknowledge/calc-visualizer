@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useNavigate } from "react-router";
 import { toast } from "sonner";
+import { InlineMath } from "react-katex";
+import "katex/dist/katex.min.css";
 
 interface FunctionCardProps {
   topic: string;
@@ -42,7 +44,9 @@ function FunctionCard({
 
   return (
     <div className="bg-[#f6f6f7] p-4 pt-2 rounded-2xl shadow-md text-center w-[240px]">
-      <p className="text-xl mb-2">{equation}</p>
+      <p className="text-xl mb-2">
+        <InlineMath>{equation}</InlineMath>
+      </p>
       <img
         src={""}
         alt={topic + " graph"}
