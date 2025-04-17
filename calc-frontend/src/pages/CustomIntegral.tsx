@@ -44,6 +44,7 @@ function CustomInt() {
   const [saving, setSaving] = useState<boolean>(false);
   const [enableSave, setEnableSave] = useState<boolean>(false);
   const [funcKey, setFuncKey] = useState<string>('');
+  const [latexFunc, setLatexFunc] = useState<any>();
 
   const handleAIResponseComplete = () => {
     setCanAskAI(false);
@@ -138,6 +139,7 @@ function CustomInt() {
     setFunc(newFunc)
     setJSFunc(newJSFunc)
     setBounds([newLowerBound, newUpperBound])
+    setLatexFunc(editMF.current.latex())
 
     newFuncKey = newFunc + newLowerBound + newUpperBound
     // check that new graph is different from old one
@@ -226,7 +228,7 @@ function CustomInt() {
           <div></div>
           
           <AskAIButton func={JSFunc} lowerBound={bounds[0]} upperBound={bounds[1]} key={funcKey} 
-              canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}/>
+              canAskAI={canAskAI} displayFunc={latexFunc} onAIResponseComplete={handleAIResponseComplete}/>
         </div>
       
     </div>
