@@ -123,8 +123,9 @@ for n_bars in range(initial_bars, 101, 5):
 
 sliders = [dict(
     active=0,
-    currentvalue={"prefix": "n = "},
+    currentvalue={"prefix": "n = ", "font":{'size':14}},
     pad={"t": 30},
+    bordercolor='#949fb3',
     steps=steps
 )]
 
