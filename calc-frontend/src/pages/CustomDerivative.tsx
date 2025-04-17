@@ -44,6 +44,8 @@ function CustomDeriv() {
   const [JSFunc, setJSFunc] = useState<string>('');
   const [LatexFunc, setLatexFunc] = useState<any>();
 
+  const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3000'
+
   const handleSave = () => {
     setEnableSave(false)
   }
@@ -72,7 +74,7 @@ function CustomDeriv() {
       setSaving(true) // show loading while saving
 
       // create-integral handles any topic
-      await axios.post(`http://localhost:3000/func/create-integral/${userId}`, {
+      await axios.post(serverUrl + `/func/create-integral/${userId}`, {
         equation,
         lowerBound,
         upperBound,
