@@ -20,18 +20,15 @@ class RightRiemannSum(Scene):
 
         self.add(axes, x_label, y_label)
 
-        # Plot y = 0.6 * x^2 from 0 to 2.6
         graph = axes.plot(lambda x: 0.6 * x**2, x_range=[0, 2.3], color=WHITE)
         self.play(Create(graph), run_time=1)
 
-        # Riemann sum parameters
         a, b = 0, 2
         n = 10
         dx = (b - a) / n
         rectangles = VGroup()
         area_sum = 0
 
-        # Create rectangles using f(x) = 0.6 * x^2
         for i in range(1, n + 1):
             x_right = a + i * dx
             height = 0.6 * x_right**2
@@ -55,17 +52,17 @@ class RightRiemannSum(Scene):
         for rect in rectangles:
             self.play(FadeIn(rect, run_time=0.15))
 
-        # Show area label in top-right corner
         area_text = Text(f"Area ≈ {area_sum:.2f}", font_size=36)
         area_text.to_edge(UP).shift(DOWN*2.4 + LEFT * 3.5)
         self.play(Write(area_text))
 
         self.wait(1.5)
-
-        # Fade everything out
+        
         self.play(
             FadeOut(rectangles),
             FadeOut(area_text),
             FadeOut(graph),
             run_time=1
         )
+
+        self.wait(3)
