@@ -26,11 +26,13 @@ function AskAIButtonDerivative({
     `### 🤖 Ask AI\n### Graph your function, then click above for an explanation!`
   );
 
+  const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3000'
+
   const handleAskAI = async () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:3000/gemini/ask-derivative",
+        serverUrl + '/gemini/ask-derivative',
         {
           func,
           lowerBound,

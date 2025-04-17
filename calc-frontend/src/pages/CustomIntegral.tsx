@@ -46,6 +46,8 @@ function CustomInt() {
   const [funcKey, setFuncKey] = useState<string>('');
   const [latexFunc, setLatexFunc] = useState<any>();
 
+  const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3000'
+
   const handleAIResponseComplete = () => {
     setCanAskAI(false);
   }
@@ -73,7 +75,7 @@ function CustomInt() {
       try {
         setSaving(true) // show loading while saving
 
-        await axios.post(`http://localhost:3000/func/create-integral/${userId}`, {
+        await axios.post(serverUrl + `/func/create-integral/${userId}`, {
           equation,
           lowerBound,
           upperBound,
