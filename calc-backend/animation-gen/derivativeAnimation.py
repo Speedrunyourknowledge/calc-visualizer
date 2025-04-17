@@ -69,4 +69,4 @@ class DerivativeAnimation(Scene):
         self.play(x.animate(rate_func=rush_into).set_value(3), run_time = 2)
         self.play(x.animate(rate_func=linear).set_value(5.5), run_time = 1.5)
 
-        self.wait(3)
+        self.wait(2.5)

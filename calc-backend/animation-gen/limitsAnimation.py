@@ -4,15 +4,19 @@ from manim import *
 class Limit(Scene):
     def construct(self):
         
-        axes = Axes(
+        axes = (Axes(
             x_range=[0.1, 4, 1],
             y_range=[0, 10, 2],
             axis_config={"include_numbers": True},
             x_length=8,
             y_length=5
+          )
+          .set_color(GRAY_A)
         )
-        labels = axes.get_axis_labels(x_label="x", y_label="y")
-        self.play(Create(axes), Write(labels))
+
+        labels = axes.get_axis_labels(x_label="x", y_label="y").set_color(GRAY_A)
+
+        self.add(axes, labels)
 
         def func(x):
             if x == 2:
@@ -70,12 +74,10 @@ class Limit(Scene):
         self.wait(0.5)
 
         self.play(
-            FadeOut(axes),
-            FadeOut(labels),
             FadeOut(graph),
             FadeOut(hole_point),
             FadeOut(left_arrow),
             FadeOut(right_arrow)
         )
 
-        self.wait(3)
+        self.wait(2.5)

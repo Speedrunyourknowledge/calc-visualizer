@@ -65,4 +65,4 @@ class RightRiemannSum(Scene):
             run_time=1
         )
 
-        self.wait(3)
+        self.wait(2.5)

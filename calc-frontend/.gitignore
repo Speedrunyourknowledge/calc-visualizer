@@ -25,3 +25,6 @@ dist-ssr
 
 # environment
 .env
+
+# manim
+src/animations/animations_etc
