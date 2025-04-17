@@ -71,7 +71,7 @@ class Limit(Scene):
             rate_func=linear
         )
 
-        self.wait(0.5)
+        self.wait(1)
 
         self.play(
             FadeOut(graph),
@@ -80,4 +80,4 @@ class Limit(Scene):
             FadeOut(right_arrow)
         )
 
-        self.wait(2.5)
+        self.wait(2)
