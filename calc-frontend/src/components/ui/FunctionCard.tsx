@@ -3,6 +3,10 @@ import { useNavigate } from "react-router";
 import { toast } from "sonner";
 import { InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
+import integralDashboard from "../../assets/integralDashboard.gif";
+import limitDashboard from "../../assets/limitDashboard.png";
+import derivativeDashboard from "../../assets/deriv-dash.jpg";
+import { useLayoutEffect, useRef } from "react";
 
 interface FunctionCardProps {
   topic: string;
@@ -21,7 +25,40 @@ function FunctionCard({
   id,
   onDelete,
 }: FunctionCardProps) {
+
+  const container = useRef(null);
+  const dxContainer = useRef(null);
+  let images = new Map<string, string>();
+  images.set("Integral", integralDashboard);
+  images.set("Limit", limitDashboard);
+  images.set("Derivative", derivativeDashboard);
+
+
   const navigate = useNavigate();
+
+  useLayoutEffect(() => {
+    //@ts-ignore Cannot find MathQuill
+    const MQ = MathQuill.getInterface(2); // Get MathQuill interface
+
+    if (container.current) {
+      let latex = "";
+
+      // Set LaTeX content based on the topic
+      if (topic === "Integral") {
+        latex = `\\int_{${lowerBound}}^{${upperBound}}`;
+      } else if (topic === "Derivative") {
+        latex = `\\frac{d}{dx}`;
+      } else if (topic === "Limit") {
+        latex = `\\lim_{x \\to ${lowerBound}}`;
+      }
+
+      // Render the LaTeX content using MathQuill
+      MQ.StaticMath(container.current).latex(latex);
+    }
+    if(topic === "Integral" && dxContainer.current) {
+      MQ.StaticMath(dxContainer.current).latex("\\mathrm{d}x")
+    }
+  }, [topic, lowerBound, upperBound]);
 
   const handleView = async () => {
     navigate(`/${topic}s/custom`, {
@@ -45,10 +82,15 @@ function FunctionCard({
   return (
     <div className="bg-[#f6f6f7] p-4 pt-2 rounded-2xl shadow-md text-center w-[240px]">
       <p className="text-xl mb-2">
-        <InlineMath math={equation} renderError={() => <span>{equation}</span>}/>
+      <div ref={container}></div>
+        <InlineMath
+          math={"(" + equation + ")"}
+          renderError={() => <span>{equation}</span>}
+        />
+        <div ref={dxContainer}></div>
       </p>
       <img
-        src={""}
+        src={images.get(topic)}
         alt={topic + " graph"}
         className="w-full aspect-2/1 bg-green-300 rounded-md mb-4"
       />
