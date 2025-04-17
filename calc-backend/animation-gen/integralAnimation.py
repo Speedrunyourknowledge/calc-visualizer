@@ -2,12 +2,8 @@ from manim import *
 
 class RightRiemannSum(Scene):
     def construct(self):
-<<<<<<< HEAD:calc-frontend/src/Animations/integralAnimations.py
-        axes = Axes(
-=======
         # Create axes
         axes = (Axes(
->>>>>>> fabfda6e62f84d1215fa9f2e0e846c48e9fbb0ed:calc-backend/animation-gen/integralAnimation.py
             x_range=[0, 2.5, 1],
             y_range=[0, 5, 1],
             x_length=10,
@@ -18,14 +14,9 @@ class RightRiemannSum(Scene):
           .set_color(GRAY_A)
         )
 
-<<<<<<< HEAD:calc-frontend/src/Animations/integralAnimations.py
-        x_label = axes.get_x_axis_label("x")
-        y_label = axes.get_y_axis_label("y")
-=======
         # Axis labels
         x_label = axes.get_x_axis_label("x").set_color(GRAY_A)
         y_label = axes.get_y_axis_label("y").set_color(GRAY_A)
->>>>>>> fabfda6e62f84d1215fa9f2e0e846c48e9fbb0ed:calc-backend/animation-gen/integralAnimation.py
 
         self.add(axes, x_label, y_label)
 
@@ -57,10 +48,7 @@ class RightRiemannSum(Scene):
             rect.align_to(rect_corner, DOWN + LEFT)
             rectangles.add(rect)
 
-<<<<<<< HEAD:calc-frontend/src/Animations/integralAnimations.py
-=======
         # Animate rectangles fading in one-by-one
->>>>>>> fabfda6e62f84d1215fa9f2e0e846c48e9fbb0ed:calc-backend/animation-gen/integralAnimation.py
         for rect in rectangles:
             self.play(FadeIn(rect, run_time=0.15))
 

@@ -1,7 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/limitsAnimation/1080p60/partial_movie_files/Limit/3529212410_1240247844_223132457.mp4'
-file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/limitsAnimation/1080p60/partial_movie_files/Limit/3040924799_1376512726_2967433267.mp4'
-file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/limitsAnimation/1080p60/partial_movie_files/Limit/3040924799_2510802644_4234489363.mp4'
-file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/limitsAnimation/1080p60/partial_movie_files/Limit/3040924799_2341082278_384939764.mp4'
-file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/limitsAnimation/1080p60/partial_movie_files/Limit/3040924799_960113373_1562076290.mp4'
-file 'file:/home/drake/CalculusVisualizerProject/calc-visualizer/calc-frontend/src/Animations/media/videos/limitsAnimation/1080p60/partial_movie_files/Limit/3040924799_667144672_3149261676.mp4'

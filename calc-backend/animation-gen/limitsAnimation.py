@@ -1,4 +1,4 @@
-import numpy as np 
+import numpy as np   
 from manim import *
 
 class Limit(Scene):
@@ -24,7 +24,7 @@ class Limit(Scene):
             color=WHITE, 
             discontinuities=[2], 
             dt=0.01,
-            x_range=[.7,3.9]
+            x_range=[.7, 3.9]
         )
 
         hole_point = Circle(
@@ -36,30 +36,30 @@ class Limit(Scene):
 
         self.play(Create(graph), FadeIn(hole_point), run_time=2)
 
-        def get_tangent_angle(x):
-            dx = 0.001
-            dy = func(x + dx) - func(x)
-            return np.arctan2(dy, dx)
-
+        # ValueTrackers for dynamic movement
         t_left = ValueTracker(0.7)
         t_right = ValueTracker(3.5)
 
-        left_arrow = Triangle(color=GREEN, fill_opacity=1).scale(0.2)
-        left_arrow.rotate(PI/2)
-        left_updater = always_redraw(
-            lambda: left_arrow.move_to(axes.c2p(t_left.get_value(), func(t_left.get_value())))
-                                 .set_angle(get_tangent_angle(t_left.get_value()))
-        )
+        # Initial dummy arrows
+        left_arrow = always_redraw(lambda: Arrow(
+            start=axes.c2p(0.7, func(0.7) + 0.3),
+            end=axes.c2p(t_left.get_value(), func(t_left.get_value())),
+            color=BLUE,
+            stroke_width=6,
+            buff=0
+        ))
 
-        right_arrow = Triangle(color=YELLOW, fill_opacity=1).scale(0.2)
-        right_arrow.rotate(PI/2)
-        right_updater = always_redraw(
-            lambda: right_arrow.move_to(axes.c2p(t_right.get_value(), func(t_right.get_value())))
-                                  .set_angle(get_tangent_angle(t_right.get_value()))
-        )
+        right_arrow = always_redraw(lambda: Arrow(
+            start=axes.c2p(3.5, func(3.5) + 0.3),
+            end=axes.c2p(t_right.get_value(), func(t_right.get_value())),
+            color=YELLOW,
+            stroke_width=6,
+            buff=0
+        ))
 
-        self.add(left_updater, right_updater)
+        self.add(left_arrow, right_arrow)
 
+        # Animate trackers to move arrows toward x = 2
         self.play(
             t_left.animate.set_value(1.99),
             t_right.animate.set_value(2.01),
@@ -67,7 +67,7 @@ class Limit(Scene):
             rate_func=linear
         )
 
-        self.wait(.5)
+        self.wait(0.5)
 
         self.play(
             FadeOut(axes),
