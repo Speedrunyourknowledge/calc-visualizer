@@ -5,7 +5,7 @@ import { InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
 import integralDashboard from "../../assets/integralDashboard.gif";
 import limitDashboard from "../../assets/limitDashboard.png";
-import derivativeDashboard from "../../assets/tangentDashboard.png";
+import derivativeDashboard from "../../assets/deriv-dash.jpg";
 import { useLayoutEffect, useRef } from "react";
 
 interface FunctionCardProps {
