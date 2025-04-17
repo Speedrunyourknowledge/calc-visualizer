@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
-import EulerDerivGraph from "./EulerDerivGraph"
+// import QuadraticLimGraph from "./QuadraticLimGraph"
 
-function EulerDeriv() {
+function QuadraticLim() {
 
   const container = useRef(null);
 
@@ -12,22 +12,15 @@ function EulerDeriv() {
 
   }, []);
 
-  return (
- 
+ return (
 
-      <div>
-     <div className="flex">
+    <div className="flex">
       <div ref={container} className="center-header">
-      \frac&#123;d&#125;&#123;dx&#125;(e^x)
-      </div>
-      </div>
-
-      <div className="graph-outer-box" >
-        <EulerDerivGraph />
+      \lim_&#123;x\to0&#125; \quad x^&#123;2&#125;
       </div>
     </div>
 
   )
 }
 
-export default EulerDeriv
+export default QuadraticLim

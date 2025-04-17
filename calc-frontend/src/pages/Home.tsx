@@ -35,6 +35,9 @@ function Home() {
     const d23 = useRef(null);
     const d24 = useRef(null);
     const d25 = useRef(null);
+    const d26 = useRef(null);
+    const d27 = useRef(null);
+    const d28 = useRef(null);
   
     useLayoutEffect(() =>{
       //@ts-ignore
@@ -64,13 +67,15 @@ function Home() {
       MQ.StaticMath(d23.current, { })
       MQ.StaticMath(d24.current, { })
       MQ.StaticMath(d25.current, { })
-
+      MQ.StaticMath(d26.current, { })
+      MQ.StaticMath(d27.current, { })
+      MQ.StaticMath(d28.current, { })
     }, []);
 
   return (
     <div>
       <div style={{display:'flex', gap:'15px'}}>
-        <Link to="/dashboard" tabIndex={-1} style={{marginRight:'10px'}}>
+        <Link to="/dashboard" tabIndex={-1} style={{marginRight:'2px'}}>
           <button className="link-box cursor-pointer" style={{borderRadius:'5px'}}>Dashboard</button>
         </Link>
         {isPending === true? 
@@ -106,42 +111,47 @@ function Home() {
         </i>
       </div>
       <div className="mt-2 flex flex-wrap gap-2">
-          <Link to="/derivatives/linear" className = "link-box">
+          <Link to="/limits/linear" className = "link-box">
                   <div className="link-title2"><span ref={d18} style={{ cursor: 'pointer' }}> x </span>
                   </div>
               </Link>
 
-            <Link to="/derivatives/quadratic" className = "link-box">
+            <Link to="/limits/quadratic" className = "link-box">
                   <div className="link-title2"><span ref={d19} style={{ cursor: 'pointer' }}>x^{2}</span>
                   </div>
               </Link>
 
-            <Link to="/derivatives/exponential" className = "link-box">
+               <Link to="/limits/cubic" className = "link-box">
+                  <div className="link-title2"><span ref={d28} style={{ cursor: 'pointer' }}>x^{3}</span>
+                  </div>
+              </Link>
+            
+            <Link to="/limits/exponential" className = "link-box">
                   <div className="link-title2"> <span ref={d20} style={{ cursor: 'pointer' }}>{"e^{x}"}</span>{/*Expnential*/}
                   </div>
               </Link>
 
-            <Link to="/derivatives/logarithmic" className = "link-box">
+            <Link to="/limits/logarithmic" className = "link-box">
                   <div className="link-title2"><span ref={d21} style={{ cursor: 'pointer' }}>ln(x)</span>{/*Log*/}
                   </div>
               </Link>
 
-            <Link to="/derivatives/sine" className = "link-box">
+            <Link to="/limits/sine" className = "link-box">
                   <div className="link-title2"><span ref={d22} style={{ cursor: 'pointer' }}>sin(x)</span>{/*Sine*/}
                   </div>
               </Link>
 
-              <Link to="/derivatives/cosine" className = "link-box">
+              <Link to="/limits/cosine" className = "link-box">
                   <div className="link-title2"><span ref={d23} style={{ cursor: 'pointer' }}>cos(x)</span>{/*Cos*/}
                   </div>
               </Link>
 
-              <Link to="/derivatives/tangent" className = "link-box">
+              <Link to="/limits/tangent" className = "link-box">
                   <div className="link-title2"><span ref={d24} style={{ cursor: 'pointer' }}>tan(x)</span>{/*Tan*/}
                   </div>
               </Link>
 
-              <Link to="/derivatives/custom" className = "link-box">
+              <Link to="/limits/custom" className = "link-box">
                   <div className="link-title2"><span ref={d25} style={{ cursor: 'pointer' }}>Custom</span>{/*Custom*/}
                   </div>
               </Link>
@@ -188,6 +198,11 @@ function Home() {
 
             <Link to="/derivatives/quadratic" className = "link-box">
                   <div className="link-title2"><span ref={d2} style={{ cursor: 'pointer' }}>x^{2}</span>
+                  </div>
+              </Link>
+
+             <Link to="/derivatives/cubic" className = "link-box">
+                  <div className="link-title2"><span ref={d27} style={{ cursor: 'pointer' }}>x^{3}</span>
                   </div>
               </Link>
 
@@ -263,6 +278,11 @@ function Home() {
 
             <Link to="/integrals/quadratic" className = "link-box">
                   <div className="link-title2"><span ref={d11} style={{ cursor: 'pointer' }}>x^{2}</span>
+                  </div>
+              </Link>
+
+              <Link to="/integrals/cubic" className = "link-box">
+                  <div className="link-title2"><span ref={d26} style={{ cursor: 'pointer' }}>x^{3}</span>
                   </div>
               </Link>
 
