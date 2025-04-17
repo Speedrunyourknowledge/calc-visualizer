@@ -2,21 +2,24 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import { InlineMath } from "react-katex";
+import "katex/dist/katex.min.css";
 
 function AskAIButtonDerivative({
   func,
   lowerBound,
   upperBound,
   canAskAI,
+  displayFunc,
   onAIResponseComplete,
 }: {
   func: string;
   lowerBound: number;
   upperBound: number;
   canAskAI: boolean;
+  displayFunc: any;
   onAIResponseComplete: () => void;
-}) 
-{
+}) {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [markdownText, setMarkdownText] = useState(
@@ -42,7 +45,6 @@ function AskAIButtonDerivative({
 
       setMarkdownText(response.data.message);
       onAIResponseComplete();
-
     } catch (error) {
       setMarkdownText(`### ❌ An error occured, please try again`);
       console.error(error);
@@ -53,10 +55,10 @@ function AskAIButtonDerivative({
 
   // the user has created a new graph
   useEffect(() => {
-    if(func !== ''){
+    if (func !== "") {
       setMarkdownText(`### 🤖 Ask AI\n### Click above for an explanation!`);
     }
-  },[])
+  }, []);
 
   return (
     <>
@@ -78,12 +80,17 @@ function AskAIButtonDerivative({
           <div className="absolute inset-0 bg-black/50"></div>
 
           {/* Modal Content */}
-          <div className="relative bg-gray-800 text-white max-w-2xl max-h-[80vh] w-full rounded-xl p-4 pt-2
-            shadow-lg overflow-y-auto mr-[20px] ml-[20px]">
+          <div
+            className="relative bg-gray-800 text-white max-w-2xl max-h-[80vh] w-full rounded-xl p-4 pt-2
+            shadow-lg overflow-y-auto mr-[20px] ml-[20px]"
+          >
             <div className="flex justify-between items-center mb-2 border-b-2 border-solid gap-2">
               {canAskAI ? (
                 <button onClick={handleAskAI} className="cursor-pointer pb-1">
-                  <h3 className="font-semibold">{`Ask AI About: ${func}`}</h3>
+                  <h3 className="font-semibold">
+                    Ask AI About:&nbsp;
+                    <InlineMath math={displayFunc} renderError={() => <span>{func}</span>} />
+                  </h3>
                 </button>
               ) : (
                 <button

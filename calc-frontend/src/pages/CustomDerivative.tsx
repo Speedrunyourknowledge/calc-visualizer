@@ -42,6 +42,7 @@ function CustomDeriv() {
 
   const [canAskAI, setCanAskAI] = useState<boolean>(false);
   const [JSFunc, setJSFunc] = useState<string>('');
+  const [LatexFunc, setLatexFunc] = useState<any>();
 
   const handleSave = () => {
     setEnableSave(false)
@@ -136,6 +137,7 @@ function CustomDeriv() {
     setFunc(newFunc)
     setJSFunc(newJSFunc);
     setBounds([newLowerBound, newUpperBound])
+    setLatexFunc(editMF.current.innerFields[0].latex());
 
     newFuncKey = newFunc + newLowerBound + newUpperBound
     // check that new graph is different from old one
@@ -214,7 +216,7 @@ function CustomDeriv() {
         <div></div>
 
         <AskAIButtonDerivative func={JSFunc} lowerBound={bounds[0]} upperBound={bounds[0]} key={funcKey} 
-        canAskAI={canAskAI} onAIResponseComplete={handleAIResponseComplete}
+        canAskAI={canAskAI} displayFunc={LatexFunc} onAIResponseComplete={handleAIResponseComplete}
         />
       </div>
 
