@@ -64,16 +64,9 @@ class DerivativeAnimation(Scene):
 
         self.add(axes, axes_labels, func)
         self.add(dot1,dot2,secant,tangent_label)
-<<<<<<< HEAD:calc-frontend/src/Animations/derivativeAnimation.py
-        self.play(dx.animate.set_value(.001), run_time=1)
-        self.play(x.animate.set_value(1), run_time = 4)
-        self.play(x.animate.set_value(7), run_time = 4)
-        self.play(dx.animate.set_value(2), run_time = 1)
-
-        self.wait(3)
-=======
         self.play(x.animate(rate_func=linear).set_value(3), run_time = 1.5)
         self.play(x.animate(rate_func=rush_from).set_value(1), run_time = 2)
         self.play(x.animate(rate_func=rush_into).set_value(3), run_time = 2)
         self.play(x.animate(rate_func=linear).set_value(5.5), run_time = 1.5)
->>>>>>> fabfda6e62f84d1215fa9f2e0e846c48e9fbb0ed:calc-backend/animation-gen/derivativeAnimation.py
+
+        self.wait(3)
