@@ -1,3 +1,4 @@
+@import "tailwindcss";
 
 .mq-math-mode var.mq-operator-name.mq-last{
   padding-right:0;
@@ -27,4 +28,23 @@ h2 .mq-math-mode .mq-fraction{
 
 .edit-box.mq-editable-field{
   padding-right:.25rem;
+}
+
+.edit-down .mq-root-block{
+  margin-right:.25rem;
+}
+
+.tooltip-content {
+  @apply bg-gray-800 text-white;
+
+	border-radius: 4px;
+	padding: 8px 10px;
+	font-size: 15px;
+	line-height: 1;
+	
+	user-select: none;
+}
+
+.tooltip-arrow {
+  fill: var(--color-gray-800);
 }

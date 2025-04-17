@@ -2,8 +2,9 @@
 
 import { useLayoutEffect , useEffect, useState} from "react";
 import axios from "axios";
+import { Blocks } from "react-loader-spinner";
 
-function IntCustomGraph({func, lowerBound, upperBound}) {
+function IntCustomGraph({func, lowerBound, upperBound, handleSave, onAIResponseComplete}) {
 
   const [ready, setReady] = useState(false)
   const [success, setSuccess] = useState(false)
@@ -29,7 +30,6 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
     setSuccess(false)
 
     request.then(response => {
-      console.log(response)
       let graphObject = response.data
 
       // add config to object
@@ -50,15 +50,18 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
       }
       else if(e.status === 422){
         setErrorMsg('Your function could not be graphed. \
-          Make sure the function is properly formatted or try a \
-          different function')
+          Try a different function or try changing \
+          the bounds')
       }
       else{
-        console.log(e)
         setErrorMsg('Your function could not be graphed. \
-          Make sure the function is properly formatted or try a \
-          different function')
+          Try a different function or try changing \
+          the bounds')
       }
+      // disable save button
+      handleSave();
+      // disable ask AI
+      onAIResponseComplete();
     })
     .finally(() =>{
       setReady(true)
@@ -77,7 +80,10 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
       }
       catch(e){
         // graph failed
-        console.log(e)
+        console.error(e)
+        
+        handleSave();
+        onAIResponseComplete();
       }
     }
   }, [ready]);
@@ -85,14 +91,16 @@ function IntCustomGraph({func, lowerBound, upperBound}) {
   if(!ready){
     return(       
       <div className="pad-sm loading" style={{fontSize:'1.25rem'}}>
-        Loading...<br/>
-        Complex functions may take longer
+        <Blocks height="80" width="80" color="#4fa94d" ariaLabel="loading" 
+               wrapperStyle={{marginLeft:'auto', marginRight:'auto'}}
+               wrapperClass="blocks-wrapper loading" visible={true}
+             />
       </div> 
     )
   }
 
   if(ready && !success){
-    return <div className="pad-sm" style={{color:'red', fontSize: '1.25rem'}}>{errorMsg}</div> 
+    return <div className="pad-sm" style={{color:'red', fontSize: '1.25rem', maxWidth:'550px'}}>{errorMsg}</div> 
   }
 
   return (

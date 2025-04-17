@@ -3,3 +3,7 @@ node_modules
 dist
 
 .venv
+prisma/client
+
+animation-gen/__pycache__
+animation-gen/media

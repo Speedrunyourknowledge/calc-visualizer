@@ -1,6 +1,6 @@
 ## Docker Images
 
-### Frontend
+### Backend
 The image **emeraldkeys/calc-visualizer-backend** runs the backend server on port 3000. The associated dockerfile is in /calc-backend. 
 This is the production build.
 

@@ -28,6 +28,7 @@ upper_bound = float(sys.argv[3])
 # parses a string representing a function
 def insert_x(x):
   parser['x'] = x
+  parser['e'] = np.e
   return parser.evaluate(input_func)
 
 # just change these 3 values
@@ -122,8 +123,9 @@ for n_bars in range(initial_bars, 101, 5):
 
 sliders = [dict(
     active=0,
-    currentvalue={"prefix": "n = "},
+    currentvalue={"prefix": "n = ", "font":{'size':14}},
     pad={"t": 30},
+    bordercolor='#949fb3',
     steps=steps
 )]
 

@@ -1,37 +1,28 @@
 import { useLayoutEffect, useRef } from "react";
-import { Link } from "react-router";
+import CubicDerivGraph from "./CubicDerivGraph"
 
 function CubicDeriv() {
 
-  const heading = useRef(null);
+  const container = useRef(null);
 
   useLayoutEffect(() =>{
     //@ts-ignore
     let MQ = MathQuill.getInterface(2);
-
-    MQ.StaticMath(heading.current, { })
+    MQ.StaticMath(container.current, { })
 
   }, []);
 
   return (
     <div>
-      <Link to="/derivatives" tabIndex={-1}>
-        <button className="back-button" style={{ marginBottom: '0rem' }}> Back</button>
-      </Link>
-      <div>
-        <h2 className="center-header" style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = x^&#123;3&#125;</span> </h2>
+     <div className="flex">
+      <div ref={container} className="center-header">
+      \frac&#123;d&#125;&#123;dx&#125;(x^3)
+      </div>
       </div>
 
-      <div className="graph-outer-box">
-        <iframe className="graph-frame" src="https://www.desmos.com/calculator/wzc7pioeji?embed"
-          style={{ border: "1px solid #ccc" }} >
-        </iframe>
-
-        <p className="big-p side-text">
-          The cubic function cubes each input value, raising it to the third power
-        </p>
+      <div className="graph-outer-box" >
+        <CubicDerivGraph />
       </div>
-
     </div>
 
   )

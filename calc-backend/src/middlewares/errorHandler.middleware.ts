@@ -10,7 +10,7 @@ const errorMiddleware = (err: Error, req: Request, res: Response, next: NextFunc
         let error = {...err};
 
         error.message = err.message;
-        console.error(err);
+        console.error("middleware error: " + err);
 
         // check for specific error types
         // set error message, maybe error code and throw the new error

@@ -1,41 +1,31 @@
 import { useLayoutEffect, useRef } from "react";
-import { Link } from "react-router";
+import TangentDerivGraph from "./TangentDerivGraph"
 
 function TangentDeriv() {
 
-  const heading = useRef(null);
   const container = useRef(null);
 
   useLayoutEffect(() =>{
     //@ts-ignore
     let MQ = MathQuill.getInterface(2);
-    MQ.StaticMath(heading.current, { })
     MQ.StaticMath(container.current, { })
 
   }, []);
 
   return (
-    <div>
-      <Link to="/derivatives" tabIndex={-1}>
-        <button className="back-button"> Back</button>
-      </Link>
-      <div>
-        <h2 className="center-header" style={{marginBottom:'0.5rem'}}>Derivative of <span ref={heading}>y = tan(x)</span> </h2>
+ 
+<div>
+     <div className="flex">
+      <div ref={container} className="center-header">
+      \frac&#123;d&#125;&#123;dx&#125;(\tan(x))
+      </div>
       </div>
 
-      <div className="graph-outer-box">
-        <iframe className="graph-frame" src="https://www.desmos.com/calculator/4hzxwimehi?embed"
-          style={{ border: "1px solid #ccc" }} >
-        </iframe>
-
-        <p className="big-p side-text">
-          The tangent function has vertical asymptotes at multiples 
-          of <span ref={container}>x = \frac&#123;\pi&#125; &#123;2&#125;</span>
-        </p>
-
+      <div className="graph-outer-box" >
+        <TangentDerivGraph />
       </div>
-
     </div>
+
   )
 }
 

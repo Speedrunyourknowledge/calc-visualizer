@@ -1,0 +1,30 @@
+diff --git a/node_modules/@radix-ui/react-tooltip/dist/index.js b/node_modules/@radix-ui/react-tooltip/dist/index.js
+index f3e51c7..acc1b98 100644
+--- a/node_modules/@radix-ui/react-tooltip/dist/index.js
++++ b/node_modules/@radix-ui/react-tooltip/dist/index.js
+@@ -245,8 +245,8 @@ var TooltipTrigger = React.forwardRef(
+           isPointerDownRef.current = true;
+           document.addEventListener("pointerup", handlePointerUp, { once: true });
+         }),
+-        onFocus: (0, import_primitive.composeEventHandlers)(props.onFocus, () => {
+-          if (!isPointerDownRef.current) context.onOpen();
++        onFocus: (0, import_primitive.composeEventHandlers)(props.onFocus, (event) => {
++          if (event.target.matches(':focus-visible') && !isPointerDownRef.current) context.onOpen();
+         }),
+         onBlur: (0, import_primitive.composeEventHandlers)(props.onBlur, context.onClose),
+         onClick: (0, import_primitive.composeEventHandlers)(props.onClick, context.onClose)
+diff --git a/node_modules/@radix-ui/react-tooltip/dist/index.mjs b/node_modules/@radix-ui/react-tooltip/dist/index.mjs
+index 128bb5e..f54a65e 100644
+--- a/node_modules/@radix-ui/react-tooltip/dist/index.mjs
++++ b/node_modules/@radix-ui/react-tooltip/dist/index.mjs
+@@ -198,8 +198,8 @@ var TooltipTrigger = React.forwardRef(
+           isPointerDownRef.current = true;
+           document.addEventListener("pointerup", handlePointerUp, { once: true });
+         }),
+-        onFocus: composeEventHandlers(props.onFocus, () => {
+-          if (!isPointerDownRef.current) context.onOpen();
++        onFocus: composeEventHandlers(props.onFocus, (event) => {
++          if (event.target.matches(':focus-visible') && !isPointerDownRef.current) context.onOpen();
+         }),
+         onBlur: composeEventHandlers(props.onBlur, context.onClose),
+         onClick: composeEventHandlers(props.onClick, context.onClose)
