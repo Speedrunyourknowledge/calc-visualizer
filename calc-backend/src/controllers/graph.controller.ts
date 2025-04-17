@@ -78,6 +78,6 @@ export function createDerivGraph(req: Request, res: Response, next: NextFunction
       res.status(200).send(prettyStr);
     }
   })
-
-  setTimeout(function(){ process.kill()}, 7500);
+  // timeout if graph takes longer than 10 seconds
+  setTimeout(function(){ process.kill()}, 10000);
 }

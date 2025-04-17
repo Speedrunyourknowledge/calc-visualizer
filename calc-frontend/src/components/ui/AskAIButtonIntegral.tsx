@@ -2,18 +2,22 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import { InlineMath } from "react-katex";
+import "katex/dist/katex.min.css";
 
 function AskAIButtonIntegral({
   func,
   lowerBound,
   upperBound,
   canAskAI,
+  displayFunc,
   onAIResponseComplete,
 }: {
   func: string;
   lowerBound: number;
   upperBound: number;
   canAskAI: boolean;
+  displayFunc: any;
   onAIResponseComplete: () => void;
 }) 
 {
@@ -83,7 +87,10 @@ function AskAIButtonIntegral({
             <div className="flex justify-between items-center mb-2 border-b-2 border-solid gap-2">
               {canAskAI ? (
                 <button onClick={handleAskAI} className="cursor-pointer pb-1">
-                  <h3 className="font-semibold">{`Ask AI About: ${func}`}</h3>
+                  <h3 className="font-semibold">
+                    Ask AI About:&nbsp;
+                  <InlineMath math={displayFunc} renderError={() => <span>{func}</span>}/>
+                  </h3>
                 </button>
               ) : (
                 <button

@@ -25,6 +25,8 @@ ENV PORT=3000
 
 EXPOSE 3000
 
+RUN npx prisma generate
+
 RUN npm run build \
     && npm prune --omit=dev
 

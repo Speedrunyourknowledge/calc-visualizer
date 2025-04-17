@@ -225,8 +225,10 @@ useLayoutEffect(() => {
       "sliders": [{
         "active": 0,
         "currentvalue": {
-          "prefix": "n = "
+          "prefix": "n = ",
+          "font":{'size':14}
         },
+        "bordercolor":'#949fb3',
         "pad": {
           "t": 30
         },
