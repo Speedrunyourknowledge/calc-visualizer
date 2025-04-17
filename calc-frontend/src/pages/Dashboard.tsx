@@ -23,6 +23,8 @@ function Dashboard()
 
     const navigate = useNavigate()
 
+    const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3000'
+
     useEffect(() => {
       // user is not logged in
       if(!isPending && !session){
@@ -46,7 +48,7 @@ function Dashboard()
     const getFuncs = async () => {
         const userId = session.user.id;
         try {
-          const response = await axios.get(`http://localhost:3000/func/all/${userId}`);
+          const response = await axios.get(serverUrl + `/func/all/${userId}`);
           setUserFunctions(response.data);
         } catch (error) {
           console.error("get function error: ", error);
