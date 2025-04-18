@@ -1,0 +1,3530 @@
+{
+  "data": [
+    {
+      "mode": "lines",
+      "name": "Function",
+      "x": {
+        "dtype": "f8",
+        "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+      },
+      "y": {
+        "dtype": "f8",
+        "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+      },
+      "type": "scatter"
+    },
+    {
+      "mode": "lines",
+      "name": "Tangent",
+      "x": {
+        "dtype": "f8",
+        "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+      },
+      "y": {
+        "dtype": "f8",
+        "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+      },
+      "type": "scatter"
+    },
+    {
+      "marker": {
+        "color": "green",
+        "size": 12
+      },
+      "mode": "markers",
+      "name": "Point",
+      "x": [
+        0
+      ],
+      "y": [
+        0
+      ],
+      "type": "scatter"
+    }
+  ],
+  "layout": {
+    "template": {
+      "data": {
+        "histogram2dcontour": [
+          {
+            "type": "histogram2dcontour",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "choropleth": [
+          {
+            "type": "choropleth",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "histogram2d": [
+          {
+            "type": "histogram2d",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "heatmap": [
+          {
+            "type": "heatmap",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "contourcarpet": [
+          {
+            "type": "contourcarpet",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "contour": [
+          {
+            "type": "contour",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "surface": [
+          {
+            "type": "surface",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            },
+            "colorscale": [
+              [
+                0.0,
+                "#0d0887"
+              ],
+              [
+                0.1111111111111111,
+                "#46039f"
+              ],
+              [
+                0.2222222222222222,
+                "#7201a8"
+              ],
+              [
+                0.3333333333333333,
+                "#9c179e"
+              ],
+              [
+                0.4444444444444444,
+                "#bd3786"
+              ],
+              [
+                0.5555555555555556,
+                "#d8576b"
+              ],
+              [
+                0.6666666666666666,
+                "#ed7953"
+              ],
+              [
+                0.7777777777777778,
+                "#fb9f3a"
+              ],
+              [
+                0.8888888888888888,
+                "#fdca26"
+              ],
+              [
+                1.0,
+                "#f0f921"
+              ]
+            ]
+          }
+        ],
+        "mesh3d": [
+          {
+            "type": "mesh3d",
+            "colorbar": {
+              "outlinewidth": 0,
+              "ticks": ""
+            }
+          }
+        ],
+        "scatter": [
+          {
+            "fillpattern": {
+              "fillmode": "overlay",
+              "size": 10,
+              "solidity": 0.2
+            },
+            "type": "scatter"
+          }
+        ],
+        "parcoords": [
+          {
+            "type": "parcoords",
+            "line": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterpolargl": [
+          {
+            "type": "scatterpolargl",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "bar": [
+          {
+            "error_x": {
+              "color": "#2a3f5f"
+            },
+            "error_y": {
+              "color": "#2a3f5f"
+            },
+            "marker": {
+              "line": {
+                "color": "#E5ECF6",
+                "width": 0.5
+              },
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "bar"
+          }
+        ],
+        "scattergeo": [
+          {
+            "type": "scattergeo",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterpolar": [
+          {
+            "type": "scatterpolar",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "histogram": [
+          {
+            "marker": {
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "histogram"
+          }
+        ],
+        "scattergl": [
+          {
+            "type": "scattergl",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatter3d": [
+          {
+            "type": "scatter3d",
+            "line": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            },
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scattermap": [
+          {
+            "type": "scattermap",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scattermapbox": [
+          {
+            "type": "scattermapbox",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scatterternary": [
+          {
+            "type": "scatterternary",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "scattercarpet": [
+          {
+            "type": "scattercarpet",
+            "marker": {
+              "colorbar": {
+                "outlinewidth": 0,
+                "ticks": ""
+              }
+            }
+          }
+        ],
+        "carpet": [
+          {
+            "aaxis": {
+              "endlinecolor": "#2a3f5f",
+              "gridcolor": "white",
+              "linecolor": "white",
+              "minorgridcolor": "white",
+              "startlinecolor": "#2a3f5f"
+            },
+            "baxis": {
+              "endlinecolor": "#2a3f5f",
+              "gridcolor": "white",
+              "linecolor": "white",
+              "minorgridcolor": "white",
+              "startlinecolor": "#2a3f5f"
+            },
+            "type": "carpet"
+          }
+        ],
+        "table": [
+          {
+            "cells": {
+              "fill": {
+                "color": "#EBF0F8"
+              },
+              "line": {
+                "color": "white"
+              }
+            },
+            "header": {
+              "fill": {
+                "color": "#C8D4E3"
+              },
+              "line": {
+                "color": "white"
+              }
+            },
+            "type": "table"
+          }
+        ],
+        "barpolar": [
+          {
+            "marker": {
+              "line": {
+                "color": "#E5ECF6",
+                "width": 0.5
+              },
+              "pattern": {
+                "fillmode": "overlay",
+                "size": 10,
+                "solidity": 0.2
+              }
+            },
+            "type": "barpolar"
+          }
+        ],
+        "pie": [
+          {
+            "automargin": true,
+            "type": "pie"
+          }
+        ]
+      },
+      "layout": {
+        "autotypenumbers": "strict",
+        "colorway": [
+          "#636efa",
+          "#EF553B",
+          "#00cc96",
+          "#ab63fa",
+          "#FFA15A",
+          "#19d3f3",
+          "#FF6692",
+          "#B6E880",
+          "#FF97FF",
+          "#FECB52"
+        ],
+        "font": {
+          "color": "#2a3f5f"
+        },
+        "hovermode": "closest",
+        "hoverlabel": {
+          "align": "left"
+        },
+        "paper_bgcolor": "white",
+        "plot_bgcolor": "#E5ECF6",
+        "polar": {
+          "bgcolor": "#E5ECF6",
+          "angularaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "radialaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          }
+        },
+        "ternary": {
+          "bgcolor": "#E5ECF6",
+          "aaxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "baxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          },
+          "caxis": {
+            "gridcolor": "white",
+            "linecolor": "white",
+            "ticks": ""
+          }
+        },
+        "coloraxis": {
+          "colorbar": {
+            "outlinewidth": 0,
+            "ticks": ""
+          }
+        },
+        "colorscale": {
+          "sequential": [
+            [
+              0.0,
+              "#0d0887"
+            ],
+            [
+              0.1111111111111111,
+              "#46039f"
+            ],
+            [
+              0.2222222222222222,
+              "#7201a8"
+            ],
+            [
+              0.3333333333333333,
+              "#9c179e"
+            ],
+            [
+              0.4444444444444444,
+              "#bd3786"
+            ],
+            [
+              0.5555555555555556,
+              "#d8576b"
+            ],
+            [
+              0.6666666666666666,
+              "#ed7953"
+            ],
+            [
+              0.7777777777777778,
+              "#fb9f3a"
+            ],
+            [
+              0.8888888888888888,
+              "#fdca26"
+            ],
+            [
+              1.0,
+              "#f0f921"
+            ]
+          ],
+          "sequentialminus": [
+            [
+              0.0,
+              "#0d0887"
+            ],
+            [
+              0.1111111111111111,
+              "#46039f"
+            ],
+            [
+              0.2222222222222222,
+              "#7201a8"
+            ],
+            [
+              0.3333333333333333,
+              "#9c179e"
+            ],
+            [
+              0.4444444444444444,
+              "#bd3786"
+            ],
+            [
+              0.5555555555555556,
+              "#d8576b"
+            ],
+            [
+              0.6666666666666666,
+              "#ed7953"
+            ],
+            [
+              0.7777777777777778,
+              "#fb9f3a"
+            ],
+            [
+              0.8888888888888888,
+              "#fdca26"
+            ],
+            [
+              1.0,
+              "#f0f921"
+            ]
+          ],
+          "diverging": [
+            [
+              0,
+              "#8e0152"
+            ],
+            [
+              0.1,
+              "#c51b7d"
+            ],
+            [
+              0.2,
+              "#de77ae"
+            ],
+            [
+              0.3,
+              "#f1b6da"
+            ],
+            [
+              0.4,
+              "#fde0ef"
+            ],
+            [
+              0.5,
+              "#f7f7f7"
+            ],
+            [
+              0.6,
+              "#e6f5d0"
+            ],
+            [
+              0.7,
+              "#b8e186"
+            ],
+            [
+              0.8,
+              "#7fbc41"
+            ],
+            [
+              0.9,
+              "#4d9221"
+            ],
+            [
+              1,
+              "#276419"
+            ]
+          ]
+        },
+        "xaxis": {
+          "gridcolor": "white",
+          "linecolor": "white",
+          "ticks": "",
+          "title": {
+            "standoff": 15
+          },
+          "zerolinecolor": "white",
+          "automargin": true,
+          "zerolinewidth": 2
+        },
+        "yaxis": {
+          "gridcolor": "white",
+          "linecolor": "white",
+          "ticks": "",
+          "title": {
+            "standoff": 15
+          },
+          "zerolinecolor": "white",
+          "automargin": true,
+          "zerolinewidth": 2
+        },
+        "scene": {
+          "xaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          },
+          "yaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          },
+          "zaxis": {
+            "backgroundcolor": "#E5ECF6",
+            "gridcolor": "white",
+            "linecolor": "white",
+            "showbackground": true,
+            "ticks": "",
+            "zerolinecolor": "white",
+            "gridwidth": 2
+          }
+        },
+        "shapedefaults": {
+          "line": {
+            "color": "#2a3f5f"
+          }
+        },
+        "annotationdefaults": {
+          "arrowcolor": "#2a3f5f",
+          "arrowhead": 0,
+          "arrowwidth": 1
+        },
+        "geo": {
+          "bgcolor": "white",
+          "landcolor": "#E5ECF6",
+          "subunitcolor": "white",
+          "showland": true,
+          "showlakes": true,
+          "lakecolor": "white"
+        },
+        "title": {
+          "x": 0.05
+        },
+        "mapbox": {
+          "style": "light"
+        }
+      }
+    },
+    "title": {
+      "text": "Slope Value = 1.0000",
+      "font": {
+        "size": 16
+      }
+    },
+    "xaxis": {
+      "title": {
+        "text": "x-axis"
+      },
+      "range": [
+        0,
+        5
+      ],
+      "fixedrange": true
+    },
+    "yaxis": {
+      "title": {
+        "text": "y-axis"
+      },
+      "range": [
+        0.0,
+        5.0
+      ],
+      "fixedrange": true
+    },
+    "margin": {
+      "t": 50,
+      "r": 0,
+      "l": 60
+    },
+    "sliders": [
+      {
+        "active": 0,
+        "bordercolor": "#949fb3",
+        "len": 1.0,
+        "pad": {
+          "b": 10,
+          "t": 10
+        },
+        "steps": [
+          {
+            "args": [
+              [
+                "0.0"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "0.1"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "0.2"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "0.30000000000000004"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "0.4"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "0.5"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "0.6000000000000001"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "0.7000000000000001"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "0.8"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "0.9"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "1.0"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "1.1"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "1.2000000000000002"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "1.3"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "1.4000000000000001"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "1.5"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "1.6"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "1.7000000000000002"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "1.8"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "1.9000000000000001"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "2.0"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "2.1"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "2.2"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "2.3000000000000003"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "2.4000000000000004"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "2.5"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "2.6"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "2.7"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "2.8000000000000003"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "2.9000000000000004"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "3.0"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "3.1"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "3.2"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "3.3000000000000003"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "3.4000000000000004"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "3.5"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "3.6"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "3.7"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "3.8000000000000003"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "3.9000000000000004"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "4.0"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "4.1000000000000005"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "4.2"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "4.3"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "4.4"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "4.5"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "4.6000000000000005"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "4.7"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "4.800000000000001"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "4.9"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          },
+          {
+            "args": [
+              [
+                "5.0"
+              ],
+              {
+                "mode": "immediate",
+                "frame": {
+                  "duration": 0,
+                  "redraw": true
+                }
+              }
+            ],
+            "label": "",
+            "method": "animate"
+          }
+        ],
+        "tickcolor": "rgba(0,0,0,0)",
+        "ticklen": 0,
+        "y": -0.05
+      }
+    ],
+    "uirevision": "static",
+    "showlegend": false,
+    "hovermode": false
+  },
+  "frames": [
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            0.0
+          ],
+          "y": [
+            0.0
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "0.0"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAADUJT2amZmZmZm5PyWUmZmZmck/vy0zMzMz0z9qkZmZmZnZPxb1/////98/YiwzMzMz4z83XmZmZmbmPw2QmZmZmek/48HMzMzM7D+48//////vP8eSmZmZmfE/syszMzMz8z+dxMzMzMz0P4ldZmZmZvY/c/b/////9z9ej5mZmZn5P0ooMzMzM/s/NMHMzMzM/D8fWmZmZmb+Pwrz//////8/+sXMzMzMAEBwkpmZmZkBQOZeZmZmZgJAXCszMzMzA0DQ9/////8DQEbEzMzMzARAvJCZmZmZBUAxXWZmZmYGQKcpMzMzMwdAHPb/////B0CRwszMzMwIQAePmZmZmQlAfVtmZmZmCkDyJzMzMzMLQGf0/////wtA3cDMzMzMDEBSjZmZmZkNQMhZZmZmZg5APiYzMzMzD0Cy8v////8PQJVfZmZmZhBAz8XMzMzMEEAJLDMzMzMRQEWSmZmZmRFAf/j/////EUC6XmZmZmYSQPXEzMzMzBJAMCszMzMzE0BqkZmZmZkTQKX3/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            0.1
+          ],
+          "y": [
+            0.1
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "0.1"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAmTL10fZmZmZm5P5qZmZmZmck/PjozMzMz0z+tp5mZmZnZP44KAAAAAOA/R0EzMzMz4z/+d2ZmZmbmP7iumZmZmek/buXMzMzM7D8TDgAAAADwP3CpmZmZmfE/zEQzMzMz8z8n4MzMzMz0P4R7ZmZmZvY/3xYAAAAA+D88spmZmZn5P5hNMzMzM/s/8+jMzMzM/D9QhGZmZmb+P9YPAAAAAABAhN3MzMzMAEAyq5mZmZkBQOB4ZmZmZgJAjkYzMzMzA0A8FAAAAAAEQOrhzMzMzARAmK+ZmZmZBUBGfWZmZmYGQPRKMzMzMwdAohgAAAAACEBQ5szMzMwIQP6zmZmZmQlArIFmZmZmCkBaTzMzMzMLQAgdAAAAAAxAturMzMzMDEBkuJmZmZkNQBKGZmZmZg5AwFMzMzMzD0C3EAAAAAAQQI53ZmZmZhBAZd7MzMzMEEA8RTMzMzMRQBOsmZmZmRFA6hIAAAAAEkDBeWZmZmYSQJjgzMzMzBJAcEczMzMzE0BGrpmZmZkTQB0VAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            0.2
+          ],
+          "y": [
+            0.2
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "0.2"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAdVb1OYZmZmZm5P4eLmZmZmck/NDMzMzMz0z+koJmZmZnZPwoHAAAAAOA/wj0zMzMz4z96dGZmZmbmPzKrmZmZmek/6uHMzMzM7D9RDAAAAADwP62nmZmZmfE/CkMzMzMz8z9l3szMzMz0P8F5ZmZmZvY/HRUAAAAA+D95sJmZmZn5P9ZLMzMzM/s/MefMzMzM/D+NgmZmZmb+P/QOAAAAAABAotzMzMzMAEBRqpmZmZkBQP53ZmZmZgJArkUzMzMzA0BaEwAAAAAEQAjhzMzMzARAuK6ZmZmZBUBkfGZmZmYGQBRKMzMzMwdAwBcAAAAACEBu5czMzMwIQB6zmZmZmQlAyoBmZmZmCkB6TjMzMzMLQCYcAAAAAAxA1OnMzMzMDECEt5mZmZkNQDCFZmZmZg5A4FIzMzMzD0BGEAAAAAAQQB53ZmZmZhBA9d3MzMzMEEDLRDMzMzMRQKOrmZmZmRFAeRIAAAAAEkBReWZmZmYSQCfgzMzMzBJA/0YzMzMzE0DWrZmZmZkTQKwUAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            0.30000000000000004
+          ],
+          "y": [
+            0.30000000000000004
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "0.30000000000000004"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAmXL0kRZmZmZm5P3R9mZmZmck/KiwzMzMz0z+amZmZmZnZP4UDAAAAAOA/PjozMzMz4z/2cGZmZmbmP62nmZmZmek/Zd7MzMzM7D+OCgAAAADwP+ulmZmZmfE/R0EzMzMz8z+i3MzMzMz0P/53ZmZmZvY/WhMAAAAA+D+4rpmZmZn5PxRKMzMzM/s/buXMzMzM/D/KgGZmZmb+PxMOAAAAAABAwtvMzMzMAEBwqZmZmZkBQB53ZmZmZgJAzEQzMzMzA0B5EgAAAAAEQCfgzMzMzARA1q2ZmZmZBUCEe2ZmZmYGQDJJMzMzMwdA3xYAAAAACECN5MzMzMwIQDyymZmZmQlA6n9mZmZmCkCYTTMzMzMLQEUbAAAAAAxA8+jMzMzMDECitpmZmZkNQFCEZmZmZg5A/lEzMzMzD0DWDwAAAAAQQK12ZmZmZhBAhN3MzMzMEEBbRDMzMzMRQDKrmZmZmRFACRIAAAAAEkDgeGZmZmYSQLffzMzMzBJAjkYzMzMzE0BlrZmZmZkTQDwUAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            0.4
+          ],
+          "y": [
+            0.4
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "0.4"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAIA8bz2AYZqZmZm5P5LkmZmZmck/MUwzMzMz0z8YppmZmZnZPwAAAAAAAOA/9SwzMzMz4z/oWWZmZmbmP9yGmZmZmek/0LPMzMzM7D/E4P/////vP9yGmZmZmfE/Vh0zMzMz8z/Qs8zMzMz0P0pKZmZmZvY/xOD/////9z8+d5mZmZn5P7gNMzMzM/s/MqTMzMzM/D+sOmZmZmb+PyXR//////8/0LPMzMzMAEANf5mZmZkBQEpKZmZmZgJAiBUzMzMzA0DE4P////8DQAGszMzMzARAPneZmZmZBUB7QmZmZmYGQLgNMzMzMwdA9Nj/////B0AypMzMzMwIQG9vmZmZmQlArDpmZmZmCkDpBTMzMzMLQCXR/////wtAYpzMzMzMDECgZ5mZmZkNQN0yZmZmZg5AGv4yMzMzD0BWyf////8PQEpKZmZmZhBA6K/MzMzMEECGFTMzMzMRQCZ7mZmZmRFAxOD/////EUBjRmZmZmYSQAGszMzMzBJAoBEzMzMzE0A+d5mZmZkTQNzc/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            0.5
+          ],
+          "y": [
+            0.5
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "0.5"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAFiD0cGpyZmZm5P86ZmpmZmck/SJMzMzMz0z+n2ZmZmZnZPwMQAAAAAOA/NDMzMzMz4z9kVmZmZmbmP5R5mZmZmek/w5zMzMzM7D/zv//////vP5JxmZmZmfE/KgMzMzMz8z/ClMzMzMz0P1omZmZmZvY/8bf/////9z+KSZmZmZn5PyLbMjMzM/s/uWzMzMzM/D9S/mVmZmb+P+mP//////8/wJDMzMzMAECNWZmZmZkBQFkiZmZmZgJAJesyMzMzA0Dws/////8DQLx8zMzMzARAiUWZmZmZBUBVDmZmZmYGQCHXMjMzMwdA7J//////B0C4aMzMzMwIQIUxmZmZmQlAUfplZmZmCkAdwzIzMzMLQOiL/////wtAtFTMzMzMDECAHZmZmZkNQE3mZWZmZg5AGa8yMzMzD0Dkd/////8PQFggZmZmZhBAvoTMzMzMEEAk6TIzMzMRQIpNmZmZmRFA8LH/////EUBWFmZmZmYSQLx6zMzMzBJAJN8yMzMzE0CIQ5mZmZkTQO6n/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            0.6000000000000001
+          ],
+          "y": [
+            0.6000000000000001
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "0.6000000000000001"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAMAFjD04mpyZmZm5P97ZmpmZmck/TrMzMzMz0z+u+ZmZmZnZPwYgAAAAAOA/N0MzMzMz4z9nZmZmZmbmP5eJmZmZmek/xqzMzMzM7D/2z//////vP5R5mZmZmfE/LAszMzMz8z/DnMzMzMz0P1wuZmZmZvY/87//////9z+LUZmZmZn5PyPjMjMzM/s/vHTMzMzM/D9UBmZmZmb+P+qX//////8/wZTMzMzMAECNXZmZmZkBQFomZmZmZgJAJu8yMzMzA0Dxt/////8DQL2AzMzMzARAiUmZmZmZBUBWEmZmZmYGQCLbMjMzMwdA7aP/////B0C5bMzMzMwIQIU1mZmZmQlAUv5lZmZmCkAexzIzMzMLQOmP/////wtAtVjMzMzMDECBIZmZmZkNQE3qZWZmZg5AGrMyMzMzD0Dle/////8PQFkiZmZmZhBAvobMzMzMEEAk6zIzMzMRQIpPmZmZmRFA8LP/////EUBXGGZmZmYSQLx8zMzMzBJAI+EyMzMzE0CJRZmZmZkTQO6p/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            0.7000000000000001
+          ],
+          "y": [
+            0.7000000000000001
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "0.7000000000000001"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAEADkD1QGp2ZmZm5P+gZm5mZmck/VdMzMzMz0z+0GZqZmZnZPwowAAAAAOA/OlMzMzMz4z9qdmZmZmbmP5qZmZmZmek/yrzMzMzM7D/63//////vP5WBmZmZmfE/LhMzMzMz8z/FpMzMzMz0P102ZmZmZvY/9Mf/////9z+NWZmZmZn5PyXrMjMzM/s/vHzMzMzM/D9VDmZmZmb+P+yf//////8/wpjMzMzMAECOYZmZmZkBQFoqZmZmZgJAJ/MyMzMzA0Dyu/////8DQL6EzMzMzARAik2ZmZmZBUBWFmZmZmYGQCTfMjMzMwdA7qf/////B0C6cMzMzMwIQIY5mZmZmQlAUgJmZmZmCkAgyzIzMzMLQOqT/////wtAtlzMzMzMDECCJZmZmZkNQE7uZWZmZg5AGrcyMzMzD0Dmf/////8PQFokZmZmZhBAv4jMzMzMEEAl7TIzMzMRQItRmZmZmRFA8bX/////EUBYGmZmZmYSQL1+zMzMzBJAJOMyMzMzE0CJR5mZmZkTQO+r/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            0.8
+          ],
+          "y": [
+            0.8
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "0.8"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAMADkj1omp2ZmZm5P/hZm5mZmck/XPMzMzMz0z+7OZqZmZnZPw1AAAAAAOA/PmMzMzMz4z9uhmZmZmbmP52pmZmZmek/zczMzMzM7D/97//////vP5eJmZmZmfE/LxszMzMz8z/GrMzMzMz0P18+ZmZmZvY/9s//////9z+OYZmZmZn5PyfzMjMzM/s/voTMzMzM/D9WFmZmZmb+P+6n//////8/w5zMzMzMAECQZZmZmZkBQFwuZmZmZgJAKPcyMzMzA0Dzv/////8DQL+IzMzMzARAi1GZmZmZBUBYGmZmZmYGQCTjMjMzMwdA76v/////B0C7dMzMzMwIQIc9mZmZmQlAUwZmZmZmCkAfzzIzMzMLQOuX/////wtAt2DMzMzMDECDKZmZmZkNQE/yZWZmZg5AG7syMzMzD0Dmg/////8PQFomZmZmZhBAwIrMzMzMEEAl7zIzMzMRQIxTmZmZmRFA8bf/////EUBYHGZmZmYSQL6AzMzMzBJAJOUyMzMzE0CJSZmZmZkTQO+t/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            0.9
+          ],
+          "y": [
+            0.9
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "0.9"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAACYcb1AnJiZmZm5PwApmZmZmck/8AEzMzMz0z9gb5mZmZnZP9Dc/////98/ISUzMzMz4z/YW2ZmZmbmP5CSmZmZmek/SMnMzMzM7D8AAAAAAADwP1ybmZmZmfE/uTYzMzMz8z8U0szMzMz0P3BtZmZmZvY/zAgAAAAA+D8opJmZmZn5P4U/MzMzM/s/4NrMzMzM/D88dmZmZmb+P8wIAAAAAABAetbMzMzMAEAopJmZmZkBQNZxZmZmZgJAhT8zMzMzA0AyDQAAAAAEQODazMzMzARAjqiZmZmZBUA8dmZmZmYGQOtDMzMzMwdAmBEAAAAACEBG38zMzMwIQPSsmZmZmQlAo3pmZmZmCkBRSDMzMzMLQP4VAAAAAAxArOPMzMzMDEBasZmZmZkNQAl/ZmZmZg5At0wzMzMzD0AyDQAAAAAQQAp0ZmZmZhBA4NrMzMzMEEC3QTMzMzMRQI6omZmZmRFAZQ8AAAAAEkA8dmZmZmYSQBPdzMzMzBJA60MzMzMzE0DCqpmZmZkTQJgRAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            1.0
+          ],
+          "y": [
+            1.0
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "1.0"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAICxn72gZZKZmZm5P8xblpmZmck/aMIxMzMz0z/mVpiZmZnZP2br/v///98/9L8yMzMz4z80CmZmZmbmP3RUmZmZmek/tJ7MzMzM7D/z6P/////vP5qZmZmZmfE/uj4zMzMz8z/a48zMzMz0P/qIZmZmZvY/Gi4AAAAA+D8605mZmZn5P1p4MzMzM/s/eh3NzMzM/D+awmZmZmb+P90zAAAAAABAbQbNzMzMAED92JmZmZkBQI6rZmZmZgJAHn4zMzMzA0CtUAAAAAAEQD0jzczMzARAzfWZmZmZBUBeyGZmZmYGQO6aMzMzMwdAfW0AAAAACEANQM3MzMwIQJ0SmpmZmQlALeVmZmZmCkC+tzMzMzMLQE2KAAAAAAxA3VzNzMzMDEBtL5qZmZkNQP0BZ2ZmZg5AjtQzMzMzD0COUwAAAAAQQNe8ZmZmZhBAHibNzMzMEEBmjzMzMzMRQK/4mZmZmRFA9mEAAAAAEkA/y2ZmZmYSQIY0zczMzBJAz50zMzMzE0AXB5qZmZkTQF5wAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            1.1
+          ],
+          "y": [
+            1.1
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "1.1"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAKBJob1ArZGZmZm5P5j/lZmZmck/TpQxMzMz0z/OKJiZmZnZP0y9/v///98/56gyMzMz4z8n82VmZmbmP2c9mZmZmek/pofMzMzM7D/m0f/////vPxSOmZmZmfE/NDMzMzMz8z9T2MzMzMz0P3R9ZmZmZvY/kyIAAAAA+D+0x5mZmZn5P9RsMzMzM/s/9BHNzMzM/D8Ut2ZmZmb+PxouAAAAAABAqgDNzMzMAEA605mZmZkBQMqlZmZmZgJAWngzMzMzA0DqSgAAAAAEQHodzczMzARACvCZmZmZBUCawmZmZmYGQCqVMzMzMwdAumcAAAAACEBKOs3MzMwIQNoMmpmZmQlAat9mZmZmCkD6sTMzMzMLQIqEAAAAAAxAGlfNzMzMDECqKZqZmZkNQDr8ZmZmZg5Ays4zMzMzD0CtUAAAAAAQQPa5ZmZmZhBAPSPNzMzMEECEjDMzMzMRQM31mZmZmRFAFV8AAAAAEkBeyGZmZmYSQKUxzczMzBJA7pozMzMzE0A1BJqZmZkTQH1tAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            1.2000000000000002
+          ],
+          "y": [
+            1.2000000000000002
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "1.2000000000000002"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAGC6or3Q9JCZmZm5P2ijlZmZmck/NGYxMzMz0z+0+peZmZnZPzSP/v///98/2pEyMzMz4z8a3GVmZmbmP1ommZmZmek/mnDMzMzM7D/auv/////vP42CmZmZmfE/riczMzMz8z/NzMzMzMz0P+1xZmZmZvY/DRcAAAAA+D8tvJmZmZn5P05hMzMzM/s/bQbNzMzM/D+Oq2ZmZmb+P1YoAAAAAABA5vrMzMzMAEB3zZmZmZkBQAegZmZmZgJAl3IzMzMzA0AmRQAAAAAEQLYXzczMzARAR+qZmZmZBUDXvGZmZmYGQGePMzMzMwdA9mEAAAAACECGNM3MzMwIQBcHmpmZmQlAptlmZmZmCkA4rDMzMzMLQMZ+AAAAAAxAVlHNzMzMDEDoI5qZmZkNQHb2ZmZmZg5ACMkzMzMzD0DLTQAAAAAQQBS3ZmZmZhBAXCDNzMzMEECjiTMzMzMRQOzymZmZmRFAM1wAAAAAEkB8xWZmZmYSQMQuzczMzBJADJgzMzMzE0BUAZqZmZkTQJtqAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            1.3
+          ],
+          "y": [
+            1.3
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "1.3"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAEArpL1wPJCZmZm5PzBHlZmZmck/HDgxMzMz0z+czJeZmZnZPxph/v///98/znoyMzMz4z8NxWVmZmbmP00PmZmZmek/jVnMzMzM7D/No//////vPwd3mZmZmfE/JxwzMzMz8z9HwczMzMz0P2dmZmZmZvY/hgsAAAAA+D+nsJmZmZn5P8dVMzMzM/s/5vrMzMzM/D8HoGZmZmb+P5MiAAAAAABAJPXMzMzMAEC0x5mZmZkBQESaZmZmZgJA1GwzMzMzA0BjPwAAAAAEQPQRzczMzARAhOSZmZmZBUAUt2ZmZmYGQKSJMzMzMwdAM1wAAAAACEDELs3MzMwIQFQBmpmZmQlA5NNmZmZmCkB0pjMzMzMLQAJ5AAAAAAxAlEvNzMzMDEAkHpqZmZkNQLTwZmZmZg5ARMMzMzMzD0DpSgAAAAAQQDK0ZmZmZhBAeh3NzMzMEEDBhjMzMzMRQArwmZmZmRFAUVkAAAAAEkCawmZmZmYSQOIrzczMzBJAKpUzMzMzE0By/pmZmZkTQLlnAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            1.4000000000000001
+          ],
+          "y": [
+            1.4000000000000001
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "1.4000000000000001"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAACcpb0AhI+ZmZm5PwDrlJmZmck/AAoxMzMz0z+AnpeZmZnZPwAz/v///98/wWMyMzMz4z8BrmVmZmbmP0D4mJmZmek/gELMzMzM7D/AjP/////vP4BrmZmZmfE/oRAzMzMz8z/AtczMzMz0P+FaZmZmZvY/AAAAAAAA+D8gpZmZmZn5P0FKMzMzM/s/YO/MzMzM/D+AlGZmZmb+P9AcAAAAAABAYO/MzMzMAEDwwZmZmZkBQICUZmZmZgJAEWczMzMzA0CgOQAAAAAEQDAMzczMzARAwN6ZmZmZBUBQsWZmZmYGQOGDMzMzMwdAcFYAAAAACEAAKc3MzMwIQJD7mZmZmQlAIM5mZmZmCkCxoDMzMzMLQEBzAAAAAAxA0EXNzMzMDEBgGJqZmZkNQPHqZmZmZg5Agb0zMzMzD0AISAAAAAAQQFCxZmZmZhBAmBrNzMzMEEDggzMzMzMRQCjtmZmZmRFAcFYAAAAAEkC4v2ZmZmYSQAApzczMzBJASZIzMzMzE0CQ+5mZmZkTQNhkAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            1.5
+          ],
+          "y": [
+            1.5
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "1.5"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAMAMp72gy46ZmZm5P8iOlJmZmck/6NswMzMz0z9kcJeZmZnZP+gE/v///98/tEwyMzMz4z/0lmVmZmbmPzThmJmZmek/cyvMzMzM7D+zdf/////vP/pfmZmZmfE/GgUzMzMz8z86qszMzMz0P1pPZmZmZvY/evT/////9z+amZmZmZn5P7o+MzMzM/s/2uPMzMzM/D/6iGZmZmb+Pw0XAAAAAABAnenMzMzMAEAtvJmZmZkBQL6OZmZmZgJATmEzMzMzA0DdMwAAAAAEQG0GzczMzARA/diZmZmZBUCOq2ZmZmYGQB5+MzMzMwdArVAAAAAACEA9I83MzMwIQM31mZmZmQlAXshmZmZmCkDumjMzMzMLQH1tAAAAAAxADUDNzMzMDECdEpqZmZkNQC3lZmZmZg5AvrczMzMzD0AmRQAAAAAQQG+uZmZmZhBAthfNzMzMEED+gDMzMzMRQEfqmZmZmRFAjlMAAAAAEkDXvGZmZmYSQB4mzczMzBJAZ48zMzMzE0Cv+JmZmZkTQPZhAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            1.6
+          ],
+          "y": [
+            1.6
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "1.6"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAKB9qL1AE46ZmZm5P5gylJmZmck/zK0wMzMz0z9MQpeZmZnZP8zW/f///98/qDUyMzMz4z/of2VmZmbmPyfKmJmZmek/ZxTMzMzM7D+mXv/////vP3RUmZmZmfE/lPkyMzMz8z+0nszMzMz0P9RDZmZmZvY/8+j/////9z8UjpmZmZn5PzQzMzMzM/s/U9jMzMzM/D90fWZmZmb+P0oRAAAAAABA2uPMzMzMAEBqtpmZmZkBQPqIZmZmZgJAilszMzMzA0AaLgAAAAAEQKoAzczMzARAOtOZmZmZBUDKpWZmZmYGQFp4MzMzMwdA6koAAAAACEB6Hc3MzMwIQArwmZmZmQlAmsJmZmZmCkAqlTMzMzMLQLpnAAAAAAxASjrNzMzMDEDaDJqZmZkNQGrfZmZmZg5A+rEzMzMzD0BFQgAAAAAQQI6rZmZmZhBA1RTNzMzMEEAcfjMzMzMRQGXnmZmZmRFArVAAAAAAEkD2uWZmZmYSQD0jzczMzBJAhowzMzMzE0DN9ZmZmZkTQBVfAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            1.7000000000000002
+          ],
+          "y": [
+            1.7000000000000002
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "1.7000000000000002"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAGDuqb3QWo2ZmZm5P2jWk5mZmck/tH8wMzMz0z80FJeZmZnZP7So/f///98/mh4yMzMz4z/aaGVmZmbmPxqzmJmZmek/Wv3LzMzM7D+aR//////vP+1ImZmZmfE/Du4yMzMz8z8tk8zMzMz0P044ZmZmZvY/bd3/////9z+NgpmZmZn5P64nMzMzM/s/zczMzMzM/D/tcWZmZmb+P4YLAAAAAABAF97MzMzMAECnsJmZmZkBQDeDZmZmZgJAx1UzMzMzA0BWKAAAAAAEQOb6zMzMzARAd82ZmZmZBUAHoGZmZmYGQJdyMzMzMwdAJkUAAAAACEC2F83MzMwIQEfqmZmZmQlA17xmZmZmCkBnjzMzMzMLQPZhAAAAAAxAhjTNzMzMDEAXB5qZmZkNQKbZZmZmZg5AOKwzMzMzD0BjPwAAAAAQQKyoZmZmZhBA9BHNzMzMEEA7ezMzMzMRQITkmZmZmRFAy00AAAAAEkAUt2ZmZmYSQFwgzczMzBJApIkzMzMzE0Ds8pmZmZkTQDNcAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            1.8
+          ],
+          "y": [
+            1.8
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "1.8"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAEBfq71wooyZmZm5PzB6k5mZmck/nFEwMzMz0z8c5paZmZnZP5h6/f///98/jgcyMzMz4z/MUWVmZmbmPw6cmJmZmek/TubLzMzM7D+NMP/////vP2c9mZmZmfE/h+IyMzMz8z+mh8zMzMz0P8csZmZmZvY/5tH/////9z8Hd5mZmZn5PyccMzMzM/s/R8HMzMzM/D9nZmZmZmb+P8MFAAAAAABAU9jMzMzMAEDkqpmZmZkBQHR9ZmZmZgJABFAzMzMzA0CTIgAAAAAEQCT1zMzMzARAtMeZmZmZBUBEmmZmZmYGQNRsMzMzMwdAYz8AAAAACED0Ec3MzMwIQITkmZmZmQlAFLdmZmZmCkCkiTMzMzMLQDNcAAAAAAxAxC7NzMzMDEBUAZqZmZkNQOTTZmZmZg5AdKYzMzMzD0CBPAAAAAAQQMqlZmZmZhBAEg/NzMzMEEBZeDMzMzMRQKLhmZmZmRFA6UoAAAAAEkAytGZmZmYSQHodzczMzBJAwoYzMzMzE0AK8JmZmZkTQFFZAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            1.9000000000000001
+          ],
+          "y": [
+            1.9000000000000001
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "1.9000000000000001"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAADQrL0A6ouZmZm5PwAek5mZmck/gCMwMzMz0z8AuJaZmZnZP4BM/f///98/gPAxMzMz4z/COmVmZmbmPwCFmJmZmek/QM/LzMzM7D+AGf/////vP+AxmZmZmfE/AdcyMzMz8z8gfMzMzMz0P0AhZmZmZvY/YMb/////9z+Aa5mZmZn5P6EQMzMzM/s/wLXMzMzM/D/hWmZmZmb+PwAAAAAAAABAkNLMzMzMAEAgpZmZmZkBQLF3ZmZmZgJAQUozMzMzA0DQHAAAAAAEQGDvzMzMzARA8MGZmZmZBUCAlGZmZmYGQBFnMzMzMwdAoDkAAAAACEAwDM3MzMwIQMDemZmZmQlAULFmZmZmCkDhgzMzMzMLQHBWAAAAAAxAACnNzMzMDECQ+5mZmZkNQCDOZmZmZg5AsaAzMzMzD0CgOQAAAAAQQOiiZmZmZhBAMAzNzMzMEEB4dTMzMzMRQMDemZmZmRFACEgAAAAAEkBQsWZmZmYSQJgazczMzBJA4YMzMzMzE0Ao7ZmZmZkTQHBWAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            2.0
+          ],
+          "y": [
+            2.0
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "2.0"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAMBArr2gMYuZmZm5P8jBkpmZmck/aPUvMzMz0z/kiZaZmZnZP2ge/f///98/dNkxMzMz4z+0I2VmZmbmP/RtmJmZmek/MrjLzMzM7D90Av/////vP1ommZmZmfE/essyMzMz8z+acMzMzMz0P7oVZmZmZvY/2rr/////9z/6X5mZmZn5PxoFMzMzM/s/OqrMzMzM/D9aT2ZmZmb+P3r0//////8/zczMzMzMAEBdn5mZmZkBQO1xZmZmZgJAfkQzMzMzA0ANFwAAAAAEQJ3pzMzMzARALbyZmZmZBUC+jmZmZmYGQE5hMzMzMwdA3TMAAAAACEBtBs3MzMwIQP3YmZmZmQlAjqtmZmZmCkAefjMzMzMLQK1QAAAAAAxAPSPNzMzMDEDN9ZmZmZkNQF7IZmZmZg5A7pozMzMzD0C+NgAAAAAQQAegZmZmZhBATgnNzMzMEECWcjMzMzMRQN/bmZmZmRFAJkUAAAAAEkBvrmZmZmYSQLYXzczMzBJA/4AzMzMzE0BH6pmZmZkTQI5TAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            2.1
+          ],
+          "y": [
+            2.1
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "2.1"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAICxr71AeYqZmZm5P6BlkpmZmck/TMcvMzMz0z/MW5aZmZnZP0zw/P///98/aMIxMzMz4z+oDGVmZmbmP+ZWmJmZmek/JqHLzMzM7D9m6/7////vP9QamZmZmfE/9L8yMzMz8z8UZczMzMz0PzQKZmZmZvY/U6//////9z90VJmZmZn5P5T5MjMzM/s/tJ7MzMzM/D/UQ2ZmZmb+P/Po//////8/CsfMzMzMAECamZmZmZkBQCpsZmZmZgJAuj4zMzMzA0BKEQAAAAAEQNrjzMzMzARAaraZmZmZBUD6iGZmZmYGQIpbMzMzMwdAGi4AAAAACECqAM3MzMwIQDrTmZmZmQlAyqVmZmZmCkBaeDMzMzMLQOpKAAAAAAxAeh3NzMzMDEAK8JmZmZkNQJrCZmZmZg5AKpUzMzMzD0DdMwAAAAAQQCadZmZmZhBAbQbNzMzMEEC0bzMzMzMRQP3YmZmZmRFARUIAAAAAEkCOq2ZmZmYSQNUUzczMzBJAHn4zMzMzE0Bl55mZmZkTQK1QAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            2.2
+          ],
+          "y": [
+            2.2
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "2.2"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAECRsL3gwImZmZm5P3AJkpmZmck/OJkvMzMz0z+wLZaZmZnZPzTC/P///98/WqsxMzMz4z+c9WRmZmbmP9o/mJmZmek/GIrLzMzM7D9a1P7////vP00PmZmZmfE/brQyMzMz8z+NWczMzMz0P67+ZWZmZvY/zaP/////9z/tSJmZmZn5Pw7uMjMzM/s/LZPMzMzM/D9OOGZmZmb+P23d//////8/R8HMzMzMAEDXk5mZmZkBQGdmZmZmZgJA9zgzMzMzA0CGCwAAAAAEQBfezMzMzARAp7CZmZmZBUA3g2ZmZmYGQMdVMzMzMwdAVigAAAAACEDm+szMzMwIQHfNmZmZmQlAB6BmZmZmCkCXcjMzMzMLQCZFAAAAAAxAthfNzMzMDEBH6pmZmZkNQNe8ZmZmZg5AZ48zMzMzD0D7MAAAAAAQQESaZmZmZhBAjAPNzMzMEEDTbDMzMzMRQBzWmZmZmRFAYz8AAAAAEkCsqGZmZmYSQPQRzczMzBJAPHszMzMzE0CE5JmZmZkTQMtNAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            2.3000000000000003
+          ],
+          "y": [
+            2.3000000000000003
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "2.3000000000000003"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAKBJsb1gCImZmZm5P0CtkZmZmck/GGsvMzMz0z+Y/5WZmZnZPxiU/P///98/TpQxMzMz4z+O3mRmZmbmP84omJmZmek/DHPLzMzM7D9Mvf7////vP8cDmZmZmfE/56gyMzMz8z8HTszMzMz0PyfzZWZmZvY/Rpj/////9z9nPZmZmZn5P4fiMjMzM/s/pofMzMzM/D/HLGZmZmb+P+bR//////8/g7vMzMzMAEAUjpmZmZkBQKRgZmZmZgJANDMzMzMzA0DDBQAAAAAEQFPYzMzMzARA5KqZmZmZBUB0fWZmZmYGQARQMzMzMwdAkyIAAAAACEAk9czMzMwIQLTHmZmZmQlARJpmZmZmCkDUbDMzMzMLQGM/AAAAAAxA9BHNzMzMDECE5JmZmZkNQBS3ZmZmZg5ApIkzMzMzD0AaLgAAAAAQQGKXZmZmZhBAqgDNzMzMEEDyaTMzMzMRQDrTmZmZmRFAgjwAAAAAEkDKpWZmZmYSQBIPzczMzBJAWngzMzMzE0Ci4ZmZmZkTQOpKAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            2.4000000000000004
+          ],
+          "y": [
+            2.4000000000000004
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "2.4000000000000004"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAAACsr0AUIiZmZm5PwBRkZmZmck/AD0vMzMz0z+A0ZWZmZnZPwBm/P///98/QH0xMzMz4z+Cx2RmZmbmP8ARmJmZmek/AFzLzMzM7D9Apv7////vP0D4mJmZmfE/YZ0yMzMz8z+AQszMzMz0P6HnZWZmZvY/wIz/////9z/gMZmZmZn5PwHXMjMzM/s/IHzMzMzM/D9AIWZmZmb+P2DG//////8/wLXMzMzMAEBQiJmZmZkBQOFaZmZmZgJAcS0zMzMzA0AAAAAAAAAEQJDSzMzMzARAIKWZmZmZBUCxd2ZmZmYGQEFKMzMzMwdA0BwAAAAACEBg78zMzMwIQPDBmZmZmQlAgJRmZmZmCkARZzMzMzMLQKA5AAAAAAxAMAzNzMzMDEDA3pmZmZkNQFCxZmZmZg5A4YMzMzMzD0A4KwAAAAAQQICUZmZmZhBAyP3MzMzMEEAQZzMzMzMRQFjQmZmZmRFAoDkAAAAAEkDoomZmZmYSQDAMzczMzBJAeXUzMzMzE0DA3pmZmZkTQAhIAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            2.5
+          ],
+          "y": [
+            2.5
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "2.5"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAGC6sr2gl4eZmZm5P9D0kJmZmck/6A4vMzMz0z9oo5WZmZnZP+g3/P///98/NGYxMzMz4z90sGRmZmbmP7T6l5mZmek/8kTLzMzM7D80j/7////vP7rsmJmZmfE/2pEyMzMz8z/6NszMzMz0PxrcZWZmZvY/OoH/////9z9aJpmZmZn5P3rLMjMzM/s/mnDMzMzM/D+6FWZmZmb+P9q6//////8//a/MzMzMAECNgpmZmZkBQB1VZmZmZgJAriczMzMzA0A9+v////8DQM3MzMzMzARAXZ+ZmZmZBUDtcWZmZmYGQH5EMzMzMwdADRcAAAAACECd6czMzMwIQC28mZmZmQlAvo5mZmZmCkBOYTMzMzMLQN0zAAAAAAxAbQbNzMzMDED92JmZmZkNQI6rZmZmZg5AHn4zMzMzD0BWKAAAAAAQQJ+RZmZmZhBA5vrMzMzMEEAuZDMzMzMRQHfNmZmZmRFAvjYAAAAAEkAHoGZmZmYSQE4JzczMzBJAl3IzMzMzE0Df25mZmZkTQCZFAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            2.6
+          ],
+          "y": [
+            2.6
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "2.6"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAMBys71A34aZmZm5P6CYkJmZmck/yOAuMzMz0z9IdZWZmZnZP9AJ/P///98/KE8xMzMz4z9omWRmZmbmP6bjl5mZmek/5i3LzMzM7D8meP7////vPzThmJmZmfE/VIYyMzMz8z9zK8zMzMz0P5TQZWZmZvY/s3X/////9z/UGpmZmZn5P/S/MjMzM/s/FGXMzMzM/D80CmZmZmb+P1Ov//////8/OqrMzMzMAEDKfJmZmZkBQFpPZmZmZgJA6iEzMzMzA0B69P////8DQArHzMzMzARAmpmZmZmZBUAqbGZmZmYGQLo+MzMzMwdAShEAAAAACEDa48zMzMwIQGq2mZmZmQlA+ohmZmZmCkCKWzMzMzMLQBouAAAAAAxAqgDNzMzMDEA605mZmZkNQMqlZmZmZg5AWngzMzMzD0B1JQAAAAAQQL6OZmZmZhBABfjMzMzMEEBMYTMzMzMRQJXKmZmZmRFA3TMAAAAAEkAmnWZmZmYSQG0GzczMzBJAtm8zMzMzE0D92JmZmZkTQEVCAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            2.7
+          ],
+          "y": [
+            2.7
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "2.7"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAEArtL3gJoaZmZm5P3A8kJmZmck/uLIuMzMz0z8wR5WZmZnZP7Db+////98/HDgxMzMz4z9cgmRmZmbmP5zMl5mZmek/2BbLzMzM7D8aYf7////vP63VmJmZmfE/znoyMzMz8z/tH8zMzMz0Pw3FZWZmZvY/LWr/////9z9ND5mZmZn5P260MjMzM/s/jVnMzMzM/D+u/mVmZmb+P82j//////8/dqTMzMzMAEAHd5mZmZkBQJdJZmZmZgJAJxwzMzMzA0C27v////8DQEfBzMzMzARA15OZmZmZBUBnZmZmZmYGQPc4MzMzMwdAhgsAAAAACEAX3szMzMwIQKewmZmZmQlAN4NmZmZmCkDHVTMzMzMLQFYoAAAAAAxA5vrMzMzMDEB3zZmZmZkNQAegZmZmZg5Al3IzMzMzD0CTIgAAAAAQQNyLZmZmZhBAJPXMzMzMEEBrXjMzMzMRQLTHmZmZmRFA+zAAAAAAEkBEmmZmZmYSQIwDzczMzBJA1GwzMzMzE0Ac1pmZmZkTQGM/AAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            2.8000000000000003
+          ],
+          "y": [
+            2.8000000000000003
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "2.8000000000000003"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAKDjtL1gboWZmZm5P0Dgj5mZmck/mIQuMzMz0z8YGZWZmZnZP5it+////98/DCExMzMz4z9Qa2RmZmbmP4y1l5mZmek/zP/KzMzM7D8MSv7////vPyfKmJmZmfE/R28yMzMz8z9nFMzMzMz0P4e5ZWZmZvY/pl7/////9z/HA5mZmZn5P+eoMjMzM/s/B07MzMzM/D8n82VmZmb+P0aY//////8/tJ7MzMzMAEBEcZmZmZkBQNRDZmZmZgJAZBYzMzMzA0Dz6P////8DQIO7zMzMzARAFI6ZmZmZBUCkYGZmZmYGQDQzMzMzMwdAwwUAAAAACEBT2MzMzMwIQOSqmZmZmQlAdH1mZmZmCkAEUDMzMzMLQJMiAAAAAAxAJPXMzMzMDEC0x5mZmZkNQESaZmZmZg5A1GwzMzMzD0CyHwAAAAAQQPqIZmZmZhBAQvLMzMzMEECKWzMzMzMRQNLEmZmZmRFAGi4AAAAAEkBil2ZmZmYSQKoAzczMzBJA8mkzMzMzE0A605mZmZkTQII8AAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            2.9000000000000004
+          ],
+          "y": [
+            2.9000000000000004
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "2.9000000000000004"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAACctb0AtoSZmZm5PwCEj5mZmck/gFYuMzMz0z8A65SZmZnZP4B/+////98/AAoxMzMz4z9AVGRmZmbmP4Cel5mZmek/wOjKzMzM7D8AM/7////vP6C+mJmZmfE/wWMyMzMz8z/gCMzMzMz0PwGuZWZmZvY/IFP/////9z9A+JiZmZn5P2GdMjMzM/s/gELMzMzM/D+h52VmZmb+P8CM//////8/8JjMzMzMAECAa5mZmZkBQBA+ZmZmZgJAoRAzMzMzA0Aw4/////8DQMC1zMzMzARAUIiZmZmZBUDhWmZmZmYGQHEtMzMzMwdAAAAAAAAACECQ0szMzMwIQCClmZmZmQlAsXdmZmZmCkBBSjMzMzMLQNAcAAAAAAxAYO/MzMzMDEDwwZmZmZkNQICUZmZmZg5AEWczMzMzD0DQHAAAAAAQQBiGZmZmZhBAYO/MzMzMEECoWDMzMzMRQPDBmZmZmRFAOCsAAAAAEkCAlGZmZmYSQMj9zMzMzBJAEWczMzMzE0BY0JmZmZkTQKA5AAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            3.0
+          ],
+          "y": [
+            3.0
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "3.0"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAGBUtr2g/YOZmZm5P9Anj5mZmck/aCguMzMz0z/ovJSZmZnZP2hR+////98/9PIwMzMz4z80PWRmZmbmP3SHl5mZmek/tNHKzMzM7D/0G/7////vPxqzmJmZmfE/OlgyMzMz8z9a/cvMzMz0P3qiZWZmZvY/mkf/////9z+67JiZmZn5P9qRMjMzM/s/+jbMzMzM/D8a3GVmZmb+PzqB//////8/LZPMzMzMAEC9ZZmZmZkBQE44ZmZmZgJA3gozMzMzA0Bt3f////8DQP2vzMzMzARAjYKZmZmZBUAdVWZmZmYGQK4nMzMzMwdAPfr/////B0DNzMzMzMwIQF2fmZmZmQlA7XFmZmZmCkB+RDMzMzMLQA0XAAAAAAxAnenMzMzMDEAtvJmZmZkNQL6OZmZmZg5ATmEzMzMzD0DuGQAAAAAQQDeDZmZmZhBAfuzMzMzMEEDGVTMzMzMRQA+/mZmZmRFAVigAAAAAEkCfkWZmZmYSQOb6zMzMzBJAL2QzMzMzE0B3zZmZmZkTQL42AAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            3.1
+          ],
+          "y": [
+            3.1
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "3.1"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAMAMt71ARYOZmZm5P6DLjpmZmck/SPotMzMz0z/IjpSZmZnZP1Aj+////98/6NswMzMz4z8oJmRmZmbmP2Rwl5mZmek/pLrKzMzM7D/oBP7////vP5SnmJmZmfE/tEwyMzMz8z/T8cvMzMz0P/SWZWZmZvY/Ezz/////9z804ZiZmZn5P1SGMjMzM/s/cyvMzMzM/D+U0GVmZmb+P7N1//////8/ao3MzMzMAED6X5mZmZkBQIoyZmZmZgJAGgUzMzMzA0Cq1/////8DQDqqzMzMzARAynyZmZmZBUBaT2ZmZmYGQOohMzMzMwdAevT/////B0AKx8zMzMwIQJqZmZmZmQlAKmxmZmZmCkC6PjMzMzMLQEoRAAAAAAxA2uPMzMzMDEBqtpmZmZkNQPqIZmZmZg5AilszMzMzD0ANFwAAAAAQQFWAZmZmZhBAnenMzMzMEEDkUjMzMzMRQC28mZmZmRFAdSUAAAAAEkC+jmZmZmYSQAX4zMzMzBJATmEzMzMzE0CVypmZmZkTQN0zAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            3.2
+          ],
+          "y": [
+            3.2
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "3.2"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAEDFt73gjIKZmZm5P3BvjpmZmck/OMwtMzMz0z+wYJSZmZnZPzD1+v///98/3MQwMzMz4z8cD2RmZmbmP1xZl5mZmek/mKPKzMzM7D/Y7f3////vPw6cmJmZmfE/LkEyMzMz8z9O5svMzMz0P22LZWZmZvY/jTD/////9z+t1ZiZmZn5P856MjMzM/s/7R/MzMzM/D8NxWVmZmb+Py1q//////8/pofMzMzMAEA3WpmZmZkBQMcsZmZmZgJAV/8yMzMzA0Dm0f////8DQHakzMzMzARAB3eZmZmZBUCXSWZmZmYGQCccMzMzMwdAtu7/////B0BHwczMzMwIQNeTmZmZmQlAZ2ZmZmZmCkD3ODMzMzMLQIYLAAAAAAxAF97MzMzMDECnsJmZmZkNQDeDZmZmZg5Ax1UzMzMzD0ArFAAAAAAQQHR9ZmZmZhBAu+bMzMzMEEADUDMzMzMRQEy5mZmZmRFAkyIAAAAAEkDci2ZmZmYSQCT1zMzMzBJAbF4zMzMzE0C0x5mZmZkTQPswAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            3.3000000000000003
+          ],
+          "y": [
+            3.3000000000000003
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "3.3000000000000003"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAKB9uL1g1IGZmZm5P0ATjpmZmck/GJ4tMzMz0z+YMpSZmZnZPxjH+v///98/zK0wMzMz4z8Q+GNmZmbmP0xCl5mZmek/jIzKzMzM7D/M1v3////vP4aQmJmZmfE/qDUyMzMz8z/G2svMzMz0P+h/ZWZmZvY/BiX/////9z8nypiZmZn5P0dvMjMzM/s/ZxTMzMzM/D+HuWVmZmb+P6Ze//////8/5IHMzMzMAEB0VJmZmZkBQAQnZmZmZgJAlPkyMzMzA0AjzP////8DQLSezMzMzARARHGZmZmZBUDUQ2ZmZmYGQGQWMzMzMwdA8+j/////B0CDu8zMzMwIQBSOmZmZmQlApGBmZmZmCkA0MzMzMzMLQMMFAAAAAAxAU9jMzMzMDEDkqpmZmZkNQHR9ZmZmZg5ABFAzMzMzD0BKEQAAAAAQQJJ6ZmZmZhBA2uPMzMzMEEAhTTMzMzMRQGq2mZmZmRFAsh8AAAAAEkD6iGZmZmYSQELyzMzMzBJAilszMzMzE0DSxJmZmZkTQBouAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            3.4000000000000004
+          ],
+          "y": [
+            3.4000000000000004
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "3.4000000000000004"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAAA2ub0AHIGZmZm5PwC3jZmZmck/AHAtMzMz0z+ABJSZmZnZPwCZ+v///98/wJYwMzMz4z8A4WNmZmbmP0Arl5mZmek/gHXKzMzM7D/Av/3////vPwCFmJmZmfE/ICoyMzMz8z9Az8vMzMz0P2J0ZWZmZvY/gBn/////9z+gvpiZmZn5P8FjMjMzM/s/4AjMzMzM/D8BrmVmZmb+PyBT//////8/IHzMzMzMAECwTpmZmZkBQEAhZmZmZgJA0fMyMzMzA0Bgxv////8DQPCYzMzMzARAgGuZmZmZBUAQPmZmZmYGQKEQMzMzMwdAMOP/////B0DAtczMzMwIQFCImZmZmQlA4VpmZmZmCkBxLTMzMzMLQAAAAAAAAAxAkNLMzMzMDEAgpZmZmZkNQLF3ZmZmZg5AQUozMzMzD0BoDgAAAAAQQLF3ZmZmZhBA+ODMzMzMEEBASjMzMzMRQIizmZmZmRFA0BwAAAAAEkAYhmZmZmYSQGDvzMzMzBJAqVgzMzMzE0DwwZmZmZkTQDgrAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            3.5
+          ],
+          "y": [
+            3.5
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "3.5"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAGDuub2gY4CZmZm5P9BajZmZmck/6EEtMzMz0z9o1pOZmZnZP+hq+v///98/tH8wMzMz4z/0yWNmZmbmPzQUl5mZmek/dF7KzMzM7D+0qP3////vP3p5mJmZmfE/mh4yMzMz8z+6w8vMzMz0P9poZWZmZvY/+g3/////9z8as5iZmZn5PzpYMjMzM/s/Wv3LzMzM/D96omVmZmb+P5pH//////8/XXbMzMzMAEDtSJmZmZkBQH4bZmZmZgJADu4yMzMzA0CdwP////8DQC2TzMzMzARAvWWZmZmZBUBOOGZmZmYGQN4KMzMzMwdAbd3/////B0D9r8zMzMwIQI2CmZmZmQlAHVVmZmZmCkCuJzMzMzMLQD36/////wtAzczMzMzMDEBdn5mZmZkNQO1xZmZmZg5AfkQzMzMzD0CGCwAAAAAQQM90ZmZmZhBAF97MzMzMEEBeRzMzMzMRQKewmZmZmRFA7hkAAAAAEkA3g2ZmZmYSQH7szMzMzBJAx1UzMzMzE0APv5mZmZkTQFYoAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            3.6
+          ],
+          "y": [
+            3.6
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "3.6"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAMCmur1Aq3+ZmZm5P6D+jJmZmck/yBMtMzMz0z9IqJOZmZnZP9A8+v///98/qGgwMzMz4z/osmNmZmbmPyT9lpmZmek/ZEfKzMzM7D+okf3////vP/RtmJmZmfE/FBMyMzMz8z8yuMvMzMz0P1RdZWZmZvY/dAL/////9z+Up5iZmZn5P7RMMjMzM/s/0/HLzMzM/D/0lmVmZmb+PxM8//////8/mnDMzMzMAEAqQ5mZmZkBQLoVZmZmZgJASugyMzMzA0Dauv////8DQGqNzMzMzARA+l+ZmZmZBUCKMmZmZmYGQBoFMzMzMwdAqtf/////B0A6qszMzMwIQMp8mZmZmQlAWk9mZmZmCkDqITMzMzMLQHr0/////wtACsfMzMzMDECamZmZmZkNQCpsZmZmZg5Auj4zMzMzD0ClCAAAAAAQQO1xZmZmZhBANdvMzMzMEEB9RDMzMzMRQMWtmZmZmRFADRcAAAAAEkBVgGZmZmYSQJ3pzMzMzBJA5lIzMzMzE0AtvJmZmZkTQHUlAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            3.7
+          ],
+          "y": [
+            3.7
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "3.7"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAEBfu73g8n6ZmZm5P3CijJmZmck/uOUsMzMz0z8wepOZmZnZP7AO+v///98/nFEwMzMz4z/cm2NmZmbmPxzmlpmZmek/WDDKzMzM7D+Yev3////vP25imJmZmfE/jgcyMzMz8z+urMvMzMz0P8xRZWZmZvY/7Pb+////9z8OnJiZmZn5Py5BMjMzM/s/TubLzMzM/D9ti2VmZmb+P40w//////8/1mrMzMzMAEBnPZmZmZkBQPcPZmZmZgJAh+IyMzMzA0AWtf////8DQKaHzMzMzARAN1qZmZmZBUDHLGZmZmYGQFf/MjMzMwdA5tH/////B0B2pMzMzMwIQAd3mZmZmQlAl0lmZmZmCkAnHDMzMzMLQLbu/////wtAR8HMzMzMDEDXk5mZmZkNQGdmZmZmZg5A9zgzMzMzD0DDBQAAAAAQQAxvZmZmZhBAU9jMzMzMEECbQTMzMzMRQOSqmZmZmRFAKxQAAAAAEkB0fWZmZmYSQLvmzMzMzBJABFAzMzMzE0BMuZmZmZkTQJMiAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            3.8000000000000003
+          ],
+          "y": [
+            3.8000000000000003
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "3.8000000000000003"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAKAXvL1gOn6ZmZm5P0BGjJmZmck/mLcsMzMz0z8YTJOZmZnZP5jg+f///98/jDowMzMz4z/QhGNmZmbmPwzPlpmZmek/TBnKzMzM7D+MY/3////vP+ZWmJmZmfE/CPwxMzMz8z8mocvMzMz0P0hGZWZmZvY/Zuv+////9z+GkJiZmZn5P6g1MjMzM/s/xtrLzMzM/D/of2VmZmb+PwYl//////8/FGXMzMzMAECkN5mZmZkBQDQKZmZmZgJAxNwyMzMzA0BTr/////8DQOSBzMzMzARAdFSZmZmZBUAEJ2ZmZmYGQJT5MjMzMwdAI8z/////B0C0nszMzMwIQERxmZmZmQlA1ENmZmZmCkBkFjMzMzMLQPPo/////wtAg7vMzMzMDEAUjpmZmZkNQKRgZmZmZg5ANDMzMzMzD0DiAgAAAAAQQCpsZmZmZhBActXMzMzMEEC5PjMzMzMRQAKomZmZmRFAShEAAAAAEkCSemZmZmYSQNrjzMzMzBJAIk0zMzMzE0BqtpmZmZkTQLIfAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            3.9000000000000004
+          ],
+          "y": [
+            3.9000000000000004
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "3.9000000000000004"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAAg20T0gudyZmZm5PxBNupmZmck/yB5DMzMz0z8IF6mZmZnZP6SHBwAAAOA/xIM6MzMz4z/kf21mZmbmPwB8oJmZmek/JHjTzMzM7D8iOgMAAADwPzK4nJmZmfE/QjY2MzMz8z9QtM/MzMz0P2IyaWZmZvY/crACAAAA+D+CLpyZmZn5P5KsNTMzM/s/oCrPzMzM/D+yqGhmZmb+P2ATAQAAAABAaNLNzMzMAEBxkZqZmZkBQHlQZ2ZmZgJAgQ80MzMzA0CIzgAAAAAEQJCNzczMzARAmEyamZmZBUChC2dmZmYGQKnKMzMzMwdAsIkAAAAACEC4SM3MzMwIQMAHmpmZmQlAycZmZmZmCkDRhTMzMzMLQNhEAAAAAAxA4APNzMzMDEDowpmZmZkNQPGBZmZmZg5A+UAzMzMzD0AAAAAAAAAQQIVfZmZmZhBACL/MzMzMEECMHjMzMzMRQBB+mZmZmRFAlN3/////EUAYPWZmZmYSQJyczMzMzBJAIfwyMzMzE0CkW5mZmZkTQCi7/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            4.0
+          ],
+          "y": [
+            4.0
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "4.0"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAADhV5T2gGUCamZm5P+DE6pmZmck/aL5aMzMz0z9wGsCZmZnZPzi7EgAAAOA/OGlFMzMz4z84F3hmZmbmPzTFqpmZmek/NHPdzMzM7D+cEAgAAADwP5xnoZmZmfE/nL46MzMz8z+aFdTMzMz0P5xsbWZmZvY/msMGAAAA+D+cGqCZmZn5P5xxOTMzM/s/msjSzMzM/D+cH2xmZmb+P027AgAAAABAzmbPzMzMAEBOEpyZmZkBQM69aGZmZgJATmk1MzMzA0DNFAIAAAAEQE7AzszMzARAzmubmZmZBUBOF2hmZmYGQM7CNDMzMwdATW4BAAAACEDNGc7MzMwIQE7FmpmZmQlAznBnZmZmCkBOHDQzMzMLQM3HAAAAAAxATXPNzMzMDEDNHpqZmZkNQE7KZmZmZg5AznUzMzMzD0CmEAAAAAAQQGdmZmZmZhBAJ7zMzMzMEEDmETMzMzMRQKdnmZmZmRFAZr3/////EUAnE2ZmZmYSQOZozMzMzBJAp74yMzMzE0BnFJmZmZkTQCZq/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            4.1000000000000005
+          ],
+          "y": [
+            4.1000000000000005
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "4.1000000000000005"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAGja5T1AQ0SamZm5P7DZ7JmZmck/0MhbMzMz0z/QJMGZmZnZP2xAEwAAAOA/bO5FMzMz4z9snHhmZmbmP2hKq5mZmek/aPjdzMzM7D80UwgAAADwPzaqoZmZmfE/NgE7MzMz8z80WNTMzMz0PzavbWZmZvY/NAYHAAAA+D80XaCZmZn5Pza0OTMzM/s/NAvTzMzM/D82YmxmZmb+P5rcAgAAAABAGojPzMzMAECaM5yZmZkBQBrfaGZmZgJAm4o1MzMzA0AaNgIAAAAEQJrhzszMzARAGo2bmZmZBUCaOGhmZmYGQBrkNDMzMwdAmo8BAAAACEAaO87MzMwIQJrmmpmZmQlAGpJnZmZmCkCaPTQzMzMLQBrpAAAAAAxAmpTNzMzMDEAaQJqZmZkNQJrrZmZmZg5AGpczMzMzD0BNIQAAAAAQQA13ZmZmZhBAzczMzMzMEECNIjMzMzMRQE14mZmZmRFADc7/////EUDNI2ZmZmYSQI15zMzMzBJATs8yMzMzE0ANJZmZmZkTQM16/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            4.2
+          ],
+          "y": [
+            4.2
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "4.2"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAKBf5j3AbEiamZm5P4Du7pmZmck/ONNcMzMz0z84L8KZmZnZP5zFEwAAAOA/oHNGMzMz4z+gIXlmZmbmP5zPq5mZmek/nH3ezMzM7D/OlQgAAADwP87soZmZmfE/0EM7MzMz8z/OmtTMzMz0P9DxbWZmZvY/zkgHAAAA+D/On6CZmZn5P872OTMzM/s/zk3TzMzM/D/QpGxmZmb+P+f9AgAAAABAZ6nPzMzMAEDnVJyZmZkBQGgAaWZmZgJA6Ks1MzMzA0BnVwIAAAAEQOcCz8zMzARAZ66bmZmZBUDoWWhmZmYGQGgFNTMzMwdA5rABAAAACEBnXM7MzMwIQOcHm5mZmQlAZ7NnZmZmCkDoXjQzMzMLQGYKAQAAAAxA57XNzMzMDEBnYZqZmZkNQOcMZ2ZmZg5AZ7gzMzMzD0DzMQAAAAAQQLSHZmZmZhBAc93MzMzMEEAzMzMzMzMRQPSImZmZmRFAs97/////EUB0NGZmZmYSQDOKzMzMzBJA9N8yMzMzE0C0NZmZmZkTQHOL/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            4.3
+          ],
+          "y": [
+            4.3
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "4.3"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAANDk5j2AlkyamZm5P0AD8ZmZmck/oN1dMzMz0z+oOcOZmZnZP9BKFAAAAOA/0PhGMzMz4z/UpnlmZmbmP9BUrJmZmek/0ALfzMzM7D9o2AgAAADwP2gvopmZmfE/aIY7MzMz8z9o3dTMzMz0P2o0bmZmZvY/aIsHAAAA+D9o4qCZmZn5P2g5OjMzM/s/ZpDTzMzM/D9q52xmZmb+PzQfAwAAAABAtMrPzMzMAEA0dpyZmZkBQLQhaWZmZgJANM01MzMzA0C0eAIAAAAEQDQkz8zMzARAtM+bmZmZBUA0e2hmZmYGQLQmNTMzMwdANNIBAAAACEC0fc7MzMwIQDQpm5mZmQlAtNRnZmZmCkA0gDQzMzMLQLQrAQAAAAxANNfNzMzMDEC0gpqZmZkNQDQuZ2ZmZg5AtNkzMzMzD0CaQgAAAAAQQFqYZmZmZhBAGu7MzMzMEEDZQzMzMzMRQJqZmZmZmRFAWu//////EUAaRWZmZmYSQNqazMzMzBJAmvAyMzMzE0BaRpmZmZkTQBqc/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            4.4
+          ],
+          "y": [
+            4.4
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "4.4"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAAhq5z0AwFCamZm5PyAY85mZmck/AOheMzMz0z8QRMSZmZnZPwTQFAAAAOA/BH5HMzMz4z8ELHpmZmbmPwTarJmZmek/BIjfzMzM7D8CGwkAAADwPwJyopmZmfE/Ask7MzMz8z8AINXMzMz0PwR3bmZmZvY/As4HAAAA+D8CJaGZmZn5PwJ8OjMzM/s/ANPTzMzM/D8CKm1mZmb+P4FAAwAAAABAAezPzMzMAECBl5yZmZkBQAFDaWZmZgJAge41MzMzA0AAmgIAAAAEQIBFz8zMzARAAfGbmZmZBUCBnGhmZmYGQAFINTMzMwdAgPMBAAAACEAAn87MzMwIQIBKm5mZmQlAAfZnZmZmCkCBoTQzMzMLQABNAQAAAAxAgPjNzMzMDEAApJqZmZkNQIFPZ2ZmZg5AAfszMzMzD0BAUwAAAAAQQAGpZmZmZhBAwP7MzMzMEECAVDMzMzMRQECqmZmZmRFAAAAAAAAAEkDBVWZmZmYSQICrzMzMzBJAQQEzMzMzE0AAV5mZmZkTQMCs/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            4.5
+          ],
+          "y": [
+            4.5
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "4.5"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAADjv5z3A6VSamZm5P+As9ZmZmck/cPJfMzMz0z9wTsWZmZnZPzhVFQAAAOA/PANIMzMz4z84sXpmZmbmPzRfrZmZmek/OA3gzMzM7D+cXQkAAADwP5y0opmZmfE/nAs8MzMz8z+aYtXMzMz0P5y5bmZmZvY/nBAIAAAA+D+cZ6GZmZn5P5y+OjMzM/s/mhXUzMzM/D+cbG1mZmb+P81hAwAAAABATg3QzMzMAEDOuJyZmZkBQE5kaWZmZgJAzg82MzMzA0BNuwIAAAAEQM5mz8zMzARAThKcmZmZBUDOvWhmZmYGQE5pNTMzMwdAzRQCAAAACEBOwM7MzMwIQM5rm5mZmQlAThdoZmZmCkDOwjQzMzMLQE1uAQAAAAxAzRnOzMzMDEBOxZqZmZkNQM5wZ2ZmZg5AThw0MzMzD0DmYwAAAAAQQKe5ZmZmZhBAZw/NzMzMEEAmZTMzMzMRQOe6mZmZmRFAphAAAAAAEkBnZmZmZmYSQCe8zMzMzBJA5xEzMzMzE0CnZ5mZmZkTQGa9/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            4.6000000000000005
+          ],
+          "y": [
+            4.6000000000000005
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "4.6000000000000005"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAGh06D1AE1mamZm5P8BB95mZmck/0PxgMzMz0z/gWMaZmZnZP2jaFQAAAOA/cIhIMzMz4z9sNntmZmbmP2jkrZmZmek/aJLgzMzM7D82oAkAAADwPzb3opmZmfE/Nk48MzMz8z80pdXMzMz0Pzb8bmZmZvY/NFMIAAAA+D82qqGZmZn5PzYBOzMzM/s/NFjUzMzM/D82r21mZmb+PxqDAwAAAABAmi7QzMzMAEAb2pyZmZkBQJuFaWZmZgJAGzE2MzMzA0Ca3AIAAAAEQBqIz8zMzARAmjOcmZmZBUAa32hmZmYGQJuKNTMzMwdAGjYCAAAACECa4c7MzMwIQBqNm5mZmQlAmjhoZmZmCkAa5DQzMzMLQJqPAQAAAAxAGjvOzMzMDECa5pqZmZkNQBqSZ2ZmZg5Amj00MzMzD0CNdAAAAAAQQE7KZmZmZhBADSDNzMzMEEDNdTMzMzMRQI3LmZmZmRFATSEAAAAAEkANd2ZmZmYSQM3MzMzMzBJAjiIzMzMzE0BNeJmZmZkTQA3O/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            4.7
+          ],
+          "y": [
+            4.7
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "4.7"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAKD56D3APF2amZm5P4BW+ZmZmck/QAdiMzMz0z9AY8eZmZnZP6BfFgAAAOA/mA1JMzMz4z+gu3tmZmbmP5xprpmZmek/nBfhzMzM7D/O4gkAAADwP9A5o5mZmfE/0JA8MzMz8z/O59XMzMz0P9A+b2ZmZvY/zpUIAAAA+D/O7KGZmZn5P9BDOzMzM/s/zprUzMzM/D/Q8W1mZmb+P2ekAwAAAABA50/QzMzMAEBn+5yZmZkBQOimaWZmZgJAaFI2MzMzA0Dn/QIAAAAEQGepz8zMzARA51ScmZmZBUBoAGlmZmYGQOirNTMzMwdAZ1cCAAAACEDnAs/MzMwIQGeum5mZmQlA6FloZmZmCkBoBTUzMzMLQOawAQAAAAxAZ1zOzMzMDEDnB5uZmZkNQGezZ2ZmZg5A6F40MzMzD0AzhQAAAAAQQPTaZmZmZhBAtDDNzMzMEEBzhjMzMzMRQDTcmZmZmRFA8zEAAAAAEkC0h2ZmZmYSQHPdzMzMzBJANDMzMzMzE0D0iJmZmZkTQLPe/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            4.800000000000001
+          ],
+          "y": [
+            4.800000000000001
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "4.800000000000001"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAANB+6T2AZmGamZm5P0Br+5mZmck/oBFjMzMz0z+wbciZmZnZP9DkFgAAAOA/0JJJMzMz4z/QQHxmZmbmP9DurpmZmek/1JzhzMzM7D9oJQoAAADwP2h8o5mZmfE/atM8MzMz8z9oKtbMzMz0P2qBb2ZmZvY/aNgIAAAA+D9oL6KZmZn5P2iGOzMzM/s/aN3UzMzM/D9qNG5mZmb+P7TFAwAAAABANHHQzMzMAEC0HJ2ZmZkBQDTIaWZmZgJAtXM2MzMzA0A0HwMAAAAEQLTKz8zMzARANHacmZmZBUC0IWlmZmYGQDTNNTMzMwdAtHgCAAAACEA0JM/MzMwIQLTPm5mZmQlANHtoZmZmCkC0JjUzMzMLQDTSAQAAAAxAtH3OzMzMDEA0KZuZmZkNQLTUZ2ZmZg5ANIA0MzMzD0DalQAAAAAQQJrrZmZmZhBAWkHNzMzMEEAalzMzMzMRQNrsmZmZmRFAmkIAAAAAEkBamGZmZmYSQBruzMzMzBJA2kMzMzMzE0CamZmZmZkTQFrv/////xNA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            4.9
+          ],
+          "y": [
+            4.9
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "4.9"
+    },
+    {
+      "data": [
+        {
+          "type": "scatter"
+        },
+        {
+          "x": {
+            "dtype": "f8",
+            "bdata": "AAAAAAAAAACamZmZmZm5P5qZmZmZmck/NDMzMzMz0z+amZmZmZnZPwAAAAAAAOA/NDMzMzMz4z9nZmZmZmbmP5qZmZmZmek/zczMzMzM7D8AAAAAAADwP5qZmZmZmfE/NDMzMzMz8z/NzMzMzMz0P2dmZmZmZvY/AAAAAAAA+D+amZmZmZn5PzQzMzMzM/s/zczMzMzM/D9nZmZmZmb+PwAAAAAAAABAzczMzMzMAECamZmZmZkBQGdmZmZmZgJANDMzMzMzA0AAAAAAAAAEQM3MzMzMzARAmpmZmZmZBUBnZmZmZmYGQDQzMzMzMwdAAAAAAAAACEDNzMzMzMwIQJqZmZmZmQlAZ2ZmZmZmCkA0MzMzMzMLQAAAAAAAAAxAzczMzMzMDECamZmZmZkNQGdmZmZmZg5ANDMzMzMzD0AAAAAAAAAQQGdmZmZmZhBAzczMzMzMEEAzMzMzMzMRQJqZmZmZmRFAAAAAAAAAEkBnZmZmZmYSQM3MzMzMzBJANDMzMzMzE0CamZmZmZkTQAAAAAAAABRA"
+          },
+          "y": {
+            "dtype": "f8",
+            "bdata": "AAAAAAgE6j0AkGWamZm5PyCA/ZmZmck/ABxkMzMz0z8QeMmZmZnZPwhqFwAAAOA/ABhKMzMz4z8IxnxmZmbmPwB0r5mZmek/CCLizMzM7D8CaAoAAADwPwK/o5mZmfE/AhY9MzMz8z8CbdbMzMz0PwTEb2ZmZvY/AhsJAAAA+D8CcqKZmZn5PwLJOzMzM/s/ACDVzMzM/D8Ed25mZmb+PwHnAwAAAABAgZLQzMzMAEABPp2ZmZkBQIHpaWZmZgJAAZU2MzMzA0CBQAMAAAAEQAHsz8zMzARAgZecmZmZBUABQ2lmZmYGQIHuNTMzMwdAAJoCAAAACECARc/MzMwIQAHxm5mZmQlAgZxoZmZmCkABSDUzMzMLQIDzAQAAAAxAAJ/OzMzMDECASpuZmZkNQAH2Z2ZmZg5AgaE0MzMzD0CApgAAAAAQQEH8ZmZmZhBAAFLNzMzMEEDApzMzMzMRQID9mZmZmRFAQFMAAAAAEkABqWZmZmYSQMD+zMzMzBJAgVQzMzMzE0BAqpmZmZkTQAAAAAAAABRA"
+          },
+          "type": "scatter"
+        },
+        {
+          "x": [
+            5.0
+          ],
+          "y": [
+            5.0
+          ],
+          "type": "scatter"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Slope Value = 1.0000"
+        },
+        "yaxis": {
+          "autorange": false
+        }
+      },
+      "name": "5.0"
+    }
+  ],
+  "config": {
+    "displayModeBar": false
+  }
+}
