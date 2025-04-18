@@ -58,9 +58,6 @@
       },
       "mode": "markers+text",
       "showlegend": false,
-      "text": [
-        "Limit (x=1)"
-      ],
       "textposition": "top center",
       "x": [
         1
@@ -869,10 +866,12 @@
       {
         "active": 0,
         "currentvalue": {
-          "visible": false
+          "prefix": "Slider",
+          "font":{"size":14}
         },
+        "bordercolor":"#949fb3",
         "pad": {
-          "t": 50
+          "t": 30
         },
         "steps": [
           {
@@ -17136,7 +17135,8 @@
             "method": "restyle"
           }
         ],
-        "ticklen": 0
+        "ticklen": 0,
+        "tickcolor":"rgba(0,0,0,0)"
       }
     ],
     "showlegend": false,
