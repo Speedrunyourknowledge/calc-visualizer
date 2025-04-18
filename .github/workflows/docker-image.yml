@@ -2,7 +2,7 @@ name: Docker for Backend - Production Branch
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "prodfix" ]
     paths:
     - 'calc-backend/**'
 
