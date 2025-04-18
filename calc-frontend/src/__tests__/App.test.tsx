@@ -2,7 +2,6 @@ import {expect, test} from 'vitest'
 import {render, screen} from '@testing-library/react'
 import { createMemoryRouter, createRoutesFromElements, RouterProvider } from 'react-router'
 
-import { AuthProvider } from '../App/AuthContext'
 import RoutesList from '../App/RoutesList'
 import { Toaster } from '@/components/ui/sonner'
 
@@ -13,10 +12,10 @@ test('full app rendering', () => {
   })
 
   render(
-    <AuthProvider>
+    <>
       <Toaster />
       <RouterProvider router={router} />
-    </AuthProvider>,
+    </>,
     {}
   );
   

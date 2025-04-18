@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useAuth } from "../App/AuthContext";
+import { authClient } from "../lib/auth-client";
 import FunctionCard from "../components/ui/FunctionCard";
 import axios from "axios";
 import { Blocks } from "react-loader-spinner";
@@ -19,7 +19,7 @@ function Dashboard()
     // each user starts with a userFunction array of size 0
     const [userFunctions, setUserFunctions] = useState<userFunction[]>([]);
 
-    const { session, isPending } = useAuth();
+    const session = authClient.useSession();
 
     const navigate = useNavigate()
 
@@ -27,7 +27,7 @@ function Dashboard()
 
     useEffect(() => {
       // user is not logged in
-      if(!isPending && !session){
+      if(!session.isPending && !session.data?.session){
         navigate("/sign-in", { replace: true })
         return
       }
@@ -35,7 +35,7 @@ function Dashboard()
       if(session){
         getFuncs();
       }
-    }, [isPending]);
+    }, [session.isPending]);
 
     // show loading while checking if user is logged in
     if(!session){
@@ -46,7 +46,7 @@ function Dashboard()
     }
 
     const getFuncs = async () => {
-        const userId = session.user.id;
+        const userId = session.data?.user.id;
         try {
           const response = await axios.get(serverUrl + `/func/all/${userId}`);
           setUserFunctions(response.data);
@@ -72,7 +72,7 @@ function Dashboard()
 
     return (
         <div>
-            <h2 className="mb-5 ml-[20px]">{session.user.name}'s Dashboard</h2>
+            <h2 className="mb-5 ml-[20px]">{session.data?.user.name}'s Dashboard</h2>
 
             {userFunctions.length > 0?
               <div className="dashboard">
