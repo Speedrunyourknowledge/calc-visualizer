@@ -1,8 +1,9 @@
-import { useLayoutEffect, useRef } from "react";
-import QuadraticDerivGraph from "./QuadraticDerivGraph"
+import { useLayoutEffect, useState, useRef } from "react";
+import Plot from "react-plotly.js";
 
 function QuadraticDeriv() {
 
+  const [figData, setFigData] = useState<any | null>(null);
   const container = useRef(null);
 
   useLayoutEffect(() =>{
@@ -10,8 +11,11 @@ function QuadraticDeriv() {
     let MQ = MathQuill.getInterface(2);
     MQ.StaticMath(container.current, { })
 
-  }, []);
+    fetch("/quadDeriv.json")
+    .then((res) => res.json())
+    .then((json) => setFigData(json));
 
+  }, []);
   return (
  
  <div>
@@ -21,9 +25,22 @@ function QuadraticDeriv() {
       </div>
       </div>
 
-      <div className="graph-outer-box" >
-        <QuadraticDerivGraph />
-      </div>
+  <div className="flex justify-center">
+    <div className="plotly-graph-div graph-frame">
+      {figData && (
+        <Plot
+          data={figData.data}
+          layout={{
+          ...figData.layout,
+          margin: { l: 40, r: 40, t: 40, b: 40 },
+          }}
+          frames={figData.frames}
+          config={figData.config}
+          style={{ width: "100%", height: "100%" }}
+        />
+      )}
+    </div>
+    </div>
     </div>
   )
 }
