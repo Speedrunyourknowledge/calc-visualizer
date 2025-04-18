@@ -33,7 +33,6 @@ function TangentLim() {
               layout={{
               ...figData.layout,
               margin: { l: 40, r: 40, t: 40, b: 40 },
-              height: 500
               }}
               config={figData.config}
               style={{ width: "100%", height: "100%" }}
