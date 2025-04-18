@@ -19,7 +19,7 @@ function RootLayout() {
   const requestSession = async () => {
 
     try{
-      const response = await axios.get(serverUrl + '/api/session')
+      const response = await axios.get(serverUrl + '/api/session', { withCredentials: true })
 
       console.log(response)
     }
