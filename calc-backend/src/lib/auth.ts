@@ -22,6 +22,13 @@ export const auth = betterAuth({
     advanced: {
       cookiePrefix: "calcvis"
     },
+    verification: {
+      modelName: "verifications",
+      fields: {
+        identifier: "id"
+      },
+      disableCleanup: false
+    },
     onAPIError: {
       throw: true,
       onError: (e) =>{
