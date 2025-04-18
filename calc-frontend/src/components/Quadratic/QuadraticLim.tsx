@@ -22,7 +22,7 @@ function QuadraticLim() {
     <div>
     <div className="flex">
       <div ref={container} className="center-header">
-      \lim_&#123;x\to0&#125; \quad x^&#123;3&#125;
+      \lim_&#123;x\to0&#125; \quad x^&#123;2&#125;
       </div>
     </div>
 
