@@ -23,9 +23,9 @@ export const auth = betterAuth({
       cookiePrefix: "calcvis"
     },
     verification: {
-      modelName: "verifications",
+      modelName: "verification",
       fields: {
-        identifier: "id"
+        identifier: "_id"
       },
       disableCleanup: false
     },
