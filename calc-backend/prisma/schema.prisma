@@ -64,19 +64,6 @@ model Account {
   @@map("account")
 }
 
-model Verification {
-  id         String   @id @default(cuid()) @map("_id")
-  identifier String
-  value      String
-  expiresAt  DateTime
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-
-  @@map("verification")
-}
-
-// Need to add type
-
 model Func {
   id         String @id @default(cuid()) @map("_id")
   equation   String
