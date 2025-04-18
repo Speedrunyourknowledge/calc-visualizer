@@ -6,11 +6,27 @@ import CalcLogo from "../components/CalcLogo"
 
 import { authClient } from "../lib/auth-client";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
-
-await authClient.getSession(); // get session
+import { useEffect, useState } from "react";
 
 function RootLayout() {
-  const session = authClient.useSession();
+
+  const oldSession = authClient.useSession();
+
+  const [session, setSession] = useState(oldSession)
+
+  useEffect(() => {
+
+    const initializeSession = async() => {
+      await authClient.getSession(); // getting session value
+
+      const newSession = authClient.useSession()
+      
+      setSession(newSession);
+    }
+
+    initializeSession()
+
+  },[])  
 
   return (
     <>
