@@ -16,3 +16,5 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: vi.fn(),
   })),
 });
+
+global.URL.createObjectURL = vi.fn(() => 'mockObjectURL');
