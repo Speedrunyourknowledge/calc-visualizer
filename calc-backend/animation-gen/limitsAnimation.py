@@ -38,7 +38,7 @@ class Limit(Scene):
             stroke_width=4
         ).move_to(axes.c2p(2, func(2.01)))
 
-        self.play(Create(graph), FadeIn(hole_point), run_time=2)
+        self.play(Create(graph), FadeIn(hole_point), run_time=1)
 
         # ValueTrackers for dynamic movement
         t_left = ValueTracker(0.7)
@@ -71,13 +71,14 @@ class Limit(Scene):
             rate_func=linear
         )
 
-        self.wait(0.5)
+        self.wait(1.5)
 
         self.play(
             FadeOut(graph),
             FadeOut(hole_point),
             FadeOut(left_arrow),
-            FadeOut(right_arrow)
+            FadeOut(right_arrow),
+            run_time=1
         )
 
-        self.wait(2.5)
+        self.wait(1)
