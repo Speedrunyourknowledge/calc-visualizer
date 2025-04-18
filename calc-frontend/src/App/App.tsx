@@ -5,7 +5,6 @@ import './app.css'
 import './widgets.css'
 
 import RoutesList from "./RoutesList";
-import { AuthProvider } from "./AuthContext";
 
 import { Toaster } from "@/components/ui/sonner";
 
@@ -19,10 +18,10 @@ function App() {
     createRoutesFromElements(RoutesList));
 
   return (
-    <AuthProvider>
+    <>
       <Toaster position="bottom-left" richColors />
       <RouterProvider router={router} />
-    </AuthProvider>
+    </>
   )
 }
 

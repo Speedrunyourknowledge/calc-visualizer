@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router"
-import { useAuth } from "../App/AuthContext";
+import { authClient } from "../lib/auth-client";
 import SignInButton from "../components/ui/SignInButton";
 import SignOutButton from "../components/ui/SignOutButton";
 import derivativeVideo from '../animations/manim-videos/derivativeAnimation/1080p60/DerivativeAnimation.mp4';
@@ -8,7 +8,7 @@ import integralVideo from '../animations/manim-videos/integralAnimation/1080p60/
 import limitVideo from '../animations/manim-videos/limitsAnimation/1080p60/Limit.mp4';
 
 function Home() {
-  const { session, isPending } = useAuth();
+    const session = authClient.useSession();
 
     const d1 = useRef(null);
     const d2 = useRef(null);
@@ -78,10 +78,10 @@ function Home() {
         <Link to="/dashboard" tabIndex={-1} style={{marginRight:'2px'}}>
           <button className="link-box cursor-pointer" style={{borderRadius:'5px'}}>Dashboard</button>
         </Link>
-        {isPending === true? 
+        {session.isPending === true? 
           null
           : 
-          !session ? <SignInButton/> : <SignOutButton/> 
+          !session.data?.session ? <SignInButton/> : <SignOutButton/> 
         }
       </div>
 
