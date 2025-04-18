@@ -18,14 +18,12 @@ app.use(cors({
 
 app.all("/api/auth/*", toNodeHandler(auth));
 
-/*
 app.get("/api/session", async (req, res) => {
   const session = await auth.api.getSession({
      headers: fromNodeHeaders(req.headers),
    });
  return res.json(session);
 });
-*/
 
 app.use(express.json()) // use this after better auth
 
