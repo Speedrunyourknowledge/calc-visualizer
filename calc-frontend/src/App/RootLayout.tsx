@@ -7,8 +7,10 @@ import CalcLogo from "../components/CalcLogo"
 import { authClient } from "../lib/auth-client";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
 
-async function RootLayout() {
-  const session = await authClient.getSession();
+await authClient.getSession(); // get session
+
+function RootLayout() {
+  const session = authClient.useSession();
 
   return (
     <>
