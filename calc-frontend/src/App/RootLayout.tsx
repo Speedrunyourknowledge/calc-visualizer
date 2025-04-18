@@ -6,24 +6,34 @@ import CalcLogo from "../components/CalcLogo"
 
 import { authClient } from "../lib/auth-client";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
-import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 
 function RootLayout() {
 
-  const oldSession = authClient.useSession();
+  const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3000'
 
-  const [session, setSession] = useState(oldSession)
+  const session = authClient.useSession();
 
-  // function to get the session
-  const initializeSession = async() => {
-    await authClient.getSession(); // getting session value
 
-    const newSession = authClient.useSession()
-    
-    setSession(newSession);
+  const requestSession = async () => {
+
+    try{
+      const response = await axios.get(serverUrl + '/api/session')
+
+      console.log(response)
+    }
+    catch(e){
+      console.error("session error: ", e)
+    }
   }
 
-  initializeSession()
+  useEffect(() => {
+
+    requestSession()
+
+  }, [])
+
 
   return (
     <>
