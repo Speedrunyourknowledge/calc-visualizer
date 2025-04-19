@@ -6,7 +6,9 @@ export const auth = betterAuth({
     database: prismaAdapter(prisma, {
         provider: "mongodb",
     }),
-    trustedOrigins: ["http://localhost:5173", 'https://calcvisualizer.netlify.app'],
+    trustedOrigins: ["http://localhost:5173", 
+      "calcvisualizer.speedrunyourknowledge.com",
+    ],
     socialProviders: {
         google: {
             clientId: process.env.GOOGLE_CLIENT_ID as string,
@@ -20,7 +22,17 @@ export const auth = betterAuth({
       }
     },
     advanced: {
-      cookiePrefix: "calcvis"
+      cookiePrefix: "calcvis",
+      crossSubDomainCookies: {
+        enabled: true,
+        domain: ".speedrunyourknowledge.com", // Domain with a leading period
+      },
+      defaultCookieAttributes: {
+        secure: true,
+        httpOnly: true,
+        sameSite: "none",  // Allows CORS-based cookie sharing across subdomains
+        partitioned: true, // New browser standards will mandate this for foreign cookies
+      },
     },
     onAPIError: {
       throw: true,
