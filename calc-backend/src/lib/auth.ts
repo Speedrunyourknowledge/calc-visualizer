@@ -7,7 +7,7 @@ export const auth = betterAuth({
         provider: "mongodb",
     }),
     trustedOrigins: ["http://localhost:5173", 
-      "calcvisualizer.speedrunyourknowledge.com",
+      "https://calcvisualizer.speedrunyourknowledge.com",
     ],
     socialProviders: {
         google: {
