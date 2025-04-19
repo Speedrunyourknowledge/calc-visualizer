@@ -17,7 +17,6 @@ export const auth = betterAuth({
         }
     },
     advanced: {
-      cookiePrefix: "calcvis",
       crossSubDomainCookies: {
         enabled: true,
         domain: ".speedrunyourknowledge.com", // Domain with a leading period
