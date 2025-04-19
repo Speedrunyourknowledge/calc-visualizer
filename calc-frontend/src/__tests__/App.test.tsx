@@ -4,6 +4,7 @@ import { createMemoryRouter, createRoutesFromElements, RouterProvider } from 're
 
 import RoutesList from '../App/RoutesList'
 import { Toaster } from '@/components/ui/sonner'
+import AuthProvider from "../App/AuthProvider";
 
 test('full app rendering', () => {
 
@@ -12,10 +13,10 @@ test('full app rendering', () => {
   })
 
   render(
-    <>
+    <AuthProvider>
       <Toaster />
       <RouterProvider router={router} />
-    </>,
+    </AuthProvider>,
     {}
   );
   
