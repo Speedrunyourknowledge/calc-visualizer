@@ -8,7 +8,7 @@ import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
 import AskAIButton from "../components/ui/AskAIButtonIntegral.tsx";
 
 import { toast } from "sonner";
-import { authClient } from "../lib/auth-client";
+import { Session } from "../lib/auth-client";
 
 function CustomInt() {
 
@@ -26,8 +26,6 @@ function CustomInt() {
   if(!prevLocation){
     state = {func: 'x^2', bounds: [0, 5]}
   }
-
-  const session = authClient.useSession();
 
   const container = useRef<HTMLDivElement>(null);
   const MQ = useRef<any>(null);
@@ -59,7 +57,7 @@ function CustomInt() {
   }
 
   // need to check if func is unique first
-  const saveFunction = async () => {
+  const saveFunction = async (session: Session) => {
 
       // check if function has been graphed
       if(func === ''){
@@ -72,7 +70,7 @@ function CustomInt() {
       const lowerBound = bounds[0];
       const upperBound = bounds[1];
       const topic = "Integral";
-      const userId = session.data?.user.id;
+      const userId = session?.user.id || "";
       
       try {
         setSaving(true) // show loading while saving
