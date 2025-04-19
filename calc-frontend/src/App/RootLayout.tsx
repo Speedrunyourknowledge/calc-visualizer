@@ -4,12 +4,28 @@ import { ScrollRestoration } from "react-router";
 import ucfLogo from "../assets/ucf-logo.png"
 import CalcLogo from "../components/CalcLogo"
 
-import { authClient } from "../lib/auth-client";
+import { authClient, Session} from "../lib/auth-client";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
+import { useEffect, useState } from "react";
 
-async function RootLayout() {
+function RootLayout() {
 
-  const {data} = await authClient.getSession();
+  const [sessionData, setSessionData] = useState<Session | null>(null)
+
+  const getSession = async () =>{
+
+    const {data} = await authClient.getSession();
+
+    setSessionData(data)
+
+  }
+
+  useEffect(() => {
+
+    getSession()
+
+  },[])
+
 
   return (
     <>
@@ -29,12 +45,12 @@ async function RootLayout() {
           </div>
 
         </div>
-        {data?.session ? (
-          data?.user.image ? (
+        {sessionData?.session ? (
+          sessionData.user.image ? (
             <Link to="/dashboard">
               <Avatar className="mr-5 cursor-pointer w-12 h-12">
-                <AvatarImage src={data?.user.image} />
-                <AvatarFallback>{data?.user.name.charAt(0)}</AvatarFallback>
+                <AvatarImage src={sessionData.user.image} />
+                <AvatarFallback>{sessionData.user.name.charAt(0)}</AvatarFallback>
               </Avatar>
             </Link>
           ) : (
