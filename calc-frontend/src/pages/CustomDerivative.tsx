@@ -3,11 +3,11 @@ import { useLocation } from "react-router"
 import {generateFunction, validateBounds} from "../functions/mathOutput";
 import DerivCustomGraph from "../components/Custom/DerivCustomGraph";
 
-import { Session } from "../lib/auth-client.ts";
 import axios from "axios";
 import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
 import AskAIButtonDerivative from "@/components/ui/AskAIButtonDerivative.tsx";
 import { toast } from "sonner";
+import { authClient } from "../lib/auth-client";
 
 function CustomDeriv() {
 
@@ -25,6 +25,8 @@ function CustomDeriv() {
   if(!prevLocation){
     state = {func: 'x^2', bounds: [0, 5]}
   }
+
+  const session = authClient.useSession();
 
   const container = useRef<HTMLDivElement>(null);
   const MQ = useRef<any>(null);
@@ -55,7 +57,7 @@ function CustomDeriv() {
   }
 
   // need to check if func is unique first
-  const saveFunction = async (session: Session) => {
+  const saveFunction = async () => {
 
     // check if function has been graphed
     if(func === ''){
@@ -68,7 +70,7 @@ function CustomDeriv() {
     const lowerBound = bounds[0];
     const upperBound = bounds[1];
     const topic = "Derivative";
-    const userId = session.user.id;
+    const userId = session.data?.user.id;
     
     try {
       setSaving(true) // show loading while saving
@@ -79,11 +81,10 @@ function CustomDeriv() {
         lowerBound,
         upperBound,
         topic,
-      },{
-        headers: {
-          Authorization: `Bearer ${session.session.token}`
-        }
-      })
+      },
+      { withCredentials:true}
+    )
+
       toast.success("Function Saved Successfully!");
     } 
     catch (error) {

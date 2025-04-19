@@ -3,12 +3,12 @@ import { useLocation } from "react-router"
 import IntCustomGraph from "../components/Custom/IntCustomGraph.tsx"
 import {generateFunction, validateBounds} from "../functions/mathOutput";
 
-import { Session } from "../lib/auth-client.ts";
 import axios from "axios";
 import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
 import AskAIButton from "../components/ui/AskAIButtonIntegral.tsx";
 
 import { toast } from "sonner";
+import { authClient } from "../lib/auth-client";
 
 function CustomInt() {
 
@@ -26,6 +26,8 @@ function CustomInt() {
   if(!prevLocation){
     state = {func: 'x^2', bounds: [0, 5]}
   }
+
+  const session = authClient.useSession();
 
   const container = useRef<HTMLDivElement>(null);
   const MQ = useRef<any>(null);
@@ -57,7 +59,7 @@ function CustomInt() {
   }
 
   // need to check if func is unique first
-  const saveFunction = async (session: Session) => {
+  const saveFunction = async () => {
 
       // check if function has been graphed
       if(func === ''){
@@ -70,7 +72,7 @@ function CustomInt() {
       const lowerBound = bounds[0];
       const upperBound = bounds[1];
       const topic = "Integral";
-      const userId = session.user.id;
+      const userId = session.data?.user.id;
       
       try {
         setSaving(true) // show loading while saving
@@ -80,11 +82,9 @@ function CustomInt() {
           lowerBound,
           upperBound,
           topic,
-        },{
-          headers: {
-            Authorization: `Bearer ${session.session.token}`
-          }
-        })
+        },
+        { withCredentials:true}
+      )
 
         toast.success("Function Saved Successfully!");
       } 

@@ -1,4 +1,4 @@
-import { betterAuth, BetterAuthOptions } from "better-auth";
+import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import prisma from "./prisma";
  
@@ -29,4 +29,4 @@ export const auth = betterAuth({
       },
       errorURL: process.env.FRONTEND_URL || 'http://localhost:5173' + '/auth-error'
     }
-} satisfies BetterAuthOptions);
+});

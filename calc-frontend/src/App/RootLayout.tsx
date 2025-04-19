@@ -6,34 +6,10 @@ import CalcLogo from "../components/CalcLogo"
 
 import { authClient } from "../lib/auth-client";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar"
-import { useEffect } from "react";
-import axios from "axios";
 
-function RootLayout() {
+async function RootLayout() {
 
-  const serverUrl = import.meta.env.VITE_SERVER_URL || 'http://localhost:3000'
-
-  const session = authClient.useSession();
-
-
-  const requestSession = async () => {
-
-    try{
-      const response = await axios.get(serverUrl + '/api/session', { withCredentials: true })
-
-      console.log(response)
-    }
-    catch(e){
-      console.error("session error: ", e)
-    }
-  }
-
-  useEffect(() => {
-
-    requestSession()
-
-  }, [])
-
+  const {data} = await authClient.getSession();
 
   return (
     <>
@@ -53,12 +29,12 @@ function RootLayout() {
           </div>
 
         </div>
-        {session.data?.session ? (
-          session.data?.user.image ? (
+        {data?.session ? (
+          data?.user.image ? (
             <Link to="/dashboard">
               <Avatar className="mr-5 cursor-pointer w-12 h-12">
-                <AvatarImage src={session.data?.user.image} />
-                <AvatarFallback>{session.data?.user.name.charAt(0)}</AvatarFallback>
+                <AvatarImage src={data?.user.image} />
+                <AvatarFallback>{data?.user.name.charAt(0)}</AvatarFallback>
               </Avatar>
             </Link>
           ) : (
