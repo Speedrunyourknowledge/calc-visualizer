@@ -8,6 +8,7 @@ export const auth = betterAuth({
     }),
     trustedOrigins: ["http://localhost:5173", 
       "https://calcvisualizer.speedrunyourknowledge.com",
+      "https://calcvisualizer.netlify.app"
     ],
     socialProviders: {
         google: {
