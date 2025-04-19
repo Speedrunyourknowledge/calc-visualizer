@@ -22,7 +22,6 @@ function DerivCustomGraph({func, lowerBound, upperBound, handleSave, onAIRespons
         'upperBound': upperBound
 
       }
-      // { withCredentials:true}
     )
 
     // add loading circle when ready is false

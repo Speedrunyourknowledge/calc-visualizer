@@ -15,7 +15,8 @@ function App() {
   // Handles all the routes
   // The calc-visualizer path is for github pages
   const router = createBrowserRouter(
-    createRoutesFromElements(RoutesList));
+    createRoutesFromElements(RoutesList)
+  );
 
   return (
     <>

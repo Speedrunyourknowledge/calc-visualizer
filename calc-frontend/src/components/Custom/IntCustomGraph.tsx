@@ -22,7 +22,6 @@ function IntCustomGraph({func, lowerBound, upperBound, handleSave, onAIResponseC
         'upperBound': upperBound
 
       }
-      // { withCredentials:true}
     )
 
     // add loading circle when ready is false
