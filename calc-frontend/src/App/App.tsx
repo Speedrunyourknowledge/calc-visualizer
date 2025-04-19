@@ -7,6 +7,7 @@ import './widgets.css'
 import RoutesList from "./RoutesList";
 
 import { Toaster } from "@/components/ui/sonner";
+import AuthProvider from "./AuthProvider";
 
 function App() {
 
@@ -19,10 +20,10 @@ function App() {
   );
 
   return (
-    <>
+    <AuthProvider>
       <Toaster position="bottom-left" richColors />
       <RouterProvider router={router} />
-    </>
+    </AuthProvider>
   )
 }
 

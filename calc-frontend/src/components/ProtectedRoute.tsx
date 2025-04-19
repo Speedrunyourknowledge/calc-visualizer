@@ -1,13 +1,14 @@
 import { Navigate, Outlet, } from "react-router";
-import { authClient } from "../lib/auth-client";
+import { useContext } from "react";
+import { AuthContext } from "../App/AuthProvider";
 import { Blocks } from "react-loader-spinner";
 
 function ProtectedRoute()
 {
-    const session = authClient.useSession();
+    const {session, isPending} = useContext(AuthContext);
 
     // show loading if waiting for session info
-    if(session.isPending){
+    if(isPending){
         return  <Blocks height="80" width="80" color="#4fa94d" ariaLabel="loading" 
           wrapperStyle={{marginLeft:'auto', marginRight:'auto'}}
           wrapperClass="blocks-wrapper loading" visible={true}
@@ -15,7 +16,7 @@ function ProtectedRoute()
     }
 
     // user is not logged in - go to sign in page
-    if(!session.data?.session) {
+    if(!session) {
         return <Navigate to="/sign-in" replace />
     }
 

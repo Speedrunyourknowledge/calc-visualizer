@@ -1,12 +1,13 @@
 import { Navigate, Outlet } from "react-router";
-import { authClient } from "../lib/auth-client";
+import { useContext } from "react";
+import { AuthContext } from "../App/AuthProvider";
 
 function RedirectIfAuth()
 {
-    const session = authClient.useSession();
+  const {session, isPending} = useContext(AuthContext);
 
     // user is not logged in - let them go to sign in page
-    if(session.isPending || !session.data?.session) {
+    if(isPending || !session) {
         return <Outlet/>
     }
 
