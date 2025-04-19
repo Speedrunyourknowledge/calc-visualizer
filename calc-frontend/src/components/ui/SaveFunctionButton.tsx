@@ -1,21 +1,11 @@
-import { useNavigate } from "react-router";
-import { authClient } from "../../lib/auth-client";
-import { Session } from "../../lib/auth-client";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, TooltipArrow } from "@radix-ui/react-tooltip";
 
-
-function SaveFunctionButton({onSave, saving, enableSave}: {onSave: (session: Session) => void, 
+function SaveFunctionButton({onSave, saving, enableSave}: {onSave: () => void, 
   saving: boolean, enableSave: boolean})
 {
-    const navigate = useNavigate();
-    const session = authClient.useSession();
-
     const handleClick = () => {
-        if(!session.data?.session ) {
-            navigate("/sign-in");
-            return;
-        }
-        onSave(session.data);
+
+        onSave();
     }
 
     if(saving){
