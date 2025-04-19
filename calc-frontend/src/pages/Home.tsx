@@ -81,7 +81,7 @@ function Home() {
         {session.isPending === true? 
           null
           : 
-          !session.data?.session ? <SignInButton/> : <SignOutButton/> 
+          session.data?.session ?  <SignOutButton/> : <SignInButton/>
         }
       </div>
 

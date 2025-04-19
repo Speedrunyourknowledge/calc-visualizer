@@ -1,15 +1,22 @@
-import { toast } from "sonner";
 import { authClient } from "../../lib/auth-client"
+import { useNavigate } from "react-router";
 
 function SignOutButton()
 {
+  const navigate = useNavigate()
+
     const handleSignOut = async () => {
         try {
-            await authClient.signOut();
-
+            await authClient.signOut({
+              fetchOptions: {
+                onSuccess: () => {
+                  navigate("/"); // redirect to home
+                },
+                withCredentials:true
+              }
+            });
         } catch (error) {
-            toast.error("Something went wrong signing out");
-            console.error("Error signing out:", error);
+            console.error("Error signing out: ", error);
         }   
     }
 

@@ -11,9 +11,8 @@ function RootLayout() {
 
   const session = authClient.useSession();
 
-  console.log('useSession: ' + session)
+  console.log('useSession: ' + session.data)
   
-
   return (
     <>
       <ScrollRestoration />
