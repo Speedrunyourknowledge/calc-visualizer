@@ -6,8 +6,9 @@ import DerivCustomGraph from "../components/Custom/DerivCustomGraph";
 import axios from "axios";
 import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
 import AskAIButtonDerivative from "@/components/ui/AskAIButtonDerivative.tsx";
+
 import { toast } from "sonner";
-import { authClient } from "../lib/auth-client";
+import { Session } from "../lib/auth-client";
 
 function CustomDeriv() {
 
@@ -25,8 +26,6 @@ function CustomDeriv() {
   if(!prevLocation){
     state = {func: 'x^2', bounds: [0, 5]}
   }
-
-  const session = authClient.useSession();
 
   const container = useRef<HTMLDivElement>(null);
   const MQ = useRef<any>(null);
@@ -57,7 +56,7 @@ function CustomDeriv() {
   }
 
   // need to check if func is unique first
-  const saveFunction = async () => {
+  const saveFunction = async (session: Session) => {
 
     // check if function has been graphed
     if(func === ''){
@@ -70,7 +69,7 @@ function CustomDeriv() {
     const lowerBound = bounds[0];
     const upperBound = bounds[1];
     const topic = "Derivative";
-    const userId = session.data?.user.id;
+    const userId = session?.user.id || "";
     
     try {
       setSaving(true) // show loading while saving
