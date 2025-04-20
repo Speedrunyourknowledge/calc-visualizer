@@ -111,8 +111,8 @@ function DerivCustomGraph({func, lowerBound, upperBound, handleSave, onAIRespons
       return(
         <div>
           <div className="pad-sm" style={{color:'red', fontSize: '1.25rem', maxWidth:'600px'}}>{errorMsg}</div> 
+          <ul className="pad-sm" style={{listStyleType: 'disc', fontSize: '1.125rem'}}>
           <br/>
-          <ul className="pad-sm" style={{listStyleType: 'disc'}}>
             Some functions can't have their derivative calculated depending on the x value:
             <li style={{marginLeft:'1rem'}}>log(x) at zero or a negative number is undefined</li>
             <li style={{marginLeft:'1rem'}}>tan(x) at about -1.5708 and 1.5708 is undefined</li>
