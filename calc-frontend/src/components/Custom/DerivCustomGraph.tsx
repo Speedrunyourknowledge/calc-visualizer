@@ -10,6 +10,7 @@ function DerivCustomGraph({func, lowerBound, upperBound, handleSave, onAIRespons
   const [success, setSuccess] = useState(false)
   const [plotlyObject, setPlotlyObject] = useState(null)
   const [errorMsg, setErrorMsg] = useState(null)
+  const [showInfoMsg, setShowInfoMsg] = useState(false)
 
   useEffect(() => {
 
@@ -46,16 +47,22 @@ function DerivCustomGraph({func, lowerBound, upperBound, handleSave, onAIRespons
     .catch(function(e) {
       if(e.code === 'ERR_NETWORK'){
         setErrorMsg('Unable to connect to server')
+
+        setShowInfoMsg(false)
       }
       else if(e.status === 422){
         setErrorMsg('Your function could not be graphed. \
-          Try a different function or try changing \
+          Try a different function or change \
           the bounds')
+
+        setShowInfoMsg(true)
       }
       else{
         setErrorMsg('Your function could not be graphed. \
-          Try a different function or try changing \
+          Try a different function or change \
           the bounds')
+
+        setShowInfoMsg(true)
       }
       // disable save button
       handleSave();
@@ -100,7 +107,24 @@ function DerivCustomGraph({func, lowerBound, upperBound, handleSave, onAIRespons
   }
 
   if(ready && !success){
-    return <div className="pad-sm" style={{color:'red', fontSize: '1.25rem', maxWidth:'550px'}}>{errorMsg}</div> 
+    if(showInfoMsg){
+      return(
+        <div>
+          <div className="pad-sm" style={{color:'red', fontSize: '1.25rem', maxWidth:'600px'}}>{errorMsg}</div> 
+          <br/>
+          <ul className="pad-sm" style={{fontSize: '1.25rem', maxWidth:'550px', listStyleType: 'disc'}}>
+            Some functions can't have their derivative calculated depending on the x value:
+            <li style={{marginLeft:'1rem'}}>log(x) at zero or a negative number is undefined</li>
+            <li style={{marginLeft:'1rem'}}>tan(x) at about -1.5708 and 1.5708 is undefined</li>
+            <li style={{marginLeft:'1rem'}}>Any function that has zero in the denominator is undefined because you can't 
+            divide by zero</li>
+          </ul> 
+        </div>
+      ) 
+    }
+    else{
+      return <div className="pad-sm" style={{color:'red', fontSize: '1.25rem', maxWidth:'600px'}}>{errorMsg}</div> 
+    }
   }
 
   return (
