@@ -845,11 +845,6 @@
       ],
       "fixedrange": true
     },
-    "margin": {
-      "t": 50,
-      "r": 0,
-      "l": 60
-    },
     "sliders": [
       {
         "active": 0,

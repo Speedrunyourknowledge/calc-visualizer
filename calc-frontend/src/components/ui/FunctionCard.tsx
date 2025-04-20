@@ -92,7 +92,7 @@ function FunctionCard({
       <img
         src={images.get(topic)}
         alt={topic + " graph"}
-        className="w-full aspect-2/1 bg-green-300 rounded-md mb-4"
+        className="w-full aspect-2/1 rounded-md mb-4"
       />
       <div className="flex justify-between">
         <button

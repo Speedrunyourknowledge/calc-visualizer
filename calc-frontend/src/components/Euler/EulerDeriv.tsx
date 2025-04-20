@@ -32,7 +32,7 @@ function EulerDeriv() {
           data={figData.data}
           layout={{
           ...figData.layout,
-          margin: { l: 40, r: 40, t: 40, b: 40 },
+          margin: { l: 40, r: 40, t: 50, b: 40 },
           }}
           frames={figData.frames}
           config={figData.config}
