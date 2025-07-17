@@ -41,7 +41,7 @@ git switch [branch name]
 ```
 <br/>
 
-See if you have anything in the staging area and check if your current branch is up to date with the remote branch 
+See if you have anything in the staging area  and check if your current branch is up to date with the remote branch 
 ```
 git status  
 ```
