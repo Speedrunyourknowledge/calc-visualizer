@@ -135,11 +135,14 @@ fig.update_layout(
     barmode='overlay',
     xaxis_title="x-axis",
     yaxis_title="y-axis",
-    xaxis=dict(range=[a, b], fixedrange=True), 
+    xaxis=dict(range=[a, b], fixedrange=True, showgrid=True), 
     yaxis=dict(fixedrange=True),
 )
 
 fig_json = fig.to_json(pretty=True)
 
 print(fig_json)
+
+# Uncomment to save the graph as HTML code to use in the frontend
+# fig.write_html("graph.html", include_plotlyjs=False, full_html=False, div_id='integral-graph')
 

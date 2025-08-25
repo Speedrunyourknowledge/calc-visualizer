@@ -2,8 +2,8 @@ import plotly.graph_objects as go
 import numpy as np
 
 # === USER DEFINES ONLY THESE TWO ===
-func    = lambda x: x**3  # ← your function
-limit_x = 0                   # ← point to approach
+func    = lambda x: np.log(x)  # ← your function
+limit_x = 2                   # ← point to approach
 
 # === Slider & sampling settings (fixed) ===
 num_steps = 50
@@ -90,3 +90,9 @@ fig.update_layout(
 )
 
 fig.show()
+
+fig_json = fig.to_json(pretty=True)
+
+# Save to file
+with open("limit-graph.txt", "a") as f:
+  f.write(fig_json)

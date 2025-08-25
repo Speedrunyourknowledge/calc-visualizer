@@ -6,10 +6,11 @@ import SignOutButton from "../components/ui/SignOutButton";
 import derivativeVideo from '../animations/manim-videos/derivativeAnimation/1080p60/DerivativeAnimation.mp4';
 import integralVideo from '../animations/manim-videos/integralAnimation/1080p60/RightRiemannSum.mp4';
 import limitVideo from '../animations/manim-videos/limitsAnimation/1080p60/Limit.mp4';
+import VideoPlayer from "../components/ui/VideoPlayer";
 
 function Home() {
     const {session, isPending} = useContext(AuthContext);
-
+    
     const d1 = useRef(null);
     const d2 = useRef(null);
     const d3 = useRef(null);
@@ -70,6 +71,7 @@ function Home() {
       MQ.StaticMath(d26.current, { })
       MQ.StaticMath(d27.current, { })
       MQ.StaticMath(d28.current, { })
+
     }, []);
 
   return (
@@ -87,17 +89,10 @@ function Home() {
 
 
       <div className="py-10 pt-[1.5rem] flex flex-col gap-6 m-auto home-list">
-            
+        {/*Limits*/}    
         <div className="m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
       
-      <video
-        className="w-full object-cover rounded-t-md"
-        src={limitVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <VideoPlayer videoUrl={limitVideo}/>
 
       <div className="p-4 pt-2">
       <h2 className="text-lg font-semibold">
@@ -151,11 +146,6 @@ function Home() {
                   </div>
               </Link>
 
-              <Link to="/limits/custom" className = "link-box">
-                  <div className="link-title2"><span ref={d25} style={{ cursor: 'pointer' }}>Custom</span>{/*Custom*/}
-                  </div>
-              </Link>
-
         <i className="fas fa-fire text-yellow-500 ml-2">
         </i>
       </div>
@@ -169,14 +159,7 @@ function Home() {
     {/*Derivatives*/}
       <div className="m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
       
-      <video
-        className="w-full object-cover rounded-t-md"
-        src={derivativeVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <VideoPlayer videoUrl={derivativeVideo}/>
 
         <div className="p-4 pt-2">
         <h2 className="text-lg font-semibold">
@@ -250,14 +233,7 @@ function Home() {
       {/*Integrals*/}
       <div className="m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
       
-      <video
-        className="w-full object-cover rounded-t-md"
-        src={integralVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+        <VideoPlayer videoUrl={integralVideo}/>
 
         <div className="p-4 pt-2">
         <h2 className="text-lg font-semibold">
