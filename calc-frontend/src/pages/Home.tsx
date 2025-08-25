@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useContext, useState } from "react";
+import { useLayoutEffect, useRef, useContext } from "react";
 import { Link } from "react-router"
 import { AuthContext } from "../App/AuthProvider";
 import SignInButton from "../components/ui/SignInButton";
@@ -11,8 +11,6 @@ import VideoPlayer from "../components/ui/VideoPlayer";
 function Home() {
     const {session, isPending} = useContext(AuthContext);
     
-    const [mathReady, setMathReady] = useState(false);
-
     const d1 = useRef(null);
     const d2 = useRef(null);
     const d3 = useRef(null);
@@ -74,7 +72,6 @@ function Home() {
       MQ.StaticMath(d27.current, { })
       MQ.StaticMath(d28.current, { })
 
-      setMathReady(true);
     }, []);
 
   return (
@@ -92,7 +89,7 @@ function Home() {
 
 
       <div className="py-10 pt-[1.5rem] flex flex-col gap-6 m-auto home-list">
-            
+        {/*Limits*/}    
         <div className="m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
       
       <VideoPlayer videoUrl={limitVideo}/>
@@ -108,7 +105,7 @@ function Home() {
         <i className="fas fa-fire text-yellow-500 ml-2">
         </i>
       </div>
-      <div className="mt-2 flex flex-wrap gap-2" style={{visibility: mathReady ? "visible" : "hidden"}}>
+      <div className="mt-2 flex flex-wrap gap-2">
           <Link to="/limits/linear" className = "link-box">
                   <div className="link-title2"><span ref={d18} style={{ cursor: 'pointer' }}> x </span>
                   </div>
@@ -176,7 +173,7 @@ function Home() {
           <i className="fas fa-fire text-yellow-500 ml-2">
           </i>
         </div>
-        <div className="mt-2 flex flex-wrap gap-2" style={{visibility: mathReady ? "visible" : "hidden"}}>
+        <div className="mt-2 flex flex-wrap gap-2">
             <Link to="/derivatives/linear" className = "link-box">
                   <div className="link-title2"><span ref={d1} style={{ cursor: 'pointer' }}> x </span>
                   </div>
@@ -236,7 +233,7 @@ function Home() {
       {/*Integrals*/}
       <div className="m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
       
-      <VideoPlayer videoUrl={integralVideo}/>
+        <VideoPlayer videoUrl={integralVideo}/>
 
         <div className="p-4 pt-2">
         <h2 className="text-lg font-semibold">
@@ -249,7 +246,7 @@ function Home() {
           <i className="fas fa-fire text-yellow-500 ml-2">
           </i>
         </div>
-        <div className="mt-2 flex flex-wrap gap-2" style={{visibility: mathReady ? "visible" : "hidden"}}>
+        <div className="mt-2 flex flex-wrap gap-2">
             <Link to="/integrals/linear" className = "link-box">
                   <div className="link-title2"><span ref={d10} style={{ cursor: 'pointer' }}> x </span>
                   </div>

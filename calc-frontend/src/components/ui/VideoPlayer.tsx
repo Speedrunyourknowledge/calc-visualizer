@@ -1,13 +1,12 @@
-import React from "react";
 
 interface VideoPlayerProps {
   videoUrl: string;
 }
 
-const VideoPlayer = React.memo(({ videoUrl }: VideoPlayerProps) => {
+const VideoPlayer = ({ videoUrl }: VideoPlayerProps) => {
   return (
       <video
-        className="w-full object-cover rounded-t-md"
+        className="w-full aspect-video object-cover rounded-t-md"
         src={videoUrl}
         autoPlay
         loop
@@ -15,6 +14,6 @@ const VideoPlayer = React.memo(({ videoUrl }: VideoPlayerProps) => {
         playsInline
       />
   );
-})
+}
 
 export default VideoPlayer;
