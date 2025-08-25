@@ -22,7 +22,7 @@ function NatLogLim() {
     <div>
     <div className="flex">
       <div ref={container} className="center-header">
-      \lim_&#123;x\to1&#125;\ln(x)
+      \lim_&#123;x\to2&#125;\ln(x)
       </div>
     </div>
 

@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useContext } from "react";
+import { useLayoutEffect, useRef, useContext, useState } from "react";
 import { Link } from "react-router"
 import { AuthContext } from "../App/AuthProvider";
 import SignInButton from "../components/ui/SignInButton";
@@ -6,9 +6,12 @@ import SignOutButton from "../components/ui/SignOutButton";
 import derivativeVideo from '../animations/manim-videos/derivativeAnimation/1080p60/DerivativeAnimation.mp4';
 import integralVideo from '../animations/manim-videos/integralAnimation/1080p60/RightRiemannSum.mp4';
 import limitVideo from '../animations/manim-videos/limitsAnimation/1080p60/Limit.mp4';
+import VideoPlayer from "../components/ui/VideoPlayer";
 
 function Home() {
     const {session, isPending} = useContext(AuthContext);
+    
+    const [mathReady, setMathReady] = useState(false);
 
     const d1 = useRef(null);
     const d2 = useRef(null);
@@ -70,6 +73,8 @@ function Home() {
       MQ.StaticMath(d26.current, { })
       MQ.StaticMath(d27.current, { })
       MQ.StaticMath(d28.current, { })
+
+      setMathReady(true);
     }, []);
 
   return (
@@ -90,14 +95,7 @@ function Home() {
             
         <div className="m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
       
-      <video
-        className="w-full object-cover rounded-t-md"
-        src={limitVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <VideoPlayer videoUrl={limitVideo}/>
 
       <div className="p-4 pt-2">
       <h2 className="text-lg font-semibold">
@@ -110,7 +108,7 @@ function Home() {
         <i className="fas fa-fire text-yellow-500 ml-2">
         </i>
       </div>
-      <div className="mt-2 flex flex-wrap gap-2">
+      <div className="mt-2 flex flex-wrap gap-2" style={{visibility: mathReady ? "visible" : "hidden"}}>
           <Link to="/limits/linear" className = "link-box">
                   <div className="link-title2"><span ref={d18} style={{ cursor: 'pointer' }}> x </span>
                   </div>
@@ -151,11 +149,6 @@ function Home() {
                   </div>
               </Link>
 
-              <Link to="/limits/custom" className = "link-box">
-                  <div className="link-title2"><span ref={d25} style={{ cursor: 'pointer' }}>Custom</span>{/*Custom*/}
-                  </div>
-              </Link>
-
         <i className="fas fa-fire text-yellow-500 ml-2">
         </i>
       </div>
@@ -169,14 +162,7 @@ function Home() {
     {/*Derivatives*/}
       <div className="m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
       
-      <video
-        className="w-full object-cover rounded-t-md"
-        src={derivativeVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <VideoPlayer videoUrl={derivativeVideo}/>
 
         <div className="p-4 pt-2">
         <h2 className="text-lg font-semibold">
@@ -190,7 +176,7 @@ function Home() {
           <i className="fas fa-fire text-yellow-500 ml-2">
           </i>
         </div>
-        <div className="mt-2 flex flex-wrap gap-2">
+        <div className="mt-2 flex flex-wrap gap-2" style={{visibility: mathReady ? "visible" : "hidden"}}>
             <Link to="/derivatives/linear" className = "link-box">
                   <div className="link-title2"><span ref={d1} style={{ cursor: 'pointer' }}> x </span>
                   </div>
@@ -250,14 +236,7 @@ function Home() {
       {/*Integrals*/}
       <div className="m-auto bg-white border-2 border-black-solid rounded-lg shadow-m">
       
-      <video
-        className="w-full object-cover rounded-t-md"
-        src={integralVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <VideoPlayer videoUrl={integralVideo}/>
 
         <div className="p-4 pt-2">
         <h2 className="text-lg font-semibold">
@@ -270,7 +249,7 @@ function Home() {
           <i className="fas fa-fire text-yellow-500 ml-2">
           </i>
         </div>
-        <div className="mt-2 flex flex-wrap gap-2">
+        <div className="mt-2 flex flex-wrap gap-2" style={{visibility: mathReady ? "visible" : "hidden"}}>
             <Link to="/integrals/linear" className = "link-box">
                   <div className="link-title2"><span ref={d10} style={{ cursor: 'pointer' }}> x </span>
                   </div>
