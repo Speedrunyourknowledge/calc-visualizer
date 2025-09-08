@@ -749,7 +749,7 @@
           "title": {
             "standoff": 15
           },
-          "zerolinecolor": "white",
+          "zerolinecolor": "silver",
           "automargin": true,
           "zerolinewidth": 2
         },
@@ -760,7 +760,7 @@
           "title": {
             "standoff": 15
           },
-          "zerolinecolor": "white",
+          "zerolinecolor": "silver",
           "automargin": true,
           "zerolinewidth": 2
         },
@@ -771,7 +771,7 @@
             "linecolor": "white",
             "showbackground": true,
             "ticks": "",
-            "zerolinecolor": "white",
+            "zerolinecolor": "silver",
             "gridwidth": 2
           },
           "yaxis": {
@@ -780,7 +780,7 @@
             "linecolor": "white",
             "showbackground": true,
             "ticks": "",
-            "zerolinecolor": "white",
+            "zerolinecolor": "silver",
             "gridwidth": 2
           },
           "zaxis": {
@@ -789,7 +789,7 @@
             "linecolor": "white",
             "showbackground": true,
             "ticks": "",
-            "zerolinecolor": "white",
+            "zerolinecolor": "silver",
             "gridwidth": 2
           }
         },

@@ -89,7 +89,7 @@ function IntSineGraph() {
                       "title": {
                           "standoff": 15
                       },
-                      "zerolinecolor": "white",
+                      "zerolinecolor": "silver",
                       "automargin": true,
                       "zerolinewidth": 2
                   },
@@ -100,7 +100,7 @@ function IntSineGraph() {
                       "title": {
                           "standoff": 15
                       },
-                      "zerolinecolor": "white",
+                      "zerolinecolor": "silver",
                       "automargin": true,
                       "zerolinewidth": 2
                   },
@@ -111,7 +111,7 @@ function IntSineGraph() {
                           "linecolor": "white",
                           "showbackground": true,
                           "ticks": "",
-                          "zerolinecolor": "white",
+                          "zerolinecolor": "silver",
                           "gridwidth": 2
                       },
                       "yaxis": {
@@ -120,7 +120,7 @@ function IntSineGraph() {
                           "linecolor": "white",
                           "showbackground": true,
                           "ticks": "",
-                          "zerolinecolor": "white",
+                          "zerolinecolor": "silver",
                           "gridwidth": 2
                       },
                       "zaxis": {
@@ -129,7 +129,7 @@ function IntSineGraph() {
                           "linecolor": "white",
                           "showbackground": true,
                           "ticks": "",
-                          "zerolinecolor": "white",
+                          "zerolinecolor": "silver",
                           "gridwidth": 2
                       }
                   },
