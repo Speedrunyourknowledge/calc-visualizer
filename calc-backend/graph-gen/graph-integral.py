@@ -55,14 +55,29 @@ area, error= quad(func, a, b)
 initial_bars = 10
 x_bar, y_bar, width = generate_bars(initial_bars)
 
-fig = px.line(x=x_line, y=y_line)
-
-# adds a line at x = 0 if the lower bound is negative
-if a < 0:
-  fig.add_vline(x=0, line_width=2, line_color="#a5adad")
+# Function graph
+fig = px.line(x=x_line, y=y_line, color_discrete_sequence=['#6570f9'])
 
 fig.update_traces(hovertemplate="(%{x:.2f}, %{y:.2f})", name="Function", showlegend=False)
 
+# Adjust padding for final layout
+pad =  min(np.abs(np.min(y_line)), np.abs(np.max(y_line))) + (max(np.abs(np.min(y_line)), np.abs(np.max(y_line))) // 20)
+
+# Set the final y-axis range with padding
+y_min = np.min(y_line) - pad
+y_max = np.max(y_line) + pad
+
+# Vertical line at x=0 (y-axis)
+if a < 0 < b:
+  fig.add_trace(go.Scatter(
+      x=[0, 0],
+      y=[y_min, y_max],
+      mode='lines',
+      line=dict(color='silver', width=2),
+      showlegend=False
+  ))
+
+# Bar graph
 bar_trace = go.Bar(
     x=x_bar,
     y=y_bar,
@@ -105,28 +120,59 @@ fig.update_layout(title=(
         f'Approx. Area = {np.round(midpoint_integrate(func, a, b, initial_bars), 9)}'
         f'<br>     True Area = {np.round(area, 9)}'), title_font_size=14, title_pad_b=2)
 
+# Create steps for the slider
 steps = []
 for n_bars in range(initial_bars, 101, 5):
-    x_bar, y_bar, width = generate_bars(n_bars)
-    step = dict(
-        method="update",
-        args=[
-            {"x": [x_line, x_bar], "y": [y_line, y_bar], "width": [None, [width] * len(x_bar)], 
-             "marker": dict(color=['#31b500' if value > 0 else '#ff3c00' for value in y_bar],
-              line=dict(color='black', width=1))},
-             {"title.text":  f'Approx. Area = {np.round(midpoint_integrate(func, a, b, n_bars), 9)}' 
-             f'<br>     True Area = {np.round(area, 9)}'}
-        ],
-        label=f"{n_bars}"
-    )
-    steps.append(step)
+  x_bar, y_bar, width = generate_bars(n_bars)
+  x_args=[]
+  y_args=[]
+  width_args = []
+  marker_args = []
+  line_args = []
+
+  # Conditionally add axis line trace args
+  if a < 0 < b:
+    x_args.append([0, 0])
+    y_args.append([y_min, y_max])
+    width_args.append(None)
+    line_args.append(dict(color='silver', width=2))
+
+  # Function trace args
+  x_args.append(x_line)
+  y_args.append(y_line)
+  width_args.append(None)
+  line_args.append(dict(color='#6570f9', width=2))
+
+  # Bar trace args
+  x_args.append(x_bar)
+  y_args.append(y_bar)
+  width_args.append([width] * len(x_bar))
+  marker_args.append(dict(
+    color=['#31b500' if value > 0 else '#ff3c00' for value in y_bar],
+    line=dict(color='black', width=1)
+  ))
+
+  step = dict(
+      method="update",
+      args=[
+            { 
+              "x": x_args, "y": y_args, "width": width_args, "marker": marker_args, "line": line_args
+            },
+            {
+              "title.text":  f'Approx. Area = {np.round(midpoint_integrate(func, a, b, n_bars), 9)}' 
+                f'<br>     True Area = {np.round(area, 9)}'
+            }
+          ],
+      label=f"{n_bars}"
+  )
+  steps.append(step)
 
 sliders = [dict(
-    active=0,
-    currentvalue={"prefix": "n = ", "font":{'size':14}},
-    pad={"t": 30},
-    bordercolor='#949fb3',
-    steps=steps
+  active=0,
+  currentvalue={"prefix": "n = ", "font":{'size':14}},
+  pad={"t": 30},
+  bordercolor='#949fb3',
+  steps=steps
 )]
 
 fig.update_layout(
@@ -136,7 +182,7 @@ fig.update_layout(
     xaxis_title="x-axis",
     yaxis_title="y-axis",
     xaxis=dict(range=[a, b], fixedrange=True, showgrid=True), 
-    yaxis=dict(fixedrange=True),
+    yaxis=dict(range=[y_min, y_max], fixedrange=True),
 )
 
 fig_json = fig.to_json(pretty=True)

@@ -2,8 +2,8 @@
   "data": [
     {
       "line": {
-        "color": "lightgray",
-        "width": 2
+        "color": "gainsboro",
+        "width": 3
       },
       "mode": "lines",
       "name": "f(x)",
@@ -20,7 +20,7 @@
     {
       "line": {
         "color": "black",
-        "width": 4
+        "width": 3
       },
       "mode": "lines",
       "name": "From Left",
@@ -37,7 +37,7 @@
     {
       "line": {
         "color": "#FFCC00",
-        "width": 4
+        "width": 3
       },
       "mode": "lines",
       "name": "From Right",
@@ -774,7 +774,7 @@
           "title": {
             "standoff": 15
           },
-          "zerolinecolor": "white",
+          "zerolinecolor": "silver",
           "automargin": true,
           "zerolinewidth": 2
         },
@@ -785,7 +785,7 @@
           "title": {
             "standoff": 15
           },
-          "zerolinecolor": "white",
+          "zerolinecolor": "silver",
           "automargin": true,
           "zerolinewidth": 2
         },
@@ -796,7 +796,7 @@
             "linecolor": "white",
             "showbackground": true,
             "ticks": "",
-            "zerolinecolor": "white",
+            "zerolinecolor": "silver",
             "gridwidth": 2
           },
           "yaxis": {
@@ -805,7 +805,7 @@
             "linecolor": "white",
             "showbackground": true,
             "ticks": "",
-            "zerolinecolor": "white",
+            "zerolinecolor": "silver",
             "gridwidth": 2
           },
           "zaxis": {
@@ -814,7 +814,7 @@
             "linecolor": "white",
             "showbackground": true,
             "ticks": "",
-            "zerolinecolor": "white",
+            "zerolinecolor": "silver",
             "gridwidth": 2
           }
         },
