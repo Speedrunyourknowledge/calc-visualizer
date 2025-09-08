@@ -88,7 +88,7 @@ function IntQuadraticGraph() {
                       "title": {
                           "standoff": 15
                       },
-                      "zerolinecolor": "white",
+                      "zerolinecolor": "silver",
                       "automargin": true,
                       "zerolinewidth": 2
                   },
@@ -99,7 +99,7 @@ function IntQuadraticGraph() {
                       "title": {
                           "standoff": 15
                       },
-                      "zerolinecolor": "white",
+                      "zerolinecolor": "silver",
                       "automargin": true,
                       "zerolinewidth": 2
                   },
@@ -110,7 +110,7 @@ function IntQuadraticGraph() {
                           "linecolor": "white",
                           "showbackground": true,
                           "ticks": "",
-                          "zerolinecolor": "white",
+                          "zerolinecolor": "silver",
                           "gridwidth": 2
                       },
                       "yaxis": {
@@ -119,7 +119,7 @@ function IntQuadraticGraph() {
                           "linecolor": "white",
                           "showbackground": true,
                           "ticks": "",
-                          "zerolinecolor": "white",
+                          "zerolinecolor": "silver",
                           "gridwidth": 2
                       },
                       "zaxis": {
@@ -128,7 +128,7 @@ function IntQuadraticGraph() {
                           "linecolor": "white",
                           "showbackground": true,
                           "ticks": "",
-                          "zerolinecolor": "white",
+                          "zerolinecolor": "silver",
                           "gridwidth": 2
                       }
                   },
@@ -202,7 +202,7 @@ function IntQuadraticGraph() {
           },
           "shapes": [{
               "line": {
-                  "color": "#a5adad",
+                  "color": "silver",
                   "width": 2
               },
               "type": "line",

@@ -59,7 +59,7 @@ fig = px.line(x=x_line, y=y_line)
 
 # adds a line at x = 0 if the lower bound is negative
 if a < 0:
-  fig.add_vline(x=0, line_width=2, line_color="#a5adad")
+  fig.add_vline(x=0, line_width=2, line_color='silver')
 
 fig.update_traces(hovertemplate="(%{x:.2f}, %{y:.2f})", name="Function", showlegend=False)
 

@@ -109,8 +109,8 @@ pad =  min(np.abs(np.min(f_vals)), np.abs(np.max(f_vals))) + (max(np.abs(np.min(
 fig.update_layout(
     xaxis_title='x-axis',
     yaxis_title='y-axis',
-    xaxis=dict(range=[x_range[0], x_range[1]], fixedrange=True),
-    yaxis=dict(range=[np.min(f_vals) - pad, np.max(f_vals) + pad], fixedrange=True),
+    xaxis=dict(range=[x_range[0], x_range[1]], fixedrange=True, linewidth=2, linecolor='silver'),
+    yaxis=dict(range=[np.min(f_vals) - pad, np.max(f_vals) + pad], fixedrange=True, linewidth=2, linecolor='silver'),
     sliders=sliders,
     uirevision='static',
     margin=dict(t=50, r=0,l=60),
