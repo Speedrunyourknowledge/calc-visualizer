@@ -60,8 +60,10 @@ fig = px.line(x=x_line, y=y_line, color_discrete_sequence=['#6570f9'])
 
 fig.update_traces(hovertemplate="(%{x:.2f}, %{y:.2f})", name="Function", showlegend=False)
 
-# Adjust padding for final layout
-pad =  min(np.abs(np.min(y_line)), np.abs(np.max(y_line))) + (max(np.abs(np.min(y_line)), np.abs(np.max(y_line))) // 20)
+# Calculate y-axis padding
+f_range = np.max(y_line) - np.min(y_line)
+# 5% of range or at least 0.1
+pad = max(f_range * 0.05, 0.1)  
 
 # Set the final y-axis range with padding
 y_min = np.min(y_line) - pad
