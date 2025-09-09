@@ -44,15 +44,26 @@ f_vals = f(x_vals)
 # Initialize the Plotly figure
 fig = go.Figure()
 
-# Adjust padding for final layout
-pad =  min(np.abs(np.min(f_vals)), np.abs(np.max(f_vals))) + (max(np.abs(np.min(f_vals)), np.abs(np.max(f_vals))) // 20)
+# Calculate y-axis padding
+f_range = np.max(f_vals) - np.min(f_vals)
+# 5% of range or at least 0.1
+pad = max(f_range * 0.05, 0.1)  
 
 # Set the final y-axis range with padding
 y_min = np.min(f_vals) - pad
-y_max = np.max(f_vals) + pad
+# No padding on top to avoid cutting off curve
+y_max = np.max(f_vals)
+
+# Calculate x-axis padding
+x_range_val = x_range[1] - x_range[0]
+x_pad = max(x_range_val * 0.05, 0.1)
+
+# Set the final x-axis range with padding
+x_min = x_range[0] - x_pad
+x_max = x_range[1] + x_pad
 
 # Vertical line at x=0 (y-axis)
-if x_range[0] < 0 < x_range[1]:
+if x_min < 0 < x_max:
   fig.add_trace(go.Scatter(
       x=[0, 0],
       y=[y_min, y_max],
@@ -64,7 +75,7 @@ if x_range[0] < 0 < x_range[1]:
 # Horizontal line at y=0 (x-axis)
 if y_min < 0 < y_max:
   fig.add_trace(go.Scatter(
-      x=[x_range[0], x_range[1]],
+      x=[x_min, x_max],
       y=[0, 0],
       mode='lines',
       line=dict(color='silver', width=2),
@@ -101,12 +112,12 @@ for slider_val in x_vals:
   frame_data=[]
 
   # Conditionally add vertical line at x=0
-  if x_range[0] < 0 < x_range[1]:
+  if x_min < 0 < x_max:
     frame_data.append(go.Scatter(x=[0, 0], y=[y_min, y_max]))
 
   # Conditionally add horizontal line at y=0
   if y_min < 0 < y_max:
-    frame_data.append(go.Scatter(x=[x_range[0], x_range[1]]))
+    frame_data.append(go.Scatter(x=[x_min, x_max], y=[0, 0]))
 
   # Placeholder for the function trace (remains unchanged)
   frame_data.append(go.Scatter()) 
@@ -149,7 +160,7 @@ sliders = [dict(
 fig.update_layout(
     xaxis_title='x-axis',
     yaxis_title='y-axis',
-    xaxis=dict(range=[x_range[0], x_range[1]], fixedrange=True),
+    xaxis=dict(range=[x_min, x_max], fixedrange=True),
     yaxis=dict(range=[y_min, y_max], fixedrange=True),
     sliders=sliders,
     uirevision='static',
