@@ -1,6 +1,7 @@
 import { useLayoutEffect, useState, useRef } from "react";
 import Plot from "react-plotly.js";
 
+const figDataPromise = fetch("/cosineLim.json").then((res) => res.json());
 
 function CosineLim() {
 
@@ -12,10 +13,7 @@ function CosineLim() {
     let MQ = MathQuill.getInterface(2);
     MQ.StaticMath(container.current, { })
 
-    fetch("/cosineLim.json")
-    .then((res) => res.json())
-    .then((json) => setFigData(json));
-
+    figDataPromise.then(setFigData);
   }, []);
 
  return (

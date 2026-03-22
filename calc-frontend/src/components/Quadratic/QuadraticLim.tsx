@@ -1,9 +1,11 @@
 import { useLayoutEffect, useState, useRef } from "react";
 import Plot from "react-plotly.js";
 
+const figDataPromise = fetch("/quadLim.json").then((res) => res.json());
+
 function QuadraticLim() {
 
-  
+
   const [figData, setFigData] = useState<any | null>(null);
   const container = useRef(null);
 
@@ -12,9 +14,7 @@ function QuadraticLim() {
     let MQ = MathQuill.getInterface(2);
     MQ.StaticMath(container.current, { })
 
-    fetch("/quadLim.json")
-    .then((res) => res.json())
-    .then((json) => setFigData(json));
+    figDataPromise.then(setFigData);
 
   }, []);
 
