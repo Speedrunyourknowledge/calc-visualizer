@@ -1,6 +1,8 @@
 import { useLayoutEffect, useState, useRef } from "react";
 import Plot from "react-plotly.js";
 
+const figDataPromise = fetch("/sineDeriv.json").then((res) => res.json());
+
 function SineDeriv() {
 
   const [figData, setFigData] = useState<any | null>(null);
@@ -11,9 +13,7 @@ function SineDeriv() {
     let MQ = MathQuill.getInterface(2);
     MQ.StaticMath(container.current, { })
 
-    fetch("/sineDeriv.json")
-    .then((res) => res.json())
-    .then((json) => setFigData(json));
+    figDataPromise.then(setFigData);
 
   }, []);
   return (

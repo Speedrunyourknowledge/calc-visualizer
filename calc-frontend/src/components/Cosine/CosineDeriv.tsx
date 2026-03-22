@@ -1,6 +1,8 @@
 import { useLayoutEffect, useState, useRef } from "react";
 import Plot from "react-plotly.js";
 
+const figDataPromise = fetch("/cosineDeriv.json").then((res) => res.json());
+
 function CosineDeriv() {
 
   const [figData, setFigData] = useState<any | null>(null);
@@ -11,36 +13,33 @@ function CosineDeriv() {
     let MQ = MathQuill.getInterface(2);
     MQ.StaticMath(container.current, { })
 
-    fetch("/cosineDeriv.json")
-    .then((res) => res.json())
-    .then((json) => setFigData(json));
-
+    figDataPromise.then(setFigData);
   }, []);
+
   return (
- 
- <div>
+    <div>
      <div className="flex">
       <div ref={container} className="center-header">
       \frac&#123;d&#125;&#123;dx&#125;(\cos(x))
       </div>
-      </div>
+    </div>
 
-  <div className="flex justify-center">
-    <div className="plotly-graph-div graph-frame">
-      {figData && (
-        <Plot
-          data={figData.data}
-          layout={{
-          ...figData.layout,
-          margin: { l: 40, r: 40, t: 50, b: 40 },
-          }}
-          frames={figData.frames}
-          config={figData.config}
-          style={{ width: "100%", height: "100%" }}
-        />
-      )}
-    </div>
-    </div>
+      <div className="flex justify-center">
+        <div className="plotly-graph-div graph-frame">
+        {figData && (
+          <Plot
+            data={figData.data}
+            layout={{
+            ...figData.layout,
+            margin: { l: 40, r: 40, t: 50, b: 40 },
+            }}
+            frames={figData.frames}
+            config={figData.config}
+            style={{ width: "100%", height: "100%" }}
+          />
+        )}
+        </div>
+      </div>
     </div>
   )
 }
