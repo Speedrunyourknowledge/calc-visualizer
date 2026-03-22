@@ -1,5 +1,5 @@
 ## Code for Generating Graphs
-Each python file outputs an html div for displaying the respective graph on the frontend.<br/>
+Each python file outputs a json object for displaying the graph on the frontend.<br/>
 The following script must be added to index.html to render the graph:
 
 ```html

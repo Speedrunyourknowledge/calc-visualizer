@@ -1,8 +1,11 @@
-import { useLayoutEffect, useRef } from "react";
-import IntCosineGraph from "./IntCosineGraph"
+import { useLayoutEffect, useState, useRef } from "react";
+import Plot from "react-plotly.js";
+
+const figDataPromise = fetch("/cosineInt.json").then((res) => res.json());
 
 function CosineInt() {
 
+  const [figData, setFigData] = useState<any | null>(null);
   const container = useRef(null);
 
   useLayoutEffect(() =>{
@@ -10,18 +13,31 @@ function CosineInt() {
     let MQ = MathQuill.getInterface(2);
     MQ.StaticMath(container.current, { })
 
+    figDataPromise.then(setFigData);
   }, []);
 
   return (
-   <div>       
+   <div>
     <div className="flex">
       <div ref={container} className="center-header">
-      \int_&#123;0&#125;^&#123;5&#125; \cos(x) \quad \mathrm&#123;d&#125;x 
+      \int_&#123;0&#125;^&#123;5&#125; \cos(x) \quad \mathrm&#123;d&#125;x
       </div>
     </div>
 
     <div className="graph-outer-box" >
-      <IntCosineGraph />
+      <div className="plotly-graph-div graph-frame">
+        {figData && (
+          <Plot
+            data={figData.data}
+            layout={{
+              ...figData.layout,
+              margin: { l: 60, r: 30, t: 50, b: 80 },
+            }}
+            config={figData.config}
+            style={{ width: "100%", height: "100%" }}
+          />
+        )}
+      </div>
     </div>
 
   </div>

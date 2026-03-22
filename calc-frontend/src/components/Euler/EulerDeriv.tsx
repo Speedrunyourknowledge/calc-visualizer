@@ -1,6 +1,8 @@
 import { useLayoutEffect, useState, useRef } from "react";
 import Plot from "react-plotly.js";
 
+const figDataPromise = fetch("/eDeriv.json").then((res) => res.json());
+
 function EulerDeriv() {
 
   const [figData, setFigData] = useState<any | null>(null);
@@ -11,9 +13,7 @@ function EulerDeriv() {
     let MQ = MathQuill.getInterface(2);
     MQ.StaticMath(container.current, { })
 
-    fetch("/eDeriv.json")
-    .then((res) => res.json())
-    .then((json) => setFigData(json));
+    figDataPromise.then(setFigData);
 
   }, []);
   return (

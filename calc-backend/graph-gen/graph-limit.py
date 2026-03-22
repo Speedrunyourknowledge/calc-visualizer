@@ -1,9 +1,13 @@
 import plotly.graph_objects as go
 import numpy as np
 
-# === USER DEFINES ONLY THESE TWO ===
-func    = lambda x: np.log(x)  # ← your function
-limit_x = 2                   # ← point to approach
+# === User Input ===
+func    = lambda x: np.tan(x)  # ← your function
+limit_x = 0                   # ← point to approach
+
+# === Range of values ===
+x_range = [-2, 2]
+y_range = [-75, 75]
 
 # === Slider & sampling settings (fixed) ===
 num_steps = 50
@@ -63,7 +67,6 @@ fig.add_trace(go.Scatter(
     x=[limit_x], y=[y_limit],
     mode="markers+text",
     marker=dict(color="red", size=10),
-    text=[f"Limit (x={limit_x})"],
     textposition="top center",
     showlegend=False
 ))
@@ -83,16 +86,15 @@ for i in range(num_steps):
 fig.update_layout(
     sliders=[dict(active=0, steps=steps,
                   currentvalue={"visible": False},
-                  pad={"t": 50}, ticklen=0)],
-    xaxis=dict(autorange=True,  fixedrange=True, title="x-axis"),
-    yaxis=dict(autorange=True,  fixedrange=True, title="y-axis"),
-    showlegend=True
+                  pad={"t": 50}, ticklen=0, tickcolor="rgba(0,0,0,0)")],
+    xaxis=dict(range=x_range, fixedrange=True, title="x-axis"),
+    yaxis=dict(range=y_range, fixedrange=True, title="y-axis"),
+    showlegend=False
 )
 
-fig.show()
+# Displays figure in browser window (for local testing)
+# fig.show()
 
 fig_json = fig.to_json(pretty=True)
 
-# Save to file
-with open("limit-graph.txt", "a") as f:
-  f.write(fig_json)
+print(fig_json)

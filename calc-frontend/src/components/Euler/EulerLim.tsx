@@ -1,9 +1,11 @@
 import { useLayoutEffect, useState, useRef } from "react";
 import Plot from "react-plotly.js";
 
+const figDataPromise = fetch("/eLim.json").then((res) => res.json());
+
 function EulerLim() {
 
-  
+
   const [figData, setFigData] = useState<any | null>(null);
   const container = useRef(null);
 
@@ -12,9 +14,7 @@ function EulerLim() {
     let MQ = MathQuill.getInterface(2);
     MQ.StaticMath(container.current, { })
 
-    fetch("/eLim.json")
-    .then((res) => res.json())
-    .then((json) => setFigData(json));
+    figDataPromise.then(setFigData);
 
   }, []);
 

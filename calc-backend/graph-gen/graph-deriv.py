@@ -38,7 +38,7 @@ def derivative(func, x, h=1e-5):
     return (func(x + h) - func(x - h)) / (2 * h)
 
 # Create an array of x values and evaluate f(x) for these values.
-x_vals = np.linspace(x_range[0], x_range[1], num=51)
+x_vals = np.linspace(x_range[0], x_range[1], num=101)
 f_vals = f(x_vals)
 
 # Initialize the Plotly figure
@@ -51,16 +51,16 @@ pad = max(f_range * 0.05, 0.1)
 
 # Set the final y-axis range with padding
 y_min = np.min(f_vals) - pad
-# No padding on top to avoid cutting off curve
-y_max = np.max(f_vals)
+y_max = np.max(f_vals) + pad
 
 # Calculate x-axis padding
 x_range_val = x_range[1] - x_range[0]
 x_pad = max(x_range_val * 0.05, 0.1)
 
-# Set the final x-axis range with padding
-x_min = x_range[0] - x_pad
-x_max = x_range[1] + x_pad
+# Set the final x-axis range with padding (only pad if lowest x value >= 0)
+x_min = x_range[0] - x_pad if x_range[0] >= 0 else x_range[0]
+# No padding on right
+x_max = x_range[1]
 
 # Vertical line at x=0 (y-axis)
 if x_min < 0 < x_max:
@@ -164,6 +164,7 @@ fig.update_layout(
     yaxis=dict(range=[y_min, y_max], fixedrange=True),
     sliders=sliders,
     uirevision='static',
+    showlegend=False,
     margin=dict(t=50, r=0,l=60),
 )
 

@@ -152,7 +152,9 @@ function Home() {
         </div>
         <div className="mt-2 flex flex-wrap gap-2">
           <span className="big-p side-text bg-gray-200 text-black-700 font-medium px-2 py-1 rounded leading-[1.5rem]">
-            Limits describe how a function behaves near a point, instead of at that point
+            A limit asks: "What value does a function approach as the input gets closer and closer to some number?" 
+            It doesn't matter what happens at that point, only what the function is heading toward. 
+            Limits are the foundation of calculus, used to define both derivatives and integrals.
           </span>
         </div>
         </div>
@@ -226,8 +228,9 @@ function Home() {
           </div>
           <div className="mt-2 flex flex-wrap gap-2">
             <span className="big-p side-text bg-gray-200 text-black-700 font-medium px-2 py-1 rounded leading-[1.5rem]">
-            A derivative measures the instantaneous rate of change of a function, essentially telling you 
-            how much a function's output changes for an infinitely small change in its input
+            A derivative tells you how fast a function is changing at a given point. Think of it as 
+            the instantaneous slope of a curve. Derivatives are used to find rates of change over time, 
+            for example, how fast a falling object's speed is increasing.
             </span>
           </div>
           </div>
@@ -301,19 +304,16 @@ function Home() {
           </div>
           <div className="mt-2 flex flex-wrap gap-2">
             <span className="big-p side-text bg-gray-200 text-black-700 font-medium px-2 py-1 rounded leading-[1.5rem]">
-            An integral is a mathematical object that represents the signed area under a curve, and it is 
-            used to calculate quantities such as area, volume, and displacement.
+            An integral adds up infinitely small pieces to find a total. The Riemann Sum method involves adding up rectangles 
+            to approximate the area under a curve. If a derivative tells you the rate of change, an integral works in reverse: 
+            given a rate, it finds the total amount accumulated over time. For example, the volume of water in a container given the rate 
+            at which the water level is rising.
             </span>
           </div>
           </div>
         </div> 
       </div>
     </div>
-          
-        
-      
-      
-    
   )
 };
 
