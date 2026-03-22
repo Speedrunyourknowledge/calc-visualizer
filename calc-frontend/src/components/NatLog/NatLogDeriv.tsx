@@ -1,7 +1,7 @@
 import { useLayoutEffect, useState, useRef } from "react";
 import Plot from "react-plotly.js";
 
-const figDataPromise = fetch("/lnDeriv.json").then((res) => res.json());
+const figDataPromise = fetch("/natLogDeriv.json").then((res) => res.json());
 
 function NatLogDeriv() {
 

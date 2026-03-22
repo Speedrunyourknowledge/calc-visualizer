@@ -853,11 +853,14 @@
       }
     },
     "yaxis": {
-      "autorange": true,
       "fixedrange": true,
       "title": {
         "text": "y-axis"
-      }
+      },
+      "range": [
+        -0.2,
+        4.2
+      ]
     },
     "sliders": [
       {

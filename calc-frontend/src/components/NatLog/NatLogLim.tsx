@@ -1,7 +1,7 @@
 import { useLayoutEffect, useState, useRef } from "react";
 import Plot from "react-plotly.js";
 
-const figDataPromise = fetch("/lnLim.json").then((res) => res.json());
+const figDataPromise = fetch("/natLogLim.json").then((res) => res.json());
 
 function NatLogLim() {
 

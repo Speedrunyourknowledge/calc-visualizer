@@ -845,11 +845,14 @@
       }
     },
     "xaxis": {
-      "autorange": true,
       "fixedrange": true,
       "title": {
         "text": "x-axis"
-      }
+      },
+      "range": [
+        -0.15,
+        4
+      ]
     },
     "yaxis": {
       "autorange": true,
