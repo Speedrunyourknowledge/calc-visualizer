@@ -8,7 +8,6 @@ import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
 import AskAIButtonDerivative from "@/components/ui/AskAIButtonDerivative.tsx";
 
 import { toast } from "sonner";
-import { Session } from "../lib/auth-client";
 
 function CustomDeriv() {
 
@@ -56,7 +55,7 @@ function CustomDeriv() {
   }
 
   // need to check if func is unique first
-  const saveFunction = async (session: Session) => {
+  const saveFunction = async () => {
 
     // check if function has been graphed
     if(func === ''){
@@ -69,13 +68,11 @@ function CustomDeriv() {
     const lowerBound = bounds[0];
     const upperBound = bounds[1];
     const topic = "Derivative";
-    const userId = session?.user.id || "";
-    
     try {
       setSaving(true) // show loading while saving
 
       // create-integral handles any topic
-      await axios.post(serverUrl + `/func/create-integral/${userId}`, {
+      await axios.post(serverUrl + `/func/create-integral`, {
         equation,
         lowerBound,
         upperBound,
@@ -85,9 +82,13 @@ function CustomDeriv() {
     )
 
       toast.success("Function Saved Successfully!");
-    } 
+    }
     catch (error) {
-      toast.error("Function Failed to Save");
+      if (axios.isAxiosError(error) && error.response?.data?.message === "You can only save up to 30 functions") {
+        toast.error("You can only save up to 30 functions");
+      } else {
+        toast.error("Function Failed to Save");
+      }
       console.error("save function error: ",error);
     }
     finally{

@@ -46,9 +46,8 @@ function Dashboard()
     }
 
     const getFuncs = async () => {
-        const userId = session.user.id;
         try {
-          const response = await axios.get(serverUrl + `/func/all/${userId}`);
+          const response = await axios.get(serverUrl + `/func/all`, { withCredentials: true });
           setUserFunctions(response.data);
         } catch (error) {
           console.error("get function error: ", error);
