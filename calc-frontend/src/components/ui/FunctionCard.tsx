@@ -71,7 +71,9 @@ function FunctionCard({
       import.meta.env.VITE_SERVER_URL || "http://localhost:3000";
 
     try {
-      await axios.delete(`${serverUrl}/func/delete/${id}`);
+      await axios.delete(`${serverUrl}/func/delete/${id}`,
+        { withCredentials:true}
+      );
       onDelete(id);
     } catch (error) {
       toast.error("Something went wrong deleting the function");
