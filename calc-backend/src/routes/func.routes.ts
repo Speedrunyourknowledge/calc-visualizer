@@ -1,10 +1,12 @@
 import { Router } from "express";
 import { createIntegral, deleteUserFunc, getUserFuncs } from "../controllers/func.controller";
+import { requireAuth } from "../middlewares/requireAuth.middleware";
 
 const router = Router();
 
-router.post("/create-integral/:id", createIntegral);
-router.get("/all/:id", getUserFuncs);
-router.delete("/delete/:id", deleteUserFunc);
+// These routes can only be accessed by authenticated users
+router.post("/create-integral", requireAuth, createIntegral);
+router.get("/all", requireAuth, getUserFuncs);
+router.delete("/delete/:id", requireAuth, deleteUserFunc);
 
 export default router;

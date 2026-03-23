@@ -8,7 +8,6 @@ import SaveFunctionButton from "../components/ui/SaveFunctionButton.tsx";
 import AskAIButton from "../components/ui/AskAIButtonIntegral.tsx";
 
 import { toast } from "sonner";
-import { Session } from "../lib/auth-client";
 
 function CustomInt() {
 
@@ -57,7 +56,7 @@ function CustomInt() {
   }
 
   // need to check if func is unique first
-  const saveFunction = async (session: Session) => {
+  const saveFunction = async () => {
 
       // check if function has been graphed
       if(func === ''){
@@ -70,12 +69,10 @@ function CustomInt() {
       const lowerBound = bounds[0];
       const upperBound = bounds[1];
       const topic = "Integral";
-      const userId = session?.user.id || "";
-      
       try {
         setSaving(true) // show loading while saving
 
-        await axios.post(serverUrl + `/func/create-integral/${userId}`, {
+        await axios.post(serverUrl + `/func/create-integral`, {
           equation,
           lowerBound,
           upperBound,
@@ -85,9 +82,13 @@ function CustomInt() {
       )
 
         toast.success("Function Saved Successfully!");
-      } 
+      }
       catch (error) {
-        toast.error("Function Failed to Save");
+        if (axios.isAxiosError(error) && error.response?.data?.message === "You can only save up to 30 functions") {
+          toast.error("You can only save up to 30 functions");
+        } else {
+          toast.error("Function Failed to Save");
+        }
         console.error("save function error: ",error);
       }
       finally{
