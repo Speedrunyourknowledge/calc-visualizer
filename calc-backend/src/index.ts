@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import routes from "./server.routes";
-import errorMiddleware from "./middlewares/errorHandler.middleware";
 import { toNodeHandler } from "better-auth/node";
 import { auth } from "./lib/auth";
 
@@ -22,8 +21,6 @@ app.use(express.json()) // use this after better auth
 
 // Prefixes the endpoint with /
 app.use('/',routes);
-
-//app.use(errorMiddleware);
 
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
